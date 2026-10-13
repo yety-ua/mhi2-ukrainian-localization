@@ -19,6 +19,21 @@ SD-карти через [M.I.B.](https://github.com/Mr-MIBonk/M.I.B._More-Incre
 Це не твердження про 100% перекладу кожного доступного екрана. Повний опис
 реалізованих частин і залишкових питань — у [документі глибини](docs/LOCALIZATION_DEPTH.md).
 
+### Безкоштовне поширення та встановлення
+
+Автор поширює цей мод **абсолютно безкоштовно для всіх охочих**. Завантаження,
+використання та встановлення локалізації мають бути безкоштовними. Можна
+встановити її самостійно або безкоштовно допомогти іншому власнику автомобіля.
+
+**Продаж, перепродаж і заробіток на цьому моді заборонені.** Не дозволяється
+брати плату за пакет, доступ до нього, його встановлення чи активацію, а також
+включати його до платних пакетів, послуг або комерційних пропозицій.
+При безкоштовному поширенні зберігайте ці умови, авторство та посилання на
+[оригінальний репозиторій](https://github.com/yety-ua/mhi2-ukrainian-localization).
+
+Ці умови стосуються авторського внеску цього проєкту. M.I.B. та ресурси сторонніх
+правовласників зберігають власні ліцензії й умови; цей репозиторій не змінює їх.
+
 ### Що включено
 
 - Українські таблиці **22 модулів**, збереження структури **15 400 штатних
@@ -210,6 +225,21 @@ pass, and Ukrainian screens run in the K3346 emulator. The SD installer has not
 been executed on the physical QNX head unit; vehicle installation, restoration,
 cold-boot persistence and full UI/speech behavior are not yet verified. This is
 not a claim of complete translation of every reachable screen.
+
+### Free distribution and installation
+
+The author provides this mod **completely free of charge to everyone**.
+Downloading, using and installing the localization must remain free. You may
+install it yourself or help another vehicle owner install it free of charge.
+
+**Selling, reselling or making money from this mod is prohibited.** Charging for
+the package, access to it, installation or activation is not permitted, nor is
+including it in paid bundles, services or commercial offerings.
+When sharing it free of charge, retain these terms, author attribution and a link
+to the [original repository](https://github.com/yety-ua/mhi2-ukrainian-localization).
+
+These terms apply to this project's original contributions. M.I.B. and third-party
+resources retain their own licenses and terms, which this repository does not change.
 
 ### Coverage and exact target
 
