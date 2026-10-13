@@ -99,8 +99,10 @@ SD1/
 
 ### Перевірка і встановлення
 
-1. Залиште один рядок `CHECK` у `uk-localization/ACTION.txt` (ASCII/UTF-8 без BOM,
-   LF, без зайвих пробілів). Вставте SD1.
+1. Вставте підготовлену SD-карту в **перший слот голови — SD1**.
+   Для першого запуску нічого редагувати не потрібно: у пакеті вже вибрано режим
+   **перевірки**, який не встановлює локалізацію й не змінює мовні налаштування.
+   Цей режим задано словом `CHECK` у файлі `uk-localization/ACTION.txt` на карті.
 2. Відкрийте GEM → `m.i.b.` → `Advanced Settings` → `Run Custom Script`
    (можлива назва `Run /mod/custom.sh from m.i.b. SD`). Потрібні **`CHECK PASS` і код 0**.
    CHECK записує лише SD-лог і тимчасові файли; не змінює мовні ресурси чи параметризацію.
@@ -223,8 +225,10 @@ rendering is incomplete. [Capture provenance](docs/screenshots.json).
 
 ### Check and install
 
-1. Keep the single line `CHECK` in `uk-localization/ACTION.txt`, ASCII/UTF-8 without
-   BOM, LF line ending, no extra whitespace. Insert SD1.
+1. Insert the prepared SD card into **the head unit's first SD slot — SD1**.
+   No file editing is needed for the first run: the package already selects
+   **check mode**, which does not install the localization or change language settings.
+   This mode is selected by the word `CHECK` in `uk-localization/ACTION.txt` on the card.
 2. Open GEM → `m.i.b.` → `Advanced Settings` → `Run Custom Script` (possibly labelled
    `Run /mod/custom.sh from m.i.b. SD`). Require **CHECK PASS and exit code 0**.
    CHECK writes only the SD log and temporary files; no app remount/resource/persistence write.
@@ -283,6 +287,14 @@ supported English commands, diagnostics and region-specific strings are not all
 expected to be Cyrillic; candidate counts are not a translation-completeness percentage.
 
 ### Development / Розробка
+
+**Технічна примітка щодо ACTION.txt:** готовий файл уже має потрібний формат.
+Якщо редагуєте його для зміни режиму, зберігайте лише одне слово дії, без пробілів,
+у ASCII або UTF-8 без BOM, з переносом LF. Це вимога скрипта, не окрема дія перед CHECK.
+
+**Technical note on ACTION.txt:** the supplied file already has the required format.
+When editing it to change modes, retain a single action word without whitespace,
+ASCII or UTF-8 without BOM, and LF line endings. No format conversion is needed before CHECK.
 
 ```sh
 python3 -m unittest discover -s tests -v
