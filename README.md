@@ -1,4 +1,4 @@
-# 🇺🇦 Ukrainian localization for Audi A4 MHI2
+# 🇺🇦 Ukrainian localization for Audi MHI2 — A4 / A5 / Q5 / Q7
 
 **MHI2_ER_AUG22_K3346 · MU1438 · G22 · EvoHigh**
 
@@ -8,7 +8,7 @@
 
 ## Українська
 
-Локалізація для штатної прошивки **Audi A4 B9 MHI2 K3346**: українські тексти,
+Локалізація для штатної прошивки **Audi MHI2 K3346 на A4, A5, Q5 та Q7**: українські тексти,
 вибір мови з прапорцем, українська смуга клавіатури та встановлення з однієї
 SD-карти через [M.I.B.](https://github.com/Mr-MIBonk/M.I.B._More-Incredible-Bash).
 Пакет додає ресурси й параметризацію; повна прошивка не перепрошивається.
@@ -35,7 +35,7 @@ SD-карти через [M.I.B.](https://github.com/Mr-MIBonk/M.I.B._More-Incre
 
 | Параметр | Єдина ціль цього пакета |
 | --- | --- |
-| Автомобіль / платформа | Audi A4 B9 / G22, MLB Evo |
+| Моделі / платформа | Audi A4, A5, Q5, Q7 з наведеною нижче прошивкою / G22, MLB Evo |
 | Firmware train | `MHI2_ER_AUG22_K3346` |
 | MU | `1438` |
 | HMI | `HMI_AU_MIB2_H_EU_G22_C6_190300`, `EvoHigh` |
@@ -45,6 +45,11 @@ SD-карти через [M.I.B.](https://github.com/Mr-MIBonk/M.I.B._More-Incre
 Інсталятор звіряє реальний train/MU з EEPROM і точний хеш HMI. A3 була
 додатковим джерелом перекладів за збігом тексту, але структура, ID, класи й
 параметризація цільового пакета належать A4 K3346. [Докази походження](docs/A4_PROVENANCE.md).
+
+Вихідні ресурси та емуляторні докази перевірені на базі A4 B9. Перелік моделей
+стосується цієї самої прошивки, а не всіх MMI на A4/A5/Q5/Q7. Для іншої моделі
+інсталятор також вимагає збігу оригінальних ресурсів і датасетів; при розбіжності
+він зупиниться. Окремих автомобільних випробувань цих моделей поки немає.
 
 ### Скріншоти
 
@@ -172,7 +177,7 @@ recovery голови, яка взагалі не може завантажит�
 
 ## English
 
-A Ukrainian localization overlay for the **original Audi A4 B9 K3346 firmware**,
+A Ukrainian localization overlay for **Audi MHI2 K3346 on A4, A5, Q5 and Q7**,
 installed from a single FAT32 SD1 card through M.I.B. It includes Ukrainian UI
 tables, language selection, the Ukrainian alphabet band and reversible resource
 installation with language parameterization. No full firmware/IFS update is performed.
@@ -200,6 +205,11 @@ A3 AU37x/P5089, MHI2Q, MIB3 and different firmware/MU versions are rejected.
 A3 supplied additional dictionary translations matched by the **A4 source text**;
 its table IDs, layout, classes and vehicle coding were not transplanted.
 [Provenance evidence and limitations](docs/A4_PROVENANCE.md).
+
+Source resources and emulator evidence were checked against the A4 B9 baseline.
+The model list applies to this exact firmware, not every MMI fitted to these models.
+Other models must also match the reviewed stock resources and datasets; the installer
+stops on a mismatch. Separate physical-vehicle trials for these models are pending.
 
 ### Screenshots
 
