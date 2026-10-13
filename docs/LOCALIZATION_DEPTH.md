@@ -22,7 +22,7 @@
 | Навігація | Українські таблиці HMINavi; запит NAVI/TTS мов маршрутизується окремо | Реальні карти, український пошук адрес, POI, маршрути, вимова |
 | Голос | Необов'язковий англійський fallback; окремий install/reboot цикл | Готовність NAVI/TTS/SDS, мікрофон, аудіо. Українського голосу/моделей немає |
 | Connectivity | 9 статусних/термінологічних правок, зокрема видимість Bluetooth | Показ усіх цих станів на авто; не всі доступні в емуляторі |
-| Virtual Cockpit | HMI просить мову 43; AU491/0379 має власні українські ресурси | AU491/0313 відхиляє BAP43. AU736/Q7 0310/0378/0416 не перевірені бінарно; H15/компас та update eligibility розглянуті в окремому дослідженні |
+| Virtual Cockpit | HMI просить мову 43; AU491/0379 та AU736/0378/0416 мають мовну карту й українські ресурси | AU491/0313 та AU736/0310 відхиляють BAP43. Фізичний показ, H15/компас, Q7/TPMS та update eligibility перевіряються окремо |
 | SD-інсталятор | Перевірка точної цілі, baseline, CRC, hashes, read-back, SD/internal backup, recovery, journal | Справжній QNX/M.I.B./GEM, встановлення, відкат і робота без SD |
 
 ### Що означають залишкові кандидати
@@ -85,7 +85,8 @@ Optional speech routing uses English resources and has no Ukrainian speech model
 
 The HMI requests cluster language 43. AU491/0313 rejects BAP43; AU491/0379 offline
 mapping/resources are separate from physical rendering and safe update eligibility.
-AU736 Q7 versions 0310/0378/0416 remain language-undetermined; see the sourced VC research.
+AU736/0310 also rejects BAP43; AU736/0378 and 0416 accept BAP43 and contain native
+Ukrainian resources. Physical display and hardware/update eligibility remain separate.
 The SD package never flashes the Virtual Cockpit.
 
 After the nine Connectivity fixes, **6497 non-Cyrillic slots remain as candidates**,

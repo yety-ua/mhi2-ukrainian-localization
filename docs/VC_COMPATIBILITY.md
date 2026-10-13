@@ -13,9 +13,10 @@ AU491/0379 має потрібні мовний код і власні укра�
 аналізом штатних бінарників, повтореним 13.10.2026. Але наявність української в 0379
 не означає, що 0379 можна без проблем встановити на будь-який VC.
 
-**Для Q7 AU736/0310, 0378 і 0416 підтримку української поки не встановлено.**
-Наявні джерела підтверджують версії та окремі проблеми, але не їхні українські
-банки/таблиці мов. Невідомий результат не можна позначати як «української немає».
+**Для Q7 AU736/0310 українська через цей пакет не працюватиме; AU736/0378 і 0416
+мають потрібну мовну карту й власні українські ресурси.** Після першої публікації
+дослідження власник надав усі три пакети; їхній бінарний аналіз 13.10.2026 замінив
+попередній статус «не встановлено» на ці визначені результати.
 
 Наш SD-пакет встановлює мову **в MMI**, надсилає VC запит мови 43, але **не прошиває
 VC і не переносить його мовні ресурси**. Для підтримуваного VC додатковий український
@@ -27,9 +28,9 @@ VC і не переносить його мовні ресурси**. Для п�
 | --- | --- | --- | --- |
 | A4/A5/Q5, AU491 | **0313** | **Ні, у перевіреному штатному бінарнику** | BAP43 відхиляється; максимум таблиці — 29. Поточний MMI-пакет цього не виправляє |
 | A4/A5/Q5, AU491 | **0379** | **Так на рівні ресурсів і протоколу** | BAP43 → внутрішній ID27; власні українські тексти. Фізичний показ і придатність оновлення перевіряються окремо |
-| Q7, AU736 | **0310** | **Не встановлено** | Офіційна гілка Q7 MY2017; власний бінарник/мовна карта не перевірені |
-| Q7, AU736 | **0378** | **Не встановлено** | Офіційна гілка Q7 MY2018; є повідомлення про роботу на H18 та проблему TPMS, але не доказ української |
-| Q7, AU736 | **0416** | **Не встановлено** | Каталог власника конкретного блока вказує 4M0920790D/H19/0416; це не перевірка мови або універсального update-шляху |
+| Q7, AU736 | **0310** | **Ні, у перевіреному бінарнику** | BAP43 відхиляється; максимум таблиці — 29; українських специфічних входжень немає |
+| Q7, AU736 | **0378** | **Так на рівні ресурсів і протоколу** | BAP43 → ID27; 931 українське специфічне входження; фізичний показ і сумісність заліза окремо |
+| Q7, AU736 | **0416** | **Так на рівні ресурсів і протоколу** | BAP43 → ID27; 943 українські специфічні входження; фізичний показ і сумісність заліза окремо |
 
 Позначення «Так» для 0379 не є гарантією інсталяції на конкретне залізо.
 Для інших AU491, зокрема 0299/0309/0373/0377/0417/0419, потрібен окремий аналіз:
@@ -102,9 +103,34 @@ MY2018 до 0379, Q7 MY2017 до 0310 і MY2018 до 0378. Для A4-подіб�
 вказує **4M0920790D / H19 / SW0416**. Це власна інвентарна заява продавця;
 мовна карта, український банк і придатність оновлення старого H15 з цього не випливають.
 
-Для визначеного мовного висновку потрібні саме AU736 0310/0378/0416: прочитати
-metainfo, перевірити контрольні суми, витягти native UI, знайти обробку BAP43 й
-пов'язаний український банк. Наразі цих образів у локальному наборі немає.
+### Бінарна перевірка Q7 після отримання пакетів
+
+Досліджені release `C1_AU736_0310_1001_prod`, `C1_AU736_0378_1280_prod` і
+`C1_AU736_0416_1540_prod`. Внутрішній device каталог у всіх трьох —
+**KI_FPK_AU536**; це фактичні метадані наданих AU736-пакетів, не помилка в назві.
+
+| Перевірка | 0310 | 0378 | 0416 |
+| --- | --- | --- | --- |
+| Файли образів / перевірені SHA-1 блоки metainfo | 13 / 113 | 13 / 109 | 13 / 111 |
+| Декодовані LZO блоки stage2 | 37 | 37 | 38 |
+| imagefs checksum / межі файлів | Пройдено | Пройдено | Пройдено |
+| Максимум BAP у native lookup | 29 | 43 | 43 |
+| Результат коду 43 | -1, відхилено | 27 | 27 |
+| Українські специфічні входження UTF-8 | 0 | 931 | 943 |
+| Відсутні українські літери в штатному шрифті | Немає | Немає | Немає |
+
+ELF у цих пакетах має урізані section headers, тому адреси мовних таблиць
+перевіряли через **PT_LOAD program headers**. Для кожного бінарника знайдено
+одну відповідну ARM-функцію lookup, перевірено її п'ять інструкцій та адресний літерал
+і три прямі native BL-виклики. Мовна таблиця 0310 повністю збігається з AU491/0313;
+таблиці 0378 і 0416 — з AU491/0379. Це прямий доказ протокольної підтримки,
+окремий від форумних тверджень і номера версії.
+
+Ресурси, хеші, адреси й кількість перевірених checksum-блоків збережені в
+[vc-binary-evidence.json](vc-binary-evidence.json). Перевірка контрольних сум
+доводить цілісність наданого набору, а не автентичність підпису або придатність
+оновлення конкретного HW. Повідомлення про TPMS і H19/0416 вище лишаються
+польовими/інвентарними даними, а не критеріями мовної підтримки.
 Загальні оголошення «українізація Q7» без версії/заліза не використані як доказ.
 
 ### Які файли зі скріншота належать цьому дослідженню
@@ -122,8 +148,10 @@ AU334 (TT), AU37X (A3), AU57X (A6/A7) і AU724 (R8) не входять у ви�
 
 **Рішення для користувача:** на AU491/0313 очікуйте українську в MMI, але не native VC;
 на вже сумісному AU491/0379 очікується native українська VC з фізичною перевіркою.
-H15-update потребує індивідуальної перевірки, зокрема компаса. Q7 зараз не має
-підтвердженого мовного verdict. Цей документ не додає жодної VC-прошивки до нашої SD-карти.
+H15-update потребує індивідуальної перевірки, зокрема компаса. Для Q7/0310
+native української не буде; для сумісно встановлених Q7/0378 і 0416 мовна
+підтримка підтверджена, з перевіркою показу на авто. Цей документ не додає
+жодної VC-прошивки до нашої SD-карти.
 
 ## English
 
@@ -133,9 +161,9 @@ H15-update потребує індивідуальної перевірки, з�
 | --- | --- | --- | --- |
 | A4/A5/Q5, AU491 | **0313** | **No in the inspected stock binary** | BAP43 rejected; maximum BAP table input 29 |
 | A4/A5/Q5, AU491 | **0379** | **Supported in protocol/resources** | BAP43 → internal ID27; native Ukrainian bank; physical display and update eligibility remain separate |
-| Q7, AU736 | **0310** | **Undetermined** | Documented Q7 update branch; native language lookup/resources not inspected |
-| Q7, AU736 | **0378** | **Undetermined** | Documented Q7 branch and H18 owner report, not Ukrainian evidence |
-| Q7, AU736 | **0416** | **Undetermined** | Identified 4M0920790D/H19/0416 unit, not a language audit |
+| Q7, AU736 | **0310** | **No in the inspected binary** | BAP43 rejected; maximum table input 29; zero Ukrainian-specific occurrences |
+| Q7, AU736 | **0378** | **Supported in protocol/resources** | BAP43 → ID27; 931 Ukrainian-specific occurrences; physical/HW checks separate |
+| Q7, AU736 | **0416** | **Supported in protocol/resources** | BAP43 → ID27; 943 Ukrainian-specific occurrences; physical/HW checks separate |
 
 The 0313/0379 native hashes and ARM lookup were rechecked on 2026-10-13.
 UTF-8 Ukrainian-specific occurrences are 0 and 931 respectively, a corroborating
@@ -170,7 +198,15 @@ identifies 4M0920790C/H18/0378 with TPMS display trouble. The same owner says
 the issue existed on 0370 too; causation by 0378 or localization is unproven.
 [A seller's own inventory](https://www.naviservice.it/virtual-cockpit-audi-q7---quadro-strumenti-digitale-4m0920790d---271.000km/)
 identifies 4M0920790D/H19/0416 but does not verify its Ukrainian resources.
-AU736 native binaries are still needed to determine BAP43 and the selected language bank.
+After the initial research publication, the owner supplied all three AU736 packages.
+Their native inspection now confirms 0310 rejects BAP43, while 0378/0416 map it to
+ID27 and contain Ukrainian text. All use package device KI_FPK_AU536. Metainfo
+verification passes for 13 images each (113/109/111 SHA-1 blocks), with 37/37/38
+decoded stage2 LZO blocks and validated imagefs. All inspected fonts cover Ukrainian.
+Stripped ELF section tables required PT_LOAD address mapping. One matching lookup
+and three direct BL callers were found per binary; Q7 tables match the corresponding
+AU491 generations. [Hashes, addresses and verification counts](vc-binary-evidence.json).
+Checksums establish consistency, not vendor signature authenticity or hardware eligibility.
 
 Only AU491 and AU736 packages from the supplied screenshot enter this model scope.
 TT/AU334, A3/AU37X, A6/A7/AU57X and R8/AU724 are excluded. In particular an
