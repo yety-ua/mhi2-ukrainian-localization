@@ -1,0 +1,70 @@
+{
+  "changes": [
+    {
+      "module": "HMIConnectivityEvoHigh",
+      "slot": 586,
+      "text_id": 2500586,
+      "old": "sichtbar",
+      "new": "Видимий"
+    },
+    {
+      "module": "HMIConnectivityEvoHigh",
+      "slot": 587,
+      "text_id": 2500587,
+      "old": "unsichtbar",
+      "new": "Невидимий"
+    },
+    {
+      "module": "HMIConnectivityEvoHigh",
+      "slot": 588,
+      "text_id": 2500588,
+      "old": "aus",
+      "new": "Вимкнено"
+    },
+    {
+      "module": "HMIConnectivityEvoHigh",
+      "slot": 589,
+      "text_id": 2500589,
+      "old": "Hot Spot",
+      "new": "Точка доступу"
+    },
+    {
+      "module": "HMIConnectivityEvoHigh",
+      "slot": 590,
+      "text_id": 2500590,
+      "old": "Tethering",
+      "new": "Режим модема"
+    },
+    {
+      "module": "HMIConnectivityEvoHigh",
+      "slot": 591,
+      "text_id": 2500591,
+      "old": "offline",
+      "new": "Без мережі"
+    },
+    {
+      "module": "HMIConnectivityEvoHigh",
+      "slot": 592,
+      "text_id": 2500592,
+      "old": "online",
+      "new": "У мережі"
+    },
+    {
+      "module": "HMIConnectivityEvoHigh",
+      "slot": 888,
+      "text_id": 2500888,
+      "old": "WLAN",
+      "new": "Wi-Fi"
+    },
+    {
+      "module": "HMIConnectivityEvoHigh",
+      "slot": 954,
+      "text_id": 2500954,
+      "old": "WLAN",
+      "new": "Wi-Fi"
+    }
+  ],
+  "baseline_sha256": "7d18e557d1c8516737442afe75d198200827fc2c2edb0d27f32a8f308f276ec9",
+  "result_sha256": "f581006ddb33d7a4b3fd53c3794f9d44e6811738c599e49cdb05068beb55cac3",
+  "scope": "Only Ukrainian Connectivity table; no stock locales, classes or dataset changes. Visibility labels map via Bluetooth Accessibility model 2500231 to cMMAIN."
+}

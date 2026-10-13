@@ -1,0 +1,6 @@
+en_SA:en_GB
+en_JP:en_US
+en_CN:en_US
+en_KR:en_US
+en_TW:en_US
+nb_NO:no_NO

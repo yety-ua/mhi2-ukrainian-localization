@@ -1,0 +1,7 @@
+* text=auto eol=lf
+# Preserve reviewed firmware bytes and checksums on every checkout.
+sd-card/** -text
+sd-card/uk-localization/stock/** binary
+*.png binary
+*.zip binary
+*.jar binary

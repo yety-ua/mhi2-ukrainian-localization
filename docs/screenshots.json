@@ -1,0 +1,42 @@
+[
+  {
+    "file": "docs/images/main-menu.png",
+    "source_filename": "Знімок екрана 2026-10-13 о 12.11.38.png",
+    "captured_by": "owner",
+    "date": "2026-10-13",
+    "environment": "K3346 A4 emulator, screen-only crop",
+    "scope": "UI evidence; not physical vehicle validation. Captured before the nine Connectivity-only publication text changes; these shown modules are unchanged."
+  },
+  {
+    "file": "docs/images/sound-settings.png",
+    "source_filename": "Знімок екрана 2026-10-13 о 12.11.58.png",
+    "captured_by": "owner",
+    "date": "2026-10-13",
+    "environment": "K3346 A4 emulator, screen-only crop",
+    "scope": "UI evidence; not physical vehicle validation. Captured before the nine Connectivity-only publication text changes; these shown modules are unchanged."
+  },
+  {
+    "file": "docs/images/phone.png",
+    "source_filename": "Знімок екрана 2026-10-13 о 12.12.52.png",
+    "captured_by": "owner",
+    "date": "2026-10-13",
+    "environment": "K3346 A4 emulator, screen-only crop",
+    "scope": "UI evidence; not physical vehicle validation. Captured before the nine Connectivity-only publication text changes; these shown modules are unchanged."
+  },
+  {
+    "file": "docs/images/language-menu.png",
+    "source_filename": "Знімок екрана 2026-10-13 о 12.13.48.png",
+    "captured_by": "owner",
+    "date": "2026-10-13",
+    "environment": "K3346 A4 emulator, screen-only crop",
+    "scope": "UI evidence; not physical vehicle validation. Captured before the nine Connectivity-only publication text changes; these shown modules are unchanged."
+  },
+  {
+    "file": "docs/images/mmi-settings.png",
+    "source_filename": "Знімок екрана 2026-10-13 о 12.14.23.png",
+    "captured_by": "owner",
+    "date": "2026-10-13",
+    "environment": "K3346 A4 emulator, screen-only crop",
+    "scope": "UI evidence; not physical vehicle validation. Captured before the nine Connectivity-only publication text changes; these shown modules are unchanged."
+  }
+]

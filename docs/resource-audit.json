@@ -1,0 +1,236 @@
+{
+  "sha256": "f581006ddb33d7a4b3fd53c3794f9d44e6811738c599e49cdb05068beb55cac3",
+  "entries": 442,
+  "modules": 22,
+  "tables": 418,
+  "nonempty_stock_counterpart_slots": 15400,
+  "appended_language_name_slots": 1,
+  "non_cyrillic_candidates": 6497,
+  "same_as_english_candidates": 5232,
+  "differing_candidates": 1265,
+  "stock_locale_changes": "Only appended Ukrainian language name in HMISettingsEvoHigh",
+  "target_structure": "All 22 Ukrainian modules preserve A4 K3346 slot, flag, empty and placeholder structure",
+  "model_token_audit": [
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 1455,
+      "source": "e-tron statistics",
+      "ukrainian": "e-tron statistics",
+      "tokens_already_in_target_source": true
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 4321,
+      "source": "Car: e-tron statistics",
+      "ukrainian": "Автомобіль: статистика e-tron",
+      "tokens_already_in_target_source": true
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 4336,
+      "source": "e-tron statistics",
+      "ukrainian": "e-tron statistics",
+      "tokens_already_in_target_source": true
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 4584,
+      "source": "Car: e-tron statistics",
+      "ukrainian": "Автомобіль: статистика e-tron",
+      "tokens_already_in_target_source": true
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 5014,
+      "source": "Reset e-tron statistics",
+      "ukrainian": "Скинути статистику e-tron",
+      "tokens_already_in_target_source": true
+    },
+    {
+      "module": "HMIEarlyAppsEvoHigh",
+      "slot": 763,
+      "source": "e-tron mode",
+      "ukrainian": "Режим e-tron",
+      "tokens_already_in_target_source": true
+    },
+    {
+      "module": "HMIEarlyAppsEvoHigh",
+      "slot": 1435,
+      "source": "e-tron mode: EV mode currently unavailable",
+      "ukrainian": "Режим e-tron: EV наразі недоступний",
+      "tokens_already_in_target_source": true
+    },
+    {
+      "module": "HMIEarlyAppsEvoHigh",
+      "slot": 1542,
+      "source": "e-tron mode: EV mode currently unavailable",
+      "ukrainian": "Режим e-tron: EV наразі недоступний",
+      "tokens_already_in_target_source": true
+    },
+    {
+      "module": "HMISpeechEvoHigh",
+      "slot": 2141,
+      "source": "e-tron statistics,",
+      "ukrainian": "e-tron statistics,",
+      "tokens_already_in_target_source": true
+    }
+  ],
+  "errors": [],
+  "modules_detail": [
+    {
+      "module": "HMIAddressBookEvoHigh",
+      "nonempty_slots": 150,
+      "non_cyrillic_candidates": 4,
+      "same_as_english_candidates": 4,
+      "differing_candidates": 0
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "nonempty_slots": 1269,
+      "non_cyrillic_candidates": 106,
+      "same_as_english_candidates": 104,
+      "differing_candidates": 2
+    },
+    {
+      "module": "HMIConnectivityEvoHigh",
+      "nonempty_slots": 363,
+      "non_cyrillic_candidates": 20,
+      "same_as_english_candidates": 20,
+      "differing_candidates": 0
+    },
+    {
+      "module": "HMIEarlyAppsEvoHigh",
+      "nonempty_slots": 536,
+      "non_cyrillic_candidates": 12,
+      "same_as_english_candidates": 12,
+      "differing_candidates": 0
+    },
+    {
+      "module": "HMIEcallEvoHigh",
+      "nonempty_slots": 76,
+      "non_cyrillic_candidates": 5,
+      "same_as_english_candidates": 5,
+      "differing_candidates": 0
+    },
+    {
+      "module": "HMIEngineeringEvoHigh",
+      "nonempty_slots": 106,
+      "non_cyrillic_candidates": 11,
+      "same_as_english_candidates": 9,
+      "differing_candidates": 2
+    },
+    {
+      "module": "HMIInfoEvoHigh",
+      "nonempty_slots": 22,
+      "non_cyrillic_candidates": 2,
+      "same_as_english_candidates": 2,
+      "differing_candidates": 0
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "nonempty_slots": 1375,
+      "non_cyrillic_candidates": 213,
+      "same_as_english_candidates": 183,
+      "differing_candidates": 30
+    },
+    {
+      "module": "HMIMessagingEvoHigh",
+      "nonempty_slots": 416,
+      "non_cyrillic_candidates": 56,
+      "same_as_english_candidates": 39,
+      "differing_candidates": 17
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "nonempty_slots": 1369,
+      "non_cyrillic_candidates": 350,
+      "same_as_english_candidates": 243,
+      "differing_candidates": 107
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "nonempty_slots": 617,
+      "non_cyrillic_candidates": 123,
+      "same_as_english_candidates": 100,
+      "differing_candidates": 23
+    },
+    {
+      "module": "HMIPhoneEvoHigh",
+      "nonempty_slots": 705,
+      "non_cyrillic_candidates": 88,
+      "same_as_english_candidates": 77,
+      "differing_candidates": 11
+    },
+    {
+      "module": "HMISWDLEvoHigh",
+      "nonempty_slots": 668,
+      "non_cyrillic_candidates": 101,
+      "same_as_english_candidates": 99,
+      "differing_candidates": 2
+    },
+    {
+      "module": "HMISettingsEvoHigh",
+      "nonempty_slots": 548,
+      "non_cyrillic_candidates": 278,
+      "same_as_english_candidates": 265,
+      "differing_candidates": 13
+    },
+    {
+      "module": "HMISpeechEvoHigh",
+      "nonempty_slots": 3274,
+      "non_cyrillic_candidates": 3148,
+      "same_as_english_candidates": 2408,
+      "differing_candidates": 740
+    },
+    {
+      "module": "HMISystemEvoHigh",
+      "nonempty_slots": 2031,
+      "non_cyrillic_candidates": 1429,
+      "same_as_english_candidates": 1178,
+      "differing_candidates": 251
+    },
+    {
+      "module": "HMITVEvoHigh",
+      "nonempty_slots": 1126,
+      "non_cyrillic_candidates": 413,
+      "same_as_english_candidates": 378,
+      "differing_candidates": 35
+    },
+    {
+      "module": "HMITerminalModeEvoHigh",
+      "nonempty_slots": 47,
+      "non_cyrillic_candidates": 13,
+      "same_as_english_candidates": 13,
+      "differing_candidates": 0
+    },
+    {
+      "module": "HMITestSupportEvoHigh",
+      "nonempty_slots": 9,
+      "non_cyrillic_candidates": 9,
+      "same_as_english_candidates": 9,
+      "differing_candidates": 0
+    },
+    {
+      "module": "HMIToneEvoHigh",
+      "nonempty_slots": 220,
+      "non_cyrillic_candidates": 13,
+      "same_as_english_candidates": 9,
+      "differing_candidates": 4
+    },
+    {
+      "module": "HMITunerEvoHigh",
+      "nonempty_slots": 467,
+      "non_cyrillic_candidates": 102,
+      "same_as_english_candidates": 74,
+      "differing_candidates": 28
+    },
+    {
+      "module": "HMIWirelessChargingEvoHigh",
+      "nonempty_slots": 6,
+      "non_cyrillic_candidates": 1,
+      "same_as_english_candidates": 1,
+      "differing_candidates": 0
+    }
+  ],
+  "note": "Candidate counts include brands, numbers, diagnostics, proper names and intentional English speech commands. Not a translation-completeness percentage."
+}
