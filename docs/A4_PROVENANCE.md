@@ -30,8 +30,8 @@
 
 Основне джерело українського словника — споріднена A4/G22 MHI2Q.
 A3 `MHI2_ER_AU37x_P5089` також використовувалася як **додатковий словник** і як
-приклад інтеграції мови. Історичне формулювання «A3 лише приклад інтеграції» було
-неповним: її тексти теж використовувалися там, де збігався оригінальний текст.
+приклад інтеграції мови. Її тексти використовувалися там, де збігався
+оригінальний текст цільової прошивки.
 
 Алгоритм брав текст **цільового слоту K3346**, шукав відповідний англійський текст
 у джерелах (точно, з нормалізацією пробілів або регістру) і підставляв переклад.
@@ -71,9 +71,9 @@ No A3 coding, layouts, native binaries, module ID tables or firmware are transpl
 The historical translation dictionary used related A4/G22 MHI2Q resources first
 and **A3 AU37x as an additional text dictionary**, plus manual overrides/reviews.
 The A4 source text was the lookup key, with exact/whitespace-normalized/case-insensitive
-matching; A3 table positions were not used as A4 IDs. Describing A3 only as an
-integration example was incomplete. Identical source wording is still not an
-exhaustive semantic-context guarantee, so contextual terminology review remains.
+matching; A3 table positions were not used as A4 IDs. Identical source wording is
+still not an exhaustive semantic-context guarantee, so contextual terminology review
+remains.
 The A3 EvoHighScale skin was not accepted as evidence of A4 EvoHigh layout budgets.
 
 No A3/AU37x/AU370/G21/Sportback/magnetic-ride tokens were found in released Ukrainian

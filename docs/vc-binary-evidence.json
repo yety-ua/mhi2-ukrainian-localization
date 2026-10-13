@@ -83,7 +83,7 @@
       "package_sha1_blocks_verified": 113,
       "imagefs_checksum_ok": true,
       "lzo_blocks": 37,
-      "evidence": "Provided Q7 package decoded and native ARM lookup verified 2026-10-13; ELF PT_LOAD segments used because section headers are stripped. No firmware modified or vehicle flashed."
+      "evidence": "Inspected AU736 package decoded and native ARM lookup verified 2026-10-13; ELF PT_LOAD segments used because section headers are stripped. No firmware modified or vehicle flashed."
     },
     {
       "family": "AU736",
@@ -155,7 +155,7 @@
       "package_sha1_blocks_verified": 109,
       "imagefs_checksum_ok": true,
       "lzo_blocks": 37,
-      "evidence": "Provided Q7 package decoded and native ARM lookup verified 2026-10-13; ELF PT_LOAD segments used because section headers are stripped. No firmware modified or vehicle flashed."
+      "evidence": "Inspected AU736 package decoded and native ARM lookup verified 2026-10-13; ELF PT_LOAD segments used because section headers are stripped. No firmware modified or vehicle flashed."
     },
     {
       "family": "AU736",
@@ -227,7 +227,7 @@
       "package_sha1_blocks_verified": 111,
       "imagefs_checksum_ok": true,
       "lzo_blocks": 38,
-      "evidence": "Provided Q7 package decoded and native ARM lookup verified 2026-10-13; ELF PT_LOAD segments used because section headers are stripped. No firmware modified or vehicle flashed."
+      "evidence": "Inspected AU736 package decoded and native ARM lookup verified 2026-10-13; ELF PT_LOAD segments used because section headers are stripped. No firmware modified or vehicle flashed."
     }
   ],
   "limitations": [

@@ -14,9 +14,8 @@ AU491/0379 має потрібні мовний код і власні укра�
 не означає, що 0379 можна без проблем встановити на будь-який VC.
 
 **Для Q7 AU736/0310 українська через цей пакет не працюватиме; AU736/0378 і 0416
-мають потрібну мовну карту й власні українські ресурси.** Після першої публікації
-дослідження власник надав усі три пакети; їхній бінарний аналіз 13.10.2026 замінив
-попередній статус «не встановлено» на ці визначені результати.
+мають потрібну мовну карту й власні українські ресурси.** Ці результати підтверджені
+бінарним аналізом трьох пакетів AU736 від 13.10.2026.
 
 Наш SD-пакет встановлює мову **в MMI**, надсилає VC запит мови 43, але **не прошиває
 VC і не переносить його мовні ресурси**. Для підтримуваного VC додатковий український
@@ -71,8 +70,6 @@ VC і не переносить його мовні ресурси**. Для п�
 
 [Початковий звіт Matze89 і застереження](https://www.digital-eliteboard.com/threads/virtual-cockpit-update-fuer-audi-a4-b9-audi-a5-f5-oder-audi-q5-fy.494687/)
 та [H12-повідомлення](https://www.digital-eliteboard.com/threads/virtual-cockpit-update-fuer-audi-a4-b9-audi-a5-f5-oder-audi-q5-fy.494687/page-22?amp=1).
-Надане власником посилання на page-26 теж переглянуте, але конкретні протилежні
-повідомлення H15 розташовані на **page-28**, а не page-26.
 
 Компас треба перевіряти без активного маршруту, зі штатною навігацією та з
 CarPlay/Android Auto окремо. Перехід на паралельну карту/інший layout не є доказом,
@@ -107,7 +104,7 @@ MY2018 до 0379, Q7 MY2017 до 0310 і MY2018 до 0378. Для A4-подіб�
 
 Досліджені release `C1_AU736_0310_1001_prod`, `C1_AU736_0378_1280_prod` і
 `C1_AU736_0416_1540_prod`. Внутрішній device каталог у всіх трьох —
-**KI_FPK_AU536**; це фактичні метадані наданих AU736-пакетів, не помилка в назві.
+**KI_FPK_AU536**; це фактичні метадані перевірених AU736-пакетів, не помилка в назві.
 
 | Перевірка | 0310 | 0378 | 0416 |
 | --- | --- | --- | --- |
@@ -128,12 +125,12 @@ ELF у цих пакетах має урізані section headers, тому а�
 
 Ресурси, хеші, адреси й кількість перевірених checksum-блоків збережені в
 [vc-binary-evidence.json](vc-binary-evidence.json). Перевірка контрольних сум
-доводить цілісність наданого набору, а не автентичність підпису або придатність
+доводить цілісність перевіреного набору, а не автентичність підпису або придатність
 оновлення конкретного HW. Повідомлення про TPMS і H19/0416 вище лишаються
 польовими/інвентарними даними, а не критеріями мовної підтримки.
 Загальні оголошення «українізація Q7» без версії/заліза не використані як доказ.
 
-### Які файли зі скріншота належать цьому дослідженню
+### Область дослідження та сімейства VC
 
 Включені AU491/0313 і AU491/0379 для A4/A5/Q5 та AU736/0310, AU736/0378,
 AU736/0416 для Q7. Номер після наступного підкреслення (0991/1310/1001/1280/1540)
@@ -190,7 +187,7 @@ equipment matter; installer acceptance/skip checks do not prove compatibility.
 
 [Audi TSB 2052820/1](https://static.nhtsa.gov/odi/tsbs/2018/MC-10153134-9999.pdf)
 separates A4/A5/Q5 MY2017→0313, MY2018→0379 and Q7 MY2017→0310, MY2018→0378.
-Its US cluster numbers differ from the inspected EU owner unit. It is a map-display
+Its US cluster numbers differ from the inspected EU cluster 8W5920790C. It is a map-display
 repair bulletin, not Ukrainian support evidence or blanket EU/H15 cross-year approval.
 
 [Q7 owner post #16](https://www.digital-eliteboard.com/threads/audi-q7-4m-virtual-cockpit-update.527812/page-2)
@@ -198,9 +195,8 @@ identifies 4M0920790C/H18/0378 with TPMS display trouble. The same owner says
 the issue existed on 0370 too; causation by 0378 or localization is unproven.
 [A seller's own inventory](https://www.naviservice.it/virtual-cockpit-audi-q7---quadro-strumenti-digitale-4m0920790d---271.000km/)
 identifies 4M0920790D/H19/0416 but does not verify its Ukrainian resources.
-After the initial research publication, the owner supplied all three AU736 packages.
-Their native inspection now confirms 0310 rejects BAP43, while 0378/0416 map it to
-ID27 and contain Ukrainian text. All use package device KI_FPK_AU536. Metainfo
+Native inspection of the three AU736 packages on 2026-10-13 confirms 0310 rejects
+BAP43, while 0378/0416 map it to ID27 and contain Ukrainian text. All use package device KI_FPK_AU536. Metainfo
 verification passes for 13 images each (113/109/111 SHA-1 blocks), with 37/37/38
 decoded stage2 LZO blocks and validated imagefs. All inspected fonts cover Ukrainian.
 Stripped ELF section tables required PT_LOAD address mapping. One matching lookup
@@ -208,7 +204,7 @@ and three direct BL callers were found per binary; Q7 tables match the correspon
 AU491 generations. [Hashes, addresses and verification counts](vc-binary-evidence.json).
 Checksums establish consistency, not vendor signature authenticity or hardware eligibility.
 
-Only AU491 and AU736 packages from the supplied screenshot enter this model scope.
+This research covers AU491 packages for A4/A5/Q5 and AU736 packages for Q7.
 TT/AU334, A3/AU37X, A6/A7/AU57X and R8/AU724 are excluded. In particular an
 [A3 owner's AU37X/0150 account](https://www.audiworld.com/forums/audi-a3-s3-rs-3-mkii-209/diy-virtual-cockpit-firmware-update-3067901/)
 uses update part 8W6906961R: an 8W prefix is not proof of an A4 target. A diagnostic
