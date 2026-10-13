@@ -1,0 +1,36 @@
+{
+  "checked_on": "2026-10-13",
+  "binaries": [
+    {
+      "family": "AU491",
+      "software": "0313",
+      "gtf2_sha256": "12be579a720def48923a6c08dba89de091eccd9666ce2fe9425f8806996ee214",
+      "function_va": "0x24d694",
+      "table_va": "0x89dcdc",
+      "max_bap_id": 29,
+      "bap_43_result": -1,
+      "instruction_sequence_verified": true,
+      "ukrainian_specific_occurrences": 0,
+      "evidence": "Exact extracted stock binary, hash and ARM language lookup rechecked 2026-10-13. Occurrence counts are from the validated extraction audit, not a count of all translated slots.",
+      "text_scan_rechecked_on": "2026-10-13"
+    },
+    {
+      "family": "AU491",
+      "software": "0379",
+      "gtf2_sha256": "2ad9b41b39262168f0c42c7f17598ee8becb2d3fdc1ce8f72afa3bde2c8c6d10",
+      "function_va": "0x20da20",
+      "table_va": "0x7eeaf8",
+      "max_bap_id": 43,
+      "bap_43_result": 27,
+      "instruction_sequence_verified": true,
+      "ukrainian_specific_occurrences": 931,
+      "evidence": "Exact extracted stock binary, hash and ARM language lookup rechecked 2026-10-13. Occurrence counts are from the validated extraction audit, not a count of all translated slots.",
+      "text_scan_rechecked_on": "2026-10-13"
+    }
+  ],
+  "limitations": [
+    "Offline evidence; no physical VC rendering or update performed.",
+    "No AU736 binary was available or inspected.",
+    "Ukrainian-letter occurrence scan is corroborating evidence; unsupported BAP43 is the decisive negative for stock 0313."
+  ]
+}

@@ -22,7 +22,7 @@
 | Навігація | Українські таблиці HMINavi; запит NAVI/TTS мов маршрутизується окремо | Реальні карти, український пошук адрес, POI, маршрути, вимова |
 | Голос | Необов'язковий англійський fallback; окремий install/reboot цикл | Готовність NAVI/TTS/SDS, мікрофон, аудіо. Українського голосу/моделей немає |
 | Connectivity | 9 статусних/термінологічних правок, зокрема видимість Bluetooth | Показ усіх цих станів на авто; не всі доступні в емуляторі |
-| Virtual Cockpit | HMI просить мову 43; протокольна інтеграція реалізована | VC має власні ресурси. 0313 не підтримує BAP43; offline-дані 0379 не доводять безпечного оновлення чи фізичного рендерингу |
+| Virtual Cockpit | HMI просить мову 43; AU491/0379 має власні українські ресурси | AU491/0313 відхиляє BAP43. AU736/Q7 0310/0378/0416 не перевірені бінарно; H15/компас та update eligibility розглянуті в окремому дослідженні |
 | SD-інсталятор | Перевірка точної цілі, baseline, CRC, hashes, read-back, SD/internal backup, recovery, journal | Справжній QNX/M.I.B./GEM, встановлення, відкат і робота без SD |
 
 ### Що означають залишкові кандидати
@@ -57,6 +57,9 @@ Messaging, Online, Tuner/TV, а також діагностичних і рег�
 
 ## English
 
+Детальна матриця VC та джерела / Detailed VC matrix and sources:
+[VC_COMPATIBILITY.md](VC_COMPATIBILITY.md).
+
 The localization integrates Ukrainian broadly across **all 22 A4 K3346 modules**,
 language selection, the alphabet band, builtin/diagnostic configuration and the
 cluster language request. It is not just a main-menu translation.
@@ -80,8 +83,9 @@ U+02BC was absent in the prior font audit. Imported contacts/input need independ
 testing. Ukrainian navigation UI does not prove address search against installed maps.
 Optional speech routing uses English resources and has no Ukrainian speech models.
 
-The HMI requests cluster language 43. VC0313 does not accept BAP43; VC0379 offline
+The HMI requests cluster language 43. AU491/0313 rejects BAP43; AU491/0379 offline
 mapping/resources are separate from physical rendering and safe update eligibility.
+AU736 Q7 versions 0310/0378/0416 remain language-undetermined; see the sourced VC research.
 The SD package never flashes the Virtual Cockpit.
 
 After the nine Connectivity fixes, **6497 non-Cyrillic slots remain as candidates**,

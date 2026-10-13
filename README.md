@@ -175,6 +175,28 @@ recovery голови, яка взагалі не може завантажит�
 Деякі команди, бренди, діагностичні/регіональні тексти залишаються англійською;
 не всі редакційні кандидати означають відсутній переклад.
 
+### Українська у Virtual Cockpit: що очікувати
+
+**Українська в MMI не означає автоматично українську в кокпіті.** Панель приладів
+має власні мовні ресурси. Цей SD-пакет їх не встановлює та VC не перепрошиває.
+
+| Автомобілі / гілка VC | Версія VC | Попередній результат |
+| --- | --- | --- |
+| A4/A5/Q5, AU491 | **0313** | **Українську не підхопить:** штатна версія відхиляє код мови 43 |
+| A4/A5/Q5, AU491 | **0379** | **Мовна підтримка є:** код 43 і власні українські ресурси підтверджені; показ на авто перевіряється окремо |
+| Q7, AU736 | **0310** | Підтримку української **ще не встановлено** |
+| Q7, AU736 | **0378** | Підтримку української **ще не встановлено** |
+| Q7, AU736 | **0416** | Підтримку української **ще не встановлено** |
+
+**H15 не є автоматичною забороною для 0379**, але результати роботи компаса після
+оновлення суперечливі. Вища H-ревізія теж не є універсальною гарантією сумісності.
+Не вибирайте прошивку лише за номером версії або назвою моделі.
+
+[Повне дослідження VC: версії, H15/H17/H18/H19, компас, Q7/TPMS та джерела](docs/VC_COMPATIBILITY.md).
+Для підбору потрібна ідентичність блока 17 (панель приладів): номери HW/SW,
+H-ревізія, поточна версія ПЗ, модельний рік і регіон. «Не встановлено» в таблиці
+означає відсутність достатнього доказу, а не доведену відсутність української.
+
 ## English
 
 A Ukrainian localization overlay for **Audi MHI2 K3346 on A4, A5, Q5 and Q7**,
@@ -295,6 +317,26 @@ remains ru_RU; alphabet display does not prove all Ukrainian stroke recognition.
 VC0313 receives no new Ukrainian resource bank from this package. Brands, numbers,
 supported English commands, diagnostics and region-specific strings are not all
 expected to be Cyrillic; candidate counts are not a translation-completeness percentage.
+
+### Ukrainian in Virtual Cockpit
+
+**Ukrainian MMI does not automatically make the cluster Ukrainian.** VC uses its
+own language resources; this SD overlay never installs or flashes VC firmware.
+
+| Models / VC family | VC software | Preliminary result |
+| --- | --- | --- |
+| A4/A5/Q5, AU491 | **0313** | **No native Ukrainian from this package:** stock VC rejects language code 43 |
+| A4/A5/Q5, AU491 | **0379** | **Language support confirmed in protocol/resources:** physical rendering and update eligibility are separate |
+| Q7, AU736 | **0310** | Ukrainian support **undetermined** |
+| Q7, AU736 | **0378** | Ukrainian support **undetermined** |
+| Q7, AU736 | **0416** | Ukrainian support **undetermined** |
+
+**H15 is not a proven blanket blocker for 0379**, but compass results after updates
+conflict. A higher H revision is not universal compatibility approval either.
+[Full sourced VC research](docs/VC_COMPATIBILITY.md) separates native language support,
+hardware/update eligibility, compass and Q7/TPMS behavior. Use complete module-17
+HW/SW identifiers, H revision, software, model year and region. Undetermined means
+insufficient evidence, not proven absence of Ukrainian.
 
 ### Development / Розробка
 
