@@ -1,0 +1,726 @@
+{
+  "description": "2026-10-21: expand unambiguous abbreviations (Налашт., Настр., Попер(едж)., Сповіщ., призн(ач)., Інтерв., нас. пункт) where the full word fits the slot limit and the string has no other abbreviation.",
+  "changes": [
+    {
+      "module": "HMIAddressBookEvoHigh",
+      "slot": 341,
+      "en": "Add business destination",
+      "old": "Додати робочий пункт призн.",
+      "new": "Додати робочий пункт призначення"
+    },
+    {
+      "module": "HMIAddressBookEvoHigh",
+      "slot": 668,
+      "en": "Hide contacts without destination",
+      "old": "Приховати контакти без пункту призн.",
+      "new": "Приховати контакти без пункту призначення"
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 891,
+      "en": "Speed warning",
+      "old": "Попередж. швидкості",
+      "new": "Попередження швидкості"
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 902,
+      "en": "Distance warning",
+      "old": "Попередж. дистанції",
+      "new": "Попередження дистанції"
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 1145,
+      "en": "Energy warning",
+      "old": "Попередж. про енергію",
+      "new": "Попередження про енергію"
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 1302,
+      "en": "Speed warning",
+      "old": "Попередж. швидкості",
+      "new": "Попередження швидкості"
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 1305,
+      "en": "Speed warning",
+      "old": "Попередж. швидкості",
+      "new": "Попередження швидкості"
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 2314,
+      "en": "System can only be configured when\nvehicle is stationary.",
+      "old": "Налашт. системи можливе, лише\nякщо автомобіль не рухається.",
+      "new": "Налаштування системи можливе, лише\nякщо автомобіль не рухається."
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 2316,
+      "en": "The selected system can only be\nconfigured when the engine is on.",
+      "old": "Налашт. вибраної системи можливе\nлише за ввімкненого двигуна.",
+      "new": "Налаштування вибраної системи можливе\nлише за ввімкненого двигуна."
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 2634,
+      "en": "Speech dialogue syst. settings",
+      "old": "Налашт. діалогової системи",
+      "new": "Налаштування діалогової системи"
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 2778,
+      "en": "The selected system can only be\nconfigured when the engine is on.",
+      "old": "Налашт. вибраної системи можливе\nлише за ввімкненого двигуна.",
+      "new": "Налаштування вибраної системи можливе\nлише за ввімкненого двигуна."
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 2779,
+      "en": "System can only be configured when\nvehicle is stationary.",
+      "old": "Налашт. системи можливе, лише\nякщо автомобіль не рухається.",
+      "new": "Налаштування системи можливе, лише\nякщо автомобіль не рухається."
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 2898,
+      "en": "The selected system can only be\nconfigured when the engine is on.",
+      "old": "Налашт. вибраної системи можливе\nлише за ввімкненого двигуна.",
+      "new": "Налаштування вибраної системи можливе\nлише за ввімкненого двигуна."
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 2911,
+      "en": "The selected system can only be\nconfigured when the engine is on.",
+      "old": "Налашт. вибраної системи можливе\nлише за ввімкненого двигуна.",
+      "new": "Налаштування вибраної системи можливе\nлише за ввімкненого двигуна."
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 3628,
+      "en": "The selected system can only be\nconfigured when the vehicle is stationary.",
+      "old": "Налашт. вибраної системи можливе,\nлише якщо автомобіль не рухається.",
+      "new": "Налаштування вибраної системи можливе,\nлише якщо автомобіль не рухається."
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 3713,
+      "en": "System can only be configured when\nvehicle is stationary.",
+      "old": "Налашт. системи можливе, лише\nякщо автомобіль не рухається.",
+      "new": "Налаштування системи можливе, лише\nякщо автомобіль не рухається."
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 3966,
+      "en": "The selected system can only be\nconfigured when the engine is on.",
+      "old": "Налашт. вибраної системи можливе\nлише за ввімкненого двигуна.",
+      "new": "Налаштування вибраної системи можливе\nлише за ввімкненого двигуна."
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 3967,
+      "en": "System can only be configured when\nvehicle is stationary.",
+      "old": "Налашт. системи можливе, лише\nякщо автомобіль не рухається.",
+      "new": "Налаштування системи можливе, лише\nякщо автомобіль не рухається."
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 3977,
+      "en": "Recognition period",
+      "old": "Інтерв. розпізн.",
+      "new": "Інтервал розпізн."
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 3997,
+      "en": "The selected system can only be\nconfigured when the engine is on.",
+      "old": "Налашт. вибраної системи можливе\nлише за ввімкненого двигуна.",
+      "new": "Налаштування вибраної системи можливе\nлише за ввімкненого двигуна."
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 4072,
+      "en": "System can only be configured when\nvehicle is stationary.",
+      "old": "Налашт. системи можливе, лише\nякщо автомобіль не рухається.",
+      "new": "Налаштування системи можливе, лише\nякщо автомобіль не рухається."
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 4086,
+      "en": "System can only be configured when\nvehicle is stationary.",
+      "old": "Налашт. системи можливе, лише\nякщо автомобіль не рухається.",
+      "new": "Налаштування системи можливе, лише\nякщо автомобіль не рухається."
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 4095,
+      "en": "System can only be configured when\nvehicle is stationary.",
+      "old": "Налашт. системи можливе, лише\nякщо автомобіль не рухається.",
+      "new": "Налаштування системи можливе, лише\nякщо автомобіль не рухається."
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 4112,
+      "en": "The selected system can only be\nconfigured when the engine is on.",
+      "old": "Налашт. вибраної системи можливе\nлише за ввімкненого двигуна.",
+      "new": "Налаштування вибраної системи можливе\nлише за ввімкненого двигуна."
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 4113,
+      "en": "System can only be configured when\nvehicle is stationary.",
+      "old": "Налашт. системи можливе, лише\nякщо автомобіль не рухається.",
+      "new": "Налаштування системи можливе, лише\nякщо автомобіль не рухається."
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 4247,
+      "en": "System can only be configured when\nvehicle is stationary.",
+      "old": "Налашт. системи можливе, лише\nякщо автомобіль не рухається.",
+      "new": "Налаштування системи можливе, лише\nякщо автомобіль не рухається."
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 4348,
+      "en": "The selected system can only be\nconfigured when the engine is on.",
+      "old": "Налашт. вибраної системи можливе\nлише за ввімкненого двигуна.",
+      "new": "Налаштування вибраної системи можливе\nлише за ввімкненого двигуна."
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 4349,
+      "en": "System can only be configured when\nvehicle is stationary.",
+      "old": "Налашт. системи можливе, лише\nякщо автомобіль не рухається.",
+      "new": "Налаштування системи можливе, лише\nякщо автомобіль не рухається."
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 4500,
+      "en": "The selected system can only be\nconfigured when the vehicle is stationary.",
+      "old": "Налашт. вибраної системи можливе,\nлише якщо автомобіль не рухається.",
+      "new": "Налаштування вибраної системи можливе,\nлише якщо автомобіль не рухається."
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 4547,
+      "en": "The selected system can only be\nconfigured when the engine is on.",
+      "old": "Налашт. вибраної системи можливе\nлише за ввімкненого двигуна.",
+      "new": "Налаштування вибраної системи можливе\nлише за ввімкненого двигуна."
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 4548,
+      "en": "System can only be configured when\nvehicle is stationary.",
+      "old": "Налашт. системи можливе, лише\nякщо автомобіль не рухається.",
+      "new": "Налаштування системи можливе, лише\nякщо автомобіль не рухається."
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 4579,
+      "en": "The selected system can only be\nconfigured when the vehicle is stationary.",
+      "old": "Налашт. вибраної системи можливе,\nлише якщо автомобіль не рухається.",
+      "new": "Налаштування вибраної системи можливе,\nлише якщо автомобіль не рухається."
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 4588,
+      "en": "The selected system can only be\nconfigured when the engine is on.",
+      "old": "Налашт. вибраної системи можливе\nлише за ввімкненого двигуна.",
+      "new": "Налаштування вибраної системи можливе\nлише за ввімкненого двигуна."
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 4613,
+      "en": "System can only be configured when\nvehicle is stationary.",
+      "old": "Налашт. системи можливе, лише\nякщо автомобіль не рухається.",
+      "new": "Налаштування системи можливе, лише\nякщо автомобіль не рухається."
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 4614,
+      "en": "The selected system can only be\nconfigured when the engine is on.",
+      "old": "Налашт. вибраної системи можливе\nлише за ввімкненого двигуна.",
+      "new": "Налаштування вибраної системи можливе\nлише за ввімкненого двигуна."
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 4826,
+      "en": "The selected system can only be\nconfigured when the engine is on.",
+      "old": "Налашт. вибраної системи можливе\nлише за ввімкненого двигуна.",
+      "new": "Налаштування вибраної системи можливе\nлише за ввімкненого двигуна."
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 4827,
+      "en": "System can only be configured when\nvehicle is stationary.",
+      "old": "Налашт. системи можливе, лише\nякщо автомобіль не рухається.",
+      "new": "Налаштування системи можливе, лише\nякщо автомобіль не рухається."
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 4920,
+      "en": "The selected system can only be\nconfigured when the engine is on.",
+      "old": "Налашт. вибраної системи можливе\nлише за ввімкненого двигуна.",
+      "new": "Налаштування вибраної системи можливе\nлише за ввімкненого двигуна."
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 4921,
+      "en": "System can only be configured when\nvehicle is stationary.",
+      "old": "Налашт. системи можливе, лише\nякщо автомобіль не рухається.",
+      "new": "Налаштування системи можливе, лише\nякщо автомобіль не рухається."
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 4964,
+      "en": "Available when system is active",
+      "old": "Налашт. за активної системи",
+      "new": "Налаштування за активної системи"
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 5035,
+      "en": "Available when system is active",
+      "old": "Налашт. за активної системи",
+      "new": "Налаштування за активної системи"
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 5059,
+      "en": "The selected system can only be\nconfigured when the engine is on.",
+      "old": "Налашт. вибраної системи можливе\nлише за ввімкненого двигуна.",
+      "new": "Налаштування вибраної системи можливе\nлише за ввімкненого двигуна."
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 5060,
+      "en": "System can only be configured when\nvehicle is stationary.",
+      "old": "Налашт. системи можливе, лише\nякщо автомобіль не рухається.",
+      "new": "Налаштування системи можливе, лише\nякщо автомобіль не рухається."
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 5243,
+      "en": "The selected system can only be\nconfigured when the engine is on.",
+      "old": "Налашт. вибраної системи можливе\nлише за ввімкненого двигуна.",
+      "new": "Налаштування вибраної системи можливе\nлише за ввімкненого двигуна."
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 5265,
+      "en": "The selected system can only be\nconfigured when the engine is on.",
+      "old": "Налашт. вибраної системи можливе\nлише за ввімкненого двигуна.",
+      "new": "Налаштування вибраної системи можливе\nлише за ввімкненого двигуна."
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 5389,
+      "en": "The selected system can only be\nconfigured when the engine is on.",
+      "old": "Налашт. вибраної системи можливе\nлише за ввімкненого двигуна.",
+      "new": "Налаштування вибраної системи можливе\nлише за ввімкненого двигуна."
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 5390,
+      "en": "System can only be configured when\nvehicle is stationary.",
+      "old": "Налашт. системи можливе, лише\nякщо автомобіль не рухається.",
+      "new": "Налаштування системи можливе, лише\nякщо автомобіль не рухається."
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 5412,
+      "en": "Available when system is active",
+      "old": "Налашт. за активної системи",
+      "new": "Налаштування за активної системи"
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 5479,
+      "en": "The selected system can only be\nconfigured when the vehicle is stationary.",
+      "old": "Налашт. вибраної системи можливе,\nлише якщо автомобіль не рухається.",
+      "new": "Налаштування вибраної системи можливе,\nлише якщо автомобіль не рухається."
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 5894,
+      "en": "The selected system can only be\nconfigured when the engine is on.",
+      "old": "Налашт. вибраної системи можливе\nлише за ввімкненого двигуна.",
+      "new": "Налаштування вибраної системи можливе\nлише за ввімкненого двигуна."
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 5905,
+      "en": "Available when system is active",
+      "old": "Налашт. за активної системи",
+      "new": "Налаштування за активної системи"
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 5921,
+      "en": "The selected system can only be\nconfigured when the engine is on.",
+      "old": "Налашт. вибраної системи можливе\nлише за ввімкненого двигуна.",
+      "new": "Налаштування вибраної системи можливе\nлише за ввімкненого двигуна."
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 5936,
+      "en": "The selected system can only be\nconfigured when the vehicle is stationary.",
+      "old": "Налашт. вибраної системи можливе,\nлише якщо автомобіль не рухається.",
+      "new": "Налаштування вибраної системи можливе,\nлише якщо автомобіль не рухається."
+    },
+    {
+      "module": "HMIConnectivityEvoHigh",
+      "slot": 219,
+      "en": "Online settings",
+      "old": "Настр. онлайн",
+      "new": "Налаштування онлайн"
+    },
+    {
+      "module": "HMIConnectivityEvoHigh",
+      "slot": 265,
+      "en": "Online settings",
+      "old": "Настр. онлайн",
+      "new": "Налаштування онлайн"
+    },
+    {
+      "module": "HMIConnectivityEvoHigh",
+      "slot": 461,
+      "en": "Online settings",
+      "old": "Настр. онлайн",
+      "new": "Налаштування онлайн"
+    },
+    {
+      "module": "HMIConnectivityEvoHigh",
+      "slot": 476,
+      "en": "SIM PIN settings",
+      "old": "Настр. PIN (SIM)",
+      "new": "Налаштування PIN (SIM)"
+    },
+    {
+      "module": "HMIConnectivityEvoHigh",
+      "slot": 612,
+      "en": "Online settings",
+      "old": "Настр. онлайн",
+      "new": "Налаштування онлайн"
+    },
+    {
+      "module": "HMIConnectivityEvoHigh",
+      "slot": 697,
+      "en": "SIM PIN settings",
+      "old": "Настр. PIN (SIM)",
+      "new": "Налаштування PIN (SIM)"
+    },
+    {
+      "module": "HMIConnectivityEvoHigh",
+      "slot": 704,
+      "en": "Online settings",
+      "old": "Настр. онлайн",
+      "new": "Налаштування онлайн"
+    },
+    {
+      "module": "HMIConnectivityEvoHigh",
+      "slot": 734,
+      "en": "Online settings",
+      "old": "Настр. онлайн",
+      "new": "Налаштування онлайн"
+    },
+    {
+      "module": "HMIConnectivityEvoHigh",
+      "slot": 851,
+      "en": "Recognition period",
+      "old": "Інтерв. розпізн.",
+      "new": "Інтервал розпізн."
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2040,
+      "en": "Speech dialogue syst. settings",
+      "old": "Налашт. діалогової системи",
+      "new": "Налаштування діалогової системи"
+    },
+    {
+      "module": "HMIMessagingEvoHigh",
+      "slot": 284,
+      "en": "Speech dialogue syst. settings",
+      "old": "Налашт. діалогової системи",
+      "new": "Налаштування діалогової системи"
+    },
+    {
+      "module": "HMIMessagingEvoHigh",
+      "slot": 1183,
+      "en": "Recognition period",
+      "old": "Інтерв. розпізн.",
+      "new": "Інтервал розпізн."
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 486,
+      "en": "Select town/post code",
+      "old": "Вибрати нас. пункт/індекс",
+      "new": "Вибрати населений пункт/індекс"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 914,
+      "en": "Speech dialogue syst. settings",
+      "old": "Налашт. діалогової системи",
+      "new": "Налаштування діалогової системи"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 1095,
+      "en": "Add business destination",
+      "old": "Додати робочий пункт призн.",
+      "new": "Додати робочий пункт призначення"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 1960,
+      "en": "Which destination?",
+      "old": "Який пункт признач. шукаєте?",
+      "new": "Який пункт призначення шукаєте?"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2372,
+      "en": "in vicinity of destination",
+      "old": "Район пункту призн.",
+      "new": "Район пункту призначення"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3151,
+      "en": "Recognition period",
+      "old": "Інтерв. розпізн.",
+      "new": "Інтервал розпізн."
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3302,
+      "en": "Which destination?",
+      "old": "Який пункт признач. шукаєте?",
+      "new": "Який пункт призначення шукаєте?"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3326,
+      "en": "Recognition period",
+      "old": "Інтерв. розпізн.",
+      "new": "Інтервал розпізн."
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 450,
+      "en": "Speech dialogue syst. settings",
+      "old": "Налашт. діалогової системи",
+      "new": "Налаштування діалогової системи"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 679,
+      "en": "Speech dialogue syst. settings",
+      "old": "Налашт. діалогової системи",
+      "new": "Налаштування діалогової системи"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 804,
+      "en": "Go to settings for auxiliary heating",
+      "old": "До налашт. автономного опалювача",
+      "new": "До налаштування автономного опалювача"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 904,
+      "en": "Recognition period",
+      "old": "Інтерв. розпізн.",
+      "new": "Інтервал розпізн."
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 1121,
+      "en": "Speech dialogue syst. settings",
+      "old": "Налашт. діалогової системи",
+      "new": "Налаштування діалогової системи"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 1174,
+      "en": "Speed alert",
+      "old": "Сповіщ. про швидкість",
+      "new": "Сповіщення про швидкість"
+    },
+    {
+      "module": "HMIPhoneEvoHigh",
+      "slot": 726,
+      "en": "SIM PIN settings",
+      "old": "Настр. PIN (SIM)",
+      "new": "Налаштування PIN (SIM)"
+    },
+    {
+      "module": "HMIPhoneEvoHigh",
+      "slot": 727,
+      "en": "SIM PIN settings",
+      "old": "Настр. PIN (SIM)",
+      "new": "Налаштування PIN (SIM)"
+    },
+    {
+      "module": "HMIPhoneEvoHigh",
+      "slot": 883,
+      "en": "SIM PIN settings",
+      "old": "Настр. PIN (SIM)",
+      "new": "Налаштування PIN (SIM)"
+    },
+    {
+      "module": "HMIPhoneEvoHigh",
+      "slot": 975,
+      "en": "SIM PIN settings",
+      "old": "Настр. PIN (SIM)",
+      "new": "Налаштування PIN (SIM)"
+    },
+    {
+      "module": "HMIPhoneEvoHigh",
+      "slot": 980,
+      "en": "SIM PIN settings",
+      "old": "Настр. PIN (SIM)",
+      "new": "Налаштування PIN (SIM)"
+    },
+    {
+      "module": "HMIPhoneEvoHigh",
+      "slot": 1501,
+      "en": "Speech dialogue syst. settings",
+      "old": "Налашт. діалогової системи",
+      "new": "Налаштування діалогової системи"
+    },
+    {
+      "module": "HMIPhoneEvoHigh",
+      "slot": 2227,
+      "en": "Recognition period",
+      "old": "Інтерв. розпізн.",
+      "new": "Інтервал розпізн."
+    },
+    {
+      "module": "HMIPhoneEvoHigh",
+      "slot": 2452,
+      "en": "Online settings",
+      "old": "Настр. онлайн",
+      "new": "Налаштування онлайн"
+    },
+    {
+      "module": "HMISettingsEvoHigh",
+      "slot": 465,
+      "en": "Speech training",
+      "old": "Налашт. мовлення",
+      "new": "Налаштування мовлення"
+    },
+    {
+      "module": "HMISettingsEvoHigh",
+      "slot": 467,
+      "en": "Speech training",
+      "old": "Налашт. мовлення",
+      "new": "Налаштування мовлення"
+    },
+    {
+      "module": "HMISettingsEvoHigh",
+      "slot": 761,
+      "en": "Speech training",
+      "old": "Налашт. мовлення",
+      "new": "Налаштування мовлення"
+    },
+    {
+      "module": "HMISettingsEvoHigh",
+      "slot": 958,
+      "en": "Speech training",
+      "old": "Налашт. мовлення",
+      "new": "Налаштування мовлення"
+    },
+    {
+      "module": "HMISystemEvoHigh",
+      "slot": 214,
+      "en": "Speech dialogue system settings",
+      "old": "Налашт. діалогової системи",
+      "new": "Налаштування діалогової системи"
+    },
+    {
+      "module": "HMISystemEvoHigh",
+      "slot": 3068,
+      "en": "Recognition period",
+      "old": "Інтерв. розпізн.",
+      "new": "Інтервал розпізн."
+    },
+    {
+      "module": "HMITVEvoHigh",
+      "slot": 153,
+      "en": "Pre-sorted",
+      "old": "Попер. сорт.",
+      "new": "Попередження сорт."
+    },
+    {
+      "module": "HMITVEvoHigh",
+      "slot": 558,
+      "en": "Speech dialogue syst. settings",
+      "old": "Налашт. діалогової системи",
+      "new": "Налаштування діалогової системи"
+    },
+    {
+      "module": "HMITVEvoHigh",
+      "slot": 1694,
+      "en": "Recognition period",
+      "old": "Інтерв. розпізн.",
+      "new": "Інтервал розпізн."
+    },
+    {
+      "module": "HMITunerEvoHigh",
+      "slot": 543,
+      "en": "SiriusXM alerts",
+      "old": "Сповіщ. SiriusXM",
+      "new": "Сповіщення SiriusXM"
+    },
+    {
+      "module": "HMITunerEvoHigh",
+      "slot": 826,
+      "en": "Speech dialogue syst. settings",
+      "old": "Налашт. діалогової системи",
+      "new": "Налаштування діалогової системи"
+    },
+    {
+      "module": "HMITunerEvoHigh",
+      "slot": 1339,
+      "en": "SiriusXM alerts",
+      "old": "Сповіщ. SiriusXM",
+      "new": "Сповіщення SiriusXM"
+    },
+    {
+      "module": "HMITunerEvoHigh",
+      "slot": 1627,
+      "en": "Recognition period",
+      "old": "Інтерв. розпізн.",
+      "new": "Інтервал розпізн."
+    },
+    {
+      "module": "HMITunerEvoHigh",
+      "slot": 1644,
+      "en": "SiriusXM alerts",
+      "old": "Сповіщ. SiriusXM",
+      "new": "Сповіщення SiriusXM"
+    },
+    {
+      "module": "HMITunerEvoHigh",
+      "slot": 1658,
+      "en": "SiriusXM alerts",
+      "old": "Сповіщ. SiriusXM",
+      "new": "Сповіщення SiriusXM"
+    },
+    {
+      "module": "HMITunerEvoHigh",
+      "slot": 1762,
+      "en": "SiriusXM music alerts",
+      "old": "Музичні сповіщ. SiriusXM",
+      "new": "Музичні сповіщення SiriusXM"
+    }
+  ]
+}

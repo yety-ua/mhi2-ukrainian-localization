@@ -11,7 +11,7 @@
   "sha256": {
     "HMI.sha1": "edce387ad99d8544217a1953fab543c9ed6b60770e51d417024e7f6b41e31e60",
     "payload/1100076.png": "8010f37d33765f762386b0d51b8c9b61e74545e602fdf8b703d1ceb5c1536ce9",
-    "payload/lang_data.zip": "f581006ddb33d7a4b3fd53c3794f9d44e6811738c599e49cdb05068beb55cac3",
+    "payload/lang_data.zip": "995440ea06cec135a37f53a4ac8fdff279b6e6d0d289e4d056738612fd4710b3",
     "payload/lang_hmi_builtin.config": "8253d68a310967591392d3622d2db417065545aa2e970b775c4b8b3360bfedb4",
     "payload/lang_uk_hook.jar": "35baff7f32c2e2378faa8e7fc0b769e673f6eb5aa6d25b3a9bdc4b01490a8a19",
     "payload/lang_uk_voice.jar": "3783f6cc588360fd4408a46fd761750da87b1d91c4fe8a8b4090bf7a9f94d230",

@@ -85,7 +85,7 @@ SD-карти через [M.I.B.](https://github.com/Mr-MIBonk/M.I.B._More-Incre
 
 ### Підготовка SD-карти
 
-1. Завантажте `mhi2-ukrainian-localization-k3346-v1.0.0-preview.1.zip` і `.sha256`
+1. Завантажте `mhi2-ukrainian-localization-k3346-v1.0.0-preview.2.zip` і `.sha256`
    з [Releases](https://github.com/yety-ua/mhi2-ukrainian-localization/releases).
    **GitHub Source code ZIP — це репозиторій, а не готовий корінь SD.**
 2. M.I.B. має вже бути встановлений у голові; його повний дистрибутив має лежати
@@ -94,6 +94,7 @@ SD-карти через [M.I.B.](https://github.com/Mr-MIBonk/M.I.B._More-Incre
    **`mod/custom.sh` у наявну папку `mod/`**. Не додавайте зовнішню папку з назвою архіву.
 4. Якщо на SD уже є власний `mod/custom.sh`, спочатку збережіть його копію під іншою
    назвою. Новий entry point не запускає старі команди. Інші файли M.I.B. збережіть.
+5. **Оновлення з preview.1.** Інсталятор вимагає штатний (stock) стан мовних файлів у голові. Якщо preview.1 уже встановлено, спочатку виконайте його RESTORE, потім CHECK/INSTALL з цього релізу.
 
 ```text
 SD1/
@@ -285,6 +286,7 @@ rendering is incomplete. [Capture provenance](docs/screenshots.json).
    release-name directory. Preserve the remaining M.I.B. files.
 4. If a custom `mod/custom.sh` exists, save it under another name before replacement.
    The new entry point does not chain existing commands. The SD tree is shown above.
+5. **Upgrading from preview.1.** The installer requires the stock language files on the head unit. If preview.1 is already installed, run its RESTORE first, then CHECK/INSTALL from this release.
 
 ### Check and install
 

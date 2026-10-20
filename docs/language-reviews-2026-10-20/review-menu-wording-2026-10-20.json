@@ -1,0 +1,159 @@
+{
+  "description": "Owner 2026-10-20: replace abbreviated/awkward menu wording (route criteria with/avoid, automatic, parking, route assist, destination entry, traffic messages). \"автомат.\" kept in HMICarEvoHigh where the slot limit is 10.",
+  "changes": [
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 442,
+      "en": "Switch to destination entry",
+      "old": "До введ. пункту признач.",
+      "new": "Ввести пункт призначення"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 444,
+      "en": "Traffic messages",
+      "old": "Повід. про сит. на дор.",
+      "new": "Дорожні повідомлення"
+    },
+    {
+      "module": "HMISystemEvoHigh",
+      "slot": 430,
+      "en": "Traffic messages",
+      "old": "Повід. про сит. на дор.",
+      "new": "Дорожні повідомлення"
+    },
+    {
+      "module": "HMIInfoEvoHigh",
+      "slot": 5,
+      "en": "Traffic messages",
+      "old": "Повід. про сит. на дор.",
+      "new": "Дорожні повідомлення"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 1728,
+      "en": "Parking in immediate vicinity",
+      "old": "Паркування в районі місцезнах.",
+      "new": "Паркування поблизу"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3421,
+      "en": "Personal route assist",
+      "old": "Персон. асистент зі складання маршр.",
+      "new": "Персональний асистент маршруту"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2008,
+      "en": "with",
+      "old": "із",
+      "new": "дозволити"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3057,
+      "en": "with",
+      "old": "із",
+      "new": "дозволити"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2009,
+      "en": "avoid",
+      "old": "без",
+      "new": "уникати"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3058,
+      "en": "avoid",
+      "old": "без",
+      "new": "уникати"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 1613,
+      "en": "automatic",
+      "old": "автомат.",
+      "new": "автоматично"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 1947,
+      "en": "automatic",
+      "old": "автомат.",
+      "new": "автоматично"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 516,
+      "en": "automatic",
+      "old": "автомат.",
+      "new": "автоматично"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 1074,
+      "en": "automatic",
+      "old": "автомат.",
+      "new": "автоматично"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 1648,
+      "en": "automatic",
+      "old": "автомат.",
+      "new": "автоматично"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 1981,
+      "en": "automatic",
+      "old": "автомат.",
+      "new": "автоматично"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2470,
+      "en": "automatic",
+      "old": "автомат.",
+      "new": "автоматично"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3483,
+      "en": "automatic",
+      "old": "автомат.",
+      "new": "автоматично"
+    },
+    {
+      "module": "HMIPhoneEvoHigh",
+      "slot": 517,
+      "en": "automatic",
+      "old": "автомат.",
+      "new": "автоматично"
+    },
+    {
+      "module": "HMIPhoneEvoHigh",
+      "slot": 1378,
+      "en": "automatic",
+      "old": "автомат.",
+      "new": "автоматично"
+    },
+    {
+      "module": "HMITVEvoHigh",
+      "slot": 563,
+      "en": "automatic",
+      "old": "автомат.",
+      "new": "автоматично"
+    },
+    {
+      "module": "HMITVEvoHigh",
+      "slot": 578,
+      "en": "automatic",
+      "old": "автомат.",
+      "new": "автоматично"
+    }
+  ]
+}

@@ -1,0 +1,201 @@
+{
+  "description": "Owner 2026-10-20: use \"вказати\" instead of \"указати\" consistently.",
+  "changes": [
+    {
+      "module": "HMIAddressBookEvoHigh",
+      "slot": 532,
+      "en": "Enter new destination",
+      "old": "Указати нову ціль",
+      "new": "Вказати нову ціль"
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 1764,
+      "en": "Enter destination",
+      "old": "Указати ціль",
+      "new": "Вказати ціль"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 433,
+      "en": "Enter destination",
+      "old": "Указати ціль",
+      "new": "Вказати ціль"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 476,
+      "en": "Navigation: enter destination",
+      "old": "Навігація: указати пункт призначення",
+      "new": "Навігація: вказати пункт призначення"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 498,
+      "en": "Enter town",
+      "old": "Указ. нас. пункт",
+      "new": "Вказ. нас. пункт"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 499,
+      "en": "Enter country",
+      "old": "Указати країну",
+      "new": "Вказати країну"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 788,
+      "en": "Enter special dest.",
+      "old": "Указати об’єкт",
+      "new": "Вказати об’єкт"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 842,
+      "en": "Enter destination",
+      "old": "Указати ціль",
+      "new": "Вказати ціль"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 843,
+      "en": "Enter country",
+      "old": "Указати країну",
+      "new": "Вказати країну"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 844,
+      "en": "Enter town",
+      "old": "Указ. нас. пункт",
+      "new": "Вказ. нас. пункт"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 850,
+      "en": "Enter destination",
+      "old": "Указати ціль",
+      "new": "Вказати ціль"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 1061,
+      "en": "Enter town",
+      "old": "Указ. нас. пункт",
+      "new": "Вказ. нас. пункт"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 1818,
+      "en": "Enter destination",
+      "old": "Указати ціль",
+      "new": "Вказати ціль"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2062,
+      "en": "The house number entered could\nnot be found.",
+      "old": "Не вдалося знайти будинок з указаним\nномером.",
+      "new": "Не вдалося знайти будинок з вказаним\nномером."
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2072,
+      "en": "Enter destination",
+      "old": "Указати ціль",
+      "new": "Вказати ціль"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2383,
+      "en": "Navigation: Enter address",
+      "old": "Навігація: указати адресу",
+      "new": "Навігація: вказати адресу"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2541,
+      "en": "Navigation: Enter address",
+      "old": "Навігація: указати адресу",
+      "new": "Навігація: вказати адресу"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2620,
+      "en": "Navigation: Enter address",
+      "old": "Навігація: указати адресу",
+      "new": "Навігація: вказати адресу"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2781,
+      "en": "The house number entered could\nnot be found.",
+      "old": "Не вдалося знайти будинок з указаним\nномером.",
+      "new": "Не вдалося знайти будинок з вказаним\nномером."
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2837,
+      "en": "Navigation: Enter address",
+      "old": "Навігація: указати адресу",
+      "new": "Навігація: вказати адресу"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3407,
+      "en": "Enter country",
+      "old": "Указати країну",
+      "new": "Вказати країну"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3408,
+      "en": "Enter destination",
+      "old": "Указати ціль",
+      "new": "Вказати ціль"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 239,
+      "en": "Enter destination",
+      "old": "Указати ціль",
+      "new": "Вказати ціль"
+    },
+    {
+      "module": "HMISettingsEvoHigh",
+      "slot": 489,
+      "en": "Enter destination",
+      "old": "Указати ціль",
+      "new": "Вказати ціль"
+    },
+    {
+      "module": "HMISystemEvoHigh",
+      "slot": 1353,
+      "en": "Enter address • Enter special destination",
+      "old": "Указати адресу • Указати об'єкт",
+      "new": "Вказати адресу • Вказати об'єкт"
+    },
+    {
+      "module": "HMISystemEvoHigh",
+      "slot": 3228,
+      "en": "Enter destination",
+      "old": "Указати ціль",
+      "new": "Вказати ціль"
+    },
+    {
+      "module": "HMISystemEvoHigh",
+      "slot": 3790,
+      "en": "Enter destination",
+      "old": "Указати ціль",
+      "new": "Вказати ціль"
+    },
+    {
+      "module": "HMITunerEvoHigh",
+      "slot": 598,
+      "en": "Enter destination",
+      "old": "Указати ціль",
+      "new": "Вказати ціль"
+    }
+  ]
+}

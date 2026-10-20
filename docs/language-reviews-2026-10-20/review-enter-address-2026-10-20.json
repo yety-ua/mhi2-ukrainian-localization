@@ -1,0 +1,236 @@
+{
+  "description": "Owner 2026-10-20: \"Enter Address\" menu item was left in English; translate. HMISystemEvoHigh (7 slots, voice-command hints) intentionally left in English.",
+  "changes": [
+    {
+      "module": "HMIMessagingEvoHigh",
+      "slot": 1386,
+      "en": "Enter address",
+      "old": "Enter Address",
+      "new": "Ввести адресу"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 434,
+      "en": "Enter address",
+      "old": "Enter Address",
+      "new": "Ввести адресу"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 674,
+      "en": "Enter address",
+      "old": "Enter Address",
+      "new": "Ввести адресу"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 796,
+      "en": "Enter address",
+      "old": "Enter Address",
+      "new": "Ввести адресу"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 831,
+      "en": "Enter address",
+      "old": "Enter Address",
+      "new": "Ввести адресу"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 1071,
+      "en": "Enter address",
+      "old": "Enter Address",
+      "new": "Ввести адресу"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 1921,
+      "en": "Enter address",
+      "old": "Enter Address",
+      "new": "Ввести адресу"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2540,
+      "en": "Enter address",
+      "old": "Enter Address",
+      "new": "Ввести адресу"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2546,
+      "en": "Enter address",
+      "old": "Enter Address",
+      "new": "Ввести адресу"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2550,
+      "en": "Enter address",
+      "old": "Enter Address",
+      "new": "Ввести адресу"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2565,
+      "en": "Enter address",
+      "old": "Enter Address",
+      "new": "Ввести адресу"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2599,
+      "en": "Enter address",
+      "old": "Enter Address",
+      "new": "Ввести адресу"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2642,
+      "en": "Enter address",
+      "old": "Enter Address",
+      "new": "Ввести адресу"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2655,
+      "en": "Enter address",
+      "old": "Enter Address",
+      "new": "Ввести адресу"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2744,
+      "en": "Enter address",
+      "old": "Enter Address",
+      "new": "Ввести адресу"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2777,
+      "en": "Enter address",
+      "old": "Enter Address",
+      "new": "Ввести адресу"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2821,
+      "en": "Enter address",
+      "old": "Enter Address",
+      "new": "Ввести адресу"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3006,
+      "en": "Enter address",
+      "old": "Enter Address",
+      "new": "Ввести адресу"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3011,
+      "en": "Enter address",
+      "old": "Enter Address",
+      "new": "Ввести адресу"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3012,
+      "en": "Enter address",
+      "old": "Enter Address",
+      "new": "Ввести адресу"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3117,
+      "en": "Enter address",
+      "old": "Enter Address",
+      "new": "Ввести адресу"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3171,
+      "en": "Enter address",
+      "old": "Enter Address",
+      "new": "Ввести адресу"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3320,
+      "en": "Enter address",
+      "old": "Enter Address",
+      "new": "Ввести адресу"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3463,
+      "en": "Enter address",
+      "old": "Enter Address",
+      "new": "Ввести адресу"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3511,
+      "en": "Enter address",
+      "old": "Enter Address",
+      "new": "Ввести адресу"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3532,
+      "en": "Enter address",
+      "old": "Enter Address",
+      "new": "Ввести адресу"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3598,
+      "en": "Enter address",
+      "old": "Enter Address",
+      "new": "Ввести адресу"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3600,
+      "en": "Enter address",
+      "old": "Enter Address",
+      "new": "Ввести адресу"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3603,
+      "en": "Enter address",
+      "old": "Enter Address",
+      "new": "Ввести адресу"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3604,
+      "en": "Enter address",
+      "old": "Enter Address",
+      "new": "Ввести адресу"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3605,
+      "en": "Enter address",
+      "old": "Enter Address",
+      "new": "Ввести адресу"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3607,
+      "en": "Enter address",
+      "old": "Enter Address",
+      "new": "Ввести адресу"
+    },
+    {
+      "module": "HMISettingsEvoHigh",
+      "slot": 487,
+      "en": "Enter address",
+      "old": "Enter Address",
+      "new": "Ввести адресу"
+    }
+  ]
+}

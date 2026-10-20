@@ -1,0 +1,1685 @@
+{
+  "description": "Owner 2026-10-20: visible German/English UI text identical to en_GB translated in navigation, media, radio, phone, online, settings and car menus. Voice-command help, Japan/China regional items and brand names intentionally left.",
+  "changes": [
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 1756,
+      "en": "Skip vorwärts",
+      "old": "Skip vorwärts",
+      "new": "Вперед"
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 3576,
+      "en": "Die elektrische Stand-\nkllimatisierung ist nun aktiviert.",
+      "old": "Die elektrische Stand-\nkllimatisierung ist nun aktiviert.",
+      "new": "Електричне стаціонарне\nкондиціювання активоване."
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 3577,
+      "en": "Die Standheizung/- klimatisierung ist nun aktiviert.",
+      "old": "Die Standheizung/- klimatisierung ist nun aktiviert.",
+      "new": "Стаціонарне опалення/кондиціювання активовано."
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 4981,
+      "en": "Die elektrische Stand-\nklimatisierung ist nun aktiviert.",
+      "old": "Die elektrische Stand-\nklimatisierung ist nun aktiviert.",
+      "new": "Електричне стаціонарне\nкондиціювання активоване."
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 4982,
+      "en": "Die Standheizung ist nun\naktiviert.",
+      "old": "Die Standheizung ist nun\naktiviert.",
+      "new": "Стаціонарне опалення\nактивовано."
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 4983,
+      "en": "Die Standheizung/-klimatisierung\nist nun aktiviert.\nDazu musste das Laden\nabgebrochen werden.",
+      "old": "Die Standheizung/-klimatisierung\nist nun aktiviert.\nDazu musste das Laden\nabgebrochen werden.",
+      "new": "Стаціонарне опалення\nкондиціювання\nактивовано.\nДля цього зарядку\nбуло перервано."
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 4984,
+      "en": "Die Klimatisierungsart kann bei\naktiver Standklimatisierung\nnicht eingestellt werden.",
+      "old": "Die Klimatisierungsart kann bei\naktiver Standklimatisierung\nnicht eingestellt werden.",
+      "new": "Режим клімат-контролю не можна\nзмінити за активного\nстаціонарного кондиціювання."
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 4985,
+      "en": "Die Klimatisierungsart kann\nauf Grund des Batteriefüllstands nicht eingestellt werden.",
+      "old": "Die Klimatisierungsart kann\nauf Grund des Batteriefüllstands nicht eingestellt werden.",
+      "new": "Режим клімат-контролю не можна змінити\nчерез рівень заряду батареї."
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 4986,
+      "en": "Die Klimatisierungsart kann\nauf Grund eines Systemsfehlers\nnicht eingestellt werden.",
+      "old": "Die Klimatisierungsart kann\nauf Grund eines Systemsfehlers\nnicht eingestellt werden.",
+      "new": "Режим клімат-контролю не можна\nзмінити через несправність\nсистеми."
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 5171,
+      "en": "Das gewählte Sytem ist derzeit\nnicht verfügbar.",
+      "old": "Das gewählte Sytem ist derzeit\nnicht verfügbar.",
+      "new": "Вибрана система зараз\nнедоступна."
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 5173,
+      "en": "Zur Einstellung des gewählten\nSystems bitte die Zündung\neinschalten.",
+      "old": "Zur Einstellung des gewählten\nSystems bitte die Zündung\neinschalten.",
+      "new": "Для налаштування вибраної\nсистеми увімкніть\nзапалювання."
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 5175,
+      "en": "Das gewählte System ist bei der\naktuellen Geschwindigkeit nicht\nverfügbar.",
+      "old": "Das gewählte System ist bei der\naktuellen Geschwindigkeit nicht\nverfügbar.",
+      "new": "Вибрана система недоступна\nна поточній швидкості."
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 5177,
+      "en": "Die Einstellung des gewählten\nSystems ist nur bei laufendem\nMotor möglich.",
+      "old": "Die Einstellung des gewählten\nSystems ist nur bei laufendem\nMotor möglich.",
+      "new": "Налаштування вибраної системи\nможливе лише при\nпрацюючому двигуні."
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 5179,
+      "en": "Die Einstellungen des gewählten\nSystems ist nur bei stehenden\nFahrzeug möglich.",
+      "old": "Die Einstellungen des gewählten\nSystems ist nur bei stehenden\nFahrzeug möglich.",
+      "new": "Налаштування вибраної системи\nможливі лише при\nнерухомому автомобілі."
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 5181,
+      "en": "Die gewählte Einstellung ist nur\nbei aktiviertem System möglich.",
+      "old": "Die gewählte Einstellung ist nur\nbei aktiviertem System möglich.",
+      "new": "Вибране налаштування можливе\nлише при активній системі."
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 496,
+      "en": "Suche in %1",
+      "old": "Suche in %1",
+      "new": "Пошук у %1"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 519,
+      "en": "ein",
+      "old": "ein",
+      "new": "вкл"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 520,
+      "en": "aus",
+      "old": "aus",
+      "new": "вим"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 521,
+      "en": "AnhängerModus",
+      "old": "AnhängerModus",
+      "new": "Режим причепа"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 578,
+      "en": "3D map",
+      "old": "3D map",
+      "new": "3D-карта"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 582,
+      "en": "Additional info: overview map",
+      "old": "Additional info: overview map",
+      "new": "Додатково: оглядова карта"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 591,
+      "en": "Voice guidance: compact",
+      "old": "Voice guidance: compact",
+      "new": "Голосові підказки: стисло"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 594,
+      "en": "Enter street",
+      "old": "Enter street",
+      "new": "Введіть вулицю"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 597,
+      "en": "Enter post code",
+      "old": "Enter post code",
+      "new": "Введіть індекс"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 598,
+      "en": "Enter intersection",
+      "old": "Enter intersection",
+      "new": "Введіть перехрестя"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 599,
+      "en": "Enter house number",
+      "old": "Enter house number",
+      "new": "Введіть номер будинку"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 601,
+      "en": "Drive home",
+      "old": "Drive home",
+      "new": "Додому"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 602,
+      "en": "Start/stop route guidance",
+      "old": "Start/stop route guidance",
+      "new": "Почати/зупинити навігацію"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 753,
+      "en": "2D Fahrt-Karte",
+      "old": "2D Fahrt-Karte",
+      "new": "2D по ходу"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 754,
+      "en": "2D Nord-Karte",
+      "old": "2D Nord-Karte",
+      "new": "2D північ"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 764,
+      "en": "Home address",
+      "old": "Home address",
+      "new": "Домашня адреса"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 766,
+      "en": "Start/stop route guidance",
+      "old": "Start/stop route guidance",
+      "new": "Почати/зупинити навігацію"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 838,
+      "en": "Countries",
+      "old": "Countries",
+      "new": "Країни"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 840,
+      "en": "Overview map",
+      "old": "Overview map",
+      "new": "Оглядова карта"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 846,
+      "en": "Enter special destination",
+      "old": "Enter special destination",
+      "new": "Вказати об’єкт"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 849,
+      "en": "3D Karte",
+      "old": "3D Karte",
+      "new": "3D-карта"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 1557,
+      "en": "Startpunkt setzen",
+      "old": "Startpunkt setzen",
+      "new": "Задати старт"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 1567,
+      "en": "Towns",
+      "old": "Towns",
+      "new": "Міста"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 1568,
+      "en": "Streets",
+      "old": "Streets",
+      "new": "Вулиці"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 1606,
+      "en": "Home address",
+      "old": "Home address",
+      "new": "Домашня адреса"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 1607,
+      "en": "The house number entered\ncould not be found.",
+      "old": "The house number entered\ncould not be found.",
+      "new": "Не вдалося знайти\nвведений номер будинку."
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 1974,
+      "en": "Audi connect an diesem Ort (Kontakte)",
+      "old": "Audi connect an diesem Ort (Kontakte)",
+      "new": "Audi connect тут (контакти)"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 1983,
+      "en": "Audi connect für diesen Ort (Crosshair)",
+      "old": "Audi connect für diesen Ort (Crosshair)",
+      "new": "Audi connect тут (приціл)"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2039,
+      "en": "Audi connect an diesem Ort",
+      "old": "Audi connect an diesem Ort",
+      "new": "Audi connect тут"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2065,
+      "en": "The house number entered\ncould not be found.",
+      "old": "The house number entered\ncould not be found.",
+      "new": "Не вдалося знайти\nвведений номер будинку."
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2145,
+      "en": "Audi connect für diesen Ort",
+      "old": "Audi connect für diesen Ort",
+      "new": "Audi connect тут"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2265,
+      "en": "Adresse übernehmen",
+      "old": "Adresse übernehmen",
+      "new": "Прийняти адресу"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2266,
+      "en": "Zusatzinformationen",
+      "old": "Zusatzinformationen",
+      "new": "Додаткова інфо"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2304,
+      "en": "Parken an diesem Ort",
+      "old": "Parken an diesem Ort",
+      "new": "Паркування тут"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2305,
+      "en": "Bei %1 suchen",
+      "old": "Bei %1 suchen",
+      "new": "Шукати в %1"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2306,
+      "en": "Position speichern",
+      "old": "Position speichern",
+      "new": "Зберегти позицію"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2415,
+      "en": "Es ist ein Fehler aufgetreten.",
+      "old": "Es ist ein Fehler aufgetreten.",
+      "new": "Сталася помилка."
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2476,
+      "en": "Speed limit display",
+      "old": "Speed limit display",
+      "new": "Показ обмеження швидкості"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2485,
+      "en": "Merging traffic",
+      "old": "Merging traffic",
+      "new": "Злиття потоків"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2486,
+      "en": "Lane warning",
+      "old": "Lane warning",
+      "new": "Попередження про смугу"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2555,
+      "en": "The house number entered\ncould not be found.",
+      "old": "The house number entered\ncould not be found.",
+      "new": "Не вдалося знайти\nвведений номер будинку."
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2663,
+      "en": "Restart navigation now",
+      "old": "Restart navigation now",
+      "new": "Перезапуск навігації"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2664,
+      "en": "Restart on the next system start",
+      "old": "Restart on the next system start",
+      "new": "Перезапуск при наступному старті"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2666,
+      "en": "Navigation: Map Update",
+      "old": "Navigation: Map Update",
+      "new": "Навігація: оновлення карти"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2681,
+      "en": "Number",
+      "old": "Number",
+      "new": "Номер"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2762,
+      "en": "The house number entered\ncould not be found.",
+      "old": "The house number entered\ncould not be found.",
+      "new": "Не вдалося знайти\nвведений номер будинку."
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2791,
+      "en": "Enter number",
+      "old": "Enter number",
+      "new": "Введіть номер"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2828,
+      "en": "Set search area",
+      "old": "Set search area",
+      "new": "Область пошуку"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2829,
+      "en": "In new area",
+      "old": "In new area",
+      "new": "Новий район"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2843,
+      "en": "Enter intersection",
+      "old": "Enter intersection",
+      "new": "Введіть перехрестя"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2850,
+      "en": "In new area",
+      "old": "In new area",
+      "new": "Новий район"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3001,
+      "en": "Address",
+      "old": "Address",
+      "new": "Адреса"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3002,
+      "en": "City/Town",
+      "old": "City/Town",
+      "new": "Місто"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3113,
+      "en": "In new Area",
+      "old": "In new Area",
+      "new": "Новий район"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3119,
+      "en": "In new area",
+      "old": "In new area",
+      "new": "Новий район"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3138,
+      "en": "You may not be able to reach\nthe destination.",
+      "old": "You may not be able to reach\nthe destination.",
+      "new": "Можливо, не вдасться\nдосягти пункту призн."
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3141,
+      "en": "nicht verfügbar",
+      "old": "nicht verfügbar",
+      "new": "недоступно"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3142,
+      "en": "Weitere Informationen",
+      "old": "Weitere Informationen",
+      "new": "Додаткова інформація"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3172,
+      "en": "Home address",
+      "old": "Home address",
+      "new": "Домашня адреса"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3179,
+      "en": "Set search area",
+      "old": "Set search area",
+      "new": "Область пошуку"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3180,
+      "en": "In new area",
+      "old": "In new area",
+      "new": "Новий район"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3215,
+      "en": "Center",
+      "old": "Center",
+      "new": "Центр"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3235,
+      "en": "Place Name",
+      "old": "Place Name",
+      "new": "Місце"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3237,
+      "en": "In new area",
+      "old": "In new area",
+      "new": "Новий район"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3273,
+      "en": "City/Town",
+      "old": "City/Town",
+      "new": "Місто"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3274,
+      "en": "Place Name",
+      "old": "Place Name",
+      "new": "Місце"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3293,
+      "en": "In new Area",
+      "old": "In new Area",
+      "new": "Новий район"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3339,
+      "en": "In new area",
+      "old": "In new area",
+      "new": "Новий район"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3340,
+      "en": "In new area",
+      "old": "In new area",
+      "new": "Новий район"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3351,
+      "en": "In new area",
+      "old": "In new area",
+      "new": "Новий район"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3353,
+      "en": "In new area",
+      "old": "In new area",
+      "new": "Новий район"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3355,
+      "en": "In new area",
+      "old": "In new area",
+      "new": "Новий район"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3363,
+      "en": "In new Area",
+      "old": "In new Area",
+      "new": "Новий район"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3382,
+      "en": "There is no TPEG Information available.",
+      "old": "There is no TPEG Information available.",
+      "new": "Інформація TPEG відсутня."
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3391,
+      "en": "POI Details",
+      "old": "POI Details",
+      "new": "Дані POI"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3468,
+      "en": "Mapcode übernehmen",
+      "old": "Mapcode übernehmen",
+      "new": "Прийняти Mapcode"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3527,
+      "en": "Go to Address/POI search",
+      "old": "Go to Address/POI search",
+      "new": "До пошуку адреси/POI"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3529,
+      "en": "In new area",
+      "old": "In new area",
+      "new": "Новий район"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3540,
+      "en": "In new area",
+      "old": "In new area",
+      "new": "Новий район"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3548,
+      "en": "Please enter keyword for last destinations, favorites or addressbook.",
+      "old": "Please enter keyword for last destinations, favorites or addressbook.",
+      "new": "Введіть ключове слово: останні, вибране, адреси."
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3554,
+      "en": "Enter destination by phone number",
+      "old": "Enter destination by phone number",
+      "new": "Вказати ціль за номером телефону"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3555,
+      "en": "Enter destination by map code",
+      "old": "Enter destination by map code",
+      "new": "Вказати ціль за map code"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3559,
+      "en": "POI call",
+      "old": "POI call",
+      "new": "Дзвінок POI"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3568,
+      "en": "Das ist ein Test",
+      "old": "Das ist ein Test",
+      "new": "Це тест"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3570,
+      "en": "Zusatzinformationen (TPEG POI)",
+      "old": "Zusatzinformationen (TPEG POI)",
+      "new": "Додаткова інформація (TPEG POI)"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3589,
+      "en": "Simple map",
+      "old": "Simple map",
+      "new": "Спрощена"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3601,
+      "en": "In new area",
+      "old": "In new area",
+      "new": "Новий район"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3634,
+      "en": "Center",
+      "old": "Center",
+      "new": "Центр"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 1112,
+      "en": "DVD Kapitel %1",
+      "old": "DVD Kapitel %1",
+      "new": "DVD розділ %1"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 1114,
+      "en": "DVDV Titel %1",
+      "old": "DVDV Titel %1",
+      "new": "DVD фільм %1"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 1115,
+      "en": "unbekannter Titel %1",
+      "old": "unbekannter Titel %1",
+      "new": "невідомий трек %1"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 1299,
+      "en": "Fehler",
+      "old": "Fehler",
+      "new": "Збій"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 1301,
+      "en": "Import läuft",
+      "old": "Import läuft",
+      "new": "Імпортування"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 1305,
+      "en": "Löschvorgang",
+      "old": "Löschvorgang",
+      "new": "Видалення"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 1306,
+      "en": "wird nicht unterstützt",
+      "old": "wird nicht unterstützt",
+      "new": "не підтримується"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 1307,
+      "en": "Überspannung",
+      "old": "Überspannung",
+      "new": "Перенапруга"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 1311,
+      "en": "Laufwerk nicht verfügbar",
+      "old": "Laufwerk nicht verfügbar",
+      "new": "Привід недоступний"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 1312,
+      "en": "Temperatur zu hoch",
+      "old": "Temperatur zu hoch",
+      "new": "Висока температура"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 1313,
+      "en": "Temperatur zu niedrig",
+      "old": "Temperatur zu niedrig",
+      "new": "Низька температура"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 1316,
+      "en": "nicht unterstützte Firmware",
+      "old": "nicht unterstützte Firmware",
+      "new": "прошивка не підтримується"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 1318,
+      "en": "Jukebox ist leer",
+      "old": "Jukebox ist leer",
+      "new": "Jukebox порожній"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 1384,
+      "en": "SD Karte.",
+      "old": "SD Karte.",
+      "new": "SD-карта."
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 1395,
+      "en": "wird geladen",
+      "old": "wird geladen",
+      "new": "завантаження"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 1467,
+      "en": "Bilder",
+      "old": "Bilder",
+      "new": "Фото"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 1491,
+      "en": "nicht abspielbar",
+      "old": "nicht abspielbar",
+      "new": "не відтворюється"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 1492,
+      "en": "Playlisten und Covers",
+      "old": "Playlisten und Covers",
+      "new": "Плейлисти, обкладинки"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 1493,
+      "en": "gerade gespielt",
+      "old": "gerade gespielt",
+      "new": "зараз грає"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 1580,
+      "en": "leer",
+      "old": "leer",
+      "new": "пуст"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 1583,
+      "en": "nicht lesbar",
+      "old": "nicht lesbar",
+      "new": "не читається"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 1587,
+      "en": "BT Audioplayer nicht verbunden",
+      "old": "BT Audioplayer nicht verbunden",
+      "new": "BT-плеєр не підключено"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 1747,
+      "en": "nicht abspielbar",
+      "old": "nicht abspielbar",
+      "new": "не відтворюється"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 1750,
+      "en": "DVD Kapitel %1",
+      "old": "DVD Kapitel %1",
+      "new": "DVD розділ %1"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 1752,
+      "en": "DVDV Titel %1",
+      "old": "DVDV Titel %1",
+      "new": "DVD фільм %1"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 1753,
+      "en": "gerade gespielt",
+      "old": "gerade gespielt",
+      "new": "зараз грає"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 1754,
+      "en": "unbekannter Titel %1",
+      "old": "unbekannter Titel %1",
+      "new": "невідомий трек %1"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2111,
+      "en": "unbekannter Fehler",
+      "old": "unbekannter Fehler",
+      "new": "невідома помилка"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2129,
+      "en": "Enter number",
+      "old": "Enter number",
+      "new": "Введіть номер"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2180,
+      "en": "Wiedergabelisten",
+      "old": "Wiedergabelisten",
+      "new": "Плейлисти"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2181,
+      "en": "Interpreten",
+      "old": "Interpreten",
+      "new": "Виконавці"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2183,
+      "en": "unbekannte Interpreten",
+      "old": "unbekannte Interpreten",
+      "new": "невідомі виконавці"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2184,
+      "en": "Alben",
+      "old": "Alben",
+      "new": "Альб."
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2185,
+      "en": "unbekanntes Album",
+      "old": "unbekanntes Album",
+      "new": "невідомий альбом"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2186,
+      "en": "unbekannte Alben",
+      "old": "unbekannte Alben",
+      "new": "невідомі альбоми"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2187,
+      "en": "Musikrichtungen",
+      "old": "Musikrichtungen",
+      "new": "Жанри"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2188,
+      "en": "unbekannte Musikrichtung",
+      "old": "unbekannte Musikrichtung",
+      "new": "невідомий жанр"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2189,
+      "en": "unbek. Musikrichtungen",
+      "old": "unbek. Musikrichtungen",
+      "new": "невідомі жанри"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2190,
+      "en": "Komponisten",
+      "old": "Komponisten",
+      "new": "Композитори"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2191,
+      "en": "Musik",
+      "old": "Musik",
+      "new": "Муз."
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2193,
+      "en": "Bilder",
+      "old": "Bilder",
+      "new": "Фото"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2194,
+      "en": "Sprachnotizen",
+      "old": "Sprachnotizen",
+      "new": "Диктофон"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2195,
+      "en": "Hörbücher",
+      "old": "Hörbücher",
+      "new": "Аудіокн."
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2197,
+      "en": "Alle",
+      "old": "Alle",
+      "new": "Усі"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2198,
+      "en": "0 Sterne",
+      "old": "0 Sterne",
+      "new": "0 зірок"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2199,
+      "en": "1 Stern",
+      "old": "1 Stern",
+      "new": "1 зірка"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2200,
+      "en": "2 Sterne",
+      "old": "2 Sterne",
+      "new": "2 зірки"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2201,
+      "en": "3 Sterne",
+      "old": "3 Sterne",
+      "new": "3 зірки"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2202,
+      "en": "4 Sterne",
+      "old": "4 Sterne",
+      "new": "4 зірки"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2203,
+      "en": "5 Sterne",
+      "old": "5 Sterne",
+      "new": "5 зірок"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2204,
+      "en": "meist gespielte",
+      "old": "meist gespielte",
+      "new": "найпопулярніші"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2205,
+      "en": "zuletzt gespielt",
+      "old": "zuletzt gespielt",
+      "new": "нещодавно грали"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2206,
+      "en": "Playlist on the Go",
+      "old": "Playlist on the Go",
+      "new": "Плейлист On-the-Go"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2207,
+      "en": "Dynamic Playlists",
+      "old": "Dynamic Playlists",
+      "new": "Дин. плейлисти"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2208,
+      "en": "Dynamic Playlists Favoriten",
+      "old": "Dynamic Playlists Favoriten",
+      "new": "Дин. плейлисти: вибране"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2210,
+      "en": "Musicvideos",
+      "old": "Musicvideos",
+      "new": "Відеокліпи"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2211,
+      "en": "Leihfilme",
+      "old": "Leihfilme",
+      "new": "Прокат"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2212,
+      "en": "Lieder",
+      "old": "Lieder",
+      "new": "Пісні"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2213,
+      "en": "TV shows",
+      "old": "TV shows",
+      "new": "ТВ-шоу"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2214,
+      "en": "Video Playlisten",
+      "old": "Video Playlisten",
+      "new": "Відеоплейлисти"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2215,
+      "en": "Video Podcast",
+      "old": "Video Podcast",
+      "new": "Відеоподкасти"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2216,
+      "en": "Filme",
+      "old": "Filme",
+      "new": "Кіно"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2217,
+      "en": "nicht abspielbar",
+      "old": "nicht abspielbar",
+      "new": "не відтворюється"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2218,
+      "en": "Playlisten und Covers",
+      "old": "Playlisten und Covers",
+      "new": "Плейлисти, обкладинки"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2220,
+      "en": "DVD Kapitel",
+      "old": "DVD Kapitel",
+      "new": "DVD розділ"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2222,
+      "en": "DVDV Titel",
+      "old": "DVDV Titel",
+      "new": "DVD фільм"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2223,
+      "en": "gerade gespielt",
+      "old": "gerade gespielt",
+      "new": "зараз грає"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2224,
+      "en": "unbekannter Titel",
+      "old": "unbekannter Titel",
+      "new": "невідомий трек"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2452,
+      "en": "Genius Wiedergabelisten",
+      "old": "Genius Wiedergabelisten",
+      "new": "Плейлисти Genius"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2453,
+      "en": "Zuletzt kopierte Titel",
+      "old": "Zuletzt kopierte Titel",
+      "new": "Нещодавно скопійовані"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2463,
+      "en": "Zuletzt kopierte Titel",
+      "old": "Zuletzt kopierte Titel",
+      "new": "Нещодавно скопійовані"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2480,
+      "en": "unbekannter Interpret",
+      "old": "unbekannter Interpret",
+      "new": "невідомий виконавець"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2482,
+      "en": "Various Artist",
+      "old": "Various Artist",
+      "new": "Різні артисти"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 3300,
+      "en": "unbekannter Fehler",
+      "old": "unbekannter Fehler",
+      "new": "невідома помилка"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 4492,
+      "en": "Abbrechen",
+      "old": "Abbrechen",
+      "new": "Скасувати"
+    },
+    {
+      "module": "HMITunerEvoHigh",
+      "slot": 573,
+      "en": "Last stations",
+      "old": "Last stations",
+      "new": "Останні станції"
+    },
+    {
+      "module": "HMITunerEvoHigh",
+      "slot": 657,
+      "en": "Online Radio",
+      "old": "Online Radio",
+      "new": "Онлайн-радіо"
+    },
+    {
+      "module": "HMITunerEvoHigh",
+      "slot": 663,
+      "en": "Last stations",
+      "old": "Last stations",
+      "new": "Останні станції"
+    },
+    {
+      "module": "HMITunerEvoHigh",
+      "slot": 732,
+      "en": "Stations",
+      "old": "Stations",
+      "new": "Станції"
+    },
+    {
+      "module": "HMITunerEvoHigh",
+      "slot": 739,
+      "en": "Ensemble",
+      "old": "Ensemble",
+      "new": "Ансамбль"
+    },
+    {
+      "module": "HMITunerEvoHigh",
+      "slot": 740,
+      "en": "Channels",
+      "old": "Channels",
+      "new": "Канали"
+    },
+    {
+      "module": "HMITunerEvoHigh",
+      "slot": 787,
+      "en": "Enter number",
+      "old": "Enter number",
+      "new": "Введіть номер"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 149,
+      "en": "Zugangsdaten speichern",
+      "old": "Zugangsdaten speichern",
+      "new": "Зберегти дані входу"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 209,
+      "en": "myAudi Kontakte",
+      "old": "myAudi Kontakte",
+      "new": "Контакти myAudi"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 238,
+      "en": "SMS Nachrichten anzeigen",
+      "old": "SMS Nachrichten anzeigen",
+      "new": "Показати SMS"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 268,
+      "en": "Durch hineinzoomen in die Navigationskarte haben Sie\ndie Möglichkeit sich Orte direkt mit Google Streetview\nanzusehen. Wechseln Sie hierzu in die Navigationskarte.",
+      "old": "Durch hineinzoomen in die Navigationskarte haben Sie\ndie Möglichkeit sich Orte direkt mit Google Streetview\nanzusehen. Wechseln Sie hierzu in die Navigationskarte.",
+      "new": "Збільшуючи навігаційну карту, ви можете\nпереглядати місця безпосередньо в Google Streetview.\nДля цього перейдіть до навігаційної карти."
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 313,
+      "en": "Noch nicht registriert",
+      "old": "Noch nicht registriert",
+      "new": "Ще не зареєстровано"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 526,
+      "en": "Adressbuch",
+      "old": "Adressbuch",
+      "new": "Адреси"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 607,
+      "en": "Muted",
+      "old": "Muted",
+      "new": "Тиша"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 706,
+      "en": "Connect to call center",
+      "old": "Connect to call center",
+      "new": "Зв’язатися з кол-центром"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 709,
+      "en": "Service not available while call is in use.",
+      "old": "Service not available while call is in use.",
+      "new": "Сервіс недоступний під час дзвінка."
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 713,
+      "en": "Call result",
+      "old": "Call result",
+      "new": "Результат"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 808,
+      "en": "POI call",
+      "old": "POI call",
+      "new": "Дзвінок POI"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 814,
+      "en": "Breakdown-Call",
+      "old": "Breakdown-Call",
+      "new": "Виклик допом."
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 815,
+      "en": "Operator-Call",
+      "old": "Operator-Call",
+      "new": "Оператор"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 816,
+      "en": "Concierge-Call",
+      "old": "Concierge-Call",
+      "new": "Консьєрж"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 905,
+      "en": "Concierge Call",
+      "old": "Concierge Call",
+      "new": "Консьєрж"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 906,
+      "en": "Operator Call",
+      "old": "Operator Call",
+      "new": "Оператор"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 909,
+      "en": "POI call",
+      "old": "POI call",
+      "new": "Дзвінок POI"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 1003,
+      "en": "POI call",
+      "old": "POI call",
+      "new": "Дзвінок POI"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 1006,
+      "en": "POI call",
+      "old": "POI call",
+      "new": "Дзвінок POI"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 1008,
+      "en": "POI call",
+      "old": "POI call",
+      "new": "Дзвінок POI"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 1012,
+      "en": "POI call",
+      "old": "POI call",
+      "new": "Дзвінок POI"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 1015,
+      "en": "POI call",
+      "old": "POI call",
+      "new": "Дзвінок POI"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 1033,
+      "en": "Email Postfach öffnen",
+      "old": "Email Postfach öffnen",
+      "new": "Відкрити пошту"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 1043,
+      "en": "Connect to call center",
+      "old": "Connect to call center",
+      "new": "Зв’язатися з кол-центром"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 1085,
+      "en": "Audi connect an diesem Ort",
+      "old": "Audi connect an diesem Ort",
+      "new": "Audi connect тут"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 1140,
+      "en": "Muted",
+      "old": "Muted",
+      "new": "Тиша"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 1208,
+      "en": "eCharge POIs",
+      "old": "eCharge POIs",
+      "new": "Зарядки"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 1258,
+      "en": "Muted",
+      "old": "Muted",
+      "new": "Тиша"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 1259,
+      "en": "Muted",
+      "old": "Muted",
+      "new": "Тиша"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 1279,
+      "en": "Hazard alert 1",
+      "old": "Hazard alert 1",
+      "new": "Небезпека 1"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 1280,
+      "en": "Hazard alert 2",
+      "old": "Hazard alert 2",
+      "new": "Небезпека 2"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 1281,
+      "en": "Traffic Sign Recognition 2",
+      "old": "Traffic Sign Recognition 2",
+      "new": "Розпізнавання знаків 2"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 1285,
+      "en": "Traffic Sign Recognition 1",
+      "old": "Traffic Sign Recognition 1",
+      "new": "Розпізнавання знаків 1"
+    },
+    {
+      "module": "HMIMessagingEvoHigh",
+      "slot": 796,
+      "en": "Add recipient",
+      "old": "Add recipient",
+      "new": "Додати отримувача"
+    },
+    {
+      "module": "HMIMessagingEvoHigh",
+      "slot": 1141,
+      "en": "Recording...",
+      "old": "Recording...",
+      "new": "Запис..."
+    },
+    {
+      "module": "HMISettingsEvoHigh",
+      "slot": 352,
+      "en": "Command display",
+      "old": "Command display",
+      "new": "Показ команд"
+    },
+    {
+      "module": "HMISettingsEvoHigh",
+      "slot": 353,
+      "en": "Short dialogue",
+      "old": "Short dialogue",
+      "new": "Короткий діалог"
+    },
+    {
+      "module": "HMISettingsEvoHigh",
+      "slot": 354,
+      "en": "Volume",
+      "old": "Volume",
+      "new": "Гучність"
+    },
+    {
+      "module": "HMISettingsEvoHigh",
+      "slot": 484,
+      "en": "Enter special destination",
+      "old": "Enter special destination",
+      "new": "Вказати об’єкт"
+    },
+    {
+      "module": "HMISettingsEvoHigh",
+      "slot": 496,
+      "en": "Enter number",
+      "old": "Enter number",
+      "new": "Введіть номер"
+    },
+    {
+      "module": "HMISettingsEvoHigh",
+      "slot": 648,
+      "en": "Volume setting",
+      "old": "Volume setting",
+      "new": "Налаштування гучності"
+    },
+    {
+      "module": "HMISettingsEvoHigh",
+      "slot": 665,
+      "en": "Enter number",
+      "old": "Enter number",
+      "new": "Введіть номер"
+    },
+    {
+      "module": "HMISettingsEvoHigh",
+      "slot": 757,
+      "en": "Factory Reset",
+      "old": "Factory Reset",
+      "new": "До заводських"
+    },
+    {
+      "module": "HMISettingsEvoHigh",
+      "slot": 927,
+      "en": "Enter number",
+      "old": "Enter number",
+      "new": "Введіть номер"
+    },
+    {
+      "module": "HMISettingsEvoHigh",
+      "slot": 933,
+      "en": "Play CD",
+      "old": "Play CD",
+      "new": "Відтворити CD"
+    },
+    {
+      "module": "HMISettingsEvoHigh",
+      "slot": 1014,
+      "en": "Hardware",
+      "old": "Hardware",
+      "new": "Обладнання"
+    },
+    {
+      "module": "HMIPhoneEvoHigh",
+      "slot": 642,
+      "en": "Enter number",
+      "old": "Enter number",
+      "new": "Введіть номер"
+    },
+    {
+      "module": "HMIPhoneEvoHigh",
+      "slot": 788,
+      "en": "Enter number",
+      "old": "Enter number",
+      "new": "Введіть номер"
+    },
+    {
+      "module": "HMIPhoneEvoHigh",
+      "slot": 1465,
+      "en": "Add recipient",
+      "old": "Add recipient",
+      "new": "Додати отримувача"
+    },
+    {
+      "module": "HMIPhoneEvoHigh",
+      "slot": 1525,
+      "en": "Konferenzschaltung",
+      "old": "Konferenzschaltung",
+      "new": "Конференція"
+    },
+    {
+      "module": "HMIPhoneEvoHigh",
+      "slot": 2242,
+      "en": "Enter number",
+      "old": "Enter number",
+      "new": "Введіть номер"
+    },
+    {
+      "module": "HMIPhoneEvoHigh",
+      "slot": 2336,
+      "en": "POI call",
+      "old": "POI call",
+      "new": "Дзвінок POI"
+    },
+    {
+      "module": "HMIEcallEvoHigh",
+      "slot": 21,
+      "en": "Telefon",
+      "old": "Telefon",
+      "new": "Телефон"
+    },
+    {
+      "module": "HMIEcallEvoHigh",
+      "slot": 70,
+      "en": "Hinweis",
+      "old": "Hinweis",
+      "new": "Увага"
+    },
+    {
+      "module": "HMIToneEvoHigh",
+      "slot": 315,
+      "en": "Short dialogue",
+      "old": "Short dialogue",
+      "new": "Короткий діалог"
+    }
+  ]
+}

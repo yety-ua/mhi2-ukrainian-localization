@@ -1,0 +1,670 @@
+{
+  "description": "2026-10-20 terminology edits (вказівка -> повідомлення/підказка) merged from lang_data_terms-20261020.zip",
+  "changes": [
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 963,
+      "en": "Navigation messages",
+      "old": "Навігаційні вказівки",
+      "new": "Попередження при наближенні"
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 1449,
+      "en": "Car: Note",
+      "old": "Автомобіль: вказівка",
+      "new": "Автомобіль: повідомлення"
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 1919,
+      "en": "Predictive messages",
+      "old": "Попереджальні вказівки",
+      "new": "Попередження"
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 2169,
+      "en": "Note",
+      "old": "Вказівка",
+      "new": "Повідомлення"
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 3706,
+      "en": "Predictive messages",
+      "old": "Попереджальні вказівки",
+      "new": "Попередження"
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 3941,
+      "en": "Note",
+      "old": "Вказівка",
+      "new": "Повідомлення"
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 5124,
+      "en": "Note",
+      "old": "Вказівка",
+      "new": "Повідомлення"
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 5433,
+      "en": "Navigation messages",
+      "old": "Навігаційні вказівки",
+      "new": "Попередження при наближенні"
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 5773,
+      "en": "Note",
+      "old": "Вказівка",
+      "new": "Повідомлення"
+    },
+    {
+      "module": "HMIConnectivityEvoHigh",
+      "slot": 56,
+      "en": "Note",
+      "old": "Вказівка",
+      "new": "Повідомлення"
+    },
+    {
+      "module": "HMIConnectivityEvoHigh",
+      "slot": 279,
+      "en": "Note",
+      "old": "Вказівка",
+      "new": "Повідомлення"
+    },
+    {
+      "module": "HMIConnectivityEvoHigh",
+      "slot": 700,
+      "en": "Note",
+      "old": "Вказівка",
+      "new": "Повідомлення"
+    },
+    {
+      "module": "HMIConnectivityEvoHigh",
+      "slot": 883,
+      "en": "Note",
+      "old": "Вказівка",
+      "new": "Повідомлення"
+    },
+    {
+      "module": "HMIEcallEvoHigh",
+      "slot": 175,
+      "en": "Note",
+      "old": "Вказівка",
+      "new": "Повідомлення"
+    },
+    {
+      "module": "HMIEcallEvoHigh",
+      "slot": 178,
+      "en": "Note",
+      "old": "Вказівка",
+      "new": "Повідомлення"
+    },
+    {
+      "module": "HMIEcallEvoHigh",
+      "slot": 184,
+      "en": "Note",
+      "old": "Вказівка",
+      "new": "Повідомлення"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 1169,
+      "en": "Note",
+      "old": "Вказівка",
+      "new": "Повідомлення"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2470,
+      "en": "Note",
+      "old": "Вказівка",
+      "new": "Повідомлення"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 4502,
+      "en": "Note",
+      "old": "Вказівка",
+      "new": "Повідомлення"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 4731,
+      "en": "Note",
+      "old": "Вказівка",
+      "new": "Повідомлення"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 4742,
+      "en": "Note",
+      "old": "Вказівка",
+      "new": "Повідомлення"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 4753,
+      "en": "Note",
+      "old": "Вказівка",
+      "new": "Повідомлення"
+    },
+    {
+      "module": "HMIMessagingEvoHigh",
+      "slot": 960,
+      "en": "Telephone: Note",
+      "old": "Телефон: вказівка",
+      "new": "Телефон: повідомлення"
+    },
+    {
+      "module": "HMIMessagingEvoHigh",
+      "slot": 1128,
+      "en": "Telephone: Note",
+      "old": "Телефон: вказівка",
+      "new": "Телефон: повідомлення"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 1025,
+      "en": "Arrival notification",
+      "old": "Вказівка при наближенні",
+      "new": "Попередження при наближенні"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 1839,
+      "en": "Arrival note",
+      "old": "Вказівка при наближ.",
+      "new": "Попередження при наближ."
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 1841,
+      "en": "Display notification when nearby",
+      "old": "Показувати вказівку при наближенні",
+      "new": "Показувати сповіщення при наближенні"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 1842,
+      "en": "Play notification tone",
+      "old": "Супров. вказівку звук. сигналом",
+      "new": "Супров. сповіщення звук. сигналом"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 1850,
+      "en": "Arrival note",
+      "old": "Вказівка при наближ.",
+      "new": "Попередження при наближ."
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2261,
+      "en": "Navigation: Note",
+      "old": "Навігація: вказівка",
+      "new": "Навігація: повідомлення"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2631,
+      "en": "Note",
+      "old": "Вказівка",
+      "new": "Повідомлення"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3021,
+      "en": "Arrival notification is deactivated.",
+      "old": "Вказівка при наближенні неактивна.",
+      "new": "Сповіщення при наближенні неактивне."
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3460,
+      "en": "Ignore this route and this message",
+      "old": "Ігнорувати цей маршрут і вказівку",
+      "new": "Ігнорувати цей маршрут і повідомлення"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3461,
+      "en": "Ignore all messages",
+      "old": "Ігнорувати всі вказівки",
+      "new": "Ігнорувати всі повідомлення"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3572,
+      "en": "Navigation: Note",
+      "old": "Навігація: вказівка",
+      "new": "Навігація: повідомлення"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 131,
+      "en": "Note",
+      "old": "Вказівка",
+      "new": "Повідомлення"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 510,
+      "en": "Note",
+      "old": "Вказівка",
+      "new": "Повідомлення"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 619,
+      "en": "Note",
+      "old": "Вказівка",
+      "new": "Повідомлення"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 620,
+      "en": "Note",
+      "old": "Вказівка",
+      "new": "Повідомлення"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 646,
+      "en": "Note",
+      "old": "Вказівка",
+      "new": "Повідомлення"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 879,
+      "en": "Note",
+      "old": "Вказівка",
+      "new": "Повідомлення"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 982,
+      "en": "Note",
+      "old": "Вказівка",
+      "new": "Повідомлення"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 1071,
+      "en": "Note",
+      "old": "Вказівка",
+      "new": "Повідомлення"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 1110,
+      "en": "Note",
+      "old": "Вказівка",
+      "new": "Повідомлення"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 1192,
+      "en": "Audi connect: Note",
+      "old": "Audi connect: вказівка",
+      "new": "Audi connect: повідомлення"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 1225,
+      "en": "Note",
+      "old": "Вказівка",
+      "new": "Повідомлення"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 1243,
+      "en": "You can, for example, have recommended\nspeeds displayed which enable you to pass\nthrough a series of green lights.\nAlternatively, you can have the\nwaiting times at red lights displayed.",
+      "old": "Тут можна переглядати, наприклад, вказівки\nщодо оптимальної швидкості для \"зеленої\nхвилі\" або час очікування на червоному\nсигналі світлофорів.",
+      "new": "Тут можна переглядати, наприклад, рекомендації\nщодо оптимальної швидкості для \"зеленої\nхвилі\" або час очікування на червоному\nсигналі світлофорів."
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 1250,
+      "en": "Audi connect: Note",
+      "old": "Audi connect: вказівка",
+      "new": "Audi connect: повідомлення"
+    },
+    {
+      "module": "HMIPhoneEvoHigh",
+      "slot": 1600,
+      "en": "Note",
+      "old": "Вказівка",
+      "new": "Повідомлення"
+    },
+    {
+      "module": "HMIPhoneEvoHigh",
+      "slot": 2341,
+      "en": "Note",
+      "old": "Вказівка",
+      "new": "Повідомлення"
+    },
+    {
+      "module": "HMISWDLEvoHigh",
+      "slot": 337,
+      "en": "Note",
+      "old": "Вказівка",
+      "new": "Повідомлення"
+    },
+    {
+      "module": "HMISWDLEvoHigh",
+      "slot": 1839,
+      "en": "Note",
+      "old": "Вказівка",
+      "new": "Повідомлення"
+    },
+    {
+      "module": "HMISWDLEvoHigh",
+      "slot": 1847,
+      "en": "Note",
+      "old": "Вказівка",
+      "new": "Повідомлення"
+    },
+    {
+      "module": "HMISWDLEvoHigh",
+      "slot": 1850,
+      "en": "Note",
+      "old": "Вказівка",
+      "new": "Повідомлення"
+    },
+    {
+      "module": "HMISettingsEvoHigh",
+      "slot": 1345,
+      "en": "spoken",
+      "old": "голосова вказівка",
+      "new": "голосова підказка"
+    },
+    {
+      "module": "HMISettingsEvoHigh",
+      "slot": 1349,
+      "en": "Switch off pop-up",
+      "old": "Вимкнути спливаючі вказівки",
+      "new": "Вимкнути спливаючі повідомлення"
+    },
+    {
+      "module": "HMISystemEvoHigh",
+      "slot": 159,
+      "en": "Note",
+      "old": "Вказівка",
+      "new": "Повідомлення"
+    },
+    {
+      "module": "HMISystemEvoHigh",
+      "slot": 354,
+      "en": "Radio: Note",
+      "old": "Радіо: вказівка",
+      "new": "Радіо: повідомлення"
+    },
+    {
+      "module": "HMISystemEvoHigh",
+      "slot": 376,
+      "en": "Sound: Note",
+      "old": "Звук: вказівка",
+      "new": "Звук: повідомлення"
+    },
+    {
+      "module": "HMISystemEvoHigh",
+      "slot": 384,
+      "en": "Picturebook navigation: Note",
+      "old": "Навігація Picturebook: вказівка",
+      "new": "Навігація Picturebook: повідомлення"
+    },
+    {
+      "module": "HMISystemEvoHigh",
+      "slot": 386,
+      "en": "Note",
+      "old": "Вказівка",
+      "new": "Повідомлення"
+    },
+    {
+      "module": "HMISystemEvoHigh",
+      "slot": 423,
+      "en": "TV: Note",
+      "old": "ТV: вказівка",
+      "new": "ТV: повідомлення"
+    },
+    {
+      "module": "HMISystemEvoHigh",
+      "slot": 677,
+      "en": "Note",
+      "old": "Вказівка",
+      "new": "Повідомлення"
+    },
+    {
+      "module": "HMISystemEvoHigh",
+      "slot": 1127,
+      "en": "Audi connect: Note",
+      "old": "Audi connect: вказівка",
+      "new": "Audi connect: повідомлення"
+    },
+    {
+      "module": "HMISystemEvoHigh",
+      "slot": 1433,
+      "en": "Telephone: Note",
+      "old": "Телефон: вказівка",
+      "new": "Телефон: повідомлення"
+    },
+    {
+      "module": "HMISystemEvoHigh",
+      "slot": 1538,
+      "en": "Do not show note again",
+      "old": "Більше не показувати вказівку",
+      "new": "Більше не показувати повідомлення"
+    },
+    {
+      "module": "HMISystemEvoHigh",
+      "slot": 1540,
+      "en": "Note",
+      "old": "Вказівка",
+      "new": "Повідомлення"
+    },
+    {
+      "module": "HMISystemEvoHigh",
+      "slot": 1630,
+      "en": "Navigation: Note",
+      "old": "Навігація: вказівка",
+      "new": "Навігація: повідомлення"
+    },
+    {
+      "module": "HMISystemEvoHigh",
+      "slot": 1781,
+      "en": "Info: Note",
+      "old": "Інфо: вказівка",
+      "new": "Інфо: повідомлення"
+    },
+    {
+      "module": "HMISystemEvoHigh",
+      "slot": 2123,
+      "en": "Note",
+      "old": "Вказівка",
+      "new": "Повідомлення"
+    },
+    {
+      "module": "HMISystemEvoHigh",
+      "slot": 2234,
+      "en": "Note",
+      "old": "Вказівка",
+      "new": "Повідомлення"
+    },
+    {
+      "module": "HMISystemEvoHigh",
+      "slot": 2611,
+      "en": "Emergency call: Note",
+      "old": "Екстрений виклик: вказівка",
+      "new": "Екстрений виклик: повідомлення"
+    },
+    {
+      "module": "HMISystemEvoHigh",
+      "slot": 3927,
+      "en": "Note",
+      "old": "Вказівка",
+      "new": "Повідомлення"
+    },
+    {
+      "module": "HMISystemEvoHigh",
+      "slot": 3947,
+      "en": "Directory: Note",
+      "old": "Адресна книга: вказівка",
+      "new": "Адресна книга: повідомлення"
+    },
+    {
+      "module": "HMISystemEvoHigh",
+      "slot": 4002,
+      "en": "Note",
+      "old": "Вказівка",
+      "new": "Повідомлення"
+    },
+    {
+      "module": "HMISystemEvoHigh",
+      "slot": 4060,
+      "en": "Note",
+      "old": "Вказівка",
+      "new": "Повідомлення"
+    },
+    {
+      "module": "HMITVEvoHigh",
+      "slot": 384,
+      "en": "To use the TV, you must first confirm the CAS\nnotification.",
+      "old": "Перш ніж користуватися телебаченням, слід\nпідтвердити вказівку CAS.",
+      "new": "Перш ніж користуватися телебаченням, слід\nпідтвердити повідомлення CAS."
+    },
+    {
+      "module": "HMITVEvoHigh",
+      "slot": 728,
+      "en": "Note",
+      "old": "Вказівка",
+      "new": "Повідомлення"
+    },
+    {
+      "module": "HMITVEvoHigh",
+      "slot": 1300,
+      "en": "TV: Note",
+      "old": "ТV: вказівка",
+      "new": "ТV: повідомлення"
+    },
+    {
+      "module": "HMITVEvoHigh",
+      "slot": 1305,
+      "en": "AV: Note",
+      "old": "AV: вказівка",
+      "new": "AV: повідомлення"
+    },
+    {
+      "module": "HMITVEvoHigh",
+      "slot": 1700,
+      "en": "Note",
+      "old": "Вказівка",
+      "new": "Повідомлення"
+    },
+    {
+      "module": "HMITVEvoHigh",
+      "slot": 2042,
+      "en": "Note",
+      "old": "Вказівка",
+      "new": "Повідомлення"
+    },
+    {
+      "module": "HMITVEvoHigh",
+      "slot": 2085,
+      "en": "AV: Note",
+      "old": "AV: вказівка",
+      "new": "AV: повідомлення"
+    },
+    {
+      "module": "HMITVEvoHigh",
+      "slot": 2088,
+      "en": "Note",
+      "old": "Вказівка",
+      "new": "Повідомлення"
+    },
+    {
+      "module": "HMITerminalModeEvoHigh",
+      "slot": 41,
+      "en": "Note",
+      "old": "Вказівка",
+      "new": "Повідомлення"
+    },
+    {
+      "module": "HMITerminalModeEvoHigh",
+      "slot": 50,
+      "en": "Note on use of data",
+      "old": "Вказівка щодо даних",
+      "new": "Повідомлення щодо даних"
+    },
+    {
+      "module": "HMITerminalModeEvoHigh",
+      "slot": 66,
+      "en": "Note",
+      "old": "Вказівка",
+      "new": "Повідомлення"
+    },
+    {
+      "module": "HMITerminalModeEvoHigh",
+      "slot": 73,
+      "en": "Note",
+      "old": "Вказівка",
+      "new": "Повідомлення"
+    },
+    {
+      "module": "HMITerminalModeEvoHigh",
+      "slot": 85,
+      "en": "Note",
+      "old": "Вказівка",
+      "new": "Повідомлення"
+    },
+    {
+      "module": "HMIToneEvoHigh",
+      "slot": 835,
+      "en": "spoken",
+      "old": "голосова вказівка",
+      "new": "голосова підказка"
+    },
+    {
+      "module": "HMITunerEvoHigh",
+      "slot": 476,
+      "en": "Note",
+      "old": "Вказівка",
+      "new": "Повідомлення"
+    },
+    {
+      "module": "HMITunerEvoHigh",
+      "slot": 670,
+      "en": "Note",
+      "old": "Вказівка",
+      "new": "Повідомлення"
+    },
+    {
+      "module": "HMITunerEvoHigh",
+      "slot": 1654,
+      "en": "Note",
+      "old": "Вказівка",
+      "new": "Повідомлення"
+    },
+    {
+      "module": "HMITunerEvoHigh",
+      "slot": 1872,
+      "en": "Note",
+      "old": "Вказівка",
+      "new": "Повідомлення"
+    },
+    {
+      "module": "HMIWirelessChargingEvoHigh",
+      "slot": 10,
+      "en": "Note",
+      "old": "Вказівка",
+      "new": "Повідомлення"
+    }
+  ]
+}

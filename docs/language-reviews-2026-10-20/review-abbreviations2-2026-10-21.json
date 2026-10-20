@@ -1,0 +1,607 @@
+{
+  "description": "2026-10-21: expand abbreviations in slots with room (e-mail, дорожніх знаків, альтернативні, etc.).",
+  "changes": [
+    {
+      "module": "HMIAddressBookEvoHigh",
+      "slot": 278,
+      "en": "No e-mail address has been set.",
+      "old": "Немає збережених адрес ел. пошти.",
+      "new": "Немає збережених адрес e-mail."
+    },
+    {
+      "module": "HMIAddressBookEvoHigh",
+      "slot": 507,
+      "en": "No telephone number has been set.",
+      "old": "Немає збережених тел. номерів.",
+      "new": "Немає збережених телефонних номерів."
+    },
+    {
+      "module": "HMIAddressBookEvoHigh",
+      "slot": 669,
+      "en": "Hide contacts without e-mail",
+      "old": "Приховати контакти без адр. ел. пошти",
+      "new": "Приховати контакти без адрес e-mail"
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 939,
+      "en": "Traffic sign based",
+      "old": "На основі дор. знаків",
+      "new": "На основі дорожніх знаків"
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 1648,
+      "en": "Traffic sign based",
+      "old": "На основі дор. знаків",
+      "new": "На основі дорожніх знаків"
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 1913,
+      "en": "Predict. efficiency assist",
+      "old": "Прогноз. асистент ефект.",
+      "new": "Прогнозний асистент ефективності"
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 2016,
+      "en": "Reset oil change interval",
+      "old": "Скинути інтервал заміни моторн. оливи",
+      "new": "Скинути інтервал заміни моторної оливи"
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 2394,
+      "en": "Reset oil change interval",
+      "old": "Скинути інтервал заміни моторн. оливи",
+      "new": "Скинути інтервал заміни моторної оливи"
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 3728,
+      "en": "Predict. efficiency assist",
+      "old": "Прогноз. асистент ефект.",
+      "new": "Прогнозний асистент ефективності"
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 3899,
+      "en": "Auxiliary A/C",
+      "old": "Автон. клімат",
+      "new": "Автономний клімат"
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 4304,
+      "en": "Passenger side",
+      "old": "пер. пасажир",
+      "new": "передній пасажир"
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 4392,
+      "en": "Passenger side",
+      "old": "пер. пасажир",
+      "new": "передній пасажир"
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 4961,
+      "en": "Not available at current speed",
+      "old": "За поточної швидк. недоступно",
+      "new": "За поточної швидкості недоступно"
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 5239,
+      "en": "Not available at current speed",
+      "old": "За поточної швидк. недоступно",
+      "new": "За поточної швидкості недоступно"
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 5356,
+      "en": "Not available at current speed",
+      "old": "За поточної швидк. недоступно",
+      "new": "За поточної швидкості недоступно"
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 5371,
+      "en": "Surface light bright.",
+      "old": "Яскр. поверхні",
+      "new": "Яскравість поверхні"
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 5409,
+      "en": "Not available at current speed",
+      "old": "За поточної швидк. недоступно",
+      "new": "За поточної швидкості недоступно"
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 5902,
+      "en": "Not available at current speed",
+      "old": "За поточної швидк. недоступно",
+      "new": "За поточної швидкості недоступно"
+    },
+    {
+      "module": "HMIConnectivityEvoHigh",
+      "slot": 100,
+      "en": "Access point (SSID)",
+      "old": "Точка дост. (SSID)",
+      "new": "Точка доступу (SSID)"
+    },
+    {
+      "module": "HMIConnectivityEvoHigh",
+      "slot": 156,
+      "en": "Data connection settings",
+      "old": "Настр. з’єдн. даних",
+      "new": "Налаштування з’єднання даних"
+    },
+    {
+      "module": "HMIConnectivityEvoHigh",
+      "slot": 455,
+      "en": "Data connection settings",
+      "old": "Настр. з’єдн. даних",
+      "new": "Налаштування з’єднання даних"
+    },
+    {
+      "module": "HMIConnectivityEvoHigh",
+      "slot": 566,
+      "en": "Access point (SSID)",
+      "old": "Точка дост. (SSID)",
+      "new": "Точка доступу (SSID)"
+    },
+    {
+      "module": "HMIConnectivityEvoHigh",
+      "slot": 934,
+      "en": "Data connection settings",
+      "old": "Настр. з’єдн. даних",
+      "new": "Налаштування з’єднання даних"
+    },
+    {
+      "module": "HMIEarlyAppsEvoHigh",
+      "slot": 504,
+      "en": "Not available at current speed",
+      "old": "За поточної швидк. недоступно",
+      "new": "За поточної швидкості недоступно"
+    },
+    {
+      "module": "HMIEarlyAppsEvoHigh",
+      "slot": 1119,
+      "en": "Auxiliary A/C",
+      "old": "Автон. клімат",
+      "new": "Автономний клімат"
+    },
+    {
+      "module": "HMIEarlyAppsEvoHigh",
+      "slot": 1143,
+      "en": "Auxiliary A/C",
+      "old": "Автон. клімат",
+      "new": "Автономний клімат"
+    },
+    {
+      "module": "HMIEarlyAppsEvoHigh",
+      "slot": 1521,
+      "en": "Not available at current speed",
+      "old": "За поточної швидк. недоступно",
+      "new": "За поточної швидкості недоступно"
+    },
+    {
+      "module": "HMIEarlyAppsEvoHigh",
+      "slot": 1524,
+      "en": "Not available at current speed",
+      "old": "За поточної швидк. недоступно",
+      "new": "За поточної швидкості недоступно"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 1043,
+      "en": "Play all albums",
+      "old": "Відтвор. всі альб.",
+      "new": "Відтворити всі альбоми"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 1459,
+      "en": "Unknown album",
+      "old": "Невід. альбом",
+      "new": "Невідомий альбом"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 1460,
+      "en": "Unknown album",
+      "old": "Невід. альбом",
+      "new": "Невідомий альбом"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 1715,
+      "en": "Unknown album",
+      "old": "Невід. альбом",
+      "new": "Невідомий альбом"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 1716,
+      "en": "Unknown album",
+      "old": "Невід. альбом",
+      "new": "Невідомий альбом"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2149,
+      "en": "Wrong password",
+      "old": "Неправ. пароль",
+      "new": "Неправильний пароль"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2481,
+      "en": "Unknown album",
+      "old": "Невід. альбом",
+      "new": "Невідомий альбом"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2550,
+      "en": "Detailed track information",
+      "old": "Розширена інформ. про трек",
+      "new": "Розширена інформація про трек"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 4671,
+      "en": "Unknown album",
+      "old": "Невід. альбом",
+      "new": "Невідомий альбом"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 4672,
+      "en": "Unknown album",
+      "old": "Невід. альбом",
+      "new": "Невідомий альбом"
+    },
+    {
+      "module": "HMIMessagingEvoHigh",
+      "slot": 313,
+      "en": "Dictate new e-mail",
+      "old": "Диктувати новий ел. лист",
+      "new": "Диктувати новий e-mail"
+    },
+    {
+      "module": "HMIMessagingEvoHigh",
+      "slot": 314,
+      "en": "Write new e-mail",
+      "old": "Написати новий ел. лист",
+      "new": "Написати новий e-mail"
+    },
+    {
+      "module": "HMIMessagingEvoHigh",
+      "slot": 324,
+      "en": "Extract e-mail address",
+      "old": "Використати адресу ел. пошти",
+      "new": "Використати адресу e-mail"
+    },
+    {
+      "module": "HMIMessagingEvoHigh",
+      "slot": 639,
+      "en": "Extract e-mail",
+      "old": "Використати ел. лист",
+      "new": "Використати e-mail"
+    },
+    {
+      "module": "HMIMessagingEvoHigh",
+      "slot": 709,
+      "en": "Replace stored template",
+      "old": "Замінити збереж. шаблон",
+      "new": "Замінити збережений шаблон"
+    },
+    {
+      "module": "HMIMessagingEvoHigh",
+      "slot": 728,
+      "en": "E-mail (SIM card)",
+      "old": "Ел. пошта (SIM)",
+      "new": "E-mail (SIM)"
+    },
+    {
+      "module": "HMIMessagingEvoHigh",
+      "slot": 729,
+      "en": "E-mail (mobile phone)",
+      "old": "Ел. пошта (моб.)",
+      "new": "E-mail (моб.)"
+    },
+    {
+      "module": "HMIMessagingEvoHigh",
+      "slot": 857,
+      "en": "Write e-mail",
+      "old": "Написати ел. лист",
+      "new": "Написати e-mail"
+    },
+    {
+      "module": "HMIMessagingEvoHigh",
+      "slot": 921,
+      "en": "Delete e-mail",
+      "old": "Видалити ел. лист",
+      "new": "Видалити e-mail"
+    },
+    {
+      "module": "HMIMessagingEvoHigh",
+      "slot": 966,
+      "en": "No phone numbers",
+      "old": "Немає тел. номерів",
+      "new": "Немає телефонних номерів"
+    },
+    {
+      "module": "HMIMessagingEvoHigh",
+      "slot": 968,
+      "en": "No e-mail address has been set.",
+      "old": "Немає збережених адрес ел. пошти.",
+      "new": "Немає збережених адрес e-mail."
+    },
+    {
+      "module": "HMIMessagingEvoHigh",
+      "slot": 1124,
+      "en": "Write new e-mail",
+      "old": "Написати новий ел. лист",
+      "new": "Написати новий e-mail"
+    },
+    {
+      "module": "HMIMessagingEvoHigh",
+      "slot": 1143,
+      "en": "Write new e-mail",
+      "old": "Написати новий ел. лист",
+      "new": "Написати новий e-mail"
+    },
+    {
+      "module": "HMIMessagingEvoHigh",
+      "slot": 1150,
+      "en": "Dictate new e-mail",
+      "old": "Диктувати новий ел. лист",
+      "new": "Диктувати новий e-mail"
+    },
+    {
+      "module": "HMIMessagingEvoHigh",
+      "slot": 1175,
+      "en": "Dictate new e-mail",
+      "old": "Диктувати новий ел. лист",
+      "new": "Диктувати новий e-mail"
+    },
+    {
+      "module": "HMIMessagingEvoHigh",
+      "slot": 1187,
+      "en": "E-mail (%1)",
+      "old": "Ел. пошта (%1)",
+      "new": "E-mail (%1)"
+    },
+    {
+      "module": "HMIMessagingEvoHigh",
+      "slot": 1188,
+      "en": "E-mail (mobile)",
+      "old": "Ел. пошта (моб.)",
+      "new": "E-mail (моб.)"
+    },
+    {
+      "module": "HMIMessagingEvoHigh",
+      "slot": 1189,
+      "en": "E-mail (SIM card)",
+      "old": "Ел. пошта (SIM)",
+      "new": "E-mail (SIM)"
+    },
+    {
+      "module": "HMIMessagingEvoHigh",
+      "slot": 1195,
+      "en": "E-mail (%1)",
+      "old": "Ел. пошта (%1)",
+      "new": "E-mail (%1)"
+    },
+    {
+      "module": "HMIMessagingEvoHigh",
+      "slot": 1196,
+      "en": "E-mail (mobile)",
+      "old": "Ел. пошта (моб.)",
+      "new": "E-mail (моб.)"
+    },
+    {
+      "module": "HMIMessagingEvoHigh",
+      "slot": 1197,
+      "en": "E-mail (SIM card)",
+      "old": "Ел. пошта (SIM)",
+      "new": "E-mail (SIM)"
+    },
+    {
+      "module": "HMIMessagingEvoHigh",
+      "slot": 1240,
+      "en": "Write e-mail",
+      "old": "Написати ел. лист",
+      "new": "Написати e-mail"
+    },
+    {
+      "module": "HMIMessagingEvoHigh",
+      "slot": 1251,
+      "en": "No phone numbers",
+      "old": "Немає тел. номерів",
+      "new": "Немає телефонних номерів"
+    },
+    {
+      "module": "HMIMessagingEvoHigh",
+      "slot": 1253,
+      "en": "No e-mail address has been set.",
+      "old": "Немає збережених адрес ел. пошти.",
+      "new": "Немає збережених адрес e-mail."
+    },
+    {
+      "module": "HMIMessagingEvoHigh",
+      "slot": 1335,
+      "en": "Telephone: e-mail (mobile phone)",
+      "old": "Телефон: ел. пошта (моб. телефон)",
+      "new": "Телефон: e-mail (мобільний телефон)"
+    },
+    {
+      "module": "HMIMessagingEvoHigh",
+      "slot": 1344,
+      "en": "E-mail (mobile phone)",
+      "old": "Ел. пошта (моб.)",
+      "new": "E-mail (моб.)"
+    },
+    {
+      "module": "HMIMessagingEvoHigh",
+      "slot": 1345,
+      "en": "E-mail (SIM card)",
+      "old": "Ел. пошта (SIM)",
+      "new": "E-mail (SIM)"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 739,
+      "en": "Display alternative routes",
+      "old": "Показати альтерн. маршрути",
+      "new": "Показати альтернативні маршрути"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 916,
+      "en": "Import myAudi special destinations",
+      "old": "Імпорт. об'єкти myAudi",
+      "new": "Імпортувати об’єкти myAudi"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 1022,
+      "en": "Always display alternative routes",
+      "old": "Завжди показувати альтерн. маршрути",
+      "new": "Завжди показувати альтернативні маршрути"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3417,
+      "en": "Delete all personal routes",
+      "old": "Видалити персон. маршрути",
+      "new": "Видалити персональні маршрути"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3418,
+      "en": "Delete recording of last 24 hrs.",
+      "old": "Видалити запис за ост. 24 год",
+      "new": "Видалити запис за останні 24 год"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3433,
+      "en": "Delete all personal routes",
+      "old": "Видалити персон. маршрути",
+      "new": "Видалити персональні маршрути"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3440,
+      "en": "Delete all personal routes",
+      "old": "Видалити персон. маршрути",
+      "new": "Видалити персональні маршрути"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 90,
+      "en": "The preview could not be loaded.",
+      "old": "Не вдалося завантажити попер. перегляд.",
+      "new": "Не вдалося завантажити попередній перегляд."
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 682,
+      "en": "Go to alternative myAudi PIN entry",
+      "old": "До альтерн. вводу PIN-коду myAudi",
+      "new": "До альтернативного вводу PIN-коду myAudi"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 801,
+      "en": "Allow location information to be sent",
+      "old": "Дозв. надсилання даних про місце",
+      "new": "Дозволити надсилання даних про місце"
+    },
+    {
+      "module": "HMIPhoneEvoHigh",
+      "slot": 889,
+      "en": "E-mail (SIM card)",
+      "old": "Ел. пошта (SIM)",
+      "new": "E-mail (SIM)"
+    },
+    {
+      "module": "HMIPhoneEvoHigh",
+      "slot": 890,
+      "en": "E-mail (mobile phone)",
+      "old": "Ел. пошта (моб.)",
+      "new": "E-mail (моб.)"
+    },
+    {
+      "module": "HMIPhoneEvoHigh",
+      "slot": 892,
+      "en": "E-mail (%1)",
+      "old": "Ел. пошта (%1)",
+      "new": "E-mail (%1)"
+    },
+    {
+      "module": "HMIPhoneEvoHigh",
+      "slot": 2134,
+      "en": "No phone numbers",
+      "old": "Немає тел. номерів",
+      "new": "Немає телефонних номерів"
+    },
+    {
+      "module": "HMIPhoneEvoHigh",
+      "slot": 2135,
+      "en": "No e-mail address has been set.",
+      "old": "Немає збережених адрес ел. пошти.",
+      "new": "Немає збережених адрес e-mail."
+    },
+    {
+      "module": "HMIPhoneEvoHigh",
+      "slot": 2184,
+      "en": "Write new e-mail",
+      "old": "Написати новий ел. лист",
+      "new": "Написати новий e-mail"
+    },
+    {
+      "module": "HMIPhoneEvoHigh",
+      "slot": 2192,
+      "en": "Dictate new e-mail",
+      "old": "Диктувати новий ел. лист",
+      "new": "Диктувати новий e-mail"
+    },
+    {
+      "module": "HMIPhoneEvoHigh",
+      "slot": 2216,
+      "en": "Extract e-mail address",
+      "old": "Використати адресу ел. пошти",
+      "new": "Використати адресу e-mail"
+    },
+    {
+      "module": "HMITVEvoHigh",
+      "slot": 266,
+      "en": "Wrong password",
+      "old": "Неправ. пароль",
+      "new": "Неправильний пароль"
+    },
+    {
+      "module": "HMITVEvoHigh",
+      "slot": 1204,
+      "en": "Wrong password",
+      "old": "Неправ. пароль",
+      "new": "Неправильний пароль"
+    },
+    {
+      "module": "HMITunerEvoHigh",
+      "slot": 1853,
+      "en": "Write e-mail",
+      "old": "Написати ел. лист",
+      "new": "Написати e-mail"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "description": "Car 5904: shorter wording because the slot limit is 33.",
+  "changes": [
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 5904,
+      "en": "Only when vehicle is stationary",
+      "old": "Можливо, якщо авт. не рухається",
+      "new": "Якщо автомобіль не рухається"
+    }
+  ]
+}

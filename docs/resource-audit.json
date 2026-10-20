@@ -1,13 +1,13 @@
 {
-  "sha256": "f581006ddb33d7a4b3fd53c3794f9d44e6811738c599e49cdb05068beb55cac3",
+  "sha256": "995440ea06cec135a37f53a4ac8fdff279b6e6d0d289e4d056738612fd4710b3",
   "entries": 442,
   "modules": 22,
   "tables": 418,
   "nonempty_stock_counterpart_slots": 15400,
   "appended_language_name_slots": 1,
-  "non_cyrillic_candidates": 6497,
-  "same_as_english_candidates": 5232,
-  "differing_candidates": 1265,
+  "non_cyrillic_candidates": 6085,
+  "same_as_english_candidates": 5022,
+  "differing_candidates": 1063,
   "stock_locale_changes": "Only appended Ukrainian language name in HMISettingsEvoHigh",
   "target_structure": "All 22 Ukrainian modules preserve A4 K3346 slot, flag, empty and placeholder structure",
   "model_token_audit": [
@@ -87,8 +87,8 @@
     {
       "module": "HMICarEvoHigh",
       "nonempty_slots": 1269,
-      "non_cyrillic_candidates": 106,
-      "same_as_english_candidates": 104,
+      "non_cyrillic_candidates": 91,
+      "same_as_english_candidates": 89,
       "differing_candidates": 2
     },
     {
@@ -108,8 +108,8 @@
     {
       "module": "HMIEcallEvoHigh",
       "nonempty_slots": 76,
-      "non_cyrillic_candidates": 5,
-      "same_as_english_candidates": 5,
+      "non_cyrillic_candidates": 3,
+      "same_as_english_candidates": 3,
       "differing_candidates": 0
     },
     {
@@ -129,37 +129,37 @@
     {
       "module": "HMIMediaEvoHigh",
       "nonempty_slots": 1375,
-      "non_cyrillic_candidates": 213,
-      "same_as_english_candidates": 183,
-      "differing_candidates": 30
+      "non_cyrillic_candidates": 125,
+      "same_as_english_candidates": 123,
+      "differing_candidates": 2
     },
     {
       "module": "HMIMessagingEvoHigh",
       "nonempty_slots": 416,
-      "non_cyrillic_candidates": 56,
+      "non_cyrillic_candidates": 50,
       "same_as_english_candidates": 39,
-      "differing_candidates": 17
+      "differing_candidates": 11
     },
     {
       "module": "HMINaviEvoHigh",
       "nonempty_slots": 1369,
-      "non_cyrillic_candidates": 350,
-      "same_as_english_candidates": 243,
-      "differing_candidates": 107
+      "non_cyrillic_candidates": 161,
+      "same_as_english_candidates": 161,
+      "differing_candidates": 0
     },
     {
       "module": "HMIOnlineEvoHigh",
       "nonempty_slots": 617,
-      "non_cyrillic_candidates": 123,
-      "same_as_english_candidates": 100,
-      "differing_candidates": 23
+      "non_cyrillic_candidates": 78,
+      "same_as_english_candidates": 68,
+      "differing_candidates": 10
     },
     {
       "module": "HMIPhoneEvoHigh",
       "nonempty_slots": 705,
-      "non_cyrillic_candidates": 88,
-      "same_as_english_candidates": 77,
-      "differing_candidates": 11
+      "non_cyrillic_candidates": 75,
+      "same_as_english_candidates": 72,
+      "differing_candidates": 3
     },
     {
       "module": "HMISWDLEvoHigh",
@@ -171,9 +171,9 @@
     {
       "module": "HMISettingsEvoHigh",
       "nonempty_slots": 548,
-      "non_cyrillic_candidates": 278,
-      "same_as_english_candidates": 265,
-      "differing_candidates": 13
+      "non_cyrillic_candidates": 257,
+      "same_as_english_candidates": 257,
+      "differing_candidates": 0
     },
     {
       "module": "HMISpeechEvoHigh",
@@ -213,16 +213,16 @@
     {
       "module": "HMIToneEvoHigh",
       "nonempty_slots": 220,
-      "non_cyrillic_candidates": 13,
-      "same_as_english_candidates": 9,
+      "non_cyrillic_candidates": 12,
+      "same_as_english_candidates": 8,
       "differing_candidates": 4
     },
     {
       "module": "HMITunerEvoHigh",
       "nonempty_slots": 467,
-      "non_cyrillic_candidates": 102,
-      "same_as_english_candidates": 74,
-      "differing_candidates": 28
+      "non_cyrillic_candidates": 70,
+      "same_as_english_candidates": 69,
+      "differing_candidates": 1
     },
     {
       "module": "HMIWirelessChargingEvoHigh",

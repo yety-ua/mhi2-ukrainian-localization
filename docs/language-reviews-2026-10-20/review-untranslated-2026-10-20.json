@@ -1,0 +1,1223 @@
+{
+  "description": "Owner 2026-10-20: translate remaining German/English UI text in navigation, media, radio and menu modules; German voice-example text replaced by the stock English text (voice stays English). English voice prompts/commands kept.",
+  "changes": [
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 1073,
+      "en": "On-the-Go playlist",
+      "old": "On-the-Go Playlist",
+      "new": "Плейлист On-the-Go"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 1277,
+      "en": "Wi-Fi",
+      "old": "WLAN",
+      "new": "Wi-Fi"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 1296,
+      "en": "Wi-Fi",
+      "old": "WLAN",
+      "new": "Wi-Fi"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 1343,
+      "en": "Wi-Fi",
+      "old": "WLAN",
+      "new": "Wi-Fi"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 1345,
+      "en": "CD changer",
+      "old": "CD Wechsler",
+      "new": "CD-чейнджер"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 1351,
+      "en": "Track \"Summer of 69\" by artist \"Bryan\nAdams\"",
+      "old": "Titel Summer of 69 von Interpret Bryan Adams",
+      "new": "Track \"Summer of 69\" by artist \"Bryan\nAdams\""
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 1352,
+      "en": "Album \"Greatest Hits\" by artist \"Bryan\nAdams\"",
+      "old": "Album Greatest Hits von Interpret Queen",
+      "new": "Album \"Greatest Hits\" by artist \"Bryan\nAdams\""
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 1353,
+      "en": "Track \"Summer of 69\"",
+      "old": "Titel Summer of 69",
+      "new": "Track \"Summer of 69\""
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 1355,
+      "en": "Find music",
+      "old": "Musiksuche",
+      "new": "Пошук музики"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 1388,
+      "en": "Wi-Fi",
+      "old": "WLAN",
+      "new": "Wi-Fi"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 1480,
+      "en": "On-the-Go playlist",
+      "old": "On-the-Go Playlist",
+      "new": "Плейлист On-the-Go"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 1736,
+      "en": "On-the-Go playlist",
+      "old": "On-the-Go Playlist",
+      "new": "Плейлист On-the-Go"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 1738,
+      "en": "Genius playlists",
+      "old": "Genius",
+      "new": "Плейлисти Genius"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2118,
+      "en": "Display tracks",
+      "old": "Titel anzeigen",
+      "new": "Показувати треки"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2428,
+      "en": "Track \"Summer of 69\" by artist \"Bryan\nAdams\"",
+      "old": "Titel Summer of 69 von Interpret Bryan Adams",
+      "new": "Track \"Summer of 69\" by artist \"Bryan\nAdams\""
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2429,
+      "en": "Album \"Greatest Hits\" by artist \"Bryan\nAdams\"",
+      "old": "Album Greatest Hits von Interpret Queen",
+      "new": "Album \"Greatest Hits\" by artist \"Bryan\nAdams\""
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2430,
+      "en": "Track \"Summer of 69\"",
+      "old": "Titel Summer of 69",
+      "new": "Track \"Summer of 69\""
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2431,
+      "en": "Artist \"Bryan Adams\"",
+      "old": "Interpret \"Bryan Adams\"",
+      "new": "Artist \"Bryan Adams\""
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2462,
+      "en": "Genius playlists",
+      "old": "Genius",
+      "new": "Плейлисти Genius"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2466,
+      "en": "Genius playlists",
+      "old": "Genius",
+      "new": "Плейлисти Genius"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2732,
+      "en": "Online media",
+      "old": "Online Medien",
+      "new": "Онлайн-медіа"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2735,
+      "en": "Track \"Summer of 69\" by artist \"Bryan\nAdams\"",
+      "old": "Titel Summer of 69 von Interpret Bryan Adams",
+      "new": "Track \"Summer of 69\" by artist \"Bryan\nAdams\""
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2736,
+      "en": "Album \"Greatest Hits\" by artist \"Bryan Adams\"",
+      "old": "Album Greatest Hits von Interpret Queen",
+      "new": "Album \"Greatest Hits\" by artist \"Bryan Adams\""
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2737,
+      "en": "Track \"Summer of 69\"",
+      "old": "Titel Summer of 69",
+      "new": "Track \"Summer of 69\""
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2738,
+      "en": "Artist \"Bryan Adams\"",
+      "old": "Interpret \"Bryan Adams\"",
+      "new": "Artist \"Bryan Adams\""
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2804,
+      "en": "Genius playlists",
+      "old": "Genius",
+      "new": "Плейлисти Genius"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 3336,
+      "en": "1.0",
+      "old": "Mono",
+      "new": "Моно"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 3546,
+      "en": "On-the-Go playlist",
+      "old": "On-the-Go Playlist",
+      "new": "Плейлист On-the-Go"
+    },
+    {
+      "module": "HMIMessagingEvoHigh",
+      "slot": 794,
+      "en": "Dictate e-mail",
+      "old": "E-Mail diktieren",
+      "new": "Диктувати e-mail"
+    },
+    {
+      "module": "HMIMessagingEvoHigh",
+      "slot": 797,
+      "en": "Carry on without a subject",
+      "old": "Ohne Betreff weitermachen",
+      "new": "Продовжити без теми"
+    },
+    {
+      "module": "HMIMessagingEvoHigh",
+      "slot": 798,
+      "en": "Continue subject",
+      "old": "Betreff erweitern",
+      "new": "Доповнити тему"
+    },
+    {
+      "module": "HMIMessagingEvoHigh",
+      "slot": 799,
+      "en": "Re-record",
+      "old": "Alles neu aufnehmen",
+      "new": "Записати заново"
+    },
+    {
+      "module": "HMIMessagingEvoHigh",
+      "slot": 803,
+      "en": "Read e-mail",
+      "old": "E-Mail vorlesen",
+      "new": "Читати e-mail"
+    },
+    {
+      "module": "HMIMessagingEvoHigh",
+      "slot": 804,
+      "en": "Read new e-mail",
+      "old": "Neue E-Mail vorlesen",
+      "new": "Читати нові e-mail"
+    },
+    {
+      "module": "HMIMessagingEvoHigh",
+      "slot": 1139,
+      "en": "Processing recording. Please wait...",
+      "old": "Aufnahme wird verarbeitet.",
+      "new": "Обробка запису."
+    },
+    {
+      "module": "HMIMessagingEvoHigh",
+      "slot": 1140,
+      "en": "Dictate message",
+      "old": "SMS diktieren",
+      "new": "Диктувати SMS"
+    },
+    {
+      "module": "HMIMessagingEvoHigh",
+      "slot": 1226,
+      "en": "Dictate e-mail",
+      "old": "E-Mail diktieren",
+      "new": "Диктувати e-mail"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 573,
+      "en": "Standard map",
+      "old": "Standardkarte",
+      "new": "Стандартна карта"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 575,
+      "en": "Traffic map",
+      "old": "Verkehrskarte",
+      "new": "Карта руху"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 576,
+      "en": "2D driving position map",
+      "old": "2D Fahrtkarte",
+      "new": "2D-карта за напрямком руху"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 577,
+      "en": "2D north position map",
+      "old": "2D Nordkarte",
+      "new": "2D-карта північ угорі"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 579,
+      "en": "Destination map",
+      "old": "Zielkarte",
+      "new": "Карта цілі"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 580,
+      "en": "Day map",
+      "old": "Tagkarte",
+      "new": "Денна карта"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 581,
+      "en": "Night map",
+      "old": "Nachtkarte",
+      "new": "Нічна карта"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 583,
+      "en": "Additional route info on/off",
+      "old": "Kartenzusatz Routeninfo ein/aus",
+      "new": "Додаткова інформація про маршрут: увімк./вимк."
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 584,
+      "en": "Intersection map on/off",
+      "old": "Kreuzungskarte ein/aus",
+      "new": "Карта перехрестя увімк./вимк."
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 587,
+      "en": "Calculate alternative routes",
+      "old": "Alternativroute berechnen",
+      "new": "Розрахувати альтернативний маршрут"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 589,
+      "en": "Switch automatic traffic avoidance on/off",
+      "old": "Automatische Stauumfahrung",
+      "new": "Автоматичний об’їзд заторів"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 590,
+      "en": "Voice guidance: traffic",
+      "old": "Nav-Ansage Verkehr",
+      "new": "Голосові підказки: затори"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 592,
+      "en": "Voice guidance: complete/off",
+      "old": "Nav-Ansage komplett/aus",
+      "new": "Голосові підказки: усі/вимк."
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 600,
+      "en": "Last destinations",
+      "old": "Letzte Ziele",
+      "new": "Останні пункти"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 658,
+      "en": "Where can I fill up?",
+      "old": "Wo kann ich tanken?",
+      "new": "Where can I fill up?"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 659,
+      "en": "I need to refuel",
+      "old": "Ich will tanken.",
+      "new": "I need to refuel"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 662,
+      "en": "I think I should sleep for a bit",
+      "old": "Ich glaube ich sollte etwas schlafen.",
+      "new": "I think I should sleep for a bit"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 664,
+      "en": "I want something to eat",
+      "old": "Ich will etwas Essen.",
+      "new": "I want something to eat"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 667,
+      "en": "I want to go to the lavatory",
+      "old": "Ich muss aufs Klo.",
+      "new": "I want to go to the lavatory"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 668,
+      "en": "I need to go to the toilet",
+      "old": "Ich muss auf die Toilette.",
+      "new": "I need to go to the toilet"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 670,
+      "en": "Online destinations",
+      "old": "Onlineziele",
+      "new": "Онлайн-пункти"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 682,
+      "en": "Last destinations",
+      "old": "Letzte Ziele",
+      "new": "Останні пункти"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 768,
+      "en": "Last destinations",
+      "old": "Letzte Ziele",
+      "new": "Останні пункти"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 848,
+      "en": "Night map",
+      "old": "Nachtkarte",
+      "new": "Нічна карта"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 1569,
+      "en": "Post codes",
+      "old": "Postleitzahlen",
+      "new": "Поштові індекси"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 1570,
+      "en": "Last destinations",
+      "old": "Letzte Ziele",
+      "new": "Останні пункти"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 1582,
+      "en": "Destinations",
+      "old": "Ziele",
+      "new": "Пункти"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2142,
+      "en": "Additional info off",
+      "old": "Kartenzusatz aus",
+      "new": "Додаткова інформація: вимк."
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2376,
+      "en": "Standard map",
+      "old": "Standardkarte",
+      "new": "Стандартна карта"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2464,
+      "en": "Show special destination symbols",
+      "old": "Display POI icons",
+      "new": "Показувати значки POI"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2467,
+      "en": "all roads",
+      "old": "All roads",
+      "new": "Усі дороги"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2468,
+      "en": "highways",
+      "old": "Highway",
+      "new": "Автомагістралі"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2469,
+      "en": "normal roads",
+      "old": "Normal road",
+      "new": "Звичайні дороги"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2473,
+      "en": "Traffic symbols",
+      "old": "Traffic event icons",
+      "new": "Значки подій на дорогах"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2474,
+      "en": "Traffic map",
+      "old": "Verkehrskarte",
+      "new": "Карта руху"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2475,
+      "en": "Clear roads",
+      "old": "Uncrowded road",
+      "new": "Вільні дороги"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2481,
+      "en": "Remove all special destination symbols",
+      "old": "Remove all POI icons",
+      "new": "Прибрати всі значки POI"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2482,
+      "en": "Special dest. symbols",
+      "old": "POI Icons",
+      "new": "Значки POI"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2487,
+      "en": "Level crossing",
+      "old": "Railway crossing",
+      "new": "Залізничний переїзд"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2488,
+      "en": "Speed cameras",
+      "old": "Speed camera",
+      "new": "Камери швидкості"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2510,
+      "en": "No.",
+      "old": "House number",
+      "new": "Номер будинку"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2643,
+      "en": "Enter town or district.",
+      "old": "Enter city or district",
+      "new": "Введіть місто або район"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2644,
+      "en": "Enter street.",
+      "old": "Enter street",
+      "new": "Введіть вулицю"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2645,
+      "en": "Enter prefecture.",
+      "old": "Enter prefecture",
+      "new": "Введіть префектуру"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2646,
+      "en": "Enter location or town.",
+      "old": "Enter city or town",
+      "new": "Введіть місто чи селище"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2647,
+      "en": "Enter square.",
+      "old": "Enter place name",
+      "new": "Введіть назву місця"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2648,
+      "en": "Enter district.",
+      "old": "Enter chome",
+      "new": "Введіть квартал"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2649,
+      "en": "Enter province or town.",
+      "old": "Enter province or metro",
+      "new": "Введіть провінцію чи мегаполіс"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2650,
+      "en": "Enter town, region or country.",
+      "old": "Enter city, ward or country",
+      "new": "Введіть місто, район або країну"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2651,
+      "en": "Enter town or street.",
+      "old": "Enter town or street",
+      "new": "Введіть місто або вулицю"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2652,
+      "en": "Enter house number.",
+      "old": "Enter house number",
+      "new": "Введіть номер будинку"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2653,
+      "en": "Enter intersection.",
+      "old": "Enter intersection",
+      "new": "Введіть перехрестя"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3163,
+      "en": "States",
+      "old": "Bundesstaaten",
+      "new": "Штати"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3173,
+      "en": "Last destinations",
+      "old": "Letzte Ziele",
+      "new": "Останні пункти"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3175,
+      "en": "Online destinations",
+      "old": "Onlineziele",
+      "new": "Онлайн-пункти"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3185,
+      "en": "Full route information",
+      "old": "Route info full",
+      "new": "Повна інформація про маршрут"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3186,
+      "en": "Route information off",
+      "old": "Route info off",
+      "new": "Інформація про маршрут: вимк."
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3187,
+      "en": "Manoeuvre route information",
+      "old": "Route info reduced",
+      "new": "Скорочена інформація про маршрут"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3192,
+      "en": "Route info on or off",
+      "old": "Routeninfo ein/aus",
+      "new": "Інформація про маршрут: увімк./вимк."
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3217,
+      "en": "Radio favourites",
+      "old": "Radio Favoriten",
+      "new": "Радіо: вибране"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3272,
+      "en": "Last destinations",
+      "old": "Letzte Ziele",
+      "new": "Останні пункти"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3331,
+      "en": "Radio favourites",
+      "old": "Radio Favoriten",
+      "new": "Радіо: вибране"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3345,
+      "en": "Online destinations",
+      "old": "Onlineziele",
+      "new": "Онлайн-пункти"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3346,
+      "en": "Town/street",
+      "old": "Town/Street",
+      "new": "Місто/вулиця"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3348,
+      "en": "Town/street",
+      "old": "Town/Street",
+      "new": "Місто/вулиця"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3473,
+      "en": "Traffic map",
+      "old": "Verkehrskarte",
+      "new": "Карта руху"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3477,
+      "en": "Show special destination symbols",
+      "old": "Display POI icons",
+      "new": "Показувати значки POI"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3480,
+      "en": "all roads",
+      "old": "All roads",
+      "new": "Усі дороги"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3481,
+      "en": "highways",
+      "old": "Highway",
+      "new": "Автомагістралі"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3482,
+      "en": "normal roads",
+      "old": "Normal road",
+      "new": "Звичайні дороги"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3486,
+      "en": "Traffic symbols",
+      "old": "Traffic event icons",
+      "new": "Значки подій на дорогах"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3487,
+      "en": "Traffic map",
+      "old": "Verkehrskarte",
+      "new": "Карта руху"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3488,
+      "en": "Clear roads",
+      "old": "Uncrowded road",
+      "new": "Вільні дороги"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3494,
+      "en": "Remove all special destination symbols",
+      "old": "Remove all POI icons",
+      "new": "Прибрати всі значки POI"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3508,
+      "en": "Special dest. symbols",
+      "old": "POI Icons",
+      "new": "Значки POI"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3528,
+      "en": "Last destinations",
+      "old": "Letzte Ziele",
+      "new": "Останні пункти"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 70,
+      "en": "Online destinations",
+      "old": "Onlineziele",
+      "new": "Онлайн-пункти"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 73,
+      "en": "Online media",
+      "old": "Online Medien",
+      "new": "Онлайн-медіа"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 84,
+      "en": "Online media",
+      "old": "Online Medien",
+      "new": "Онлайн-медіа"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 88,
+      "en": "Online destinations",
+      "old": "Onlineziele",
+      "new": "Онлайн-пункти"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 230,
+      "en": "Wi-Fi",
+      "old": "WLAN",
+      "new": "Wi-Fi"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 240,
+      "en": "Last destinations",
+      "old": "Letzte Ziele",
+      "new": "Останні пункти"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 962,
+      "en": "Speed alert",
+      "old": "Speed Alert",
+      "new": "Сповіщ. про швидкість"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 1039,
+      "en": "Dictate e-mail",
+      "old": "E-Mail diktieren",
+      "new": "Диктувати e-mail"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 1173,
+      "en": "Valet alert",
+      "old": "Valet Alert",
+      "new": "Сповіщення Valet"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 1174,
+      "en": "Speed alert",
+      "old": "Speed Alert",
+      "new": "Сповіщ. про швидкість"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 1175,
+      "en": "Geofencing alert",
+      "old": "Geofence Alert",
+      "new": "Сповіщення Geofence"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 1178,
+      "en": "SIM card alert",
+      "old": "SIM card Alert",
+      "new": "Сповіщ. SIM-карти"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 1210,
+      "en": "Valet alert",
+      "old": "Valet Alert",
+      "new": "Сповіщення Valet"
+    },
+    {
+      "module": "HMIPhoneEvoHigh",
+      "slot": 561,
+      "en": "Read text message",
+      "old": "SMS Vorlesen",
+      "new": "Читати SMS"
+    },
+    {
+      "module": "HMIPhoneEvoHigh",
+      "slot": 563,
+      "en": "Call mobile number/land line number",
+      "old": "Mobil/Festnetz anrufen",
+      "new": "Дзвінок: мобільний/стаціонарний"
+    },
+    {
+      "module": "HMIPhoneEvoHigh",
+      "slot": 569,
+      "en": "1 2 3 4",
+      "old": "Ziffern 0-9",
+      "new": "Цифри 0-9"
+    },
+    {
+      "module": "HMIPhoneEvoHigh",
+      "slot": 956,
+      "en": "Dictate e-mail",
+      "old": "E-Mail diktieren",
+      "new": "Диктувати e-mail"
+    },
+    {
+      "module": "HMIPhoneEvoHigh",
+      "slot": 1073,
+      "en": "Media: Favourites - active medium",
+      "old": "Titel anzeigen",
+      "new": "Показувати треки"
+    },
+    {
+      "module": "HMIPhoneEvoHigh",
+      "slot": 1466,
+      "en": "Re-record",
+      "old": "Alles neu aufnehmen",
+      "new": "Записати заново"
+    },
+    {
+      "module": "HMIPhoneEvoHigh",
+      "slot": 1468,
+      "en": "Read new text message",
+      "old": "Neue SMS vorlesen",
+      "new": "Читати нові SMS"
+    },
+    {
+      "module": "HMIPhoneEvoHigh",
+      "slot": 2244,
+      "en": "Telephone favourites",
+      "old": "Telephone Favorites",
+      "new": "Вибране: телефон"
+    },
+    {
+      "module": "HMIPhoneEvoHigh",
+      "slot": 2303,
+      "en": "Radio favourites",
+      "old": "Radio Favoriten",
+      "new": "Радіо: вибране"
+    },
+    {
+      "module": "HMISettingsEvoHigh",
+      "slot": 349,
+      "en": "gallons (US)",
+      "old": "gal (US)",
+      "new": "гал. (США)"
+    },
+    {
+      "module": "HMISettingsEvoHigh",
+      "slot": 382,
+      "en": "Yes, reset now",
+      "old": "Yes",
+      "new": "Так, скинути зараз"
+    },
+    {
+      "module": "HMISettingsEvoHigh",
+      "slot": 507,
+      "en": "Ensemble \"BBC\"",
+      "old": "Zeile 1",
+      "new": "Ensemble \"BBC\""
+    },
+    {
+      "module": "HMISettingsEvoHigh",
+      "slot": 921,
+      "en": "Wi-Fi",
+      "old": "WLAN",
+      "new": "Wi-Fi"
+    },
+    {
+      "module": "HMISettingsEvoHigh",
+      "slot": 932,
+      "en": "Ensemble \"BBC\"",
+      "old": "Zeile 1",
+      "new": "Ensemble \"BBC\""
+    },
+    {
+      "module": "HMISettingsEvoHigh",
+      "slot": 934,
+      "en": "Display tracks",
+      "old": "Titel anzeigen",
+      "new": "Показувати треки"
+    },
+    {
+      "module": "HMISettingsEvoHigh",
+      "slot": 935,
+      "en": "Display albums",
+      "old": "Alben anzeigen",
+      "new": "Показувати альбоми"
+    },
+    {
+      "module": "HMISettingsEvoHigh",
+      "slot": 936,
+      "en": "Display artists",
+      "old": "Interpreten anzeigen",
+      "new": "Показувати виконавців"
+    },
+    {
+      "module": "HMISettingsEvoHigh",
+      "slot": 1290,
+      "en": "The ETC gate cannot be used.",
+      "old": "The ETC gate cannot be passed.",
+      "new": "Проїзд через ETC неможливий"
+    },
+    {
+      "module": "HMISettingsEvoHigh",
+      "slot": 1291,
+      "en": "The ETC gate cannot be passed.",
+      "old": "The ETC gate cannot be used.",
+      "new": "Шлагбаум ETC недоступний"
+    },
+    {
+      "module": "HMISettingsEvoHigh",
+      "slot": 1326,
+      "en": "CD changer",
+      "old": "CD Wechsler",
+      "new": "CD-чейнджер"
+    },
+    {
+      "module": "HMISettingsEvoHigh",
+      "slot": 1376,
+      "en": "The ETC gate cannot be used.",
+      "old": "The ETC gate cannot be passed.",
+      "new": "Проїзд через ETC неможливий"
+    },
+    {
+      "module": "HMITunerEvoHigh",
+      "slot": 509,
+      "en": "Radio: Favourites",
+      "old": "Radio Favoriten",
+      "new": "Радіо: вибране"
+    },
+    {
+      "module": "HMITunerEvoHigh",
+      "slot": 543,
+      "en": "SiriusXM alerts",
+      "old": "Sirius seek",
+      "new": "Сповіщ. SiriusXM"
+    },
+    {
+      "module": "HMITunerEvoHigh",
+      "slot": 592,
+      "en": "Ensemble \"BBC\"",
+      "old": "Zeile 1",
+      "new": "Ensemble \"BBC\""
+    },
+    {
+      "module": "HMITunerEvoHigh",
+      "slot": 593,
+      "en": "Channel \"The Pulse\"",
+      "old": "Kanal The Pulse",
+      "new": "Channel \"The Pulse\""
+    },
+    {
+      "module": "HMITunerEvoHigh",
+      "slot": 599,
+      "en": "Last destinations",
+      "old": "Letzte Ziele",
+      "new": "Останні пункти"
+    },
+    {
+      "module": "HMITunerEvoHigh",
+      "slot": 606,
+      "en": "DAB",
+      "old": "DAB Radio",
+      "new": "DAB-радіо"
+    },
+    {
+      "module": "HMITunerEvoHigh",
+      "slot": 635,
+      "en": "DAB",
+      "old": "DAB Radio",
+      "new": "DAB-радіо"
+    },
+    {
+      "module": "HMITunerEvoHigh",
+      "slot": 652,
+      "en": "DAB",
+      "old": "DAB Radio",
+      "new": "DAB-радіо"
+    },
+    {
+      "module": "HMITunerEvoHigh",
+      "slot": 661,
+      "en": "DAB",
+      "old": "DAB Radio",
+      "new": "DAB-радіо"
+    },
+    {
+      "module": "HMITunerEvoHigh",
+      "slot": 713,
+      "en": "DAB",
+      "old": "DAB Radio",
+      "new": "DAB-радіо"
+    },
+    {
+      "module": "HMITunerEvoHigh",
+      "slot": 742,
+      "en": "Online stations",
+      "old": "Onlinesender",
+      "new": "Онлайн-станції"
+    },
+    {
+      "module": "HMITunerEvoHigh",
+      "slot": 853,
+      "en": "No subscription to channel %1.\nFor a subscription please call\n%2.\nReceiver serial number: %3",
+      "old": "Channel %1 not subscribed.\nCall %2 to subscribe.\nSirius XM Radio ID: %3",
+      "new": "Канал %1 не передплачено.\nЗателефонуйте %2 для підписки.\nID Sirius XM Radio: %3"
+    },
+    {
+      "module": "HMITunerEvoHigh",
+      "slot": 922,
+      "en": "Radio: Favourites",
+      "old": "Radio Favoriten",
+      "new": "Радіо: вибране"
+    },
+    {
+      "module": "HMITunerEvoHigh",
+      "slot": 1069,
+      "en": "cover art",
+      "old": "Cover Art",
+      "new": "Обкладинка"
+    },
+    {
+      "module": "HMITunerEvoHigh",
+      "slot": 1339,
+      "en": "SiriusXM alerts",
+      "old": "Sirius seek",
+      "new": "Сповіщ. SiriusXM"
+    },
+    {
+      "module": "HMITunerEvoHigh",
+      "slot": 1641,
+      "en": "Radio favourites",
+      "old": "Radio Favoriten",
+      "new": "Радіо: вибране"
+    },
+    {
+      "module": "HMITunerEvoHigh",
+      "slot": 1644,
+      "en": "SiriusXM alerts",
+      "old": "Sirius seek",
+      "new": "Сповіщ. SiriusXM"
+    },
+    {
+      "module": "HMITunerEvoHigh",
+      "slot": 1653,
+      "en": "SiriusXM hotline\n%1\nSiriusXM radio ID:\n%2",
+      "old": "SiriusXM Hotline\n%1\nSiriusXM Radio ID:\n%2",
+      "new": "Гаряча лінія SiriusXM\n%1\nID радіо SiriusXM:\n%2"
+    },
+    {
+      "module": "HMITunerEvoHigh",
+      "slot": 1658,
+      "en": "SiriusXM alerts",
+      "old": "Sirius seek",
+      "new": "Сповіщ. SiriusXM"
+    },
+    {
+      "module": "HMITunerEvoHigh",
+      "slot": 1682,
+      "en": "DAB",
+      "old": "DAB Radio",
+      "new": "DAB-радіо"
+    },
+    {
+      "module": "HMITunerEvoHigh",
+      "slot": 1690,
+      "en": "Radio favourites",
+      "old": "Radio Favoriten",
+      "new": "Радіо: вибране"
+    },
+    {
+      "module": "HMITunerEvoHigh",
+      "slot": 1760,
+      "en": "SiriusXM game alerts",
+      "old": "SiriusXM Game Alert",
+      "new": "Сповіщ. про матч SiriusXM"
+    },
+    {
+      "module": "HMITunerEvoHigh",
+      "slot": 1762,
+      "en": "SiriusXM music alerts",
+      "old": "SiriusXM Music Alerts",
+      "new": "Музичні сповіщ. SiriusXM"
+    },
+    {
+      "module": "HMITunerEvoHigh",
+      "slot": 1769,
+      "en": "SiriusXM alert",
+      "old": "SiriusXM Alert",
+      "new": "Сповіщення SiriusXM"
+    },
+    {
+      "module": "HMITunerEvoHigh",
+      "slot": 1778,
+      "en": "SiriusXM game alerts",
+      "old": "SiriusXM Game Alert",
+      "new": "Сповіщ. про матч SiriusXM"
+    },
+    {
+      "module": "HMITunerEvoHigh",
+      "slot": 1797,
+      "en": "SiriusXM radio ID: %1",
+      "old": "SiriusXM Radio-ID: %1",
+      "new": "ID радіо SiriusXM: %1"
+    },
+    {
+      "module": "HMITunerEvoHigh",
+      "slot": 1837,
+      "en": "SiriusXM game alerts",
+      "old": "SiriusXM Game Alert",
+      "new": "Сповіщ. про матч SiriusXM"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "description": "Owner 2026-10-21: \"Delete this favourite\" -> \"Видалити з вибраного\".",
+  "changes": [
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 1953,
+      "en": "Delete this favourite",
+      "old": "Видалити цей ел. вибраного",
+      "new": "Видалити з вибраного"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 1000,
+      "en": "Delete this favourite",
+      "old": "Видалити цей ел. вибраного",
+      "new": "Видалити з вибраного"
+    },
+    {
+      "module": "HMITVEvoHigh",
+      "slot": 946,
+      "en": "Delete this favourite",
+      "old": "Видалити цей ел. вибраного",
+      "new": "Видалити з вибраного"
+    },
+    {
+      "module": "HMITunerEvoHigh",
+      "slot": 974,
+      "en": "Delete this favourite",
+      "old": "Видалити цей ел. вибраного",
+      "new": "Видалити з вибраного"
+    }
+  ]
+}

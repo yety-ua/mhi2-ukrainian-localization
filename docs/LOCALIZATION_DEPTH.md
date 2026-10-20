@@ -7,8 +7,8 @@
 Він не обмежується перекладом головного меню. Водночас структурне покриття не означає
 100% редакційної завершеності або перевірку кожного доступного екрана.
 
-Аудит 13.10.2026 перевіряє **саме релізний ZIP**, SHA-256
-`f581006ddb33d7a4b3fd53c3794f9d44e6811738c599e49cdb05068beb55cac3`.
+Аудит 20.10.2026 перевіряє **саме релізний ZIP**, SHA-256
+`995440ea06cec135a37f53a4ac8fdff279b6e6d0d289e4d056738612fd4710b3`.
 Машинний звіт: [resource-audit.json](resource-audit.json).
 
 | Частина | Реалізовано | Що ще треба підтвердити |
@@ -22,13 +22,14 @@
 | Навігація | Українські таблиці HMINavi; запит NAVI/TTS мов маршрутизується окремо | Реальні карти, український пошук адрес, POI, маршрути, вимова |
 | Голос | Необов'язковий англійський fallback; окремий install/reboot цикл | Готовність NAVI/TTS/SDS, мікрофон, аудіо. Українського голосу/моделей немає |
 | Connectivity | 9 статусних/термінологічних правок, зокрема видимість Bluetooth | Показ усіх цих станів на авто; не всі доступні в емуляторі |
+| Редакційні правки 20.10.2026 | 95 слотів термінології («вказівка» → «повідомлення», «підказка», «сповіщення» тощо) 174 слоти перекладу в Navi, Media, Tuner, Online, Messaging, Phone, Settings 22 слоти формулювань меню («Ввести пункт призначення», «Дорожні повідомлення», «дозволити/уникати», «автоматично» тощо), 28 слотів «указати» → «вказати», 33 слоти «Ввести адресу» і 240 видимих німецьких/англійських назв у Navi, Media, Car, Online, Settings, Phone, Tuner 189 слотів, де скорочення розгорнуто в повні слова (разом 891 слот відносно попереднього релізу); німецькі голосові приклади замінено штатним англійським текстом; маніфести в [language-reviews-2026-10-20](language-reviews-2026-10-20/) | 69 термінологічних слотів, зокрема заголовок «Повідомлення» (12 символів) при ліміті слота 10–11, перевірено лише за кількістю символів; в емуляторі «Audi smartphone interface: Повідомле…» обрізається. Попап гучності показує «Гучність» (емулятор) |
 | Virtual Cockpit | HMI просить мову 43; AU491/0379 та AU736/0378/0416 мають мовну карту й українські ресурси | AU491/0313 та AU736/0310 відхиляють BAP43. Фізичний показ, H15/компас, Q7/TPMS та update eligibility перевіряються окремо |
 | SD-інсталятор | Перевірка точної цілі, baseline, CRC, hashes, read-back, SD/internal backup, recovery, journal | Справжній QNX/M.I.B./GEM, встановлення, відкат і робота без SD |
 
 ### Що означають залишкові кандидати
 
-Після правок Connectivity лишилося **6497 слотів без кирилиці**: 5232 дорівнюють
-англійському оригіналу, 1265 відрізняються. Це **не** 6497 пропущених перекладів:
+Після правок Connectivity і редакційних правок 20.10.2026 лишилося **6085 слотів без кирилиці**:
+5022 дорівнюють англійському оригіналу, 1063 відрізняються. Це **не** 6085 пропущених перекладів:
 сюди входять Bluetooth/CarPlay/Audi, числа, URL, географічні приклади, імена, діагностика
 та підтримувані англійські команди голосової системи. Сам en_GB місцями містить німецьку,
 тому рівність з en_GB теж не є доказом допустимості залишкового тексту.
@@ -89,8 +90,13 @@ AU736/0310 also rejects BAP43; AU736/0378 and 0416 accept BAP43 and contain nati
 Ukrainian resources. Physical display and hardware/update eligibility remain separate.
 The SD package never flashes the Virtual Cockpit.
 
-After the nine Connectivity fixes, **6497 non-Cyrillic slots remain as candidates**,
-5232 equal to English and 1265 different. These counts include product names, numbers,
+After the nine Connectivity fixes and the 2026-10-20 editorial review (95 terminology
+slots, 174 translated slots in Navi/Media/Tuner/Online/Messaging/Phone/Settings, 22 menu-wording slots, 28 "вказати" spelling slots, 33 "Enter Address" slots and 240 visible German/English labels 189 slots with abbreviations expanded to full words (891 slots in total against the previous release); German
+voice examples replaced by the stock English text), **6085 non-Cyrillic slots remain as
+candidates**, 5022 equal to English and 1063 different. 69 terminology slots, notably the
+12-character "Повідомлення" for "Note" against a slot limit of 10-11 characters, were checked
+by character count only; in the emulator the title "Audi smartphone interface: Повідомле…"
+is truncated. These counts include product names, numbers,
 URLs, examples, diagnostics and deliberate English speech commands. They are not
 missing-translation counts or a completeness percentage. English tables themselves
 contain some German text. Media/Navi/Phone/Messaging/Online/Tuner/TV voice-help contexts,

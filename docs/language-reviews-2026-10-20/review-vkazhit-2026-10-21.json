@@ -1,0 +1,61 @@
+{
+  "description": "2026-10-21: \"Укажіть\" -> \"Вкажіть\" (consistent with вказати).",
+  "changes": [
+    {
+      "module": "HMIConnectivityEvoHigh",
+      "slot": 627,
+      "en": "Please enter the access point (APN):",
+      "old": "Укажіть точку доступу (APN):",
+      "new": "Вкажіть точку доступу (APN):"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 1952,
+      "en": "Please enter one of the last destinations.",
+      "old": "Укажіть один із останніх пунктів призн.",
+      "new": "Вкажіть один із останніх пунктів призн."
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 1957,
+      "en": "Please enter a location.",
+      "old": "Укажіть населений пункт.",
+      "new": "Вкажіть населений пункт."
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2054,
+      "en": "Please enter a special destination.",
+      "old": "Укажіть об’єкт.",
+      "new": "Вкажіть об’єкт."
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2071,
+      "en": "The destination could not be created.\nPlease enter the destination again.",
+      "old": "Не вдалося створити пункт\nпризначення. Укажіть його пізніше.",
+      "new": "Не вдалося створити пункт\nпризначення. Вкажіть його пізніше."
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2334,
+      "en": "The destination could not be created.\nPlease enter the destination again.",
+      "old": "Не вдалося створити пункт\nпризначення. Укажіть його пізніше.",
+      "new": "Не вдалося створити пункт\nпризначення. Вкажіть його пізніше."
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3301,
+      "en": "Please enter a special destination.",
+      "old": "Укажіть об’єкт.",
+      "new": "Вкажіть об’єкт."
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3641,
+      "en": "Please enter a name for the favourite.",
+      "old": "Укажіть ім’я для елемента вибраного.",
+      "new": "Вкажіть ім’я для елемента вибраного."
+    }
+  ]
+}

@@ -1,0 +1,740 @@
+{
+  "description": "Owner 2026-10-21 approved: destination -> ціль, Сигнал, латиниця/кирилиця/арабське письмо, дорожні оголошення, Змінити основний телефон, авт./ел. expansions.",
+  "changes": [
+    {
+      "module": "HMIAddressBookEvoHigh",
+      "slot": 342,
+      "en": "Add private destination",
+      "old": "Додати приватн. пункт призн.",
+      "new": "Додати приватну ціль"
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 968,
+      "en": "Night vision assist warning symbol",
+      "old": "Попер. символ сист. нічн. бачення",
+      "new": "Символ попередження нічного бачення"
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 1001,
+      "en": "Traffic announcements on/off",
+      "old": "Увімк./вимк. гол. пов. про с. на дор.",
+      "new": "Увімк./вимк. дорожні оголошення"
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 1317,
+      "en": "Distance warning",
+      "old": "Попередж. дистанції",
+      "new": "Сигнал дистанції"
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 1419,
+      "en": "Clear settings",
+      "old": "Видал. призн.",
+      "new": "Скинути налаштування"
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 1709,
+      "en": "Traffic announcements on/off",
+      "old": "Увімк./вимк. гол. пов. про с. на дор.",
+      "new": "Увімк./вимк. дорожні оголошення"
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 2132,
+      "en": "auxiliary",
+      "old": "авт. опал.",
+      "new": "автономне"
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 2182,
+      "en": "Switch to Cyrillic characters",
+      "old": "Перейти на кирил. набір символів",
+      "new": "Перейти на кирилицю"
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 2183,
+      "en": "Switch to Latin characters",
+      "old": "Перейти на лат. набір символів",
+      "new": "Перейти на латиницю"
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 2185,
+      "en": "Switch to Arabic characters",
+      "old": "Перейти на араб. набір символів",
+      "new": "Перейти на арабське письмо"
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 2485,
+      "en": "Speed warning",
+      "old": "Попередж. швидкості",
+      "new": "Сигнал швидкості"
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 4057,
+      "en": "Vehicle must\nbe stationary",
+      "old": "Можл., якщо\nавт. не рух.",
+      "new": "Якщо автомобіль\nне рухається"
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 4368,
+      "en": "Switch off aux. heating/air conditioning",
+      "old": "Вимк. авт. опалювач/авт. кліматизацію",
+      "new": "Вимкнути автономне опалення/кліматизацію"
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 4581,
+      "en": "Switch on auxiliary air conditioning",
+      "old": "Увімк. авт. опалювач/авт. кліматиз.",
+      "new": "Увімкнути автономну кліматизацію"
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 4963,
+      "en": "Only when vehicle is stationary",
+      "old": "Можливо, якщо авт. не рухається",
+      "new": "Можливо, якщо автомобіль не рухається"
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 5073,
+      "en": "auxiliary",
+      "old": "авт. опал.",
+      "new": "автономне"
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 5367,
+      "en": "Only when vehicle is stationary",
+      "old": "Можливо, якщо авт. не рухається",
+      "new": "Можливо, якщо автомобіль не рухається"
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 5368,
+      "en": "auxiliary",
+      "old": "авт. опал.",
+      "new": "автономне"
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 5403,
+      "en": "Only when vehicle is stationary",
+      "old": "Можливо, якщо авт. не рухається",
+      "new": "Можливо, якщо автомобіль не рухається"
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 5411,
+      "en": "Only when vehicle is stationary",
+      "old": "Можливо, якщо авт. не рухається",
+      "new": "Можливо, якщо автомобіль не рухається"
+    },
+    {
+      "module": "HMICarEvoHigh",
+      "slot": 5931,
+      "en": "Only when vehicle is stationary",
+      "old": "Можливо, якщо авт. не рухається",
+      "new": "Можливо, якщо автомобіль не рухається"
+    },
+    {
+      "module": "HMIConnectivityEvoHigh",
+      "slot": 832,
+      "en": "Switch to Cyrillic characters",
+      "old": "Перейти на кирил. набір символів",
+      "new": "Перейти на кирилицю"
+    },
+    {
+      "module": "HMIConnectivityEvoHigh",
+      "slot": 833,
+      "en": "Switch to Latin characters",
+      "old": "Перейти на лат. набір символів",
+      "new": "Перейти на латиницю"
+    },
+    {
+      "module": "HMIConnectivityEvoHigh",
+      "slot": 834,
+      "en": "Switch to Arabic characters",
+      "old": "Перейти на араб. набір символів",
+      "new": "Перейти на арабське письмо"
+    },
+    {
+      "module": "HMIEarlyAppsEvoHigh",
+      "slot": 352,
+      "en": "auxiliary",
+      "old": "авт. опал.",
+      "new": "автономне"
+    },
+    {
+      "module": "HMIEarlyAppsEvoHigh",
+      "slot": 506,
+      "en": "Only when vehicle is stationary",
+      "old": "Можливо, якщо авт. не рухається",
+      "new": "Можливо, якщо автомобіль не рухається"
+    },
+    {
+      "module": "HMIEarlyAppsEvoHigh",
+      "slot": 1221,
+      "en": "auxiliary",
+      "old": "авт. опал.",
+      "new": "автономне"
+    },
+    {
+      "module": "HMIEarlyAppsEvoHigh",
+      "slot": 1393,
+      "en": "auxiliary",
+      "old": "авт. опал.",
+      "new": "автономне"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2538,
+      "en": "Switch to Cyrillic characters",
+      "old": "Перейти на кирил. набір символів",
+      "new": "Перейти на кирилицю"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2539,
+      "en": "Switch to Latin characters",
+      "old": "Перейти на лат. набір символів",
+      "new": "Перейти на латиницю"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 2540,
+      "en": "Switch to Arabic characters",
+      "old": "Перейти на араб. набір символів",
+      "new": "Перейти на арабське письмо"
+    },
+    {
+      "module": "HMIMediaEvoHigh",
+      "slot": 3565,
+      "en": "Traffic announcements on/off",
+      "old": "Увімк./вимк. гол. пов. про с. на дор.",
+      "new": "Увімк./вимк. дорожні оголошення"
+    },
+    {
+      "module": "HMIMessagingEvoHigh",
+      "slot": 315,
+      "en": "Continue with last edited e-mail",
+      "old": "Продовжити ост. змін. ел. лист",
+      "new": "Продовжити останній змінений e-mail"
+    },
+    {
+      "module": "HMIMessagingEvoHigh",
+      "slot": 431,
+      "en": "Traffic announcements on/off",
+      "old": "Увімк./вимк. гол. пов. про с. на дор.",
+      "new": "Увімк./вимк. дорожні оголошення"
+    },
+    {
+      "module": "HMIMessagingEvoHigh",
+      "slot": 754,
+      "en": "Switch to Cyrillic characters",
+      "old": "Перейти на кирил. набір символів",
+      "new": "Перейти на кирилицю"
+    },
+    {
+      "module": "HMIMessagingEvoHigh",
+      "slot": 755,
+      "en": "Switch to Latin characters",
+      "old": "Перейти на лат. набір символів",
+      "new": "Перейти на латиницю"
+    },
+    {
+      "module": "HMIMessagingEvoHigh",
+      "slot": 756,
+      "en": "Switch to Arabic characters",
+      "old": "Перейти на араб. набір символів",
+      "new": "Перейти на арабське письмо"
+    },
+    {
+      "module": "HMIMessagingEvoHigh",
+      "slot": 1151,
+      "en": "Continue with last edited e-mail",
+      "old": "Продовжити ост. змін. ел. лист",
+      "new": "Продовжити останній змінений e-mail"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 440,
+      "en": "Picturebook destinations",
+      "old": "Пункти призн. Picturebook",
+      "new": "Цілі Picturebook"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 730,
+      "en": "Delete picture destination",
+      "old": "Видалити граф. пункт признач.",
+      "new": "Видалити графічну ціль"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 859,
+      "en": "Replace active destination",
+      "old": "Замінити активний пункт признач.",
+      "new": "Замінити активну ціль"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 919,
+      "en": "Show destination details",
+      "old": "Показати дані про пункт призн.",
+      "new": "Показати дані про ціль"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 920,
+      "en": "Show destination details",
+      "old": "Показати дані про пункт призн.",
+      "new": "Показати дані про ціль"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 998,
+      "en": "Delete this recent destination",
+      "old": "Видалити цей ост. п/признач.",
+      "new": "Видалити цю останню ціль"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 999,
+      "en": "Delete all recent destinations",
+      "old": "Видалити всі ост. п/признач.",
+      "new": "Видалити всі останні цілі"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 1002,
+      "en": "Delete this picture destination",
+      "old": "Видалити цей граф. п/призн.",
+      "new": "Видалити цю графічну ціль"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 1003,
+      "en": "Delete all picture destinations",
+      "old": "Видалити всі граф. п/признач.",
+      "new": "Видалити всі графічні цілі"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 1021,
+      "en": "Traffic announcements on/off",
+      "old": "Увімк./вимк. гол. пов. про с. на дор.",
+      "new": "Увімк./вимк. дорожні оголошення"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 1096,
+      "en": "Add private destination",
+      "old": "Додати приватн. пункт призн.",
+      "new": "Додати приватну ціль"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 1118,
+      "en": "Destination details",
+      "old": "Дані про пункт призн.",
+      "new": "Дані про ціль"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 1214,
+      "en": "Show destination details",
+      "old": "Показати дані про пункт призн.",
+      "new": "Показати дані про ціль"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 1216,
+      "en": "Show destination details",
+      "old": "Показати дані про пункт призн.",
+      "new": "Показати дані про ціль"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 1218,
+      "en": "Show destination details",
+      "old": "Показати дані про пункт призн.",
+      "new": "Показати дані про ціль"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 1280,
+      "en": "Onl. search (near dest.)",
+      "old": "Пошук онл. (призн.)",
+      "new": "Пошук онлайн (біля цілі)"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 1480,
+      "en": "near destination)",
+      "old": "район пунк. призн.)",
+      "new": "біля цілі)"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 1481,
+      "en": "near stopover)",
+      "old": "район пром. призн.)",
+      "new": "біля зупинки)"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 1637,
+      "en": "Destination details",
+      "old": "Дані про пункт призн.",
+      "new": "Дані про ціль"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 1879,
+      "en": "near destination)",
+      "old": "район пунк. призн.)",
+      "new": "біля цілі)"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 1952,
+      "en": "Please enter one of the last destinations.",
+      "old": "Вкажіть один із останніх пунктів призн.",
+      "new": "Вкажіть одну з останніх цілей"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 1953,
+      "en": "Search last destinations",
+      "old": "Перегл. останні пункти призн.",
+      "new": "Переглянути останні цілі"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 1985,
+      "en": "Show destination details",
+      "old": "Показати дані про пункт призн.",
+      "new": "Показати дані про ціль"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2088,
+      "en": "Destination details",
+      "old": "Дані про пункт призн.",
+      "new": "Дані про ціль"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2110,
+      "en": "Switch to Cyrillic characters",
+      "old": "Перейти на кирил. набір символів",
+      "new": "Перейти на кирилицю"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2111,
+      "en": "Switch to Latin characters",
+      "old": "Перейти на лат. набір символів",
+      "new": "Перейти на латиницю"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2112,
+      "en": "Switch to Arabic characters",
+      "old": "Перейти на араб. набір символів",
+      "new": "Перейти на арабське письмо"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2114,
+      "en": "Enter search (at destination)",
+      "old": "Ввести умову пошуку (призн.)",
+      "new": "Ввести умову пошуку (біля цілі)"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2129,
+      "en": "Replace current destination",
+      "old": "Замінити поточний пункт признач.",
+      "new": "Замінити поточну ціль"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2267,
+      "en": "Destination details",
+      "old": "Дані про пункт призн.",
+      "new": "Дані про ціль"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2325,
+      "en": "Destination details",
+      "old": "Дані про пункт призн.",
+      "new": "Дані про ціль"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2373,
+      "en": "in vicinity of stopover",
+      "old": "Район пром. п/призн.",
+      "new": "Біля зупинки"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 2713,
+      "en": "Select dest.",
+      "old": "Вибр. п/призн.",
+      "new": "Вибрати ціль"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3138,
+      "en": "You may not be able to reach\nthe destination.",
+      "old": "Можливо, не вдасться\nдосягти пункту призн.",
+      "new": "Можливо, не вдасться\nдосягти цілі."
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3394,
+      "en": "Show destination details",
+      "old": "Показати дані про пункт призн.",
+      "new": "Показати дані про ціль"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3416,
+      "en": "Delete this dest. and its routes",
+      "old": "Видал. п/призн. і відп. маршр.",
+      "new": "Видалити ціль і її маршрути"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3472,
+      "en": "Show destination details",
+      "old": "Показати дані про пункт призн.",
+      "new": "Показати дані про ціль"
+    },
+    {
+      "module": "HMINaviEvoHigh",
+      "slot": 3565,
+      "en": "Show destination details",
+      "old": "Показати дані про пункт призн.",
+      "new": "Показати дані про ціль"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 71,
+      "en": "myAudi destinations",
+      "old": "Пункти признач. myAudi",
+      "new": "Цілі myAudi"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 455,
+      "en": "Switch to Cyrillic characters",
+      "old": "Перейти на кирил. набір символів",
+      "new": "Перейти на кирилицю"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 456,
+      "en": "Switch to Latin characters",
+      "old": "Перейти на лат. набір символів",
+      "new": "Перейти на латиницю"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 457,
+      "en": "Switch to Arabic characters",
+      "old": "Перейти на араб. набір символів",
+      "new": "Перейти на арабське письмо"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 1055,
+      "en": "Show destination details",
+      "old": "Показати дані про пункт призн.",
+      "new": "Показати дані про ціль"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 1056,
+      "en": "Show destination details",
+      "old": "Показати дані про пункт призн.",
+      "new": "Показати дані про ціль"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 1057,
+      "en": "Display destination on map",
+      "old": "Показати пункт призн. на мапі",
+      "new": "Показати ціль на мапі"
+    },
+    {
+      "module": "HMIOnlineEvoHigh",
+      "slot": 1078,
+      "en": "Switch to Latin characters",
+      "old": "Перейти на лат. набір символів",
+      "new": "Перейти на латиницю"
+    },
+    {
+      "module": "HMIPhoneEvoHigh",
+      "slot": 949,
+      "en": "Traffic announcements on/off",
+      "old": "Увімк./вимк. гол. пов. про с. на дор.",
+      "new": "Увімк./вимк. дорожні оголошення"
+    },
+    {
+      "module": "HMIPhoneEvoHigh",
+      "slot": 1361,
+      "en": "Switch to Cyrillic characters",
+      "old": "Перейти на кирил. набір символів",
+      "new": "Перейти на кирилицю"
+    },
+    {
+      "module": "HMIPhoneEvoHigh",
+      "slot": 1362,
+      "en": "Switch to Latin characters",
+      "old": "Перейти на лат. набір символів",
+      "new": "Перейти на латиницю"
+    },
+    {
+      "module": "HMIPhoneEvoHigh",
+      "slot": 1364,
+      "en": "Switch to Arabic characters",
+      "old": "Перейти на араб. набір символів",
+      "new": "Перейти на арабське письмо"
+    },
+    {
+      "module": "HMIPhoneEvoHigh",
+      "slot": 2162,
+      "en": "Switch primary & additional phone",
+      "old": "Поміняти гол. і додатк. телефони",
+      "new": "Змінити основний телефон"
+    },
+    {
+      "module": "HMIPhoneEvoHigh",
+      "slot": 2193,
+      "en": "Continue with last edited e-mail",
+      "old": "Продовжити ост. змін. ел. лист",
+      "new": "Продовжити останній змінений e-mail"
+    },
+    {
+      "module": "HMISettingsEvoHigh",
+      "slot": 806,
+      "en": "Consumption (el. motor)",
+      "old": "Витрата ел./двиг.",
+      "new": "Витрата електродвигуна"
+    },
+    {
+      "module": "HMISettingsEvoHigh",
+      "slot": 1095,
+      "en": "Please deactivate auto time zone setting.",
+      "old": "Вимкніть авт. визначення часового поясу.",
+      "new": "Вимкніть автоматичне визначення часового поясу."
+    },
+    {
+      "module": "HMISystemEvoHigh",
+      "slot": 675,
+      "en": "Traffic announcements on/off",
+      "old": "Увімк./вимк. гол. пов. про с. на дор.",
+      "new": "Увімк./вимк. дорожні оголошення"
+    },
+    {
+      "module": "HMISystemEvoHigh",
+      "slot": 1532,
+      "en": "Switch to Cyrillic characters",
+      "old": "Перейти на кирил. набір символів",
+      "new": "Перейти на кирилицю"
+    },
+    {
+      "module": "HMISystemEvoHigh",
+      "slot": 1534,
+      "en": "Switch to Arabic characters",
+      "old": "Перейти на араб. набір символів",
+      "new": "Перейти на арабське письмо"
+    },
+    {
+      "module": "HMISystemEvoHigh",
+      "slot": 2115,
+      "en": "Switch to Latin characters",
+      "old": "Перейти на лат. набір символів",
+      "new": "Перейти на латиницю"
+    },
+    {
+      "module": "HMITVEvoHigh",
+      "slot": 864,
+      "en": "Switch to Cyrillic characters",
+      "old": "Перейти на кирил. набір символів",
+      "new": "Перейти на кирилицю"
+    },
+    {
+      "module": "HMITVEvoHigh",
+      "slot": 865,
+      "en": "Switch to Latin characters",
+      "old": "Перейти на лат. набір символів",
+      "new": "Перейти на латиницю"
+    },
+    {
+      "module": "HMITVEvoHigh",
+      "slot": 866,
+      "en": "Switch to Arabic characters",
+      "old": "Перейти на араб. набір символів",
+      "new": "Перейти на арабське письмо"
+    },
+    {
+      "module": "HMIToneEvoHigh",
+      "slot": 320,
+      "en": "Traffic announcements",
+      "old": "Гол. пов. про с. на дор.",
+      "new": "Дорожні оголошення"
+    },
+    {
+      "module": "HMIToneEvoHigh",
+      "slot": 380,
+      "en": "Traffic announcements",
+      "old": "Гол. пов. про с. на дор.",
+      "new": "Дорожні оголошення"
+    },
+    {
+      "module": "HMITunerEvoHigh",
+      "slot": 784,
+      "en": "Traffic announcements on/off",
+      "old": "Увімк./вимк. гол. пов. про с. на дор.",
+      "new": "Увімк./вимк. дорожні оголошення"
+    },
+    {
+      "module": "HMITunerEvoHigh",
+      "slot": 1007,
+      "en": "Switch to Cyrillic characters",
+      "old": "Перейти на кирил. набір символів",
+      "new": "Перейти на кирилицю"
+    },
+    {
+      "module": "HMITunerEvoHigh",
+      "slot": 1008,
+      "en": "Switch to Latin characters",
+      "old": "Перейти на лат. набір символів",
+      "new": "Перейти на латиницю"
+    },
+    {
+      "module": "HMITunerEvoHigh",
+      "slot": 1009,
+      "en": "Switch to Arabic characters",
+      "old": "Перейти на араб. набір символів",
+      "new": "Перейти на арабське письмо"
+    }
+  ]
+}
