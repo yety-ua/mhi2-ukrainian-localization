@@ -54,7 +54,8 @@ SD-карти через [M.I.B.](https://github.com/Mr-MIBonk/M.I.B._More-Incre
 | Firmware train | `MHI2_ER_AUG22_K3346` |
 | MU | `1438` |
 | HMI | `HMI_AU_MIB2_H_EU_G22_C6_190300`, `EvoHigh` |
-| Носій | FAT32 SD-карта в **SD1** з повним M.I.B. |
+| Носій | FAT32 SD-карта в **SD1** з повним M.I.B. (повнорозмірна, не microSD, від 4 ГБ, свіжо відформатована, без захисту від запису) |
+| M.I.B. | V3.6+ (`Run individual script`); старіші версії запускають `Run Custom Script`. На авто пробувалась лише V3.7.1 MHIG (GEM 4.5s) |
 
 Інші MHI2, Audi A3 `AU37x/P5089`, MHI2Q, MIB3 та інші MU не підтримуються.
 Інсталятор звіряє реальний train/MU з EEPROM і точний хеш HMI. A3 була
@@ -92,6 +93,8 @@ SD-карти через [M.I.B.](https://github.com/Mr-MIBonk/M.I.B._More-Incre
    **GitHub Source code ZIP — це репозиторій, а не готовий корінь SD.**
 2. M.I.B. має вже бути встановлений у голові; його повний дистрибутив має лежати
    в корені writable FAT32 SD-карти. Цей пакет не містить і не перевстановлює M.I.B.
+   За документацією M.I.B., погана SD-карта — найчастіша причина збоїв: використовуйте
+   повнорозмірну карту від 4 ГБ, відформатовану FAT32 заново, з вимкненим захистом від запису.
 3. Розпакуйте реліз на комп'ютері. Скопіюйте **`uk-localization/` у корінь SD**, а
    **`mod/custom.sh` і `mod/command.sh` у наявну папку `mod/`**. На macOS не перетягуйте саму папку `mod` (Finder замінює, а не зливає): копіюйте тільки ці два файли. Не додавайте зовнішню папку з назвою архіву.
 4. Якщо на SD уже є власний `mod/custom.sh` чи `mod/command.sh`, спочатку збережіть їх копії під іншою
@@ -154,6 +157,8 @@ SD1/
 але не є атомарною транзакцією при втраті живлення.
 Зовнішнє повідомлення M.I.B. «execution finished» (у V3.7.1 — «it is all done!») не означає успішної інсталяції;
 орієнтуйтеся на SUCCESS/ERROR та код саме цього пакета.
+Якщо потрібна допомога, надішліть фото екрана, `uk-localization/logs/run-*.log` і
+`uk-localization/logs/launcher-errors.txt` (помилки самої оболонки блока).
 
 ### Дії ACTION.txt (запасний шлях)
 
@@ -295,7 +300,8 @@ rendering is incomplete. [Capture provenance](docs/screenshots.json).
 1. Download the release ZIP and its `.sha256` from
    [Releases](https://github.com/yety-ua/mhi2-ukrainian-localization/releases).
    GitHub's Source code ZIP is the repository, not a ready SD-root overlay.
-2. Use a writable FAT32 card in **SD1**, with the full existing M.I.B. distribution
+2. Use a writable FAT32 card (full-size, not microSD, 4 GB or more, freshly formatted, write-protect off;
+   per the M.I.B. docs a bad card is the most common cause of failures) in **SD1**, with the full existing M.I.B. distribution
    at its root. M.I.B. must already be installed on the unit; this overlay does not
    include or reinstall M.I.B.
 3. Extract the release on the computer. Copy **`uk-localization/` to the SD root**
@@ -337,6 +343,8 @@ PENDING indicates an interrupted operation: do not reboot until restoration has 
 checked. Writes are ordered/journalled, not a power-loss-atomic transaction. The outer
 M.I.B. “execution finished” (V3.7.1: “it is all done!”) message is unconditional; use this package's SUCCESS/ERROR
 and exit code. Actions are CHECK, INSTALL, VOICE_INSTALL, VOICE_RESTORE and RESTORE.
+For help, send a photo of the screen, `uk-localization/logs/run-*.log` and
+`uk-localization/logs/launcher-errors.txt` (errors from the unit's own shell).
 
 ### English voice fallback
 
@@ -412,6 +420,7 @@ ASCII or UTF-8 without BOM, and LF line endings. No format conversion is needed 
 
 ```sh
 python3 -m unittest discover -s tests -v
+UK_TEST_SHELL=oksh python3 -m unittest discover -s tests   # also mksh: the unit's /bin/sh is a pdksh
 python3 tools/audit_resources.py --output docs/resource-audit.json
 sh -n sd-card/mod/custom.sh sd-card/mod/command.sh sd-card/uk-localization/scripts/localization.sh
 python3 tools/package_release.py
