@@ -147,7 +147,7 @@
    `Run Custom Script` / `Run /mod/custom.sh from m.i.b. SD`. Запустіть.
 3. Очікуваний результат: рядок **`CHECK PASS`** і код **`0`**. Якщо екран прокрутився
    надто швидко — відкрийте лог на карті на комп'ютері: `uk-localization/logs/run-….log`.
-4. Напис M.I.B. «execution finished» **нічого не означає** — він з'являється навіть при
+4. Напис M.I.B. «execution finished» (у V3.7.1 — «it is all done!») **нічого не означає** — він з'являється навіть при
    помилці. Дивіться тільки на `CHECK PASS` / `SUCCESS` / `ERROR` і код.
 
 5. Після `CHECK PASS` ви побачите підказку на кшталт `Nothing was changed. To INSTALL, run
@@ -481,7 +481,7 @@ a cold start. REM uses the **lower** half of the right key instead; do not confu
    `Run /mod/custom.sh from m.i.b. SD`.
 3. Expect **`CHECK PASS`** and exit code **`0`**. If the output scrolled away, read
    `uk-localization/logs/run-….log` on the card.
-4. The M.I.B. message “execution finished” means nothing; rely on `CHECK PASS` /
+4. The M.I.B. message “execution finished” (V3.7.1: “it is all done!”) means nothing; rely on `CHECK PASS` /
    `SUCCESS` / `ERROR` and the code. See the [troubleshooting table](#if-something-goes-wrong).
 5. After `CHECK PASS` you will see a hint like `Nothing was changed. To INSTALL, run this same
    GEM item again (step 1 of 3 done)`. This is **not an error**; it is the first of three steps:

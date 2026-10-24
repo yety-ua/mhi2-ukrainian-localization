@@ -152,7 +152,7 @@ SD1/
 `uk-localization/logs/run-*.log`. Якщо залишився `PENDING`, ресурси могли бути частково
 змінені: не перезавантажуйте голову до відновлення. Запис упорядкований і журналюється,
 але не є атомарною транзакцією при втраті живлення.
-Зовнішнє повідомлення M.I.B. «execution finished» не означає успішної інсталяції;
+Зовнішнє повідомлення M.I.B. «execution finished» (у V3.7.1 — «it is all done!») не означає успішної інсталяції;
 орієнтуйтеся на SUCCESS/ERROR та код саме цього пакета.
 
 ### Дії ACTION.txt (запасний шлях)
@@ -335,7 +335,7 @@ rendering is incomplete. [Capture provenance](docs/screenshots.json).
 There is **no automatic reboot**. For errors, inspect `uk-localization/logs/run-*.log`.
 PENDING indicates an interrupted operation: do not reboot until restoration has been
 checked. Writes are ordered/journalled, not a power-loss-atomic transaction. The outer
-M.I.B. “execution finished” message is unconditional; use this package's SUCCESS/ERROR
+M.I.B. “execution finished” (V3.7.1: “it is all done!”) message is unconditional; use this package's SUCCESS/ERROR
 and exit code. Actions are CHECK, INSTALL, VOICE_INSTALL, VOICE_RESTORE and RESTORE.
 
 ### English voice fallback
