@@ -138,7 +138,7 @@
    Дерево — у [README](../README.md#підготовка-sd-карти).
 6. **Безпечно вилучіть карту** з комп'ютера (щоб файли дописалися). На macOS після копіювання
    можуть з'явитися службові файли `._*` — вони не заважають.
-7. **Оновлення з preview.1:** спершу виконайте його `RESTORE`, потім ставте цей реліз. З preview.2–9 замініть теку `uk-localization/` і **лише файли** `mod/custom.sh`, `mod/command.sh` (не всю теку `mod/`: там файли M.I.B.). У preview.2/3 не було `mod/command.sh`, тому на M.I.B. V3.6+ пункт нічого не запускав.
+7. **Якщо ви вже ставили якусь із попередніх тестових версій:** спершу виконайте її `RESTORE` (або `CHECK`, щоб побачити стан), потім скопіюйте цей реліз: теку `uk-localization/` і **лише файли** `mod/custom.sh`, `mod/command.sh` (не всю теку `mod/`: там файли M.I.B.).
 
 ### Етап 4. Перша перевірка — `CHECK` (нічого не змінює)
 
@@ -309,18 +309,18 @@ Patch / Restore / SW Update. Потім скопіюйте створену те
 | Що бачите | Що це означає | Що робити |
 | --- | --- | --- |
 | Немає пункту `m.i.b.` в GEM | Немає карти в SD1 або блок ще не завантажився | Перевірте слот, зачекайте до 5 хв |
-| `Nothing to do!` після «Run individual script» | У `mod/` на карті немає `command.sh` (M.I.B. V3.6+ шукає саме його) | Скопіюйте `mod/command.sh` із релізу preview.4 або новішого поруч із `custom.sh` |
-| `syntax error` / `unexpected` у `localization.sh` | Помилка розбору скрипта оболонкою блока; лог `run-*.log` у такому разі не створюється | Надішліть фото екрана і файл `uk-localization/logs/launcher-errors.txt` (з preview.5 він зберігається на карті) |
-| `Required M.I.B. tool is missing: …` | Потрібна утиліта відсутня в M.I.B. (у V3.7+ немає `apps/sbin/awk`, з preview.7 скрипт бере `awk` самого блока) | Оновіться до preview.7+. Якщо пишеться про інший файл — перевірте, що на карті повний M.I.B. (`apps/sbin/…`) |
-| `mkdir: …/logs: Read-only file system`, логу немає | Блок монтує SD лише для читання (до preview.8 скрипт не перемонтовував її) | Оновіться до preview.8+. Також перевірте, що перемикач захисту від запису на карті у положенні «відкрито» |
+| `Nothing to do!` після «Run individual script» | У `mod/` на карті немає `command.sh` (M.I.B. V3.6+ шукає саме його) | Скопіюйте `mod/command.sh` із релізу preview.4  поруч із `custom.sh` |
+| `syntax error` / `unexpected` у `localization.sh` | Помилка розбору скрипта оболонкою блока; лог `run-*.log` у такому разі не створюється | Надішліть фото екрана і файл `uk-localization/logs/launcher-errors.txt` (він зберігається на карті) |
+| `Required M.I.B. tool is missing: …` | Потрібна утиліта відсутня в M.I.B. (у M.I.B. V3.7+ немає `apps/sbin/awk`; скрипт бере `awk` самого блока) | Використовуйте останній реліз. Якщо пишеться про інший файл — перевірте, що на карті повний M.I.B. (`apps/sbin/…`) |
+| `mkdir: …/logs: Read-only file system`, логу немає | Блок монтує SD лише для читання | Використовуйте останній реліз. Також перевірте, що перемикач захисту від запису на карті у положенні «відкрито» |
 | `ERROR: uk-localization package is missing from SD1` | Теку скопійовано не в корінь | Виправте вкладеність (Етап 3, п. 4) |
 | `step 1 of 3 done` / `step 2 of 3` | Це підказка, не помилка | Нічого не робіть, якщо не хочете йти далі |
 | `Invalid action…` | Лише якщо ви вручну редагували `ACTION.txt`: зайвий CR/пробіл/BOM | Перезапишіть командою із запасного шляху Етапу 6 |
 | `HMI is not the exact reviewed K3346/MU1438 binary` або схожі «not stock» | Версія/файли не ті, або вже щось змінено | **Нічого не змушуйте.** Не підтримується. Надішліть лог |
 | `At least 40000 KiB free…` | Мало місця в блоці | Надішліть лог; не видаляйте нічого самі |
 | `WARNING: the SD card cannot be written; logging to …` | SD змонтована лише для читання, і перемонтування не вдалось | `CHECK` це не блокує (лог іде в пам'ять блока), але `INSTALL` без запису на SD не стартує. Перевірте перемикач захисту на карті, відформатуйте її FAT32 заново (M.I.B.: погана карта — головна причина проблем) |
-| `Cannot create the lock file …` / `Diagnostics: …` | Блок не дав створити службовий файл у `/tmp` (на цих блоках це `/dev/shmem`, де є лише файли, без папок; до preview.10 скрипт створював там папку і помилково писав «stale lock») | Оновіться до preview.10+. Якщо помилка лишилась — надішліть рядок `Diagnostics:` з логу |
-| `Another localization operation is running (process N)` | Справді виконується інший запуск | Дочекайтеся його завершення. `stale lock` з preview.9 скрипт прибирає сам, якщо власника замка вже немає |
+| `Cannot create the lock file …` / `Diagnostics: …` | Блок не дав створити службовий файл у `/tmp` (на цих блоках це `/dev/shmem`, де є лише файли, без папок) | Використовуйте останній реліз. Якщо помилка лишилась — надішліть рядок `Diagnostics:` з логу |
+| `Another localization operation is running (process N)` | Справді виконується інший запуск | Дочекайтеся його завершення. застарілий замок скрипт прибирає сам, якщо власника вже немає |
 | `M.I.B. backup/reboot/flash is running` | Йде інша операція M.I.B. | Дочекайтеся її завершення |
 | `Interrupted operation recorded; run RESTORE…` / `PENDING` | Встановлення перервано | **Не перезавантажуйте.** Виконайте `RESTORE` (нижче) |
 | Блок не запускає меню | HMI/GEM не стартує | Відновлення по telnet (нижче) |
@@ -478,7 +478,7 @@ a cold start. REM uses the **lower** half of the right key instead; do not confu
    No extra wrapper folder — the most common mistake.
    **macOS:** dragging the `mod` folder in Finder **replaces** the existing one instead of merging, destroying M.I.B.'s own files (`mod/sshd`, `mod/ringtones`…). Copy only the two files into `mod`. (chefranov's project warns about this too.) On Windows folder copies merge.
 5. Compare with the tree in the [README](../README.md#prepare-the-sd-card), then eject safely.
-6. Upgrading from preview.1: run its `RESTORE` first. From preview.2–9 replace the `uk-localization/` folder and **only the files** `mod/custom.sh`, `mod/command.sh` (not the whole `mod/` folder: it holds M.I.B.'s files). preview.2/3 lacked `mod/command.sh`, so on M.I.B. V3.6+ the item ran nothing.
+6. If you already installed an earlier test version: run its `RESTORE` first (or `CHECK` to see the state), then copy this release: the `uk-localization/` folder and **only the files** `mod/custom.sh`, `mod/command.sh` (not the whole `mod/` folder: it holds M.I.B.'s files).
 
 ### Stage 4. First check — `CHECK`
 
@@ -602,18 +602,18 @@ A word other than `CHECK` in `ACTION.txt` runs **at once, in a single launch** (
 | Symptom | Meaning | Action |
 | --- | --- | --- |
 | No `m.i.b.` entry in GEM | No card in SD1 or the unit is still starting | Check the slot, wait up to 5 min |
-| `Nothing to do!` after “Run individual script” | `mod/command.sh` is missing on the card (M.I.B. V3.6+ looks for it) | Copy `mod/command.sh` from release preview.4 or newer next to `custom.sh` |
-| `syntax error` / `unexpected` in `localization.sh` | The unit's shell failed to parse the script; no `run-*.log` is created in that case | Send a photo of the screen and `uk-localization/logs/launcher-errors.txt` (kept on the card since preview.5) |
-| `Required M.I.B. tool is missing: …` | A required utility is absent from M.I.B. (V3.7+ ships no `apps/sbin/awk`; since preview.7 the script uses the unit's own `awk`) | Update to preview.7+. If another file is named, check the card holds the full M.I.B. (`apps/sbin/…`) |
-| `mkdir: …/logs: Read-only file system`, no log | The unit mounts the SD read-only (before preview.8 the script did not remount it) | Update to preview.8+. Also check that the card's write-protect switch is unlocked |
+| `Nothing to do!` after “Run individual script” | `mod/command.sh` is missing on the card (M.I.B. V3.6+ looks for it) | Copy `mod/command.sh` from the latest release next to `custom.sh` |
+| `syntax error` / `unexpected` in `localization.sh` | The unit's shell failed to parse the script; no `run-*.log` is created in that case | Send a photo of the screen and `uk-localization/logs/launcher-errors.txt` (kept on the card) |
+| `Required M.I.B. tool is missing: …` | A required utility is absent from M.I.B. (M.I.B. V3.7+ ships no `apps/sbin/awk`; the script uses the unit's own `awk`) | Use the latest release. If another file is named, check the card holds the full M.I.B. (`apps/sbin/…`) |
+| `mkdir: …/logs: Read-only file system`, no log | The unit mounts the SD read-only | Use the latest release. Also check that the card's write-protect switch is unlocked |
 | `uk-localization package is missing from SD1` | Folder not in the card root | Fix nesting (Stage 3, step 4) |
 | `step 1 of 3 done` / `step 2 of 3` | A hint, not an error | Do nothing unless you want to continue |
 | `Invalid action…` | Only if you edited `ACTION.txt` by hand: stray CR / space / BOM | Rewrite with the Stage 6 fallback command |
 | `HMI is not the exact reviewed K3346/MU1438 binary`, “not stock” | Wrong version, or already modified | Do not force; unsupported. Send the log |
 | `At least 40000 KiB free…` | Not enough space | Send the log; delete nothing yourself |
 | `WARNING: the SD card cannot be written; logging to …` | The SD is mounted read-only and the remount failed | `CHECK` is not blocked (the log goes to the unit's RAM), but `INSTALL` will not start without SD write access. Check the card's write-protect switch and reformat it as FAT32 (M.I.B.: bad cards are the top issue) |
-| `Cannot create the lock file …` / `Diagnostics: …` | The unit refused a helper file in `/tmp` (on these units that is `/dev/shmem`, which holds files only, no folders; before preview.10 the script made a folder there and wrongly reported a “stale lock”) | Update to preview.10+. If it persists, send the `Diagnostics:` line from the log |
-| `Another localization operation is running (process N)` | Another run is really active | Wait for it to finish. Since preview.9 a stale lock is removed automatically when its owner is gone |
+| `Cannot create the lock file …` / `Diagnostics: …` | The unit refused a helper file in `/tmp` (on these units that is `/dev/shmem`, which holds files only, no folders) | Use the latest release. If it persists, send the `Diagnostics:` line from the log |
+| `Another localization operation is running (process N)` | Another run is really active | Wait for it to finish. A stale lock is removed automatically when its owner is gone |
 | `M.I.B. backup/reboot/flash is running` | Another M.I.B. operation | Wait for it |
 | `Interrupted operation recorded` / `PENDING` | Install interrupted | **Do not reboot.** Run `RESTORE` |
 | Unit does not show the menu | HMI/GEM will not start | Recover over telnet (below) |

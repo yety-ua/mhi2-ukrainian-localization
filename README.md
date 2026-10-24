@@ -96,7 +96,7 @@ SD-карти через [M.I.B.](https://github.com/Mr-MIBonk/M.I.B._More-Incre
    **`mod/custom.sh` і `mod/command.sh` у наявну папку `mod/`**. На macOS не перетягуйте саму папку `mod` (Finder замінює, а не зливає): копіюйте тільки ці два файли. Не додавайте зовнішню папку з назвою архіву.
 4. Якщо на SD уже є власний `mod/custom.sh` чи `mod/command.sh`, спочатку збережіть їх копії під іншою
    назвою. Новий entry point не запускає старі команди. Інші файли M.I.B. збережіть.
-5. **Оновлення з preview.1.** Інсталятор вимагає штатний (stock) стан мовних файлів у голові. Якщо preview.1 уже встановлено, спочатку виконайте його RESTORE, потім CHECK/INSTALL з цього релізу. З preview.2–9 достатньо замінити теку `uk-localization/` і **лише файли** `mod/custom.sh` та `mod/command.sh` (не всю теку `mod/`: у ній лежать файли самого M.I.B.): стан у голові не змінювався, `CHECK` розпізнає наявне встановлення. У preview.2/3 не було `mod/command.sh`, тому на M.I.B. V3.6+ пункт нічого не запускав.
+5. **Якщо ви вже ставили якусь із попередніх тестових версій.** Інсталятор вимагає штатний (stock) стан мовних файлів у голові: спершу виконайте її RESTORE, потім CHECK/INSTALL з цього релізу. Копіюйте теку `uk-localization/` і лише файли `mod/custom.sh`, `mod/command.sh` (не всю теку `mod/`).
 
 ```text
 SD1/
@@ -303,7 +303,7 @@ rendering is incomplete. [Capture provenance](docs/screenshots.json).
    release-name directory. Preserve the remaining M.I.B. files.
 4. If a custom `mod/custom.sh` or `mod/command.sh` exists, save copies under other names before replacement.
    The new entry point does not chain existing commands. The SD tree is shown above.
-5. **Upgrading from preview.1.** The installer requires the stock language files on the head unit. If preview.1 is already installed, run its RESTORE first, then CHECK/INSTALL from this release. From preview.2–9 replace the `uk-localization/` folder and **only the files** `mod/custom.sh` and `mod/command.sh` (not the whole `mod/` folder: it holds M.I.B.'s own files): the on-unit state is unchanged and `CHECK` recognises an existing install. preview.2/3 lacked `mod/command.sh`, so on M.I.B. V3.6+ the item ran nothing.
+5. **If you already installed an earlier test version.** The installer requires the stock language files on the head unit: run its RESTORE first, then CHECK/INSTALL from this release. Copy the `uk-localization/` folder and only the files `mod/custom.sh`, `mod/command.sh` (not the whole `mod/` folder).
 
 ### Check and install
 
