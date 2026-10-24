@@ -9,6 +9,7 @@ import tempfile
 import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
+SHELL = os.environ.get('UK_TEST_SHELL', '/bin/sh')
 spec = importlib.util.spec_from_file_location('sd_builder', ROOT / 'tools/package_release.py')
 builder = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(builder)
@@ -85,7 +86,7 @@ print('0x000003a0 ' + ' '.join(f'{x:02x}' for x in value.encode()))
 PY
 ''')
         self.tool(self.bin / 'mount', '#!/bin/sh\n[ -z "${TEST_FAIL_MOUNT:-}" ]\n')
-        self.tool(self.bin / 'df', '#!/bin/sh\necho "disk blocks used avail"\necho "disk 100000 1000 ${TEST_SPACE:-90000}"\n')
+        self.tool(self.bin / 'df', '#!/bin/sh\necho "Filesystem 1K-blocks Used Available Use% Mounted"\nif [ -n "${TEST_DF_WRAP:-}" ]; then echo "/dev/a-very-long-device-name"; echo "    100000 1000 ${TEST_SPACE:-90000} 1% /mnt/app"; else echo "disk 100000 1000 ${TEST_SPACE:-90000} 1% /mnt/app"; fi\n')
         self.tool(self.bin / 'writer', '''#!/bin/sh
 echo "$4" >> "$TEST_ROOT/writes"
 [ -z "${TEST_FAIL_WRITE:-}" ] || exit 1
@@ -113,7 +114,7 @@ if [ -n "${TEST_BAD_READ:-}" ]; then echo invalid; else cat "$TEST_ROOT/persiste
     def run_action(self, action, package=None, **env):
         package = package or self.package
         (package / 'ACTION.txt').write_text(action + '\n')
-        self.result = subprocess.run(['/bin/sh', str(package / 'scripts/localization.sh')],
+        self.result = subprocess.run([SHELL, str(package / 'scripts/localization.sh')],
                                      env={**os.environ, 'TEST_ROOT': str(self.root), **env}, text=True, capture_output=True)
         return self.result
 
@@ -212,6 +213,10 @@ if [ -n "${TEST_BAD_READ:-}" ]; then echo invalid; else cat "$TEST_ROOT/persiste
         self.assertNotEqual(self.run_action('INSTALL').returncode, 0)
         self.assertFalse(self.state.exists())
 
+    def test_wrapped_df_output_is_understood(self):
+        self.success(self.run_action('CHECK', TEST_DF_WRAP='1'))
+        self.assertNotEqual(self.run_action('CHECK', TEST_DF_WRAP='1', TEST_SPACE='100').returncode, 0)
+
     def press(self, **env):
         return self.run_action('CHECK', **env)
 
@@ -263,7 +268,7 @@ if [ -n "${TEST_BAD_READ:-}" ]; then echo invalid; else cat "$TEST_ROOT/persiste
         self.assertIsNone(self.arm())
 
     def test_argument_check_never_arms(self):
-        result = subprocess.run(['/bin/sh', str(self.package / 'scripts/localization.sh'), 'CHECK'],
+        result = subprocess.run([SHELL, str(self.package / 'scripts/localization.sh'), 'CHECK'],
                                 env={**os.environ, 'TEST_ROOT': str(self.root)}, text=True, capture_output=True)
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
         self.assertIsNone(self.arm())
@@ -298,7 +303,7 @@ class CommandWrapperTests(unittest.TestCase):
             mod = Path(tmp) / 'mod'
             mod.mkdir()
             shutil.copyfile(ROOT / 'sd-card/mod/command.sh', mod / 'command.sh')
-            run = lambda: subprocess.run(['/bin/sh', str(mod / 'command.sh')], text=True, capture_output=True)
+            run = lambda: subprocess.run([SHELL, str(mod / 'command.sh')], text=True, capture_output=True)
             missing = run()
             self.assertEqual(missing.returncode, 1)
             self.assertIn('custom.sh is missing', missing.stdout)
@@ -322,4 +327,18 @@ class QnxShellCompatibilityTests(unittest.TestCase):
             for name in self.ALIASES:
                 self.assertIsNone(re.search(r'^\s*' + name + r'\s*\(\)', text, re.M), (path.name, name))
                 self.assertIsNone(re.search(r'(\$\(|`|^\s*|[;&|]\s*)' + name + r'\s+', text, re.M), (path.name, name))
+
+
+class PdkshParseTests(unittest.TestCase):
+    """oksh/mksh/pdksh reproduce the unit's ksh parsing (the `hash() {` failure seen on the car)."""
+    def test_scripts_parse_in_every_available_ksh_variant(self):
+        shells = [shutil.which(n) for n in ('oksh', 'mksh', 'pdksh', 'ksh')]
+        shells = [s for s in shells if s]
+        if not shells:
+            self.skipTest('no ksh-family shell installed')
+        for shell in shells:
+            for path in [ROOT / 'sd-card/uk-localization/scripts/localization.sh',
+                         ROOT / 'sd-card/mod/custom.sh', ROOT / 'sd-card/mod/command.sh']:
+                result = subprocess.run([shell, '-n', str(path)], text=True, capture_output=True)
+                self.assertEqual(result.returncode, 0, f'{shell} {path.name}: {result.stderr}')
 

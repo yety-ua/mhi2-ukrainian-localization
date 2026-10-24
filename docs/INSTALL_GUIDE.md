@@ -104,21 +104,21 @@
 
 1. **Завантажте реліз**, а не вихідний код. На сторінці
    [Releases](https://github.com/yety-ua/mhi2-ukrainian-localization/releases) візьміть
-   `mhi2-ukrainian-localization-k3346-v1.0.0-preview.5.zip` і поруч файл `.sha256`.
+   `mhi2-ukrainian-localization-k3346-v1.0.0-preview.6.zip` і поруч файл `.sha256`.
    Кнопка «Source code (zip)» — **не те**: це вихідники, а не готова карта.
 2. **Перевірте, що файл не пошкоджений.** Порівняйте суму з вмістом `.sha256`.
 
    Windows (PowerShell, у теці із завантаженням):
 
    ```powershell
-   Get-FileHash .\mhi2-ukrainian-localization-k3346-v1.0.0-preview.5.zip -Algorithm SHA256
-   Get-Content .\mhi2-ukrainian-localization-k3346-v1.0.0-preview.5.zip.sha256
+   Get-FileHash .\mhi2-ukrainian-localization-k3346-v1.0.0-preview.6.zip -Algorithm SHA256
+   Get-Content .\mhi2-ukrainian-localization-k3346-v1.0.0-preview.6.zip.sha256
    ```
 
    macOS / Linux:
 
    ```sh
-   shasum -a 256 -c mhi2-ukrainian-localization-k3346-v1.0.0-preview.5.zip.sha256
+   shasum -a 256 -c mhi2-ukrainian-localization-k3346-v1.0.0-preview.6.zip.sha256
    ```
 
    Рядки хешу мають збігатися (у macOS — `OK`). Не збігаються — завантажте знову.
@@ -456,14 +456,14 @@ a cold start. REM uses the **lower** half of the right key instead; do not confu
    Windows:
 
    ```powershell
-   Get-FileHash .\mhi2-ukrainian-localization-k3346-v1.0.0-preview.5.zip -Algorithm SHA256
-   Get-Content .\mhi2-ukrainian-localization-k3346-v1.0.0-preview.5.zip.sha256
+   Get-FileHash .\mhi2-ukrainian-localization-k3346-v1.0.0-preview.6.zip -Algorithm SHA256
+   Get-Content .\mhi2-ukrainian-localization-k3346-v1.0.0-preview.6.zip.sha256
    ```
 
    macOS / Linux:
 
    ```sh
-   shasum -a 256 -c mhi2-ukrainian-localization-k3346-v1.0.0-preview.5.zip.sha256
+   shasum -a 256 -c mhi2-ukrainian-localization-k3346-v1.0.0-preview.6.zip.sha256
    ```
 
 3. Copy your whole working M.I.B. card to the computer as a spare. If `mod/custom.sh` or `mod/command.sh`

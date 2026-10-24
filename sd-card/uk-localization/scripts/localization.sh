@@ -168,7 +168,8 @@ verify_backup() {
     equal "$BACKUP/280.hex" "$PACKAGE/target/280.original.hex" || die 'Default-language baseline damaged'
 }
 require_space() {
-    SPACE=$(df -k "$APP" | tail -1) || die 'Cannot read free space'
+    # Join all lines after the header: a long device name may wrap onto its own line.
+    SPACE=$(df -k "$APP" | "$AWK" 'NR > 1 { printf "%s ", $0 }') || die 'Cannot read free space'
     set -- $SPACE
     [ "$#" -ge 4 ] || die 'Unrecognized df output'
     case $4 in ''|*[!0-9]*) die 'Unrecognized available space' ;; esac
