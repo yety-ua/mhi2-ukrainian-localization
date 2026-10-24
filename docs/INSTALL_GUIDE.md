@@ -308,6 +308,7 @@ Patch / Restore / SW Update. Потім скопіюйте створену те
 | Що бачите | Що це означає | Що робити |
 | --- | --- | --- |
 | Немає пункту `m.i.b.` в GEM | Немає карти в SD1 або блок ще не завантажився | Перевірте слот, зачекайте до 5 хв |
+| `Nothing to do!` після «Run individual script» | У `mod/` на карті немає `command.sh` (M.I.B. V3.6+ шукає саме його) | Скопіюйте `mod/command.sh` із релізу preview.4 або новішого поруч із `custom.sh` |
 | `ERROR: uk-localization package is missing from SD1` | Теку скопійовано не в корінь | Виправте вкладеність (Етап 3, п. 4) |
 | `step 1 of 3 done` / `step 2 of 3` | Це підказка, не помилка | Нічого не робіть, якщо не хочете йти далі |
 | `Invalid action…` | Лише якщо ви вручну редагували `ACTION.txt`: зайвий CR/пробіл/BOM | Перезапишіть командою із запасного шляху Етапу 6 |
@@ -594,6 +595,7 @@ A word other than `CHECK` in `ACTION.txt` runs **at once, in a single launch** (
 | Symptom | Meaning | Action |
 | --- | --- | --- |
 | No `m.i.b.` entry in GEM | No card in SD1 or the unit is still starting | Check the slot, wait up to 5 min |
+| `Nothing to do!` after “Run individual script” | `mod/command.sh` is missing on the card (M.I.B. V3.6+ looks for it) | Copy `mod/command.sh` from release preview.4 or newer next to `custom.sh` |
 | `uk-localization package is missing from SD1` | Folder not in the card root | Fix nesting (Stage 3, step 4) |
 | `step 1 of 3 done` / `step 2 of 3` | A hint, not an error | Do nothing unless you want to continue |
 | `Invalid action…` | Only if you edited `ACTION.txt` by hand: stray CR / space / BOM | Rewrite with the Stage 6 fallback command |
