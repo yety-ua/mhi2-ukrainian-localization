@@ -59,13 +59,15 @@ class SdInstallerTests(unittest.TestCase):
             p.parent.mkdir(parents=True, exist_ok=True)
             if name == 'scripts/localization.sh':
                 text = blob.decode()
-                for before, after in [('/net/mmx/fs/sda0', str(self.sd)), ('/mnt/app', str(self.app)),
-                                      ('/net/rcc/dev/shmem', str(self.busy)), ('/tmp/uk-localization.lock', str(self.root / 'lock')),
-                                      ('/tmp/uk-localization.arm', str(self.root / 'arm')),
+                for before, after in [
+                                      ('RUNTIME_DIRS="/tmp /dev/shmem /net/rcc/dev/shmem"', f'RUNTIME_DIRS="{self.root}/no-such-dir {self.root}"'),
+                                     ('/net/mmx/fs/sda0', str(self.sd)), ('/mnt/app', str(self.app)),
+                                      ('/net/rcc/dev/shmem', str(self.busy)), 
                                       ('/eso/bin/dumb_persistence_writer', str(self.bin / 'writer')),
                                       ('/ifs/lsd.jxe', str(self.root / 'lsd.jxe'))]:
                     text = text.replace(before, after)
                 text = text.replace('PATH=/proc/boot:', f'PATH={self.bin}:/proc/boot:')
+                assert str(self.root) + '/no-such-dir' in text, 'RUNTIME_DIRS substitution did not apply'
                 blob = text.encode()
             p.write_bytes(blob)
         (self.root / 'lsd.jxe').write_bytes(b'reviewed fixture HMI')
@@ -82,10 +84,24 @@ shift 2
 python3 - "$3" <<'PY'
 import os,sys
 value=os.environ.get('TEST_TRAIN','MHI2_ER_AUG22_K3346') if sys.argv[1]=='3A0' else '1438'
-print('0x000003a0 ' + ' '.join(f'{x:02x}' for x in value.encode()))
+data = value.encode()
+fmt = os.environ.get('TEST_E2P_FORMAT', 'spaced')
+hexes = [f'{x:02x}' for x in data]
+if fmt == 'spaced':
+    print('0x000003a0 ' + ' '.join(hexes))
+elif fmt == 'colon':
+    print('0x000003a0: ' + ' '.join(hexes))
+elif fmt == 'grouped':
+    print('0x000003a0  ' + ' '.join(''.join(hexes[i:i+2]) for i in range(0, len(hexes), 2)))
+elif fmt == 'compact':
+    print('0x000003a0 ' + ''.join(hexes))
+elif fmt == 'rows16':
+    for i in range(0, len(hexes), 16):
+        print(f'0x{0x3a0 + i:08x}  ' + ' '.join(hexes[i:i+16]))
 PY
 ''')
-        self.tool(self.bin / 'mount', '#!/bin/sh\necho "$*" >> "$TEST_ROOT/mounts"\ncase "$2" in "$TEST_ROOT/sd") chmod -R u+w "$2" ;; esac\n[ -z "${TEST_FAIL_MOUNT:-}" ]\n')
+        self.tool(self.bin / 'mkdir', '#!/bin/sh\nfor a in "$@"; do case "$a" in "$TEST_ROOT"/uk-localization.*) echo "mkdir: $a: Operation not supported" >&2; exit 1 ;; esac; done\nexec /bin/mkdir "$@"\n')
+        self.tool(self.bin / 'mount', '#!/bin/sh\necho "$*" >> "$TEST_ROOT/mounts"\ncase "$2" in "$TEST_ROOT/sd") [ -n "${TEST_SD_STAYS_RO:-}" ] || chmod -R u+w "$2" ;; esac\n[ -z "${TEST_FAIL_MOUNT:-}" ]\n')
         self.tool(self.bin / 'df', '#!/bin/sh\necho "Filesystem 1K-blocks Used Available Use% Mounted"\nif [ -n "${TEST_DF_WRAP:-}" ]; then echo "/dev/a-very-long-device-name"; echo "    100000 1000 ${TEST_SPACE:-90000} 1% /mnt/app"; else echo "disk 100000 1000 ${TEST_SPACE:-90000} 1% /mnt/app"; fi\n')
         self.tool(self.bin / 'writer', '''#!/bin/sh
 echo "$4" >> "$TEST_ROOT/writes"
@@ -98,7 +114,7 @@ echo "$5" > "$TEST_ROOT/persistence/$4"
         for n in ['awk', 'sed', 'xxd']:
             self.tool(tools / n, f'#!/bin/sh\n{shutil.which(n)} "$@"\n')
         self.tool(tools / 'dumb_persistence_reader', '''#!/bin/sh
-echo blob:
+[ -z "${TEST_READER_PREFIX:-}" ] || echo blob:
 if [ -n "${TEST_BAD_READ:-}" ]; then echo invalid; else cat "$TEST_ROOT/persistence/$2"; fi
 ''')
 
@@ -131,6 +147,7 @@ if [ -n "${TEST_BAD_READ:-}" ]; then echo invalid; else cat "$TEST_ROOT/persiste
     def test_full_install_voice_restore_and_reinstall(self):
         self.success(self.run_action('INSTALL'))
         self.assertEqual((self.package / 'ACTION.txt').read_text().strip(), 'CHECK')
+        self.assertIn(f'-ur {self.app}', (self.root / 'mounts').read_text())
         self.assertEqual((self.root / 'writes').read_text().splitlines(), ['3221422086'])
         self.assertEqual((self.lsd / 'jars/lang_data.zip').read_bytes(), self.sources['payload/lang_data.zip'])
         self.assertTrue(list((self.package / 'backups').glob('baseline-*')))
@@ -209,46 +226,71 @@ if [ -n "${TEST_BAD_READ:-}" ]; then echo invalid; else cat "$TEST_ROOT/persiste
     def test_mount_failure_and_stale_lock_are_reported(self):
         self.assertNotEqual(self.run_action('INSTALL', TEST_FAIL_MOUNT='1').returncode, 0)
         self.assertFalse(self.state.exists())
-        lock = self.root / 'lock'
-        lock.mkdir()
+        lock = self.root / 'uk-localization.lock'
         sleeper = subprocess.Popen(['sleep', '60'])
         self.addCleanup(sleeper.kill)
-        (lock / 'pid').write_text(f'{sleeper.pid}\n')
+        lock.write_text(f'{sleeper.pid}\n')
         self.assertNotEqual(self.run_action('INSTALL').returncode, 0)
         self.assertIn('is running', self.result.stdout)
         self.assertFalse(self.state.exists())
 
     def test_stale_lock_without_live_owner_is_replaced(self):
-        lock = self.root / 'lock'
-        lock.mkdir()
+        lock = self.root / 'uk-localization.lock'
+        lock.write_text('not a pid\n')
         self.success(self.run_action('CHECK'))
         self.assertIn('Replaced a stale lock', self.result.stdout)
         self.assertFalse(lock.exists())
-        lock.mkdir()
         dead = subprocess.Popen(['true'])
         dead.wait()
-        (lock / 'pid').write_text(f'{dead.pid}\n')
+        lock.write_text(f'{dead.pid}\n')
         self.success(self.run_action('INSTALL'))
         self.assertIn('Replaced a stale lock', self.result.stdout)
         self.assertFalse(lock.exists())
-
-    def test_unit_awk_is_used_when_mib_ships_none(self):
-        """M.I.B. V3.7.1 has no apps/sbin/awk; the installer must fall back to the unit's own."""
-        (self.sd / 'apps/sbin/awk').unlink()
-        self.tool(self.bin / 'awk', f'#!/bin/sh\n{shutil.which("awk")} "$@"\n')
+        # a leftover lock FOLDER (older releases) is replaced as well
+        lock.mkdir()
         self.success(self.run_action('CHECK'))
-        self.success(self.run_action('INSTALL'))
-        self.success(self.run_action('RESTORE'))
+        self.assertFalse(lock.exists())
 
-    def test_read_only_sd_is_remounted_before_logging(self):
-        """The unit mounts SD1 read-only: mkdir logs failed with 'Read-only file system' on the car."""
+    def test_runtime_files_work_when_the_unit_cannot_create_folders_there(self):
+        """QNX /dev/shmem (behind /tmp) refuses mkdir: the car reported 'stale lock' for exactly that."""
+        self.success(self.run_action('CHECK'))
+        self.assertTrue((self.root / 'uk-localization.arm').is_file())
+        self.assertFalse(list(self.root.glob('uk-localization.reader.*')))
+
+    def test_lock_failure_explains_itself(self):
+        (self.root / 'uk-localization.lock').write_text('x\n')
+        self.root.chmod(0o555)
+        self.addCleanup(lambda: self.root.chmod(0o755))
+        result = self.run_action('CHECK')
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn('Cannot create the lock file', result.stdout, f'rc={result.returncode} out={result.stdout!r} err={result.stderr!r}')
+        self.assertIn('Diagnostics:', result.stdout)
+
+    def test_eeprom_and_persistence_output_formats(self):
+        """The car's real reader prints one bare hex line (seen in the car logs); E2P layout is unverified."""
+        for fmt in ('spaced', 'colon', 'grouped', 'compact', 'rows16'):
+            with self.subTest(e2p=fmt):
+                self.success(self.run_action('CHECK', TEST_E2P_FORMAT=fmt))
+        with self.subTest(reader='prefixed'):
+            self.success(self.run_action('CHECK', TEST_READER_PREFIX='1'))
+        with self.subTest(reader='bad'):
+            self.assertNotEqual(self.run_action('CHECK', TEST_BAD_READ='1').returncode, 0)
+
+    def test_unwritable_sd_does_not_stop_check_but_stops_install(self):
+        """chefranov's installer logs only to RAM; an SD that stays read-only must not block a CHECK."""
         shutil.rmtree(self.package / 'logs')
         (self.package / 'ACTION.txt').write_text('CHECK\n')
         self.package.chmod(0o555)
         self.addCleanup(lambda: os.system(f'chmod -R u+w "{self.sd}"'))
-        self.success(self.run_action('CHECK'))
-        self.assertTrue((self.package / 'logs').is_dir())
-        self.assertIn(f'-uw {self.sd}', (self.root / 'mounts').read_text())
+        result = self.run_action('CHECK', TEST_SD_STAYS_RO='1')
+        self.success(result)
+        self.assertIn('WARNING: the SD card cannot be written', result.stdout)
+        self.assertIn('CHECK PASS', result.stdout)
+        self.assertTrue((self.root / 'uk-localization.log').exists())
+        self.assertFalse(self.state.exists())
+        # an explicit INSTALL must still refuse before changing anything
+        self.assertNotEqual(self.run_action('INSTALL', TEST_SD_STAYS_RO='1').returncode, 0)
+        self.assertFalse(self.state.exists())
 
     def test_wrapped_df_output_is_understood(self):
         self.success(self.run_action('CHECK', TEST_DF_WRAP='1'))
@@ -258,7 +300,7 @@ if [ -n "${TEST_BAD_READ:-}" ]; then echo invalid; else cat "$TEST_ROOT/persiste
         return self.run_action('CHECK', **env)
 
     def arm(self):
-        path = self.root / 'arm'
+        path = self.root / 'uk-localization.arm'
         return path.read_text().strip() if path.exists() else None
 
     def test_menu_three_presses_install_then_restore(self):
@@ -288,7 +330,7 @@ if [ -n "${TEST_BAD_READ:-}" ]; then echo invalid; else cat "$TEST_ROOT/persiste
     def test_restart_forgets_pending_step(self):
         self.success(self.press())
         self.success(self.press())
-        (self.root / 'arm').unlink()
+        (self.root / 'uk-localization.arm').unlink()
         self.success(self.press())
         self.assertEqual(self.arm(), 'INSTALL 1')
         self.assertFalse(self.state.exists())
@@ -392,4 +434,3 @@ class PdkshParseTests(unittest.TestCase):
             self.assertEqual(result.returncode, 0, result.stderr)
             self.assertIn('launcher-continues', result.stdout)
             self.assertNotIn('handed-over', result.stdout)
-

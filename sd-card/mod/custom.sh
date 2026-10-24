@@ -9,7 +9,7 @@ fi
 mount -uw /net/mmx/fs/sda0 2>/dev/null
 # Keep shell errors (e.g. a parse error before the installer opens its own log) on the card.
 ERRLOG=$PACKAGE/logs/launcher-errors.txt
-if mkdir -p "$PACKAGE/logs" 2>/dev/null && : > "$ERRLOG" 2>/dev/null; then
+if mkdir -p "$PACKAGE/logs" 2>/dev/null && { cat /dev/null > "$ERRLOG"; } 2>/dev/null; then
     on -f mmx /bin/sh "$PACKAGE/scripts/localization.sh" 2> "$ERRLOG"
     result=$?
     if [ -s "$ERRLOG" ]; then

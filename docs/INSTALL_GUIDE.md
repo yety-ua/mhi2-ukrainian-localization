@@ -104,21 +104,21 @@
 
 1. **Завантажте реліз**, а не вихідний код. На сторінці
    [Releases](https://github.com/yety-ua/mhi2-ukrainian-localization/releases) візьміть
-   `mhi2-ukrainian-localization-k3346-v1.0.0-preview.9.zip` і поруч файл `.sha256`.
+   `mhi2-ukrainian-localization-k3346-v1.0.0-preview.10.zip` і поруч файл `.sha256`.
    Кнопка «Source code (zip)» — **не те**: це вихідники, а не готова карта.
 2. **Перевірте, що файл не пошкоджений.** Порівняйте суму з вмістом `.sha256`.
 
    Windows (PowerShell, у теці із завантаженням):
 
    ```powershell
-   Get-FileHash .\mhi2-ukrainian-localization-k3346-v1.0.0-preview.9.zip -Algorithm SHA256
-   Get-Content .\mhi2-ukrainian-localization-k3346-v1.0.0-preview.9.zip.sha256
+   Get-FileHash .\mhi2-ukrainian-localization-k3346-v1.0.0-preview.10.zip -Algorithm SHA256
+   Get-Content .\mhi2-ukrainian-localization-k3346-v1.0.0-preview.10.zip.sha256
    ```
 
    macOS / Linux:
 
    ```sh
-   shasum -a 256 -c mhi2-ukrainian-localization-k3346-v1.0.0-preview.9.zip.sha256
+   shasum -a 256 -c mhi2-ukrainian-localization-k3346-v1.0.0-preview.10.zip.sha256
    ```
 
    Рядки хешу мають збігатися (у macOS — `OK`). Не збігаються — завантажте знову.
@@ -129,6 +129,7 @@
    - теку **`uk-localization`** — у **корінь** карти (поруч з `apps`, `config`, `mod`…);
    - файли **`mod/custom.sh`** і **`mod/command.sh`** — у вже наявну теку `mod` на карті (з заміною).
 
+   **macOS:** Finder при перетягуванні папки `mod` **замінює** її, а не зливає з наявною, і ви втратите файли M.I.B. (`mod/sshd`, `mod/ringtones`…). Копіюйте всередину `mod` лише два файли. (Проєкт Чефранова теж на це застерігає.) У Windows копіювання папок зливає вміст.
    Не створюйте проміжної теки з назвою архіву. Найчастіша помилка — вкладеність
    `SD/mhi2-ukrainian-…/uk-localization/…`.
 5. **Звірте з картинкою.** На карті мають бути `apps/`, `config/`, `esd/`, `Launcher/`,
@@ -137,7 +138,7 @@
    Дерево — у [README](../README.md#підготовка-sd-карти).
 6. **Безпечно вилучіть карту** з комп'ютера (щоб файли дописалися). На macOS після копіювання
    можуть з'явитися службові файли `._*` — вони не заважають.
-7. **Оновлення з preview.1:** спершу виконайте його `RESTORE`, потім ставте цей реліз. З preview.2/3 достатньо замінити `uk-localization/` і `mod/` (**у preview.2/3 не було `mod/command.sh`**, тому на M.I.B. V3.6+ пункт нічого не запускав).
+7. **Оновлення з preview.1:** спершу виконайте його `RESTORE`, потім ставте цей реліз. З preview.2–9 замініть теку `uk-localization/` і **лише файли** `mod/custom.sh`, `mod/command.sh` (не всю теку `mod/`: там файли M.I.B.). У preview.2/3 не було `mod/command.sh`, тому на M.I.B. V3.6+ пункт нічого не запускав.
 
 ### Етап 4. Перша перевірка — `CHECK` (нічого не змінює)
 
@@ -317,6 +318,8 @@ Patch / Restore / SW Update. Потім скопіюйте створену те
 | `Invalid action…` | Лише якщо ви вручну редагували `ACTION.txt`: зайвий CR/пробіл/BOM | Перезапишіть командою із запасного шляху Етапу 6 |
 | `HMI is not the exact reviewed K3346/MU1438 binary` або схожі «not stock» | Версія/файли не ті, або вже щось змінено | **Нічого не змушуйте.** Не підтримується. Надішліть лог |
 | `At least 40000 KiB free…` | Мало місця в блоці | Надішліть лог; не видаляйте нічого самі |
+| `WARNING: the SD card cannot be written; logging to …` | SD змонтована лише для читання, і перемонтування не вдалось | `CHECK` це не блокує (лог іде в пам'ять блока), але `INSTALL` без запису на SD не стартує. Перевірте перемикач захисту на карті, відформатуйте її FAT32 заново (M.I.B.: погана карта — головна причина проблем) |
+| `Cannot create the lock file …` / `Diagnostics: …` | Блок не дав створити службовий файл у `/tmp` (на цих блоках це `/dev/shmem`, де є лише файли, без папок; до preview.10 скрипт створював там папку і помилково писав «stale lock») | Оновіться до preview.10+. Якщо помилка лишилась — надішліть рядок `Diagnostics:` з логу |
 | `Another localization operation is running (process N)` | Справді виконується інший запуск | Дочекайтеся його завершення. `stale lock` з preview.9 скрипт прибирає сам, якщо власника замка вже немає |
 | `M.I.B. backup/reboot/flash is running` | Йде інша операція M.I.B. | Дочекайтеся її завершення |
 | `Interrupted operation recorded; run RESTORE…` / `PENDING` | Встановлення перервано | **Не перезавантажуйте.** Виконайте `RESTORE` (нижче) |
@@ -458,14 +461,14 @@ a cold start. REM uses the **lower** half of the right key instead; do not confu
    Windows:
 
    ```powershell
-   Get-FileHash .\mhi2-ukrainian-localization-k3346-v1.0.0-preview.9.zip -Algorithm SHA256
-   Get-Content .\mhi2-ukrainian-localization-k3346-v1.0.0-preview.9.zip.sha256
+   Get-FileHash .\mhi2-ukrainian-localization-k3346-v1.0.0-preview.10.zip -Algorithm SHA256
+   Get-Content .\mhi2-ukrainian-localization-k3346-v1.0.0-preview.10.zip.sha256
    ```
 
    macOS / Linux:
 
    ```sh
-   shasum -a 256 -c mhi2-ukrainian-localization-k3346-v1.0.0-preview.9.zip.sha256
+   shasum -a 256 -c mhi2-ukrainian-localization-k3346-v1.0.0-preview.10.zip.sha256
    ```
 
 3. Copy your whole working M.I.B. card to the computer as a spare. If `mod/custom.sh` or `mod/command.sh`
@@ -473,8 +476,9 @@ a cold start. REM uses the **lower** half of the right key instead; do not confu
 4. Extract the release. Copy the **`uk-localization`** folder to the **card root** (next
    to `apps`, `config`, `mod`) and **`mod/custom.sh`** and **`mod/command.sh`** into the existing `mod` folder.
    No extra wrapper folder — the most common mistake.
+   **macOS:** dragging the `mod` folder in Finder **replaces** the existing one instead of merging, destroying M.I.B.'s own files (`mod/sshd`, `mod/ringtones`…). Copy only the two files into `mod`. (chefranov's project warns about this too.) On Windows folder copies merge.
 5. Compare with the tree in the [README](../README.md#prepare-the-sd-card), then eject safely.
-6. Upgrading from preview.1: run its `RESTORE` first. From preview.2/3 replace `uk-localization/` and `mod/` (**preview.2/3 lacked `mod/command.sh`**, so on M.I.B. V3.6+ the item ran nothing).
+6. Upgrading from preview.1: run its `RESTORE` first. From preview.2–9 replace the `uk-localization/` folder and **only the files** `mod/custom.sh`, `mod/command.sh` (not the whole `mod/` folder: it holds M.I.B.'s files). preview.2/3 lacked `mod/command.sh`, so on M.I.B. V3.6+ the item ran nothing.
 
 ### Stage 4. First check — `CHECK`
 
@@ -607,6 +611,8 @@ A word other than `CHECK` in `ACTION.txt` runs **at once, in a single launch** (
 | `Invalid action…` | Only if you edited `ACTION.txt` by hand: stray CR / space / BOM | Rewrite with the Stage 6 fallback command |
 | `HMI is not the exact reviewed K3346/MU1438 binary`, “not stock” | Wrong version, or already modified | Do not force; unsupported. Send the log |
 | `At least 40000 KiB free…` | Not enough space | Send the log; delete nothing yourself |
+| `WARNING: the SD card cannot be written; logging to …` | The SD is mounted read-only and the remount failed | `CHECK` is not blocked (the log goes to the unit's RAM), but `INSTALL` will not start without SD write access. Check the card's write-protect switch and reformat it as FAT32 (M.I.B.: bad cards are the top issue) |
+| `Cannot create the lock file …` / `Diagnostics: …` | The unit refused a helper file in `/tmp` (on these units that is `/dev/shmem`, which holds files only, no folders; before preview.10 the script made a folder there and wrongly reported a “stale lock”) | Update to preview.10+. If it persists, send the `Diagnostics:` line from the log |
 | `Another localization operation is running (process N)` | Another run is really active | Wait for it to finish. Since preview.9 a stale lock is removed automatically when its owner is gone |
 | `M.I.B. backup/reboot/flash is running` | Another M.I.B. operation | Wait for it |
 | `Interrupted operation recorded` / `PENDING` | Install interrupted | **Do not reboot.** Run `RESTORE` |

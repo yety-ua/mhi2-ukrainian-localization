@@ -14,8 +14,22 @@ LSD=$APP/eso/hmi/lsd
 STATE=$APP/root/uk-localization
 BACKUP=$STATE/baseline
 RECOVERY=$STATE/recovery
-LOCK=/tmp/uk-localization.lock
-ARM=/tmp/uk-localization.arm
+# RAM directory for the lock and the pending menu step. QNX /dev/shmem (often behind /tmp) holds only
+# files, never folders, so everything here is a plain file; the first candidate that accepts one wins.
+RUNTIME_DIRS="/tmp /dev/shmem /net/rcc/dev/shmem"
+RUNTIME=
+for RUNTIME_CANDIDATE in $RUNTIME_DIRS; do
+    # { ...; } 2>/dev/null: a failed redirection of a special builtin (:) would end a POSIX ksh script.
+    if [ -d "$RUNTIME_CANDIDATE" ] && { echo probe > "$RUNTIME_CANDIDATE/uk-localization.probe.$$"; } 2>/dev/null; then
+        rm -f "$RUNTIME_CANDIDATE/uk-localization.probe.$$"
+        RUNTIME=$RUNTIME_CANDIDATE
+        break
+    fi
+done
+[ -n "$RUNTIME" ] || RUNTIME=${RUNTIME_DIRS%% *}
+LOCK=$RUNTIME/uk-localization.lock
+READER_TMP=$RUNTIME/uk-localization.reader.$$
+ARM=$RUNTIME/uk-localization.arm
 SHA=$MIB/apps/sbin/sha1sum
 AWK=$MIB/apps/sbin/awk
 SED=$MIB/apps/sbin/sed
@@ -42,6 +56,7 @@ KEY280=3221422085
 MUTATING=0
 MENU=0
 KEEP_ARM=0
+LOG=/dev/null
 
 say() { echo "$*"; echo "$*" >> "$LOG"; }
 die() {
@@ -127,8 +142,8 @@ activate() {
     equal "$1" "$2" || die "Active file verification failed: $2"
 }
 blob() {
-    "$READER" 0 "$1" > "$LOCK/reader.txt" 2>&1 || die "Cannot read persistence key $1"
-    "$AWK" -v bytes="$2" -f "$PACKAGE/scripts/blob.awk" "$LOCK/reader.txt" || die "Ambiguous or invalid CRC for key $1"
+    "$READER" 0 "$1" > "$READER_TMP" 2>&1 || die "Cannot read persistence key $1"
+    "$AWK" -v bytes="$2" -f "$PACKAGE/scripts/blob.awk" "$READER_TMP" || die "Ambiguous or invalid CRC for key $1"
 }
 write_blob() {
     VALUE=$(cat "$2") || die "Cannot read $2"
@@ -235,17 +250,27 @@ case $PACKAGE in
     "$APP"/*) [ "${1:-}" = CHECK ] || mount -uw "$APP" 2>/dev/null ;;
 esac
 [ ! -L "$PACKAGE/logs" ] || exit 1
-mkdir -p "$PACKAGE/logs" || exit 1
-LOG=$PACKAGE/logs/run-$$.log
-INDEX=0
-while [ -e "$LOG" ] || [ -L "$LOG" ]; do
-    INDEX=$((INDEX + 1))
-    LOG=$PACKAGE/logs/run-$$-$INDEX.log
-done
-: > "$LOG" || exit 1
-# The lock records its owner's PID: a lock whose owner is gone (killed run) is stale and is replaced.
-if ! mkdir "$LOCK" 2>/dev/null; then
-    LOCK_OWNER=$(cat "$LOCK/pid" 2>/dev/null)
+# A log on the SD is a convenience, not a requirement: if the card cannot be written, log in RAM and go on.
+LOG=
+if mkdir -p "$PACKAGE/logs" 2>/dev/null; then
+    LOG_CANDIDATE=$PACKAGE/logs/run-$$.log
+    INDEX=0
+    while [ -e "$LOG_CANDIDATE" ] || [ -L "$LOG_CANDIDATE" ]; do
+        INDEX=$((INDEX + 1))
+        LOG_CANDIDATE=$PACKAGE/logs/run-$$-$INDEX.log
+    done
+    if { cat /dev/null > "$LOG_CANDIDATE"; } 2>/dev/null; then LOG=$LOG_CANDIDATE; fi
+fi
+if [ -z "$LOG" ]; then
+    LOG=$RUNTIME/uk-localization.log
+    { cat /dev/null > "$LOG"; } 2>/dev/null || LOG=/dev/null
+    say "WARNING: the SD card cannot be written; logging to $LOG (lost at reboot)."
+fi
+# The lock is a file holding its owner's PID, created atomically (noclobber). A lock whose owner is
+# gone (killed run) is stale and is replaced.
+make_lock() { ( set -C; echo $$ > "$LOCK" ) 2>/dev/null; }
+if ! make_lock; then
+    LOCK_OWNER=$(cat "$LOCK" 2>/dev/null)
     case $LOCK_OWNER in
         ''|*[!0-9]*) LOCK_OWNER= ;;
     esac
@@ -254,11 +279,14 @@ if ! mkdir "$LOCK" 2>/dev/null; then
         exit 1
     fi
     rm -rf "$LOCK" 2>/dev/null
-    mkdir "$LOCK" 2>/dev/null || { say 'ERROR: Cannot replace a stale lock'; exit 1; }
+    if ! make_lock; then
+        say "ERROR: Cannot create the lock file $LOCK"
+        say "Diagnostics: user=$(id 2>&1); $(ls -ld "$RUNTIME" "$LOCK" 2>&1)"
+        exit 1
+    fi
     say 'Replaced a stale lock left by an interrupted run.'
 fi
-echo $$ > "$LOCK/pid"
-trap 'rm -f "$LOCK/reader.txt" "$LOCK/pid"; rmdir "$LOCK" 2>/dev/null' 0
+trap 'rm -f "$LOCK" "$READER_TMP"' 0
 trap 'exit 1' 1 2 15
 
 if [ "$#" -eq 1 ]; then
@@ -275,16 +303,16 @@ ACTUAL_HMI=$(file_sha1 /ifs/lsd.jxe) || die 'Cannot fingerprint live HMI'
 [ "$ACTUAL_HMI" = "$EXPECTED_HMI" ] || die 'HMI is not the exact reviewed K3346/MU1438 binary'
 # Same EEPROM offsets as upstream GLOBALS; require exactly the requested bytes.
 read_eeprom() {
-    on -f rcc /net/rcc/usr/apps/modifyE2P r "$1" "$2" > "$LOCK/reader.txt" 2>&1 || return 1
+    on -f rcc /net/rcc/usr/apps/modifyE2P r "$1" "$2" > "$READER_TMP" 2>&1 || return 1
     "$AWK" -v expected="$2" '
-        $1 ~ /^0x[0-9a-fA-F]+$/ {
+        $1 ~ /^0x[0-9a-fA-F]+:?$/ {
             for (i=2;i<=NF;i++) {
-                if (length($i)!=2 || $i ~ /[^0-9a-fA-F]/) break
-                out=out $i; count++
+                if ($i ~ /[^0-9a-fA-F]/ || length($i) % 2) break
+                out=out $i
             }
         }
-        END { if(count!=expected) exit 1; print out }
-    ' "$LOCK/reader.txt" | "$XXD" -r -p | "$SED" 's/[^a-zA-Z0-9_-]//g'
+        END { if (length(out) != expected * 2) exit 1; print out }
+    ' "$READER_TMP" | "$XXD" -r -p | "$SED" 's/[^a-zA-Z0-9_-]//g'
 }
 TRAIN=$(read_eeprom 3A0 19) || die 'Cannot read real firmware train'
 MU=$(read_eeprom 3B9 4) || die 'Cannot read MU version'
@@ -435,3 +463,5 @@ sync || die 'Journal sync failed'
 MUTATING=0
 say "SUCCESS: $ACTION completed and file/dataset read-back verified. No automatic reboot."
 say 'Vehicle UI, persistence after cold boot, speech and Virtual Cockpit remain to be tested.'
+# Like M.I.B., hand /mnt/app back read-only once everything (including the log) is written.
+mount -ur "$APP" 2>/dev/null

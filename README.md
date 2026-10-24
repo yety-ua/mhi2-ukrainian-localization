@@ -87,16 +87,16 @@ SD-карти через [M.I.B.](https://github.com/Mr-MIBonk/M.I.B._More-Incre
 
 > **Вперше з M.I.B.?** Читайте [покрокову інструкцію](docs/INSTALL_GUIDE.md#українська): словник термінів, перевірка контрольної суми, запасний вхід по telnet, таблиця помилок.
 
-1. Завантажте `mhi2-ukrainian-localization-k3346-v1.0.0-preview.9.zip` і `.sha256`
+1. Завантажте `mhi2-ukrainian-localization-k3346-v1.0.0-preview.10.zip` і `.sha256`
    з [Releases](https://github.com/yety-ua/mhi2-ukrainian-localization/releases).
    **GitHub Source code ZIP — це репозиторій, а не готовий корінь SD.**
 2. M.I.B. має вже бути встановлений у голові; його повний дистрибутив має лежати
    в корені writable FAT32 SD-карти. Цей пакет не містить і не перевстановлює M.I.B.
 3. Розпакуйте реліз на комп'ютері. Скопіюйте **`uk-localization/` у корінь SD**, а
-   **`mod/custom.sh` і `mod/command.sh` у наявну папку `mod/`**. Не додавайте зовнішню папку з назвою архіву.
+   **`mod/custom.sh` і `mod/command.sh` у наявну папку `mod/`**. На macOS не перетягуйте саму папку `mod` (Finder замінює, а не зливає): копіюйте тільки ці два файли. Не додавайте зовнішню папку з назвою архіву.
 4. Якщо на SD уже є власний `mod/custom.sh` чи `mod/command.sh`, спочатку збережіть їх копії під іншою
    назвою. Новий entry point не запускає старі команди. Інші файли M.I.B. збережіть.
-5. **Оновлення з preview.1.** Інсталятор вимагає штатний (stock) стан мовних файлів у голові. Якщо preview.1 уже встановлено, спочатку виконайте його RESTORE, потім CHECK/INSTALL з цього релізу. З preview.2/3 достатньо замінити `uk-localization/` і `mod/`: стан у голові не змінювався, `CHECK` розпізнає наявне встановлення. У preview.2/3 не було `mod/command.sh`, тому на M.I.B. V3.6+ пункт нічого не запускав.
+5. **Оновлення з preview.1.** Інсталятор вимагає штатний (stock) стан мовних файлів у голові. Якщо preview.1 уже встановлено, спочатку виконайте його RESTORE, потім CHECK/INSTALL з цього релізу. З preview.2–9 достатньо замінити теку `uk-localization/` і **лише файли** `mod/custom.sh` та `mod/command.sh` (не всю теку `mod/`: у ній лежать файли самого M.I.B.): стан у голові не змінювався, `CHECK` розпізнає наявне встановлення. У preview.2/3 не було `mod/command.sh`, тому на M.I.B. V3.6+ пункт нічого не запускав.
 
 ```text
 SD1/
@@ -299,11 +299,11 @@ rendering is incomplete. [Capture provenance](docs/screenshots.json).
    at its root. M.I.B. must already be installed on the unit; this overlay does not
    include or reinstall M.I.B.
 3. Extract the release on the computer. Copy **`uk-localization/` to the SD root**
-   and **`mod/custom.sh` and `mod/command.sh` into the existing `mod/` directory**. Do not add an enclosing
+   and **`mod/custom.sh` and `mod/command.sh` into the existing `mod/` directory**. On macOS do not drag the `mod` folder itself (Finder replaces instead of merging): copy just those two files. Do not add an enclosing
    release-name directory. Preserve the remaining M.I.B. files.
 4. If a custom `mod/custom.sh` or `mod/command.sh` exists, save copies under other names before replacement.
    The new entry point does not chain existing commands. The SD tree is shown above.
-5. **Upgrading from preview.1.** The installer requires the stock language files on the head unit. If preview.1 is already installed, run its RESTORE first, then CHECK/INSTALL from this release. From preview.2/3 simply replace `uk-localization/` and `mod/`: the on-unit state is unchanged and `CHECK` recognises an existing install. preview.2/3 lacked `mod/command.sh`, so on M.I.B. V3.6+ the item ran nothing.
+5. **Upgrading from preview.1.** The installer requires the stock language files on the head unit. If preview.1 is already installed, run its RESTORE first, then CHECK/INSTALL from this release. From preview.2–9 replace the `uk-localization/` folder and **only the files** `mod/custom.sh` and `mod/command.sh` (not the whole `mod/` folder: it holds M.I.B.'s own files): the on-unit state is unchanged and `CHECK` recognises an existing install. preview.2/3 lacked `mod/command.sh`, so on M.I.B. V3.6+ the item ran nothing.
 
 ### Check and install
 
