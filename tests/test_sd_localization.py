@@ -213,6 +213,14 @@ if [ -n "${TEST_BAD_READ:-}" ]; then echo invalid; else cat "$TEST_ROOT/persiste
         self.assertNotEqual(self.run_action('INSTALL').returncode, 0)
         self.assertFalse(self.state.exists())
 
+    def test_unit_awk_is_used_when_mib_ships_none(self):
+        """M.I.B. V3.7.1 has no apps/sbin/awk; the installer must fall back to the unit's own."""
+        (self.sd / 'apps/sbin/awk').unlink()
+        self.tool(self.bin / 'awk', f'#!/bin/sh\n{shutil.which("awk")} "$@"\n')
+        self.success(self.run_action('CHECK'))
+        self.success(self.run_action('INSTALL'))
+        self.success(self.run_action('RESTORE'))
+
     def test_wrapped_df_output_is_understood(self):
         self.success(self.run_action('CHECK', TEST_DF_WRAP='1'))
         self.assertNotEqual(self.run_action('CHECK', TEST_DF_WRAP='1', TEST_SPACE='100').returncode, 0)

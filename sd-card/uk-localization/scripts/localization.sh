@@ -1,7 +1,7 @@
 #!/bin/sh
 # Standalone, exact-target M.I.B. SD installer. Never reboots or patches IFS.
 set -u
-PATH=/proc/boot:/bin:/usr/bin:/usr/sbin:/sbin:/mnt/app/armle/bin:/mnt/app/armle/usr/bin:/mnt/app/armle/usr/sbin
+PATH=/proc/boot:/bin:/usr/bin:/usr/sbin:/sbin:/mnt/app/media/gracenote/bin:/mnt/app/armle/bin:/mnt/app/armle/sbin:/mnt/app/armle/usr/bin:/mnt/app/armle/usr/sbin
 LD_LIBRARY_PATH=/lib:/mnt/app/root/lib-target:/eso/lib:/mnt/app/usr/lib:/mnt/app/armle/lib:/mnt/app/armle/lib/dll:/mnt/app/armle/usr/lib
 IPL_CONFIG_DIR=/etc/eso/production
 export PATH LD_LIBRARY_PATH IPL_CONFIG_DIR
@@ -21,6 +21,15 @@ AWK=$MIB/apps/sbin/awk
 SED=$MIB/apps/sbin/sed
 XXD=$MIB/apps/sbin/xxd
 READER=$MIB/apps/sbin/dumb_persistence_reader
+# M.I.B. V3.7+ no longer ships apps/sbin/awk and uses the unit's own awk from this PATH.
+if [ ! -x "$AWK" ]; then
+    OLD_IFS=$IFS
+    IFS=:
+    for FIND_DIR in $PATH; do
+        if [ -f "$FIND_DIR/awk" ] && [ -x "$FIND_DIR/awk" ]; then AWK=$FIND_DIR/awk; break; fi
+    done
+    IFS=$OLD_IFS
+fi
 if [ -d "$PACKAGE/tools" ]; then
     SHA=$PACKAGE/tools/sha1sum
     AWK=$PACKAGE/tools/awk
