@@ -2,7 +2,7 @@
 
 **MHI2_ER_AUG22_K3346 · MU1438 · G22 · EvoHigh**
 
-[Українська](#українська) · [English](#english) · [Download / Завантажити](https://github.com/yety-ua/mhi2-ukrainian-localization/releases) · [Глибина / Coverage](docs/LOCALIZATION_DEPTH.md) · [A4 provenance](docs/A4_PROVENANCE.md)
+[Українська](#українська) · [English](#english) · [Покрокова інструкція / Step-by-step guide](docs/INSTALL_GUIDE.md) · [Download / Завантажити](https://github.com/yety-ua/mhi2-ukrainian-localization/releases) · [Глибина / Coverage](docs/LOCALIZATION_DEPTH.md) · [A4 provenance](docs/A4_PROVENANCE.md)
 
 ![Українське головне меню Audi A4 K3346 / Ukrainian Audi A4 K3346 main menu](docs/images/main-menu.png)
 
@@ -85,6 +85,8 @@ SD-карти через [M.I.B.](https://github.com/Mr-MIBonk/M.I.B._More-Incre
 
 ### Підготовка SD-карти
 
+> **Вперше з M.I.B.?** Читайте [покрокову інструкцію](docs/INSTALL_GUIDE.md#українська): словник термінів, перевірка контрольної суми, запасний вхід по telnet, таблиця помилок.
+
 1. Завантажте `mhi2-ukrainian-localization-k3346-v1.0.0-preview.2.zip` і `.sha256`
    з [Releases](https://github.com/yety-ua/mhi2-ukrainian-localization/releases).
    **GitHub Source code ZIP — це репозиторій, а не готовий корінь SD.**
@@ -127,11 +129,11 @@ SD1/
 2. Відкрийте GEM → `m.i.b.` → `Advanced Settings` → `Run Custom Script`
    (можлива назва `Run /mod/custom.sh from m.i.b. SD`). Потрібні **`CHECK PASS` і код 0**.
    CHECK записує лише SD-лог і тимчасові файли; не змінює мовні ресурси чи параметризацію.
-3. Перед першою автомобільною інсталяцією перевірте recovery telnet на порту 23,
+3. Перед першою автомобільною інсталяцією перевірте recovery telnet на порту 23 (потрібні USB-Ethernet адаптер і пароль зі списку M.I.B., див. [посібник](docs/INSTALL_GUIDE.md#етап-5-страховка-перед-встановленням)),
    зробіть і перевірте повний резервний знімок M.I.B., підключіть стабільне зовнішнє
    живлення. Ноутбук не потрібний для перенесення пакета, але потрібен для незалежної
    recovery-перевірки першого випробування. Потрібно щонайменше 40000 KiB у `/mnt/app`.
-4. На комп'ютері змініть єдиний рядок ACTION.txt на `INSTALL`. Знову запустіть той
+4. На комп'ютері змініть єдиний рядок ACTION.txt на `INSTALL` (**LF**, не CRLF: Блокнот Windows не підходить, команда — у [посібнику](docs/INSTALL_GUIDE.md#етап-6-встановлення--install)). Знову запустіть той
    самий пункт GEM. Не виймайте SD, не натискайте Back, не запускайте інші операції M.I.B.
 5. Інсталятор поверне ACTION.txt до CHECK, збереже оригінали в голові та на SD,
    встановить ресурси, запише `2D00` останнім і перевірить результат. `0x280` під час
@@ -275,6 +277,8 @@ rendering is incomplete. [Capture provenance](docs/screenshots.json).
 
 ### Prepare the SD card
 
+> **New to M.I.B.?** Read the [step-by-step guide](docs/INSTALL_GUIDE.md#english): glossary, checksum verification, telnet fallback, troubleshooting table.
+
 1. Download the release ZIP and its `.sha256` from
    [Releases](https://github.com/yety-ua/mhi2-ukrainian-localization/releases).
    GitHub's Source code ZIP is the repository, not a ready SD-root overlay.
@@ -297,11 +301,11 @@ rendering is incomplete. [Capture provenance](docs/screenshots.json).
 2. Open GEM → `m.i.b.` → `Advanced Settings` → `Run Custom Script` (possibly labelled
    `Run /mod/custom.sh from m.i.b. SD`). Require **CHECK PASS and exit code 0**.
    CHECK writes only the SD log and temporary files; no app remount/resource/persistence write.
-3. Before the first vehicle trial, confirm recovery telnet on port 23, make/verify
+3. Before the first vehicle trial, confirm recovery telnet on port 23 (needs a USB-Ethernet adapter and the password from the M.I.B. list, see the [guide](docs/INSTALL_GUIDE.md#stage-5-safety-net-before-installing)), make/verify
    the complete M.I.B. backup and connect stable external power. Installation transport
    uses only SD, but the first trial still needs independent laptop recovery verification.
    At least 40000 KiB free in `/mnt/app` is required.
-4. On the computer, change ACTION.txt to `INSTALL` and run the same GEM item. Do not
+4. On the computer, change ACTION.txt to `INSTALL` (**LF**, not CRLF: Windows Notepad will fail; see the [guide](docs/INSTALL_GUIDE.md#stage-6-install--install)) and run the same GEM item. Do not
    remove SD, press Back or run other M.I.B. backup/reboot/flash operations concurrently.
 5. The action resets to CHECK before writing. Baselines are stored on SD and the unit;
    resources are installed before 2D00 and verified by read-back. 0x280 is unchanged
