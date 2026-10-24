@@ -15,6 +15,7 @@ STATE=$APP/root/uk-localization
 BACKUP=$STATE/baseline
 RECOVERY=$STATE/recovery
 LOCK=/tmp/uk-localization.lock
+ARM=/tmp/uk-localization.arm
 SHA=$MIB/apps/sbin/sha1sum
 AWK=$MIB/apps/sbin/awk
 SED=$MIB/apps/sbin/sed
@@ -30,14 +31,66 @@ fi
 KEY=3221422086
 KEY280=3221422085
 MUTATING=0
+MENU=0
+KEEP_ARM=0
 
 say() { echo "$*"; echo "$*" >> "$LOG"; }
 die() {
+    [ "$KEEP_ARM" = 1 ] || rm -f "$ARM"
     say "ERROR: $*"
     if [ "$MUTATING" = 1 ]; then
         say 'Changes may remain. Do not reboot. Run RESTORE or use the recovery instructions.'
     fi
     exit 1
+}
+# GEM-only flow: run the same item three times (CHECK -> checklist -> action). The pending
+# step lives in RAM, so a restart of the unit cancels it. ACTION.txt other than CHECK wins.
+menu_step() {
+    MENU_TARGET=$1
+    MENU_STEP=0
+    if [ -f "$ARM" ]; then
+        ARM_ROW=$(cat "$ARM")
+        set -- $ARM_ROW
+        if [ "$#" -eq 2 ] && [ "$1" = "$MENU_TARGET" ]; then
+            case $2 in 1|2) MENU_STEP=$2 ;; esac
+        fi
+    fi
+    if [ "$MENU_STEP" = 2 ]; then
+        say "Step 3 of 3 confirmed: running $MENU_TARGET now."
+        ACTION=$MENU_TARGET
+        PROBLEM=
+        return 0
+    fi
+    MENU_NEXT=$((MENU_STEP + 1))
+    echo "$MENU_TARGET $MENU_NEXT" > "$ARM" || die 'Cannot record the pending menu step'
+    if [ -n "$PROBLEM" ]; then MENU_CODE=1; else MENU_CODE=0; fi
+    say ''
+    if [ "$MENU_STEP" = 0 ]; then
+        if [ "$MENU_TARGET" = INSTALL ]; then
+            say 'Nothing was changed. To INSTALL, run this same GEM item again (step 1 of 3 done).'
+            say 'The next run only shows a checklist; the run after it installs.'
+            say 'To cancel, do nothing: the pending step is forgotten when the MMI restarts.'
+        elif [ -n "$PROBLEM" ]; then
+            say 'To RESTORE the original files, run this same GEM item again (step 1 of 3 done).'
+            say 'Do NOT reboot the unit before restoring.'
+        else
+            say 'Ukrainian is installed and verified; nothing needs to be done.'
+            say 'To go back to the original language files, run this item again (step 1 of 3 done).'
+        fi
+    else
+        say "CONFIRM (step 2 of 3) before $MENU_TARGET. Continue only if ALL of these are true:"
+        say ' - stable external power is connected'
+        say ' - recovery access (telnet or SSH from a laptop) was verified'
+        say ' - a full M.I.B. backup was made and copied off the SD'
+        say "Run this item ONE more time to $MENU_TARGET now."
+        if [ -n "$PROBLEM" ]; then
+            say 'Do NOT reboot the unit before restoring.'
+        else
+            say 'To cancel, restart the MMI.'
+        fi
+    fi
+    [ -z "$PROBLEM" ] || say "ERROR: $PROBLEM"
+    exit $MENU_CODE
 }
 hash() {
     [ -f "$1" ] && [ ! -L "$1" ] || return 1
@@ -178,7 +231,12 @@ mkdir "$LOCK" 2>/dev/null || { say 'ERROR: Another localization operation or sta
 trap 'rm -f "$LOCK/reader.txt"; rmdir "$LOCK" 2>/dev/null' 0
 trap 'exit 1' 1 2 15
 
-if [ "$#" -eq 1 ]; then ACTION=$1; else ACTION=$(cat "$PACKAGE/ACTION.txt") || die 'Missing ACTION.txt'; fi
+if [ "$#" -eq 1 ]; then
+    ACTION=$1
+else
+    ACTION=$(cat "$PACKAGE/ACTION.txt") || die 'Missing ACTION.txt'
+    [ "$ACTION" != CHECK ] || MENU=1
+fi
 case $ACTION in CHECK|INSTALL|RESTORE|VOICE_INSTALL|VOICE_RESTORE) ;; *) die 'Invalid action; use CHECK, INSTALL, RESTORE, VOICE_INSTALL or VOICE_RESTORE' ;; esac
 say "Ukrainian localization 1.0 / action=$ACTION"
 verify_manifest
@@ -224,20 +282,31 @@ say 'Persistence values read and CRC-checked.'
 
 if [ "$ACTION" = CHECK ]; then
     require_space
+    OFFER=
+    PROBLEM=
     if [ -e "$STATE" ]; then
         verify_backup
-        if [ -f "$STATE/PENDING" ]; then die 'Interrupted operation recorded; run RESTORE before rebooting'; fi
-        if [ -f "$STATE/INSTALLED" ]; then
-            verify_ui
-            if [ -f "$LSD/jars/lang_uk_voice.jar" ]; then
-                equal "$LSD/jars/lang_uk_voice.jar" "$PACKAGE/payload/lang_uk_voice.jar" || die 'Unknown voice hook'
-                say 'English voice fallback is installed; actual speech needs vehicle validation.'
+        if [ -f "$STATE/PENDING" ]; then
+            PROBLEM='Interrupted operation recorded; run RESTORE before rebooting'
+            OFFER=RESTORE
+        elif [ -f "$STATE/INSTALLED" ]; then
+            KEEP_ARM=1
+            if ( verify_ui ); then
+                if [ -f "$LSD/jars/lang_uk_voice.jar" ]; then
+                    equal "$LSD/jars/lang_uk_voice.jar" "$PACKAGE/payload/lang_uk_voice.jar" || die 'Unknown voice hook'
+                    say 'English voice fallback is installed; actual speech needs vehicle validation.'
+                fi
+                say 'CHECK PASS: Ukrainian UI installation matches this package.'
+            else
+                PROBLEM='Installed files differ from this package; the original baseline can be restored'
             fi
-            say 'CHECK PASS: Ukrainian UI installation matches this package.'
+            KEEP_ARM=0
+            OFFER=RESTORE
         elif [ -f "$STATE/RESTORED" ]; then
             verify_stock
             [ "$CURRENT" = "$ORIGINAL" ] && [ "$CURRENT280" = "$ORIGINAL280" ] || die 'Restored datasets differ'
             say 'CHECK PASS: stock baseline restored; package can be installed again.'
+            OFFER=INSTALL
         else die 'Unfinished package state exists; inspect the recovery log'; fi
     else
         verify_stock
@@ -246,12 +315,18 @@ if [ "$ACTION" = CHECK ]; then
             [ ! -e "$FILE" ] && [ ! -L "$FILE" ] || die "Existing unmanaged localization file: $FILE"
         done
         say 'CHECK PASS: exact stock baseline, valid package, tools and free space.'
+        OFFER=INSTALL
     fi
-    say 'CHECK performs no remount, firmware file write, persistence write or reboot.'
-    exit 0
+    if [ "$MENU" = 1 ] && [ -n "$OFFER" ]; then menu_step "$OFFER"; fi
+    [ -z "$PROBLEM" ] || die "$PROBLEM"
+    if [ "$ACTION" = CHECK ]; then
+        say 'CHECK performs no remount, firmware file write, persistence write or reboot.'
+        exit 0
+    fi
 fi
 
-# One-shot action: a second GEM click cannot repeat an install automatically.
+# One-shot action: reset ACTION.txt to CHECK before writing; menu steps are forgotten.
+rm -f "$ARM"
 echo CHECK > "$PACKAGE/ACTION.txt.new" || die 'Cannot reset action on SD'
 mv "$PACKAGE/ACTION.txt.new" "$PACKAGE/ACTION.txt" || die 'Cannot reset action'
 if [ "$ACTION" = INSTALL ]; then

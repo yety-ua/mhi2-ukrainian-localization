@@ -87,7 +87,7 @@ SD-карти через [M.I.B.](https://github.com/Mr-MIBonk/M.I.B._More-Incre
 
 > **Вперше з M.I.B.?** Читайте [покрокову інструкцію](docs/INSTALL_GUIDE.md#українська): словник термінів, перевірка контрольної суми, запасний вхід по telnet, таблиця помилок.
 
-1. Завантажте `mhi2-ukrainian-localization-k3346-v1.0.0-preview.2.zip` і `.sha256`
+1. Завантажте `mhi2-ukrainian-localization-k3346-v1.0.0-preview.3.zip` і `.sha256`
    з [Releases](https://github.com/yety-ua/mhi2-ukrainian-localization/releases).
    **GitHub Source code ZIP — це репозиторій, а не готовий корінь SD.**
 2. M.I.B. має вже бути встановлений у голові; його повний дистрибутив має лежати
@@ -96,7 +96,7 @@ SD-карти через [M.I.B.](https://github.com/Mr-MIBonk/M.I.B._More-Incre
    **`mod/custom.sh` у наявну папку `mod/`**. Не додавайте зовнішню папку з назвою архіву.
 4. Якщо на SD уже є власний `mod/custom.sh`, спочатку збережіть його копію під іншою
    назвою. Новий entry point не запускає старі команди. Інші файли M.I.B. збережіть.
-5. **Оновлення з preview.1.** Інсталятор вимагає штатний (stock) стан мовних файлів у голові. Якщо preview.1 уже встановлено, спочатку виконайте його RESTORE, потім CHECK/INSTALL з цього релізу.
+5. **Оновлення з preview.1.** Інсталятор вимагає штатний (stock) стан мовних файлів у голові. Якщо preview.1 уже встановлено, спочатку виконайте його RESTORE, потім CHECK/INSTALL з цього релізу. З preview.2 достатньо замінити `uk-localization/` і `mod/custom.sh`: стан у голові не змінювався, `CHECK` розпізнає наявне встановлення.
 
 ```text
 SD1/
@@ -133,9 +133,13 @@ SD1/
    зробіть і перевірте повний резервний знімок M.I.B., підключіть стабільне зовнішнє
    живлення. Ноутбук не потрібний для перенесення пакета, але потрібен для незалежної
    recovery-перевірки першого випробування. Потрібно щонайменше 40000 KiB у `/mnt/app`.
-4. На комп'ютері змініть єдиний рядок ACTION.txt на `INSTALL` (**LF**, не CRLF: Блокнот Windows не підходить, команда — у [посібнику](docs/INSTALL_GUIDE.md#етап-6-встановлення--install)). Знову запустіть той
-   самий пункт GEM. Не виймайте SD, не натискайте Back, не запускайте інші операції M.I.B.
-5. Інсталятор поверне ACTION.txt до CHECK, збереже оригінали в голові та на SD,
+4. **Файли редагувати не потрібно.** Запустіть той самий пункт GEM ще **двічі**: після
+   `CHECK PASS` екран підкаже наступний крок. Другий запуск лише показує чеклист
+   (перевірте живлення, recovery-доступ і бекап), **третій** встановлює. Незавершений крок
+   «забувається» при перезапуску MMI. Не виймайте SD, не натискайте Back, не запускайте інші операції M.I.B.
+   *Запасний шлях:* записати `INSTALL` у `ACTION.txt` на комп'ютері (**LF**, не CRLF; Блокнот
+   Windows не підходить, команда — у [посібнику](docs/INSTALL_GUIDE.md#етап-6-встановлення--install)) — тоді дія виконується за один запуск.
+5. Інсталятор збереже оригінали в голові та на SD,
    встановить ресурси, запише `2D00` останнім і перевірить результат. `0x280` під час
    встановлення не змінюється. Невідомі попередні модифікації спричиняють зупинку.
 6. Лише після **`SUCCESS: INSTALL` і коду 0** перезавантажте MMI вручну. Виберіть
@@ -149,7 +153,11 @@ SD1/
 Зовнішнє повідомлення M.I.B. «execution finished» не означає успішної інсталяції;
 орієнтуйтеся на SUCCESS/ERROR та код саме цього пакета.
 
-### Дії ACTION.txt
+### Дії ACTION.txt (запасний шлях)
+
+Зазвичай `ACTION.txt` редагувати не треба: `CHECK`, `INSTALL` і `RESTORE` вибираються повторним
+запуском пункту GEM. Файл потрібен для `VOICE_*` і як запасний шлях: слово, відмінне від
+`CHECK`, виконується одразу, за один запуск.
 
 | Значення | Дія |
 | --- | --- |
@@ -164,7 +172,10 @@ reboot і перемикання з української на іншу мов�
 
 ### Відновлення
 
-Запишіть `RESTORE` у ACTION.txt і запустіть той самий пункт GEM. Пакет відновлює
+Коли пакет встановлено (або встановлення перервалося, або файли розійшлися з пакетом),
+запустіть той самий пункт GEM **тричі**: перший покаже стан і запропонує відновлення,
+другий — чеклист, третій виконає `RESTORE`. Або запишіть `RESTORE` у ACTION.txt і запустіть
+пункт один раз. Пакет відновлює
 оригінальні ZIP/config/LUT, `2D00/0x280`, прибирає лише свої початково відсутні
 hooks/прапорець і перевіряє запис. Бекапи та логи зберігаються; після відновлення
 можна повторити інсталяцію з тією самою базою.
@@ -290,7 +301,7 @@ rendering is incomplete. [Capture provenance](docs/screenshots.json).
    release-name directory. Preserve the remaining M.I.B. files.
 4. If a custom `mod/custom.sh` exists, save it under another name before replacement.
    The new entry point does not chain existing commands. The SD tree is shown above.
-5. **Upgrading from preview.1.** The installer requires the stock language files on the head unit. If preview.1 is already installed, run its RESTORE first, then CHECK/INSTALL from this release.
+5. **Upgrading from preview.1.** The installer requires the stock language files on the head unit. If preview.1 is already installed, run its RESTORE first, then CHECK/INSTALL from this release. From preview.2 simply replace `uk-localization/` and `mod/custom.sh`: the on-unit state is unchanged and `CHECK` recognises an existing install.
 
 ### Check and install
 
@@ -305,9 +316,13 @@ rendering is incomplete. [Capture provenance](docs/screenshots.json).
    the complete M.I.B. backup and connect stable external power. Installation transport
    uses only SD, but the first trial still needs independent laptop recovery verification.
    At least 40000 KiB free in `/mnt/app` is required.
-4. On the computer, change ACTION.txt to `INSTALL` (**LF**, not CRLF: Windows Notepad will fail; see the [guide](docs/INSTALL_GUIDE.md#stage-6-install--install)) and run the same GEM item. Do not
-   remove SD, press Back or run other M.I.B. backup/reboot/flash operations concurrently.
-5. The action resets to CHECK before writing. Baselines are stored on SD and the unit;
+4. **No file editing is needed.** Run the same GEM item **two more times**: after
+   `CHECK PASS` the screen tells you the next step. The second run only shows a checklist
+   (power, recovery access, backup); the **third** installs. A pending step is forgotten
+   when the MMI restarts. Do not remove SD, press Back or run other M.I.B. backup/reboot/flash operations concurrently.
+   *Fallback:* set ACTION.txt to `INSTALL` on a computer (**LF**, not CRLF; Windows Notepad will
+   fail; see the [guide](docs/INSTALL_GUIDE.md#stage-6-install--install)) — the action then runs in a single launch.
+5. Baselines are stored on SD and the unit;
    resources are installed before 2D00 and verified by read-back. 0x280 is unchanged
    during installation. Unknown existing modifications cause an abort.
 6. Only after **SUCCESS: INSTALL and exit code 0**, reboot manually and select Ukrainian
@@ -322,6 +337,9 @@ and exit code. Actions are CHECK, INSTALL, VOICE_INSTALL, VOICE_RESTORE and REST
 
 ### English voice fallback
 
+Usually ACTION.txt needs no editing: CHECK, INSTALL and RESTORE are chosen by running the GEM
+item repeatedly; the file is for `VOICE_*` and as a fallback (a word other than CHECK runs at once).
+
 After validating UI, set ACTION.txt to `VOICE_INSTALL` and run the same GEM item.
 After success, reboot manually and switch away from Ukrainian and back. English
 speech resources must exist on the unit. Verify actual microphone/audio behavior;
@@ -329,7 +347,10 @@ this is not Ukrainian speech support. `VOICE_RESTORE` removes only this managed 
 
 ### Restore and recover
 
-Set ACTION.txt to `RESTORE` and use the same GEM item. It restores baseline
+When the package is installed (or an install was interrupted, or files drifted from the
+package), run the same GEM item **three times**: the first shows the state and offers
+restoration, the second shows a checklist, the third performs `RESTORE`. Or set ACTION.txt to
+`RESTORE` and run the item once. It restores baseline
 ZIP/config/LUT and 2D00/0x280, removes only its originally absent hooks/flag, checks
 read-back and keeps backups/logs. Reinstallation retains the original baseline.
 

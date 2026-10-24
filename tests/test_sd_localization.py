@@ -60,6 +60,7 @@ class SdInstallerTests(unittest.TestCase):
                 text = blob.decode()
                 for before, after in [('/net/mmx/fs/sda0', str(self.sd)), ('/mnt/app', str(self.app)),
                                       ('/net/rcc/dev/shmem', str(self.busy)), ('/tmp/uk-localization.lock', str(self.root / 'lock')),
+                                      ('/tmp/uk-localization.arm', str(self.root / 'arm')),
                                       ('/eso/bin/dumb_persistence_writer', str(self.bin / 'writer')),
                                       ('/ifs/lsd.jxe', str(self.root / 'lsd.jxe'))]:
                     text = text.replace(before, after)
@@ -210,3 +211,82 @@ if [ -n "${TEST_BAD_READ:-}" ]; then echo invalid; else cat "$TEST_ROOT/persiste
         (self.root / 'lock').mkdir()
         self.assertNotEqual(self.run_action('INSTALL').returncode, 0)
         self.assertFalse(self.state.exists())
+
+    def press(self, **env):
+        return self.run_action('CHECK', **env)
+
+    def arm(self):
+        path = self.root / 'arm'
+        return path.read_text().strip() if path.exists() else None
+
+    def test_menu_three_presses_install_then_restore(self):
+        self.success(self.press())
+        self.assertEqual(self.arm(), 'INSTALL 1')
+        self.assertIn('run this same GEM item again', self.result.stdout)
+        self.assertFalse(self.state.exists())
+        self.success(self.press())
+        self.assertEqual(self.arm(), 'INSTALL 2')
+        self.assertIn('CONFIRM (step 2 of 3)', self.result.stdout)
+        self.assertFalse(self.state.exists())
+        self.assertFalse((self.root / 'writes').exists())
+        self.success(self.press())
+        self.assertIn('SUCCESS: INSTALL', self.result.stdout)
+        self.assertIsNone(self.arm())
+        self.assertEqual((self.package / 'ACTION.txt').read_text().strip(), 'CHECK')
+        self.assertEqual((self.lsd / 'jars/lang_data.zip').read_bytes(), self.sources['payload/lang_data.zip'])
+        self.success(self.press())
+        self.assertEqual(self.arm(), 'RESTORE 1')
+        self.assertIn('nothing needs to be done', self.result.stdout)
+        self.success(self.press())
+        self.success(self.press())
+        self.assertIn('SUCCESS: RESTORE', self.result.stdout)
+        self.assertEqual((self.lsd / 'jars/lang_data.zip').read_bytes(), self.sources['stock/lang_data.zip'])
+        self.assertIsNone(self.arm())
+
+    def test_restart_forgets_pending_step(self):
+        self.success(self.press())
+        self.success(self.press())
+        (self.root / 'arm').unlink()
+        self.success(self.press())
+        self.assertEqual(self.arm(), 'INSTALL 1')
+        self.assertFalse(self.state.exists())
+
+    def test_explicit_action_and_failure_clear_pending_step(self):
+        self.success(self.press())
+        self.success(self.press())
+        self.success(self.run_action('INSTALL'))
+        self.assertIsNone(self.arm())
+        self.success(self.run_action('RESTORE'))
+        self.success(self.press())
+        self.assertEqual(self.arm(), 'INSTALL 1')
+        self.assertNotEqual(self.press(TEST_TRAIN='MHI2_ER_AU37x_P5089').returncode, 0)
+        self.assertIsNone(self.arm())
+
+    def test_argument_check_never_arms(self):
+        result = subprocess.run(['/bin/sh', str(self.package / 'scripts/localization.sh'), 'CHECK'],
+                                env={**os.environ, 'TEST_ROOT': str(self.root)}, text=True, capture_output=True)
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertIsNone(self.arm())
+
+    def test_menu_offers_restore_for_interrupted_install(self):
+        self.assertNotEqual(self.run_action('INSTALL', TEST_FAIL_WRITE='1').returncode, 0)
+        self.assertNotEqual(self.press().returncode, 0)
+        self.assertEqual(self.arm(), 'RESTORE 1')
+        self.assertIn('Do NOT reboot', self.result.stdout)
+        self.assertNotEqual(self.press().returncode, 0)
+        self.assertEqual(self.arm(), 'RESTORE 2')
+        self.success(self.press())
+        self.assertIn('SUCCESS: RESTORE', self.result.stdout)
+        self.assertFalse((self.state / 'PENDING').exists())
+        self.assertEqual((self.lsd / 'jars/lang_data.zip').read_bytes(), self.sources['stock/lang_data.zip'])
+
+    def test_menu_offers_restore_when_installed_files_differ(self):
+        self.success(self.run_action('INSTALL'))
+        (self.lsd / 'jars/lang_uk_hook.jar').write_bytes(b'tampered')
+        self.assertNotEqual(self.press().returncode, 0)
+        self.assertEqual(self.arm(), 'RESTORE 1')
+        self.assertNotEqual(self.press().returncode, 0)
+        self.assertEqual(self.arm(), 'RESTORE 2')
+        self.success(self.press())
+        self.assertFalse((self.lsd / 'jars/lang_uk_hook.jar').exists())
+        self.assertEqual((self.lsd / 'jars/lang_data.zip').read_bytes(), self.sources['stock/lang_data.zip'])

@@ -44,9 +44,9 @@
 | 1 | Перевіряєте, чи підходить вам пакет | ні |
 | 2 | Перевіряєте, що M.I.B. уже працює | ні |
 | 3 | Готуєте SD-карту на комп'ютері | ні |
-| 4 | Запускаєте `CHECK` в авто | **ні** |
+| 4 | Запускаєте пункт GEM: `CHECK` (крок 1 із 3) | **ні** |
 | 5 | Страховка: запасний вхід, бекап, живлення | створює копії |
-| 6 | Запускаєте `INSTALL` | **так** |
+| 6 | Запускаєте той самий пункт ще **двічі** (чеклист, потім `INSTALL`) | **так** |
 | 7 | Перезавантаження й перевірка | — |
 
 ### Що потрібно мати
@@ -104,21 +104,21 @@
 
 1. **Завантажте реліз**, а не вихідний код. На сторінці
    [Releases](https://github.com/yety-ua/mhi2-ukrainian-localization/releases) візьміть
-   `mhi2-ukrainian-localization-k3346-v1.0.0-preview.2.zip` і поруч файл `.sha256`.
+   `mhi2-ukrainian-localization-k3346-v1.0.0-preview.3.zip` і поруч файл `.sha256`.
    Кнопка «Source code (zip)» — **не те**: це вихідники, а не готова карта.
 2. **Перевірте, що файл не пошкоджений.** Порівняйте суму з вмістом `.sha256`.
 
    Windows (PowerShell, у теці із завантаженням):
 
    ```powershell
-   Get-FileHash .\mhi2-ukrainian-localization-k3346-v1.0.0-preview.2.zip -Algorithm SHA256
-   Get-Content .\mhi2-ukrainian-localization-k3346-v1.0.0-preview.2.zip.sha256
+   Get-FileHash .\mhi2-ukrainian-localization-k3346-v1.0.0-preview.3.zip -Algorithm SHA256
+   Get-Content .\mhi2-ukrainian-localization-k3346-v1.0.0-preview.3.zip.sha256
    ```
 
    macOS / Linux:
 
    ```sh
-   shasum -a 256 -c mhi2-ukrainian-localization-k3346-v1.0.0-preview.2.zip.sha256
+   shasum -a 256 -c mhi2-ukrainian-localization-k3346-v1.0.0-preview.3.zip.sha256
    ```
 
    Рядки хешу мають збігатися (у macOS — `OK`). Не збігаються — завантажте знову.
@@ -137,7 +137,7 @@
    Дерево — у [README](../README.md#підготовка-sd-карти).
 6. **Безпечно вилучіть карту** з комп'ютера (щоб файли дописалися). На macOS після копіювання
    можуть з'явитися службові файли `._*` — вони не заважають.
-7. **Оновлення з preview.1:** спершу виконайте його `RESTORE`, потім ставте цей реліз.
+7. **Оновлення з preview.1:** спершу виконайте його `RESTORE`, потім ставте цей реліз. З preview.2 достатньо замінити `uk-localization/` і `mod/custom.sh`.
 
 ### Етап 4. Перша перевірка — `CHECK` (нічого не змінює)
 
@@ -149,8 +149,15 @@
 4. Напис M.I.B. «execution finished» **нічого не означає** — він з'являється навіть при
    помилці. Дивіться тільки на `CHECK PASS` / `SUCCESS` / `ERROR` і код.
 
+5. Після `CHECK PASS` ви побачите підказку на кшталт `Nothing was changed. To INSTALL, run
+   this same GEM item again (step 1 of 3 done)`. Це **не помилка**, а перший із трьох кроків:
+   встановлення почнеться лише після ще двох запусків поспіль. Не хочете встановлювати —
+   просто не запускайте пункт знову.
+
+> **Увага:** три запуски цього пункту підряд = встановлення. Якщо хочете лише перевіряти,
+> не запускайте його втретє; перезапуск MMI скасовує будь-який незавершений крок.
+
 Що робити, якщо не `PASS` — у [таблиці проблем](#якщо-щось-пішло-не-так).
-`CHECK` можна повторювати скільки завгодно.
 
 ### Етап 5. Страховка перед встановленням
 
@@ -225,8 +232,32 @@ Patch / Restore / SW Update. Потім скопіюйте створену те
 
 ### Етап 6. Встановлення — `INSTALL`
 
-1. Вийміть карту з блока.
-2. На комп'ютері замініть вміст `uk-localization/ACTION.txt` на одне слово `INSTALL`.
+Ноутбук і редагування файлів не потрібні: дію вибирає **повторний запуск** того самого пункту GEM
+(`m.i.b. → Advanced Settings → Run Custom Script`). Крок 1 із 3 ви вже зробили на Етапі 4.
+
+1. Переконайтеся, що пройшли весь Етап 5 (живлення, запасний вхід, бекап).
+2. Запустіть пункт **вдруге**. З'явиться `CONFIRM (step 2 of 3)` і три умови (живлення,
+   перевірений запасний вхід, повний бекап). Нічого не змінюється. Якщо хоч одна умова не
+   виконана — зупиніться й перезапустіть MMI: крок скасується.
+3. Запустіть пункт **втретє**: `Step 3 of 3 confirmed: running INSTALL now.` — почнеться
+   встановлення.
+4. **Поки йде робота:** не виймайте карту, не натискайте Back, не запускайте інші операції
+   M.I.B. (бекап, перезавантаження, прошивку), не вимикайте запалювання.
+5. Скрипт збереже оригінали (в блоці й на карті), встановить файли, запише параметр `2D00`
+   останнім і перевірить запис.
+6. Очікуваний результат: **`SUCCESS: INSTALL`** і код **`0`**. Тільки тоді переходьте до
+   Етапу 7. Автоматичного перезавантаження **немає**.
+
+Якщо між запусками MMI перезапускали або була помилка — відлік починається спочатку.
+
+<details>
+<summary>Запасний шлях: вибрати дію через файл ACTION.txt (потрібен комп'ютер)</summary>
+
+Слово в `ACTION.txt`, відмінне від `CHECK`, виконується **одразу, за один запуск**. Знадобиться,
+наприклад, для `VOICE_INSTALL`.
+
+1. Вийміть карту з блока й на комп'ютері замініть вміст `uk-localization/ACTION.txt` на одне слово
+   (`INSTALL`, `RESTORE`…).
 
    > **Пастка:** скрипт приймає **лише** слово з переносом рядка LF. Звичайний Блокнот
    > Windows зберігає з переносом CRLF — тоді скрипт відповість `Invalid action`. Використайте
@@ -239,7 +270,7 @@ Patch / Restore / SW Update. Потім скопіюйте створену те
    [IO.File]::ReadAllBytes("E:\uk-localization\ACTION.txt").Length
    ```
 
-   Друга команда має вивести **8**. (9 — зайвий символ CRLF; запишіть ще раз.)
+   Друга команда має вивести **8** для `INSTALL` (9 — зайвий символ CRLF; запишіть ще раз).
 
    macOS / Linux:
 
@@ -247,16 +278,11 @@ Patch / Restore / SW Update. Потім скопіюйте створену те
    printf 'INSTALL\n' > /Volumes/SDCARD/uk-localization/ACTION.txt
    ```
 
-   Перевірте також, що в Notepad++/VS Code кодування — UTF-8 **без BOM**, якщо редагуєте
-   в редакторі.
-3. Безпечно вилучіть карту, вставте в **SD1**, запустіть той самий пункт GEM
-   (`m.i.b. → Advanced Settings → Run Custom Script`).
-4. **Поки йде робота:** не виймайте карту, не натискайте Back, не запускайте інші операції
-   M.I.B. (бекап, перезавантаження, прошивку), не вимикайте запалювання.
-5. Скрипт сам поверне `ACTION.txt` у `CHECK`, збереже оригінали (в блоці й на карті),
-   встановить файли, запише параметр `2D00` останнім і перевірить запис.
-6. Очікуваний результат: **`SUCCESS: INSTALL`** і код **`0`**. Тільки тоді переходьте до
-   Етапу 7. Автоматичного перезавантаження **немає**.
+   Якщо редагуєте в редакторі, кодування — UTF-8 **без BOM**.
+2. Безпечно вилучіть карту, вставте в **SD1**, запустіть пункт GEM один раз. Після дії
+   скрипт сам повертає `ACTION.txt` до `CHECK`.
+
+</details>
 
 **Якщо встановлення перервалося (лог містить `Interrupted operation recorded` або стан
 `PENDING`) — не перезавантажуйте блок. Одразу переходьте до розділу «Якщо щось пішло не так».**
@@ -282,7 +308,8 @@ Patch / Restore / SW Update. Потім скопіюйте створену те
 | --- | --- | --- |
 | Немає пункту `m.i.b.` в GEM | Немає карти в SD1 або блок ще не завантажився | Перевірте слот, зачекайте до 5 хв |
 | `ERROR: uk-localization package is missing from SD1` | Теку скопійовано не в корінь | Виправте вкладеність (Етап 3, п. 4) |
-| `Invalid action…` | У `ACTION.txt` зайвий CR/пробіл/BOM | Перезапишіть командою з Етапу 6 |
+| `step 1 of 3 done` / `step 2 of 3` | Це підказка, не помилка | Нічого не робіть, якщо не хочете йти далі |
+| `Invalid action…` | Лише якщо ви вручну редагували `ACTION.txt`: зайвий CR/пробіл/BOM | Перезапишіть командою із запасного шляху Етапу 6 |
 | `HMI is not the exact reviewed K3346/MU1438 binary` або схожі «not stock» | Версія/файли не ті, або вже щось змінено | **Нічого не змушуйте.** Не підтримується. Надішліть лог |
 | `At least 40000 KiB free…` | Мало місця в блоці | Надішліть лог; не видаляйте нічого самі |
 | `Another localization operation or stale lock exists` | Попередній запуск перервався | Не видаляйте `/tmp/uk-localization.lock`, поки не впевнені, що нічого не виконується |
@@ -292,9 +319,13 @@ Patch / Restore / SW Update. Потім скопіюйте створену те
 
 </details>
 
-**Відновити оригінал (меню працює).** Запишіть у `ACTION.txt` слово `RESTORE` (так само, як
-`INSTALL`), запустіть той самий пункт GEM. Дочекайтеся **`SUCCESS: RESTORE`** і коду `0`.
-Бекапи й логи лишаються.
+**Відновити оригінал (меню працює).** Запустіть пункт GEM **тричі підряд**: у стані «встановлено»
+перший запуск пише `Ukrainian is installed and verified; nothing needs to be done` і пропонує
+відновлення (`step 1 of 3`), другий показує чеклист, третій виконує `RESTORE`. Те саме, якщо
+встановлення перервалося (`PENDING`) або файли розійшлися з пакетом: тоді перший запуск
+завершується повідомленням про проблему та пропозицією відновлення. Дочекайтеся
+**`SUCCESS: RESTORE`** і коду `0`. Бекапи й логи лишаються. Запасний шлях: слово `RESTORE`
+в `ACTION.txt` виконується за один запуск.
 
 **Відновити оригінал (меню не працює).** Підключіть ноутбук, як на 5.2, зайдіть telnet і
 виконайте:
@@ -371,9 +402,9 @@ see and what to do when you see something else.
 | 1 | Check the package fits | no |
 | 2 | Confirm M.I.B. already works | no |
 | 3 | Prepare the SD card | no |
-| 4 | Run `CHECK` in the car | **no** |
+| 4 | Run the GEM item: `CHECK` (step 1 of 3) | **no** |
 | 5 | Safety net: fallback access, backup, power | creates copies |
-| 6 | Run `INSTALL` | **yes** |
+| 6 | Run the same item **two more times** (checklist, then `INSTALL`) | **yes** |
 | 7 | Reboot and verify | — |
 
 ### What you need
@@ -422,14 +453,14 @@ a cold start. REM uses the **lower** half of the right key instead; do not confu
    Windows:
 
    ```powershell
-   Get-FileHash .\mhi2-ukrainian-localization-k3346-v1.0.0-preview.2.zip -Algorithm SHA256
-   Get-Content .\mhi2-ukrainian-localization-k3346-v1.0.0-preview.2.zip.sha256
+   Get-FileHash .\mhi2-ukrainian-localization-k3346-v1.0.0-preview.3.zip -Algorithm SHA256
+   Get-Content .\mhi2-ukrainian-localization-k3346-v1.0.0-preview.3.zip.sha256
    ```
 
    macOS / Linux:
 
    ```sh
-   shasum -a 256 -c mhi2-ukrainian-localization-k3346-v1.0.0-preview.2.zip.sha256
+   shasum -a 256 -c mhi2-ukrainian-localization-k3346-v1.0.0-preview.3.zip.sha256
    ```
 
 3. Copy your whole working M.I.B. card to the computer as a spare. If `mod/custom.sh`
@@ -438,7 +469,7 @@ a cold start. REM uses the **lower** half of the right key instead; do not confu
    to `apps`, `config`, `mod`) and **`mod/custom.sh`** into the existing `mod` folder.
    No extra wrapper folder — the most common mistake.
 5. Compare with the tree in the [README](../README.md#prepare-the-sd-card), then eject safely.
-6. Upgrading from preview.1: run its `RESTORE` first.
+6. Upgrading from preview.1: run its `RESTORE` first. From preview.2 just replace `uk-localization/` and `mod/custom.sh`.
 
 ### Stage 4. First check — `CHECK`
 
@@ -449,6 +480,13 @@ a cold start. REM uses the **lower** half of the right key instead; do not confu
    `uk-localization/logs/run-….log` on the card.
 4. The M.I.B. message “execution finished” means nothing; rely on `CHECK PASS` /
    `SUCCESS` / `ERROR` and the code. See the [troubleshooting table](#if-something-goes-wrong).
+5. After `CHECK PASS` you will see a hint like `Nothing was changed. To INSTALL, run this same
+   GEM item again (step 1 of 3 done)`. This is **not an error**; it is the first of three steps:
+   installation starts only after two more runs in a row. If you do not want to install,
+   simply do not run the item again.
+
+> **Note:** three runs of this item in a row = installation. To only verify, do not run it a
+> third time; restarting the MMI cancels any unfinished step.
 
 ### Stage 5. Safety net before installing
 
@@ -494,8 +532,30 @@ Do **all** of it before `INSTALL`.
 
 ### Stage 6. Install — `INSTALL`
 
-1. Remove the card, then on the computer set the single word in `uk-localization/ACTION.txt`
-   to `INSTALL`.
+No laptop and no file editing: the action is chosen by **running the same GEM item again**
+(`m.i.b. → Advanced Settings → Run Custom Script`). You already did step 1 of 3 in Stage 4.
+
+1. Make sure all of Stage 5 is done (power, fallback access, backup).
+2. Run the item a **second time**. It shows `CONFIRM (step 2 of 3)` and three conditions (power,
+   verified fallback access, full backup). Nothing changes. If any condition is not met, stop and
+   restart the MMI: the step is cancelled.
+3. Run it a **third time**: `Step 3 of 3 confirmed: running INSTALL now.` — installation starts.
+4. While it runs: do not remove the card, press Back, run other M.I.B. operations or switch
+   ignition off.
+5. Expect **`SUCCESS: INSTALL`** and exit code **`0`**. There is **no automatic reboot**.
+6. **If the install was interrupted (`PENDING` state / `Interrupted operation recorded`), do not
+   reboot.** Go to the troubleshooting section and run `RESTORE`.
+
+If the MMI was restarted between runs, or an error occurred, counting starts over.
+
+<details>
+<summary>Fallback: choose the action through ACTION.txt (needs a computer)</summary>
+
+A word other than `CHECK` in `ACTION.txt` runs **at once, in a single launch** (needed e.g. for
+`VOICE_INSTALL`).
+
+1. Remove the card and on the computer set the single word in `uk-localization/ACTION.txt`
+   (`INSTALL`, `RESTORE`…).
 
    > **Trap:** the script accepts the word with an **LF** line ending only. Windows Notepad
    > usually saves **CRLF**, which gives `Invalid action`. Use (replace `E:`):
@@ -505,15 +565,13 @@ Do **all** of it before `INSTALL`.
    [IO.File]::ReadAllBytes("E:\uk-localization\ACTION.txt").Length
    ```
 
-   The second command must print **8** (9 means CRLF). macOS / Linux:
-   `printf 'INSTALL\n' > /Volumes/SDCARD/uk-localization/ACTION.txt`. If you use an editor,
-   save as UTF-8 **without BOM**.
-2. Eject safely, insert in **SD1**, run the same GEM item.
-3. While it runs: do not remove the card, press Back, run other M.I.B. operations or
-   switch ignition off.
-4. Expect **`SUCCESS: INSTALL`** and exit code **`0`**. There is **no automatic reboot**.
-5. **If the install was interrupted (`PENDING` state / `Interrupted operation recorded`), do not reboot.** Go to the troubleshooting
-   section and run `RESTORE`.
+   The second command must print **8** for `INSTALL` (9 means CRLF). macOS / Linux:
+   `printf 'INSTALL\n' > /Volumes/SDCARD/uk-localization/ACTION.txt`. In an editor use
+   UTF-8 **without BOM**.
+2. Eject safely, insert in **SD1**, run the GEM item once. Afterwards the script resets
+   `ACTION.txt` to `CHECK` itself.
+
+</details>
 
 ### Stage 7. Reboot and verify
 
@@ -535,7 +593,8 @@ Do **all** of it before `INSTALL`.
 | --- | --- | --- |
 | No `m.i.b.` entry in GEM | No card in SD1 or the unit is still starting | Check the slot, wait up to 5 min |
 | `uk-localization package is missing from SD1` | Folder not in the card root | Fix nesting (Stage 3, step 4) |
-| `Invalid action…` | Stray CR / space / BOM in `ACTION.txt` | Rewrite with the Stage 6 command |
+| `step 1 of 3 done` / `step 2 of 3` | A hint, not an error | Do nothing unless you want to continue |
+| `Invalid action…` | Only if you edited `ACTION.txt` by hand: stray CR / space / BOM | Rewrite with the Stage 6 fallback command |
 | `HMI is not the exact reviewed K3346/MU1438 binary`, “not stock” | Wrong version, or already modified | Do not force; unsupported. Send the log |
 | `At least 40000 KiB free…` | Not enough space | Send the log; delete nothing yourself |
 | `Another localization operation or stale lock exists` | Previous run was interrupted | Do not delete `/tmp/uk-localization.lock` until you are sure nothing is running |
@@ -545,8 +604,13 @@ Do **all** of it before `INSTALL`.
 
 </details>
 
-**Restore (menu works):** set `ACTION.txt` to `RESTORE` (same method), run the same GEM
-item, wait for **`SUCCESS: RESTORE`** and code `0`.
+**Restore (menu works):** run the GEM item **three times in a row**: in the installed state the
+first run prints `Ukrainian is installed and verified; nothing needs to be done` and offers
+restoration (`step 1 of 3`), the second shows the checklist, the third performs `RESTORE`.
+The same happens after an interrupted install (`PENDING`) or when files drifted from the
+package: the first run ends with the problem message and the restore offer. Wait for
+**`SUCCESS: RESTORE`** and code `0`. Backups and logs stay. Fallback: the word `RESTORE` in
+`ACTION.txt` runs in a single launch.
 
 **Restore (menu does not work):** connect the laptop as in Stage 5, telnet in and run:
 
