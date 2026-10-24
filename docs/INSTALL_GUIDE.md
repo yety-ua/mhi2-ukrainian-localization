@@ -104,21 +104,21 @@
 
 1. **Завантажте реліз**, а не вихідний код. На сторінці
    [Releases](https://github.com/yety-ua/mhi2-ukrainian-localization/releases) візьміть
-   `mhi2-ukrainian-localization-k3346-v1.0.0-preview.7.zip` і поруч файл `.sha256`.
+   `mhi2-ukrainian-localization-k3346-v1.0.0-preview.8.zip` і поруч файл `.sha256`.
    Кнопка «Source code (zip)» — **не те**: це вихідники, а не готова карта.
 2. **Перевірте, що файл не пошкоджений.** Порівняйте суму з вмістом `.sha256`.
 
    Windows (PowerShell, у теці із завантаженням):
 
    ```powershell
-   Get-FileHash .\mhi2-ukrainian-localization-k3346-v1.0.0-preview.7.zip -Algorithm SHA256
-   Get-Content .\mhi2-ukrainian-localization-k3346-v1.0.0-preview.7.zip.sha256
+   Get-FileHash .\mhi2-ukrainian-localization-k3346-v1.0.0-preview.8.zip -Algorithm SHA256
+   Get-Content .\mhi2-ukrainian-localization-k3346-v1.0.0-preview.8.zip.sha256
    ```
 
    macOS / Linux:
 
    ```sh
-   shasum -a 256 -c mhi2-ukrainian-localization-k3346-v1.0.0-preview.7.zip.sha256
+   shasum -a 256 -c mhi2-ukrainian-localization-k3346-v1.0.0-preview.8.zip.sha256
    ```
 
    Рядки хешу мають збігатися (у macOS — `OK`). Не збігаються — завантажте знову.
@@ -311,6 +311,7 @@ Patch / Restore / SW Update. Потім скопіюйте створену те
 | `Nothing to do!` після «Run individual script» | У `mod/` на карті немає `command.sh` (M.I.B. V3.6+ шукає саме його) | Скопіюйте `mod/command.sh` із релізу preview.4 або новішого поруч із `custom.sh` |
 | `syntax error` / `unexpected` у `localization.sh` | Помилка розбору скрипта оболонкою блока; лог `run-*.log` у такому разі не створюється | Надішліть фото екрана і файл `uk-localization/logs/launcher-errors.txt` (з preview.5 він зберігається на карті) |
 | `Required M.I.B. tool is missing: …` | Потрібна утиліта відсутня в M.I.B. (у V3.7+ немає `apps/sbin/awk`, з preview.7 скрипт бере `awk` самого блока) | Оновіться до preview.7+. Якщо пишеться про інший файл — перевірте, що на карті повний M.I.B. (`apps/sbin/…`) |
+| `mkdir: …/logs: Read-only file system`, логу немає | Блок монтує SD лише для читання (до preview.8 скрипт не перемонтовував її) | Оновіться до preview.8+. Також перевірте, що перемикач захисту від запису на карті у положенні «відкрито» |
 | `ERROR: uk-localization package is missing from SD1` | Теку скопійовано не в корінь | Виправте вкладеність (Етап 3, п. 4) |
 | `step 1 of 3 done` / `step 2 of 3` | Це підказка, не помилка | Нічого не робіть, якщо не хочете йти далі |
 | `Invalid action…` | Лише якщо ви вручну редагували `ACTION.txt`: зайвий CR/пробіл/BOM | Перезапишіть командою із запасного шляху Етапу 6 |
@@ -457,14 +458,14 @@ a cold start. REM uses the **lower** half of the right key instead; do not confu
    Windows:
 
    ```powershell
-   Get-FileHash .\mhi2-ukrainian-localization-k3346-v1.0.0-preview.7.zip -Algorithm SHA256
-   Get-Content .\mhi2-ukrainian-localization-k3346-v1.0.0-preview.7.zip.sha256
+   Get-FileHash .\mhi2-ukrainian-localization-k3346-v1.0.0-preview.8.zip -Algorithm SHA256
+   Get-Content .\mhi2-ukrainian-localization-k3346-v1.0.0-preview.8.zip.sha256
    ```
 
    macOS / Linux:
 
    ```sh
-   shasum -a 256 -c mhi2-ukrainian-localization-k3346-v1.0.0-preview.7.zip.sha256
+   shasum -a 256 -c mhi2-ukrainian-localization-k3346-v1.0.0-preview.8.zip.sha256
    ```
 
 3. Copy your whole working M.I.B. card to the computer as a spare. If `mod/custom.sh` or `mod/command.sh`
@@ -600,6 +601,7 @@ A word other than `CHECK` in `ACTION.txt` runs **at once, in a single launch** (
 | `Nothing to do!` after “Run individual script” | `mod/command.sh` is missing on the card (M.I.B. V3.6+ looks for it) | Copy `mod/command.sh` from release preview.4 or newer next to `custom.sh` |
 | `syntax error` / `unexpected` in `localization.sh` | The unit's shell failed to parse the script; no `run-*.log` is created in that case | Send a photo of the screen and `uk-localization/logs/launcher-errors.txt` (kept on the card since preview.5) |
 | `Required M.I.B. tool is missing: …` | A required utility is absent from M.I.B. (V3.7+ ships no `apps/sbin/awk`; since preview.7 the script uses the unit's own `awk`) | Update to preview.7+. If another file is named, check the card holds the full M.I.B. (`apps/sbin/…`) |
+| `mkdir: …/logs: Read-only file system`, no log | The unit mounts the SD read-only (before preview.8 the script did not remount it) | Update to preview.8+. Also check that the card's write-protect switch is unlocked |
 | `uk-localization package is missing from SD1` | Folder not in the card root | Fix nesting (Stage 3, step 4) |
 | `step 1 of 3 done` / `step 2 of 3` | A hint, not an error | Do nothing unless you want to continue |
 | `Invalid action…` | Only if you edited `ACTION.txt` by hand: stray CR / space / BOM | Rewrite with the Stage 6 fallback command |

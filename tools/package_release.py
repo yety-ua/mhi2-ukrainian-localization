@@ -2,7 +2,7 @@
 """Validate the reviewed SD overlay and create a fresh release ZIP.
 
 Usage: python3 tools/package_release.py
-Output: dist/mhi2-ukrainian-localization-k3346-v1.0.0-preview.7.zip
+Output: dist/mhi2-ukrainian-localization-k3346-v1.0.0-preview.8.zip
 """
 import argparse
 import hashlib
@@ -76,5 +76,5 @@ def build(output):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--output', type=Path, default=ROOT / 'dist/mhi2-ukrainian-localization-k3346-v1.0.0-preview.7.zip')
+    parser.add_argument('--output', type=Path, default=ROOT / 'dist/mhi2-ukrainian-localization-k3346-v1.0.0-preview.8.zip')
     build(parser.parse_args().output.resolve())

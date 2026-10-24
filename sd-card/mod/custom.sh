@@ -5,6 +5,8 @@ if [ ! -f "$PACKAGE/scripts/localization.sh" ]; then
     echo 'ERROR: uk-localization package is missing from SD1.'
     exit 1
 fi
+# The SD is mounted read-only by default; the log folder and ACTION.txt need it writable.
+mount -uw /net/mmx/fs/sda0 2>/dev/null
 # Keep shell errors (e.g. a parse error before the installer opens its own log) on the card.
 ERRLOG=$PACKAGE/logs/launcher-errors.txt
 if mkdir -p "$PACKAGE/logs" 2>/dev/null && : > "$ERRLOG" 2>/dev/null; then

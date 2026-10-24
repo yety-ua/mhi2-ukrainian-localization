@@ -85,7 +85,7 @@ value=os.environ.get('TEST_TRAIN','MHI2_ER_AUG22_K3346') if sys.argv[1]=='3A0' e
 print('0x000003a0 ' + ' '.join(f'{x:02x}' for x in value.encode()))
 PY
 ''')
-        self.tool(self.bin / 'mount', '#!/bin/sh\n[ -z "${TEST_FAIL_MOUNT:-}" ]\n')
+        self.tool(self.bin / 'mount', '#!/bin/sh\necho "$*" >> "$TEST_ROOT/mounts"\ncase "$2" in "$TEST_ROOT/sd") chmod -R u+w "$2" ;; esac\n[ -z "${TEST_FAIL_MOUNT:-}" ]\n')
         self.tool(self.bin / 'df', '#!/bin/sh\necho "Filesystem 1K-blocks Used Available Use% Mounted"\nif [ -n "${TEST_DF_WRAP:-}" ]; then echo "/dev/a-very-long-device-name"; echo "    100000 1000 ${TEST_SPACE:-90000} 1% /mnt/app"; else echo "disk 100000 1000 ${TEST_SPACE:-90000} 1% /mnt/app"; fi\n')
         self.tool(self.bin / 'writer', '''#!/bin/sh
 echo "$4" >> "$TEST_ROOT/writes"
@@ -220,6 +220,16 @@ if [ -n "${TEST_BAD_READ:-}" ]; then echo invalid; else cat "$TEST_ROOT/persiste
         self.success(self.run_action('CHECK'))
         self.success(self.run_action('INSTALL'))
         self.success(self.run_action('RESTORE'))
+
+    def test_read_only_sd_is_remounted_before_logging(self):
+        """The unit mounts SD1 read-only: mkdir logs failed with 'Read-only file system' on the car."""
+        shutil.rmtree(self.package / 'logs')
+        (self.package / 'ACTION.txt').write_text('CHECK\n')
+        self.package.chmod(0o555)
+        self.addCleanup(lambda: os.system(f'chmod -R u+w "{self.sd}"'))
+        self.success(self.run_action('CHECK'))
+        self.assertTrue((self.package / 'logs').is_dir())
+        self.assertIn(f'-uw {self.sd}', (self.root / 'mounts').read_text())
 
     def test_wrapped_df_output_is_understood(self):
         self.success(self.run_action('CHECK', TEST_DF_WRAP='1'))

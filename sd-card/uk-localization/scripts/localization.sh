@@ -228,6 +228,12 @@ for TOOL in "$SHA" "$AWK" "$SED" "$XXD" "$READER"; do
     [ -x "$TOOL" ] || { echo "ERROR: Required M.I.B. tool is missing: $TOOL"; exit 1; }
 done
 [ -x /eso/bin/dumb_persistence_writer ] || { echo 'ERROR: Persistence writer is missing.'; exit 1; }
+# The SD is mounted read-only by default; logs, ACTION.txt and the SD baseline need it writable.
+mount -uw "$MIB" 2>/dev/null
+# The internal recovery copy logs under /mnt/app, which is read-only until remounted.
+case $PACKAGE in
+    "$APP"/*) [ "${1:-}" = CHECK ] || mount -uw "$APP" 2>/dev/null ;;
+esac
 [ ! -L "$PACKAGE/logs" ] || exit 1
 mkdir -p "$PACKAGE/logs" || exit 1
 LOG=$PACKAGE/logs/run-$$.log
