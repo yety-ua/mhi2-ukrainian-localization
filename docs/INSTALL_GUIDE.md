@@ -104,21 +104,21 @@
 
 1. **Завантажте реліз**, а не вихідний код. На сторінці
    [Releases](https://github.com/yety-ua/mhi2-ukrainian-localization/releases) візьміть
-   `mhi2-ukrainian-localization-k3346-v1.0.0-preview.8.zip` і поруч файл `.sha256`.
+   `mhi2-ukrainian-localization-k3346-v1.0.0-preview.9.zip` і поруч файл `.sha256`.
    Кнопка «Source code (zip)» — **не те**: це вихідники, а не готова карта.
 2. **Перевірте, що файл не пошкоджений.** Порівняйте суму з вмістом `.sha256`.
 
    Windows (PowerShell, у теці із завантаженням):
 
    ```powershell
-   Get-FileHash .\mhi2-ukrainian-localization-k3346-v1.0.0-preview.8.zip -Algorithm SHA256
-   Get-Content .\mhi2-ukrainian-localization-k3346-v1.0.0-preview.8.zip.sha256
+   Get-FileHash .\mhi2-ukrainian-localization-k3346-v1.0.0-preview.9.zip -Algorithm SHA256
+   Get-Content .\mhi2-ukrainian-localization-k3346-v1.0.0-preview.9.zip.sha256
    ```
 
    macOS / Linux:
 
    ```sh
-   shasum -a 256 -c mhi2-ukrainian-localization-k3346-v1.0.0-preview.8.zip.sha256
+   shasum -a 256 -c mhi2-ukrainian-localization-k3346-v1.0.0-preview.9.zip.sha256
    ```
 
    Рядки хешу мають збігатися (у macOS — `OK`). Не збігаються — завантажте знову.
@@ -317,7 +317,7 @@ Patch / Restore / SW Update. Потім скопіюйте створену те
 | `Invalid action…` | Лише якщо ви вручну редагували `ACTION.txt`: зайвий CR/пробіл/BOM | Перезапишіть командою із запасного шляху Етапу 6 |
 | `HMI is not the exact reviewed K3346/MU1438 binary` або схожі «not stock» | Версія/файли не ті, або вже щось змінено | **Нічого не змушуйте.** Не підтримується. Надішліть лог |
 | `At least 40000 KiB free…` | Мало місця в блоці | Надішліть лог; не видаляйте нічого самі |
-| `Another localization operation or stale lock exists` | Попередній запуск перервався | Не видаляйте `/tmp/uk-localization.lock`, поки не впевнені, що нічого не виконується |
+| `Another localization operation is running (process N)` | Справді виконується інший запуск | Дочекайтеся його завершення. `stale lock` з preview.9 скрипт прибирає сам, якщо власника замка вже немає |
 | `M.I.B. backup/reboot/flash is running` | Йде інша операція M.I.B. | Дочекайтеся її завершення |
 | `Interrupted operation recorded; run RESTORE…` / `PENDING` | Встановлення перервано | **Не перезавантажуйте.** Виконайте `RESTORE` (нижче) |
 | Блок не запускає меню | HMI/GEM не стартує | Відновлення по telnet (нижче) |
@@ -458,14 +458,14 @@ a cold start. REM uses the **lower** half of the right key instead; do not confu
    Windows:
 
    ```powershell
-   Get-FileHash .\mhi2-ukrainian-localization-k3346-v1.0.0-preview.8.zip -Algorithm SHA256
-   Get-Content .\mhi2-ukrainian-localization-k3346-v1.0.0-preview.8.zip.sha256
+   Get-FileHash .\mhi2-ukrainian-localization-k3346-v1.0.0-preview.9.zip -Algorithm SHA256
+   Get-Content .\mhi2-ukrainian-localization-k3346-v1.0.0-preview.9.zip.sha256
    ```
 
    macOS / Linux:
 
    ```sh
-   shasum -a 256 -c mhi2-ukrainian-localization-k3346-v1.0.0-preview.8.zip.sha256
+   shasum -a 256 -c mhi2-ukrainian-localization-k3346-v1.0.0-preview.9.zip.sha256
    ```
 
 3. Copy your whole working M.I.B. card to the computer as a spare. If `mod/custom.sh` or `mod/command.sh`
@@ -607,7 +607,7 @@ A word other than `CHECK` in `ACTION.txt` runs **at once, in a single launch** (
 | `Invalid action…` | Only if you edited `ACTION.txt` by hand: stray CR / space / BOM | Rewrite with the Stage 6 fallback command |
 | `HMI is not the exact reviewed K3346/MU1438 binary`, “not stock” | Wrong version, or already modified | Do not force; unsupported. Send the log |
 | `At least 40000 KiB free…` | Not enough space | Send the log; delete nothing yourself |
-| `Another localization operation or stale lock exists` | Previous run was interrupted | Do not delete `/tmp/uk-localization.lock` until you are sure nothing is running |
+| `Another localization operation is running (process N)` | Another run is really active | Wait for it to finish. Since preview.9 a stale lock is removed automatically when its owner is gone |
 | `M.I.B. backup/reboot/flash is running` | Another M.I.B. operation | Wait for it |
 | `Interrupted operation recorded` / `PENDING` | Install interrupted | **Do not reboot.** Run `RESTORE` |
 | Unit does not show the menu | HMI/GEM will not start | Recover over telnet (below) |

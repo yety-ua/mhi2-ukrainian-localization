@@ -243,8 +243,22 @@ while [ -e "$LOG" ] || [ -L "$LOG" ]; do
     LOG=$PACKAGE/logs/run-$$-$INDEX.log
 done
 : > "$LOG" || exit 1
-mkdir "$LOCK" 2>/dev/null || { say 'ERROR: Another localization operation or stale lock exists'; exit 1; }
-trap 'rm -f "$LOCK/reader.txt"; rmdir "$LOCK" 2>/dev/null' 0
+# The lock records its owner's PID: a lock whose owner is gone (killed run) is stale and is replaced.
+if ! mkdir "$LOCK" 2>/dev/null; then
+    LOCK_OWNER=$(cat "$LOCK/pid" 2>/dev/null)
+    case $LOCK_OWNER in
+        ''|*[!0-9]*) LOCK_OWNER= ;;
+    esac
+    if [ -n "$LOCK_OWNER" ] && kill -0 "$LOCK_OWNER" 2>/dev/null; then
+        say "ERROR: Another localization operation is running (process $LOCK_OWNER)"
+        exit 1
+    fi
+    rm -rf "$LOCK" 2>/dev/null
+    mkdir "$LOCK" 2>/dev/null || { say 'ERROR: Cannot replace a stale lock'; exit 1; }
+    say 'Replaced a stale lock left by an interrupted run.'
+fi
+echo $$ > "$LOCK/pid"
+trap 'rm -f "$LOCK/reader.txt" "$LOCK/pid"; rmdir "$LOCK" 2>/dev/null' 0
 trap 'exit 1' 1 2 15
 
 if [ "$#" -eq 1 ]; then

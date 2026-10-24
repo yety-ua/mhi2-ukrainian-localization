@@ -209,9 +209,28 @@ if [ -n "${TEST_BAD_READ:-}" ]; then echo invalid; else cat "$TEST_ROOT/persiste
     def test_mount_failure_and_stale_lock_are_reported(self):
         self.assertNotEqual(self.run_action('INSTALL', TEST_FAIL_MOUNT='1').returncode, 0)
         self.assertFalse(self.state.exists())
-        (self.root / 'lock').mkdir()
+        lock = self.root / 'lock'
+        lock.mkdir()
+        sleeper = subprocess.Popen(['sleep', '60'])
+        self.addCleanup(sleeper.kill)
+        (lock / 'pid').write_text(f'{sleeper.pid}\n')
         self.assertNotEqual(self.run_action('INSTALL').returncode, 0)
+        self.assertIn('is running', self.result.stdout)
         self.assertFalse(self.state.exists())
+
+    def test_stale_lock_without_live_owner_is_replaced(self):
+        lock = self.root / 'lock'
+        lock.mkdir()
+        self.success(self.run_action('CHECK'))
+        self.assertIn('Replaced a stale lock', self.result.stdout)
+        self.assertFalse(lock.exists())
+        lock.mkdir()
+        dead = subprocess.Popen(['true'])
+        dead.wait()
+        (lock / 'pid').write_text(f'{dead.pid}\n')
+        self.success(self.run_action('INSTALL'))
+        self.assertIn('Replaced a stale lock', self.result.stdout)
+        self.assertFalse(lock.exists())
 
     def test_unit_awk_is_used_when_mib_ships_none(self):
         """M.I.B. V3.7.1 has no apps/sbin/awk; the installer must fall back to the unit's own."""
@@ -359,4 +378,18 @@ class PdkshParseTests(unittest.TestCase):
                          ROOT / 'sd-card/mod/custom.sh', ROOT / 'sd-card/mod/command.sh']:
                 result = subprocess.run([shell, '-n', str(path)], text=True, capture_output=True)
                 self.assertEqual(result.returncode, 0, f'{shell} {path.name}: {result.stderr}')
+
+    def test_sourcing_by_mib_launcher_does_nothing(self):
+        """apps/launcher runs `. mod/command.sh` during M.I.B. setup; exec there would kill the launcher."""
+        with tempfile.TemporaryDirectory() as tmp:
+            mod = Path(tmp) / 'mod'
+            mod.mkdir()
+            shutil.copyfile(ROOT / 'sd-card/mod/command.sh', mod / 'command.sh')
+            (mod / 'custom.sh').write_text('#!/bin/sh\necho handed-over\nexit 3\n')
+            launcher = Path(tmp) / 'launcher'
+            launcher.write_text(f'#!/bin/sh\n. {mod}/command.sh\necho launcher-continues\n')
+            result = subprocess.run([SHELL, str(launcher)], text=True, capture_output=True)
+            self.assertEqual(result.returncode, 0, result.stderr)
+            self.assertIn('launcher-continues', result.stdout)
+            self.assertNotIn('handed-over', result.stdout)
 
