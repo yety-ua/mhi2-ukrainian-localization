@@ -92,7 +92,7 @@ menu_step() {
     [ -z "$PROBLEM" ] || say "ERROR: $PROBLEM"
     exit $MENU_CODE
 }
-hash() {
+file_sha1() {
     [ -f "$1" ] && [ ! -L "$1" ] || return 1
     HASH_ROW=$("$SHA" "$1") || return 1
     set -- $HASH_ROW
@@ -102,8 +102,8 @@ hash() {
     echo "$1"
 }
 equal() {
-    LEFT=$(hash "$1") || return 1
-    RIGHT=$(hash "$2") || return 1
+    LEFT=$(file_sha1 "$1") || return 1
+    RIGHT=$(file_sha1 "$2") || return 1
     [ "$LEFT" = "$RIGHT" ]
 }
 copy_checked() {
@@ -139,7 +139,7 @@ verify_manifest() {
         case $SEEN in *"|$REL|"*) die 'Duplicate manifest path' ;; esac
         SEEN=$SEEN$REL'|'
         COUNT=$((COUNT + 1))
-        ACTUAL=$(hash "$PACKAGE/$REL") || die "Missing/unreadable package file: $REL"
+        ACTUAL=$(file_sha1 "$PACKAGE/$REL") || die "Missing/unreadable package file: $REL"
         [ "$ACTUAL" = "$EXPECTED" ] || die "Package checksum mismatch: $REL"
     done < "$PACKAGE/SHA1SUMS"
     [ "$COUNT" -eq 14 ] || die 'Incomplete package manifest'
@@ -241,7 +241,7 @@ case $ACTION in CHECK|INSTALL|RESTORE|VOICE_INSTALL|VOICE_RESTORE) ;; *) die 'In
 say "Ukrainian localization 1.0 / action=$ACTION"
 verify_manifest
 EXPECTED_HMI=$(cat "$PACKAGE/HMI.sha1") || die 'Missing HMI fingerprint'
-ACTUAL_HMI=$(hash /ifs/lsd.jxe) || die 'Cannot fingerprint live HMI'
+ACTUAL_HMI=$(file_sha1 /ifs/lsd.jxe) || die 'Cannot fingerprint live HMI'
 [ "$ACTUAL_HMI" = "$EXPECTED_HMI" ] || die 'HMI is not the exact reviewed K3346/MU1438 binary'
 # Same EEPROM offsets as upstream GLOBALS; require exactly the requested bytes.
 read_eeprom() {

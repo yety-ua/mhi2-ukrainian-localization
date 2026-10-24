@@ -307,3 +307,19 @@ class CommandWrapperTests(unittest.TestCase):
             self.assertEqual(result.returncode, 3)
             self.assertIn('handed-over', result.stdout)
 
+
+class QnxShellCompatibilityTests(unittest.TestCase):
+    """The unit's QNX ksh (pdksh family) pre-defines aliases such as hash; defining or calling
+    them by name breaks parsing (seen on the car: syntax error at `hash() {`)."""
+    ALIASES = ['hash', 'autoload', 'functions', 'history', 'integer', 'local', 'login',
+               'nohup', 'r', 'stop', 'suspend', 'type', 'command']
+
+    def test_no_predefined_ksh_alias_names_in_package_scripts(self):
+        import re
+        for path in [ROOT / 'sd-card/uk-localization/scripts/localization.sh',
+                     ROOT / 'sd-card/mod/custom.sh', ROOT / 'sd-card/mod/command.sh']:
+            text = path.read_text()
+            for name in self.ALIASES:
+                self.assertIsNone(re.search(r'^\s*' + name + r'\s*\(\)', text, re.M), (path.name, name))
+                self.assertIsNone(re.search(r'(\$\(|`|^\s*|[;&|]\s*)' + name + r'\s+', text, re.M), (path.name, name))
+

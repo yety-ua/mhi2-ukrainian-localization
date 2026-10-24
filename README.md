@@ -87,7 +87,7 @@ SD-карти через [M.I.B.](https://github.com/Mr-MIBonk/M.I.B._More-Incre
 
 > **Вперше з M.I.B.?** Читайте [покрокову інструкцію](docs/INSTALL_GUIDE.md#українська): словник термінів, перевірка контрольної суми, запасний вхід по telnet, таблиця помилок.
 
-1. Завантажте `mhi2-ukrainian-localization-k3346-v1.0.0-preview.4.zip` і `.sha256`
+1. Завантажте `mhi2-ukrainian-localization-k3346-v1.0.0-preview.5.zip` і `.sha256`
    з [Releases](https://github.com/yety-ua/mhi2-ukrainian-localization/releases).
    **GitHub Source code ZIP — це репозиторій, а не готовий корінь SD.**
 2. M.I.B. має вже бути встановлений у голові; його повний дистрибутив має лежати

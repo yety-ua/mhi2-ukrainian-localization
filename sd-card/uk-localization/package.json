@@ -16,7 +16,7 @@
     "payload/lang_uk_hook.jar": "35baff7f32c2e2378faa8e7fc0b769e673f6eb5aa6d25b3a9bdc4b01490a8a19",
     "payload/lang_uk_voice.jar": "3783f6cc588360fd4408a46fd761750da87b1d91c4fe8a8b4090bf7a9f94d230",
     "scripts/blob.awk": "c37405d8304e0881e041616f28cb7759b47677c47b06a952d815d1a807c08c75",
-    "scripts/localization.sh": "9a8fa1d4e0865d020ac9e82aef037c4150440e92dbea864e90e977b2c85ee091",
+    "scripts/localization.sh": "c736311e6430a8419f8eb365fed514105760d73455f35072cdb3e435df5ad790",
     "stock/lang_data.zip": "82558f1e6808f9f27a6c1f0102f8421c9aac86c9498a928b7d76428de54991cf",
     "stock/lang_hmi_builtin.config": "6b2364211842688b534efc134ce52179e39deb556e123507e62ef770d0f05568",
     "stock/language_lut_hmi.txt": "42ea7dd4ac804fdc69d1804b7fa5ebbe9267cd8aa2de4a25154738c658ac97d4",
