@@ -104,46 +104,47 @@
 
 1. **Завантажте реліз**, а не вихідний код. На сторінці
    [Releases](https://github.com/yety-ua/mhi2-ukrainian-localization/releases) візьміть
-   `mhi2-ukrainian-localization-k3346-v1.0.0-preview.3.zip` і поруч файл `.sha256`.
+   `mhi2-ukrainian-localization-k3346-v1.0.0-preview.4.zip` і поруч файл `.sha256`.
    Кнопка «Source code (zip)» — **не те**: це вихідники, а не готова карта.
 2. **Перевірте, що файл не пошкоджений.** Порівняйте суму з вмістом `.sha256`.
 
    Windows (PowerShell, у теці із завантаженням):
 
    ```powershell
-   Get-FileHash .\mhi2-ukrainian-localization-k3346-v1.0.0-preview.3.zip -Algorithm SHA256
-   Get-Content .\mhi2-ukrainian-localization-k3346-v1.0.0-preview.3.zip.sha256
+   Get-FileHash .\mhi2-ukrainian-localization-k3346-v1.0.0-preview.4.zip -Algorithm SHA256
+   Get-Content .\mhi2-ukrainian-localization-k3346-v1.0.0-preview.4.zip.sha256
    ```
 
    macOS / Linux:
 
    ```sh
-   shasum -a 256 -c mhi2-ukrainian-localization-k3346-v1.0.0-preview.3.zip.sha256
+   shasum -a 256 -c mhi2-ukrainian-localization-k3346-v1.0.0-preview.4.zip.sha256
    ```
 
    Рядки хешу мають збігатися (у macOS — `OK`). Не збігаються — завантажте знову.
 3. **Збережіть M.I.B.-карту.** Скопіюйте весь вміст вашої робочої SD-карти на комп'ютер як
-   запасну копію. Якщо на карті вже є `mod/custom.sh`, збережіть його під іншою назвою:
+   запасну копію. Якщо на карті вже є `mod/custom.sh` чи `mod/command.sh`, збережіть їх під іншими назвами:
    наш файл його замінює і **не запускає** старі команди.
 4. **Розпакуйте архів** і скопіюйте:
    - теку **`uk-localization`** — у **корінь** карти (поруч з `apps`, `config`, `mod`…);
-   - файл **`mod/custom.sh`** — у вже наявну теку `mod` на карті (з заміною файлу).
+   - файли **`mod/custom.sh`** і **`mod/command.sh`** — у вже наявну теку `mod` на карті (з заміною).
 
    Не створюйте проміжної теки з назвою архіву. Найчастіша помилка — вкладеність
    `SD/mhi2-ukrainian-…/uk-localization/…`.
 5. **Звірте з картинкою.** На карті мають бути `apps/`, `config/`, `esd/`, `Launcher/`,
-   `mod/custom.sh` і `uk-localization/` із файлами `ACTION.txt`, `HMI.sha1`, `SHA1SUMS`,
+   `mod/custom.sh`, `mod/command.sh` і `uk-localization/` із файлами `ACTION.txt`, `HMI.sha1`, `SHA1SUMS`,
    `package.json` та теками `scripts/`, `payload/`, `stock/`, `target/`.
    Дерево — у [README](../README.md#підготовка-sd-карти).
 6. **Безпечно вилучіть карту** з комп'ютера (щоб файли дописалися). На macOS після копіювання
    можуть з'явитися службові файли `._*` — вони не заважають.
-7. **Оновлення з preview.1:** спершу виконайте його `RESTORE`, потім ставте цей реліз. З preview.2 достатньо замінити `uk-localization/` і `mod/custom.sh`.
+7. **Оновлення з preview.1:** спершу виконайте його `RESTORE`, потім ставте цей реліз. З preview.2/3 достатньо замінити `uk-localization/` і `mod/` (**у preview.2/3 не було `mod/command.sh`**, тому на M.I.B. V3.6+ пункт нічого не запускав).
 
 ### Етап 4. Перша перевірка — `CHECK` (нічого не змінює)
 
 1. Вставте карту в **SD1**. Нічого редагувати не треба: в `ACTION.txt` уже стоїть `CHECK`.
-2. У GEM: **`m.i.b.` → `Advanced Settings` → `Run Custom Script`** (може називатися
-   `Run /mod/custom.sh from m.i.b. SD`). Запустіть.
+2. У GEM: **`m.i.b.` → `Advanced Settings` → `Run individual script`** (так у M.I.B. V3.6+; на екрані
+   підказка «Place command.sh with script in /mod/ folder»). У старіших версіях пункт називається
+   `Run Custom Script` / `Run /mod/custom.sh from m.i.b. SD`. Запустіть.
 3. Очікуваний результат: рядок **`CHECK PASS`** і код **`0`**. Якщо екран прокрутився
    надто швидко — відкрийте лог на карті на комп'ютері: `uk-localization/logs/run-….log`.
 4. Напис M.I.B. «execution finished» **нічого не означає** — він з'являється навіть при
@@ -233,7 +234,7 @@ Patch / Restore / SW Update. Потім скопіюйте створену те
 ### Етап 6. Встановлення — `INSTALL`
 
 Ноутбук і редагування файлів не потрібні: дію вибирає **повторний запуск** того самого пункту GEM
-(`m.i.b. → Advanced Settings → Run Custom Script`). Крок 1 із 3 ви вже зробили на Етапі 4.
+(`m.i.b. → Advanced Settings → Run individual script`). Крок 1 із 3 ви вже зробили на Етапі 4.
 
 1. Переконайтеся, що пройшли весь Етап 5 (живлення, запасний вхід, бекап).
 2. Запустіть пункт **вдруге**. З'явиться `CONFIRM (step 2 of 3)` і три умови (живлення,
@@ -453,29 +454,30 @@ a cold start. REM uses the **lower** half of the right key instead; do not confu
    Windows:
 
    ```powershell
-   Get-FileHash .\mhi2-ukrainian-localization-k3346-v1.0.0-preview.3.zip -Algorithm SHA256
-   Get-Content .\mhi2-ukrainian-localization-k3346-v1.0.0-preview.3.zip.sha256
+   Get-FileHash .\mhi2-ukrainian-localization-k3346-v1.0.0-preview.4.zip -Algorithm SHA256
+   Get-Content .\mhi2-ukrainian-localization-k3346-v1.0.0-preview.4.zip.sha256
    ```
 
    macOS / Linux:
 
    ```sh
-   shasum -a 256 -c mhi2-ukrainian-localization-k3346-v1.0.0-preview.3.zip.sha256
+   shasum -a 256 -c mhi2-ukrainian-localization-k3346-v1.0.0-preview.4.zip.sha256
    ```
 
-3. Copy your whole working M.I.B. card to the computer as a spare. If `mod/custom.sh`
-   exists, rename a copy first: ours replaces it and does not chain old commands.
+3. Copy your whole working M.I.B. card to the computer as a spare. If `mod/custom.sh` or `mod/command.sh`
+   exists, rename copies first: ours replaces it and does not chain old commands.
 4. Extract the release. Copy the **`uk-localization`** folder to the **card root** (next
-   to `apps`, `config`, `mod`) and **`mod/custom.sh`** into the existing `mod` folder.
+   to `apps`, `config`, `mod`) and **`mod/custom.sh`** and **`mod/command.sh`** into the existing `mod` folder.
    No extra wrapper folder — the most common mistake.
 5. Compare with the tree in the [README](../README.md#prepare-the-sd-card), then eject safely.
-6. Upgrading from preview.1: run its `RESTORE` first. From preview.2 just replace `uk-localization/` and `mod/custom.sh`.
+6. Upgrading from preview.1: run its `RESTORE` first. From preview.2/3 replace `uk-localization/` and `mod/` (**preview.2/3 lacked `mod/command.sh`**, so on M.I.B. V3.6+ the item ran nothing).
 
 ### Stage 4. First check — `CHECK`
 
 1. Put the card in **SD1**. Nothing to edit: `ACTION.txt` already says `CHECK`.
-2. GEM → **`m.i.b.` → `Advanced Settings` → `Run Custom Script`** (may read
-   `Run /mod/custom.sh from m.i.b. SD`).
+2. GEM → **`m.i.b.` → `Advanced Settings` → `Run individual script`** (M.I.B. V3.6+; the screen hints
+   “Place command.sh with script in /mod/ folder”). Older versions: `Run Custom Script` /
+   `Run /mod/custom.sh from m.i.b. SD`.
 3. Expect **`CHECK PASS`** and exit code **`0`**. If the output scrolled away, read
    `uk-localization/logs/run-….log` on the card.
 4. The M.I.B. message “execution finished” means nothing; rely on `CHECK PASS` /
@@ -533,7 +535,7 @@ Do **all** of it before `INSTALL`.
 ### Stage 6. Install — `INSTALL`
 
 No laptop and no file editing: the action is chosen by **running the same GEM item again**
-(`m.i.b. → Advanced Settings → Run Custom Script`). You already did step 1 of 3 in Stage 4.
+(`m.i.b. → Advanced Settings → Run individual script`). You already did step 1 of 3 in Stage 4.
 
 1. Make sure all of Stage 5 is done (power, fallback access, backup).
 2. Run the item a **second time**. It shows `CONFIRM (step 2 of 3)` and three conditions (power,

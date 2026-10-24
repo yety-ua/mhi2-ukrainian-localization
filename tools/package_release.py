@@ -2,7 +2,7 @@
 """Validate the reviewed SD overlay and create a fresh release ZIP.
 
 Usage: python3 tools/package_release.py
-Output: dist/mhi2-ukrainian-localization-k3346-v1.0.0-preview.3.zip
+Output: dist/mhi2-ukrainian-localization-k3346-v1.0.0-preview.4.zip
 """
 import argparse
 import hashlib
@@ -42,9 +42,10 @@ def validated_sources():
         raise ValueError('Manifest and SHA-256 metadata disagree')
     if (PACKAGE / 'ACTION.txt').read_bytes() != b'CHECK\n':
         raise ValueError('Release action must be CHECK')
-    wrapper = (CARD / 'mod/custom.sh').read_bytes()
-    if b'\r' in wrapper or wrapper.startswith(b'\xef\xbb\xbf'):
-        raise ValueError('Wrapper requires LF/no BOM')
+    for name in ('mod/custom.sh', 'mod/command.sh'):
+        wrapper = (CARD / name).read_bytes()
+        if b'\r' in wrapper or wrapper.startswith(b'\xef\xbb\xbf'):
+            raise ValueError('Wrapper requires LF/no BOM: ' + name)
     return result
 
 
@@ -75,5 +76,5 @@ def build(output):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--output', type=Path, default=ROOT / 'dist/mhi2-ukrainian-localization-k3346-v1.0.0-preview.3.zip')
+    parser.add_argument('--output', type=Path, default=ROOT / 'dist/mhi2-ukrainian-localization-k3346-v1.0.0-preview.4.zip')
     build(parser.parse_args().output.resolve())

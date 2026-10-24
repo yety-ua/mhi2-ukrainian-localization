@@ -290,3 +290,20 @@ if [ -n "${TEST_BAD_READ:-}" ]; then echo invalid; else cat "$TEST_ROOT/persiste
         self.success(self.press())
         self.assertFalse((self.lsd / 'jars/lang_uk_hook.jar').exists())
         self.assertEqual((self.lsd / 'jars/lang_data.zip').read_bytes(), self.sources['stock/lang_data.zip'])
+
+
+class CommandWrapperTests(unittest.TestCase):
+    def test_command_hands_over_to_custom_and_keeps_exit_code(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            mod = Path(tmp) / 'mod'
+            mod.mkdir()
+            shutil.copyfile(ROOT / 'sd-card/mod/command.sh', mod / 'command.sh')
+            run = lambda: subprocess.run(['/bin/sh', str(mod / 'command.sh')], text=True, capture_output=True)
+            missing = run()
+            self.assertEqual(missing.returncode, 1)
+            self.assertIn('custom.sh is missing', missing.stdout)
+            (mod / 'custom.sh').write_text('#!/bin/sh\necho handed-over\nexit 3\n')
+            result = run()
+            self.assertEqual(result.returncode, 3)
+            self.assertIn('handed-over', result.stdout)
+
