@@ -129,6 +129,7 @@ SD1/
 2. Відкрийте GEM → `m.i.b.` → `Advanced Settings` → `Run Custom Script`
    (можлива назва `Run /mod/custom.sh from m.i.b. SD`). Потрібні **`CHECK PASS` і код 0**.
    CHECK записує лише SD-лог і тимчасові файли; не змінює мовні ресурси чи параметризацію.
+   **Увага:** три запуски цього пункту поспіль = встановлення (див. крок 4). Лише перевіряєте — не запускайте його втретє.
 3. Перед першою автомобільною інсталяцією перевірте recovery telnet на порту 23 (потрібні USB-Ethernet адаптер і пароль зі списку M.I.B., див. [посібник](docs/INSTALL_GUIDE.md#етап-5-страховка-перед-встановленням)),
    зробіть і перевірте повний резервний знімок M.I.B., підключіть стабільне зовнішнє
    живлення. Ноутбук не потрібний для перенесення пакета, але потрібен для незалежної
@@ -312,6 +313,7 @@ rendering is incomplete. [Capture provenance](docs/screenshots.json).
 2. Open GEM → `m.i.b.` → `Advanced Settings` → `Run Custom Script` (possibly labelled
    `Run /mod/custom.sh from m.i.b. SD`). Require **CHECK PASS and exit code 0**.
    CHECK writes only the SD log and temporary files; no app remount/resource/persistence write.
+   **Note:** three runs of this item in a row = installation (see step 4). To only verify, do not run it a third time.
 3. Before the first vehicle trial, confirm recovery telnet on port 23 (needs a USB-Ethernet adapter and the password from the M.I.B. list, see the [guide](docs/INSTALL_GUIDE.md#stage-5-safety-net-before-installing)), make/verify
    the complete M.I.B. backup and connect stable external power. Installation transport
    uses only SD, but the first trial still needs independent laptop recovery verification.
