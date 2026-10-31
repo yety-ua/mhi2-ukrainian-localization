@@ -87,7 +87,7 @@ SD-карти через [M.I.B.](https://github.com/Mr-MIBonk/M.I.B._More-Incre
 
 ### Швидке встановлення
 
-1. Завантажте з [Releases](https://github.com/yety-ua/mhi2-ukrainian-localization/releases) файли `.zip` і `.sha256`, звірте SHA-256.
+1. Завантажте з [Releases](https://github.com/yety-ua/mhi2-ukrainian-localization/releases) файл `.zip`.
 2. M.I.B. вже має стояти в голові (повний M.I.B. лежить на SD1). Розпакуйте архів і скопіюйте **вміст** його теки `mod/` у наявну `mod/` на SD-карті (саму теку `mod` не замінюйте).
 3. Вставте карту в SD1 → GEM → `m.i.b.` → `Advanced Settings` → **`Run individual script`**.
 4. **Читайте кінець виводу:** там статус і підказка, що робити далі. Повторюйте той самий пункт, доки не побачите `SUCCESS` (кожна дія: два запуски показують чеклист, третій виконує).
@@ -196,7 +196,7 @@ rendering is incomplete. [Capture provenance](docs/screenshots.json).
 
 ### Quick install
 
-1. Download the `.zip` and `.sha256` from [Releases](https://github.com/yety-ua/mhi2-ukrainian-localization/releases) and check the SHA-256.
+1. Download the `.zip` from [Releases](https://github.com/yety-ua/mhi2-ukrainian-localization/releases).
 2. M.I.B. must already be installed (its full folder on SD1). Unpack the archive and copy the **contents** of its `mod/` folder into the existing `mod/` on the card (do not replace `mod` itself).
 3. Insert the card in SD1 → GEM → `m.i.b.` → `Advanced Settings` → **`Run individual script`**.
 4. **Read the end of the output:** it shows the status and what to do next. Run the same item again until you see `SUCCESS` (for each action, two runs show a checklist and the third executes).
