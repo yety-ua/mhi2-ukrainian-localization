@@ -10,9 +10,9 @@
 
 ### Спершу чесно
 
-- Пакет має статус **preview**. Його перевірено на комп'ютері й в емуляторі, але **ще ніхто не
-  встановлював його на справжній автомобіль**. Ви серед перших. Це нормально, але
-  ризик реальний: помилка під час запису може залишити магнітолу, яка не завантажується.
+- Пакет перевірено на комп'ютері, в емуляторі та на одному авто
+  (A4 B9, K3346 / MU1438): встановлення, `RESTORE` і повторне встановлення з SD. На інших блоках
+  не перевірено, тому ризик реальний: помилка під час запису може залишити магнітолу, яка не завантажується.
 - Пакет **не перепрошиває** магнітолу, лише замінює мовні файли й один параметр. Усе, що
   він змінює, спершу копіюється, а `RESTORE` повертає оригінал.
 - **Якщо вам страшно або немає запасного входу (див. Етап 5) — зупиніться на Етапі 4
@@ -33,7 +33,7 @@
 | **CHECK** | Режим «тільки подивитись». Нічого не встановлює й не змінює мову. |
 | **telnet / порт 23** | Запасний вхід у магнітолу з ноутбука по мережі. Потрібен лише на випадок, якщо після встановлення блок не запустить меню. |
 | **MMX** | Назва частини блока, де лежать мовні файли. Telnet на порту 23 відкриває саме її. |
-| **Лог** | Текстовий файл `uk-localization/logs/run-….log` на карті; там написано, що саме сталося. |
+| **Лог** | Текстовий файл `mod/uk-localization/logs/run-….log` на карті; там написано, що саме сталося. |
 
 </details>
 
@@ -104,41 +104,40 @@
 
 1. **Завантажте реліз**, а не вихідний код. На сторінці
    [Releases](https://github.com/yety-ua/mhi2-ukrainian-localization/releases) візьміть
-   `mhi2-ukrainian-localization-k3346-v1.0.0-preview.10.zip` і поруч файл `.sha256`.
+   `mhi2-ukrainian-localization-k3346-v1.0.0.zip` і поруч файл `.sha256`.
    Кнопка «Source code (zip)» — **не те**: це вихідники, а не готова карта.
 2. **Перевірте, що файл не пошкоджений.** Порівняйте суму з вмістом `.sha256`.
 
    Windows (PowerShell, у теці із завантаженням):
 
    ```powershell
-   Get-FileHash .\mhi2-ukrainian-localization-k3346-v1.0.0-preview.10.zip -Algorithm SHA256
-   Get-Content .\mhi2-ukrainian-localization-k3346-v1.0.0-preview.10.zip.sha256
+   Get-FileHash .\mhi2-ukrainian-localization-k3346-v1.0.0.zip -Algorithm SHA256
+   Get-Content .\mhi2-ukrainian-localization-k3346-v1.0.0.zip.sha256
    ```
 
    macOS / Linux:
 
    ```sh
-   shasum -a 256 -c mhi2-ukrainian-localization-k3346-v1.0.0-preview.10.zip.sha256
+   shasum -a 256 -c mhi2-ukrainian-localization-k3346-v1.0.0.zip.sha256
    ```
 
    Рядки хешу мають збігатися (у macOS — `OK`). Не збігаються — завантажте знову.
 3. **Збережіть M.I.B.-карту.** Скопіюйте весь вміст вашої робочої SD-карти на комп'ютер як
    запасну копію. Якщо на карті вже є `mod/custom.sh` чи `mod/command.sh`, збережіть їх під іншими назвами:
    наш файл його замінює і **не запускає** старі команди.
-4. **Розпакуйте архів** і скопіюйте:
-   - теку **`uk-localization`** — у **корінь** карти (поруч з `apps`, `config`, `mod`…);
-   - файли **`mod/custom.sh`** і **`mod/command.sh`** — у вже наявну теку `mod` на карті (з заміною).
+4. **Розпакуйте архів.** Усередині є тека `mod/`. Скопіюйте її **вміст** у вже наявну теку `mod`
+   на карті: файли **`custom.sh`**, **`command.sh`** і теку **`uk-localization`**. Корінь карти
+   (`apps`, `config`, `esd`…) не чіпайте.
 
-   **macOS:** Finder при перетягуванні папки `mod` **замінює** її, а не зливає з наявною, і ви втратите файли M.I.B. (`mod/sshd`, `mod/ringtones`…). Копіюйте всередину `mod` лише два файли. (Проєкт Чефранова теж на це застерігає.) У Windows копіювання папок зливає вміст.
+   **macOS:** Finder при перетягуванні папки `mod` **замінює** її, а не зливає з наявною, і ви втратите файли M.I.B. (`mod/sshd`, `mod/ringtones`…). Копіюйте саме вміст папки. (Проєкт Чефранова теж на це застерігає.) У Windows копіювання папок зливає вміст.
    Не створюйте проміжної теки з назвою архіву. Найчастіша помилка — вкладеність
-   `SD/mhi2-ukrainian-…/uk-localization/…`.
-5. **Звірте з картинкою.** На карті мають бути `apps/`, `config/`, `esd/`, `Launcher/`,
-   `mod/custom.sh`, `mod/command.sh` і `uk-localization/` із файлами `ACTION.txt`, `HMI.sha1`, `SHA1SUMS`,
-   `package.json` та теками `scripts/`, `payload/`, `stock/`, `target/`.
-   Дерево — у [README](../README.md#підготовка-sd-карти).
+   `mod/mhi2-ukrainian-…/uk-localization/…`.
+5. **Звірте з картинкою.** У `mod/` мають бути `custom.sh`, `command.sh` і `uk-localization/` із файлами
+   `ACTION.txt`, `HMI.sha1`, `SHA1SUMS`, `package.json` та теками `scripts/`, `payload/`, `stock/`, `target/`
+   (решта `mod/` і корінь карти — файли M.I.B.). Дерево — у [README](#довідка-українська).
 6. **Безпечно вилучіть карту** з комп'ютера (щоб файли дописалися). На macOS після копіювання
    можуть з'явитися службові файли `._*` — вони не заважають.
-7. **Якщо ви вже ставили якусь із попередніх тестових версій:** спершу виконайте її `RESTORE` (або `CHECK`, щоб побачити стан), потім скопіюйте цей реліз: теку `uk-localization/` і **лише файли** `mod/custom.sh`, `mod/command.sh` (не всю теку `mod/`: там файли M.I.B.).
+7. **Якщо ви вже ставили якусь із попередніх тестових версій:** спершу виконайте її `RESTORE` (або `CHECK`, щоб побачити стан), потім скопіюйте цей реліз за п. 4. Раніше тека `uk-localization` лежала в корені карти: видаліть її звідти.
 
 ### Етап 4. Перша перевірка — `CHECK` (нічого не змінює)
 
@@ -147,7 +146,7 @@
    підказка «Place command.sh with script in /mod/ folder»). У старіших версіях пункт називається
    `Run Custom Script` / `Run /mod/custom.sh from m.i.b. SD`. Запустіть.
 3. Очікуваний результат: рядок **`CHECK PASS`** і код **`0`**. Якщо екран прокрутився
-   надто швидко — відкрийте лог на карті на комп'ютері: `uk-localization/logs/run-….log`.
+   надто швидко — відкрийте лог на карті на комп'ютері: `mod/uk-localization/logs/run-….log`.
 4. Напис M.I.B. «execution finished» (у V3.7.1 — «it is all done!») **нічого не означає** — він з'являється навіть при
    помилці. Дивіться тільки на `CHECK PASS` / `SUCCESS` / `ERROR` і код.
 
@@ -249,6 +248,9 @@ Patch / Restore / SW Update. Потім скопіюйте створену те
    останнім і перевірить запис.
 6. Очікуваний результат: **`SUCCESS: INSTALL`** і код **`0`**. Тільки тоді переходьте до
    Етапу 7. Автоматичного перезавантаження **немає**.
+   Якщо після початку запису щось зламалося, скрипт **сам повертає оригінали**: побачите `ROLLED BACK`
+   (блок такий, як був, можна повторити). Лише якщо відкат теж не вдався, з'явиться «Changes may remain.
+   Do not reboot»: тоді запустіть пункт GEM тричі (RESTORE) або скористайтеся telnet/SSH.
 
 Якщо між запусками MMI перезапускали або була помилка — відлік починається спочатку.
 
@@ -258,7 +260,7 @@ Patch / Restore / SW Update. Потім скопіюйте створену те
 Слово в `ACTION.txt`, відмінне від `CHECK`, виконується **одразу, за один запуск**. Знадобиться,
 наприклад, для `VOICE_INSTALL`.
 
-1. Вийміть карту з блока й на комп'ютері замініть вміст `uk-localization/ACTION.txt` на одне слово
+1. Вийміть карту з блока й на комп'ютері замініть вміст `mod/uk-localization/ACTION.txt` на одне слово
    (`INSTALL`, `RESTORE`…).
 
    > **Пастка:** скрипт приймає **лише** слово з переносом рядка LF. Звичайний Блокнот
@@ -268,8 +270,8 @@ Patch / Restore / SW Update. Потім скопіюйте створену те
    Windows (PowerShell):
 
    ```powershell
-   [IO.File]::WriteAllText("E:\uk-localization\ACTION.txt", "INSTALL`n")
-   [IO.File]::ReadAllBytes("E:\uk-localization\ACTION.txt").Length
+   [IO.File]::WriteAllText("E:\mod\uk-localization\ACTION.txt", "INSTALL`n")
+   [IO.File]::ReadAllBytes("E:\mod\uk-localization\ACTION.txt").Length
    ```
 
    Друга команда має вивести **8** для `INSTALL` (9 — зайвий символ CRLF; запишіть ще раз).
@@ -277,7 +279,7 @@ Patch / Restore / SW Update. Потім скопіюйте створену те
    macOS / Linux:
 
    ```sh
-   printf 'INSTALL\n' > /Volumes/SDCARD/uk-localization/ACTION.txt
+   printf 'INSTALL\n' > /Volumes/SDCARD/mod/uk-localization/ACTION.txt
    ```
 
    Якщо редагуєте в редакторі, кодування — UTF-8 **без BOM**.
@@ -309,11 +311,11 @@ Patch / Restore / SW Update. Потім скопіюйте створену те
 | Що бачите | Що це означає | Що робити |
 | --- | --- | --- |
 | Немає пункту `m.i.b.` в GEM | Немає карти в SD1 або блок ще не завантажився | Перевірте слот, зачекайте до 5 хв |
-| `Nothing to do!` після «Run individual script» | У `mod/` на карті немає `command.sh` (M.I.B. V3.6+ шукає саме його) | Скопіюйте `mod/command.sh` із релізу preview.4  поруч із `custom.sh` |
-| `syntax error` / `unexpected` у `localization.sh` | Помилка розбору скрипта оболонкою блока; лог `run-*.log` у такому разі не створюється | Надішліть фото екрана і файл `uk-localization/logs/launcher-errors.txt` (він зберігається на карті) |
+| `Nothing to do!` після «Run individual script» | У `mod/` на карті немає `command.sh` (M.I.B. V3.6+ шукає саме його) | Скопіюйте `mod/command.sh` із релізу  поруч із `custom.sh` |
+| `syntax error` / `unexpected` у `localization.sh` | Помилка розбору скрипта оболонкою блока; лог `run-*.log` у такому разі не створюється | Надішліть фото екрана і файл `mod/uk-localization/logs/launcher-errors.txt` (він зберігається на карті) |
 | `Required M.I.B. tool is missing: …` | Потрібна утиліта відсутня в M.I.B. (у M.I.B. V3.7+ немає `apps/sbin/awk`; скрипт бере `awk` самого блока) | Використовуйте останній реліз. Якщо пишеться про інший файл — перевірте, що на карті повний M.I.B. (`apps/sbin/…`) |
 | `mkdir: …/logs: Read-only file system`, логу немає | Блок монтує SD лише для читання | Використовуйте останній реліз. Також перевірте, що перемикач захисту від запису на карті у положенні «відкрито» |
-| `ERROR: uk-localization package is missing from SD1` | Теку скопійовано не в корінь | Виправте вкладеність (Етап 3, п. 4) |
+| `ERROR: the uk-localization folder is missing from SD1/mod` | Теку скопійовано не в `mod/` | Виправте розташування (Етап 3, п. 4) |
 | `step 1 of 3 done` / `step 2 of 3` | Це підказка, не помилка | Нічого не робіть, якщо не хочете йти далі |
 | `Invalid action…` | Лише якщо ви вручну редагували `ACTION.txt`: зайвий CR/пробіл/BOM | Перезапишіть командою із запасного шляху Етапу 6 |
 | `HMI is not the exact reviewed K3346/MU1438 binary` або схожі «not stock» | Версія/файли не ті, або вже щось змінено | **Нічого не змушуйте.** Не підтримується. Надішліть лог |
@@ -352,7 +354,7 @@ Patch / Restore / SW Update. Потім скопіюйте створену те
 <summary>Що надіслати, якщо потрібна допомога</summary>
 
 Відкрийте [issue](https://github.com/yety-ua/mhi2-ukrainian-localization/issues) і додайте:
-вміст `uk-localization/logs/run-*.log`, на якому етапі зупинилися, модель авто й версію MMI.
+вміст `mod/uk-localization/logs/run-*.log`, на якому етапі зупинилися, модель авто й версію MMI.
 **Не публікуйте** VIN, пароли й особисті дані з логів.
 
 </details>
@@ -369,6 +371,134 @@ Patch / Restore / SW Update. Потім скопіюйте створену те
 
 ---
 
+### Довідка (українська)
+
+Матеріал із попередньої версії README: підготовка карти, перевірка, режими `ACTION.txt`, відновлення.
+
+#### Підготовка SD-карти
+
+> **Вперше з M.I.B.?** Читайте [покрокову інструкцію](docs/INSTALL_GUIDE.md#українська): словник термінів, перевірка контрольної суми, запасний вхід по telnet, таблиця помилок.
+
+1. Завантажте `mhi2-ukrainian-localization-k3346-v1.0.0.zip` і `.sha256`
+   з [Releases](https://github.com/yety-ua/mhi2-ukrainian-localization/releases).
+   **GitHub Source code ZIP — це репозиторій, а не готовий корінь SD.**
+2. M.I.B. має вже бути встановлений у голові; його повний дистрибутив має лежати
+   в корені writable FAT32 SD-карти. Цей пакет не містить і не перевстановлює M.I.B.
+   За документацією M.I.B., погана SD-карта — найчастіша причина збоїв: використовуйте
+   повнорозмірну карту від 4 ГБ, відформатовану FAT32 заново, з вимкненим захистом від запису.
+3. Розпакуйте реліз на комп'ютері: усередині є тека `mod/`. Скопіюйте її **вміст** у наявну папку
+   `mod/` на карті: файли `custom.sh`, `command.sh` і теку `uk-localization/`. Корінь SD (`apps`,
+   `config`…) не чіпайте. На macOS не перетягуйте саму папку `mod` (Finder замінює, а не зливає):
+   копіюйте її вміст. Не додавайте зовнішню папку з назвою архіву.
+4. Якщо на SD уже є власний `mod/custom.sh` чи `mod/command.sh`, спочатку збережіть їх копії під іншою
+   назвою. Новий entry point не запускає старі команди. Інші файли M.I.B. збережіть.
+5. **Якщо ви вже ставили якусь із попередніх тестових версій.** Інсталятор вимагає штатний (stock) стан мовних файлів у голові: спершу виконайте її RESTORE, потім CHECK/INSTALL з цього релізу. Раніше тека `uk-localization/` лежала в корені карти: після копіювання нової в `mod/` видаліть її звідти.
+
+```text
+SD1/
+├── apps/                         повний наявний M.I.B.
+├── config/                       наявний M.I.B.
+├── esd/                          наявний M.I.B.
+├── Launcher/                     наявний M.I.B.
+├── ...                           решта файлів M.I.B. збережена
+└── mod/
+    ├── custom.sh                 entry point із цього релізу
+    ├── command.sh                для M.I.B. V3.6+ («Run individual script»)
+    ├── ...                       наявні теки M.I.B. (ambient, sshd, ringtones…)
+    └── uk-localization/
+        ├── ACTION.txt            CHECK за замовчуванням
+        ├── HMI.sha1
+        ├── SHA1SUMS
+        ├── package.json
+        ├── scripts/
+        ├── payload/
+        ├── stock/
+        ├── target/
+        ├── logs/                 створюється під час запуску
+        └── backups/              створюється під час встановлення
+```
+
+#### Перевірка і встановлення
+
+1. Вставте підготовлену SD-карту в **перший слот голови — SD1**.
+   Для першого запуску нічого редагувати не потрібно: у пакеті вже вибрано режим
+   **перевірки**, який не встановлює локалізацію й не змінює мовні налаштування.
+   Цей режим задано словом `CHECK` у файлі `mod/uk-localization/ACTION.txt` на карті.
+2. Відкрийте GEM → `m.i.b.` → `Advanced Settings` → **`Run individual script`** (у M.I.B. V3.6+;
+   у старіших версіях — `Run Custom Script` / `Run /mod/custom.sh from m.i.b. SD`). Потрібні **`CHECK PASS` і код 0**.
+   CHECK записує лише SD-лог і тимчасові файли; не змінює мовні ресурси чи параметризацію.
+   **Увага:** три запуски цього пункту поспіль = встановлення (див. крок 4). Лише перевіряєте — не запускайте його втретє.
+3. Перед першою автомобільною інсталяцією перевірте recovery telnet на порту 23 (потрібні USB-Ethernet адаптер і пароль зі списку M.I.B., див. [посібник](docs/INSTALL_GUIDE.md#етап-5-страховка-перед-встановленням)),
+   зробіть і перевірте повний резервний знімок M.I.B., підключіть стабільне зовнішнє
+   живлення. Ноутбук не потрібний для перенесення пакета, але потрібен для незалежної
+   recovery-перевірки першого випробування. Потрібно щонайменше 40000 KiB у `/mnt/app`.
+4. **Файли редагувати не потрібно.** Запустіть той самий пункт GEM ще **двічі**: після
+   `CHECK PASS` екран підкаже наступний крок. Другий запуск лише показує чеклист
+   (перевірте живлення, recovery-доступ і бекап), **третій** встановлює. Незавершений крок
+   «забувається» при перезапуску MMI. Не виймайте SD, не натискайте Back, не запускайте інші операції M.I.B.
+   *Запасний шлях:* записати `INSTALL` у `ACTION.txt` на комп'ютері (**LF**, не CRLF; Блокнот
+   Windows не підходить, команда — у [посібнику](docs/INSTALL_GUIDE.md#етап-6-встановлення--install)) — тоді дія виконується за один запуск.
+5. Інсталятор збереже оригінали в голові та на SD,
+   встановить ресурси, запише `2D00` останнім і перевірить результат. `0x280` під час
+   встановлення не змінюється. Невідомі попередні модифікації спричиняють зупинку.
+6. Лише після **`SUCCESS: INSTALL` і коду 0** перезавантажте MMI вручну. Виберіть
+   «Українська» в налаштуваннях мови. Перевірте меню, введення, діагностику та холодний
+   запуск без SD. Очікується робота без карти після інсталяції; на авто це ще не доведено.
+
+**Автоматичного перезавантаження немає.** Якщо помилка трапиться вже після початку запису, скрипт сам
+поверне збережені оригінали: на екрані буде `ROLLED BACK`, і інсталяцію можна повторити. Лише якщо
+відкат теж не вдався, лишається `PENDING` і напис «Do not reboot»: тоді запустіть пункт GEM тричі
+(RESTORE) або скористайтеся telnet/SSH. За будь-якої помилки дивіться
+`mod/uk-localization/logs/run-*.log`. Якщо залишився `PENDING`, ресурси могли бути частково
+змінені: не перезавантажуйте голову до відновлення. Запис упорядкований і журналюється,
+але не є атомарною транзакцією при втраті живлення.
+Зовнішнє повідомлення M.I.B. «execution finished» (у V3.7.1 — «it is all done!») не означає успішної інсталяції;
+орієнтуйтеся на SUCCESS/ERROR та код саме цього пакета.
+Якщо потрібна допомога, надішліть фото екрана, `mod/uk-localization/logs/run-*.log` і
+`mod/uk-localization/logs/launcher-errors.txt` (помилки самої оболонки блока).
+
+#### Дії ACTION.txt (запасний шлях)
+
+Зазвичай `ACTION.txt` редагувати не треба: `CHECK`, `INSTALL` і `RESTORE` вибираються повторним
+запуском пункту GEM. Файл потрібен для `VOICE_*` і як запасний шлях: слово, відмінне від
+`CHECK`, виконується одразу, за один запуск.
+
+| Значення | Дія |
+| --- | --- |
+| `CHECK` | Перевірка без зміни ресурсів/параметризації |
+| `INSTALL` | Встановлення українського інтерфейсу й клавіатури |
+| `VOICE_INSTALL` | Окреме встановлення англійського голосового fallback після перевірки UI |
+| `VOICE_RESTORE` | Прибрати лише керований голосовий hook |
+| `RESTORE` | Відновити оригінальні ресурси та датасети |
+
+Для VOICE_INSTALL потрібні англійські ресурси в голові. Після успіху — окремий ручний
+reboot і перемикання з української на іншу мову й назад. Це не український голос.
+
+#### Відновлення
+
+Коли пакет встановлено (або встановлення перервалося, або файли розійшлися з пакетом),
+запустіть той самий пункт GEM **тричі**: перший покаже стан і запропонує відновлення,
+другий — чеклист, третій виконає `RESTORE`. Або запишіть `RESTORE` у ACTION.txt і запустіть
+пункт один раз. Пакет відновлює
+оригінальні ZIP/config/LUT, `2D00/0x280`, прибирає лише свої початково відсутні
+hooks/прапорець і перевіряє запис. Бекапи та логи зберігаються; після відновлення
+можна повторити інсталяцію з тією самою базою.
+
+Якщо HMI/GEM не запускається, через заздалегідь перевірений telnet до **MMX** запустіть
+внутрішню копію (скрипти й потрібні інструменти M.I.B. скопійовані в голову):
+
+```sh
+/bin/sh /mnt/app/root/uk-localization/recovery/scripts/localization.sh RESTORE
+```
+
+Дочекайтеся SUCCESS: RESTORE і коду 0 перед перезавантаженням. Пошкоджене поточне
+значення persistence не блокує повернення повної перевіреної бази. Якщо COMPLETE
+відсутній або пошкоджений — зупиніться, не використовуйте force і не видаляйте стан.
+Після аварії shell може лишитися `/tmp/uk-localization.lock`; не видаляйте його,
+доки не підтверджено відсутність активної операції. Відкат мовних ресурсів не замінює
+recovery голови, яка взагалі не може завантажити QNX.
+
+
 ## English
 
 This guide is for people installing **for the first time** who do not know M.I.B. The
@@ -377,9 +507,9 @@ see and what to do when you see something else.
 
 ### Honest status first
 
-- The package is **preview**. It has been tested on a computer and in an emulator, but
-  **not yet on a real car**. You are among the first. A failed write can leave a head
-  unit that does not boot.
+- The package has been tested on a computer, in an emulator and on one car
+  (A4 B9, K3346 / MU1438): install, `RESTORE` and re-install from the SD card. Other units are
+  untested, and a failed write can leave a head unit that does not boot.
 - It does **not** flash firmware: it replaces language files and one parameter. Everything
   it touches is copied first, and `RESTORE` puts the originals back.
 - **If you are unsure, or you have no fallback access (Stage 5), stop at Stage 4
@@ -399,7 +529,7 @@ see and what to do when you see something else.
 | **ACTION.txt** | One file with one word on the card: `CHECK`, `INSTALL`, `RESTORE`. |
 | **CHECK** | Look-only mode; installs nothing. |
 | **telnet / port 23** | Fallback network login to the unit from a laptop; only needed if the menu stops working. |
-| **Log** | `uk-localization/logs/run-….log` on the card. |
+| **Log** | `mod/uk-localization/logs/run-….log` on the card. |
 
 </details>
 
@@ -461,24 +591,24 @@ a cold start. REM uses the **lower** half of the right key instead; do not confu
    Windows:
 
    ```powershell
-   Get-FileHash .\mhi2-ukrainian-localization-k3346-v1.0.0-preview.10.zip -Algorithm SHA256
-   Get-Content .\mhi2-ukrainian-localization-k3346-v1.0.0-preview.10.zip.sha256
+   Get-FileHash .\mhi2-ukrainian-localization-k3346-v1.0.0.zip -Algorithm SHA256
+   Get-Content .\mhi2-ukrainian-localization-k3346-v1.0.0.zip.sha256
    ```
 
    macOS / Linux:
 
    ```sh
-   shasum -a 256 -c mhi2-ukrainian-localization-k3346-v1.0.0-preview.10.zip.sha256
+   shasum -a 256 -c mhi2-ukrainian-localization-k3346-v1.0.0.zip.sha256
    ```
 
 3. Copy your whole working M.I.B. card to the computer as a spare. If `mod/custom.sh` or `mod/command.sh`
    exists, rename copies first: ours replaces it and does not chain old commands.
-4. Extract the release. Copy the **`uk-localization`** folder to the **card root** (next
-   to `apps`, `config`, `mod`) and **`mod/custom.sh`** and **`mod/command.sh`** into the existing `mod` folder.
-   No extra wrapper folder — the most common mistake.
-   **macOS:** dragging the `mod` folder in Finder **replaces** the existing one instead of merging, destroying M.I.B.'s own files (`mod/sshd`, `mod/ringtones`…). Copy only the two files into `mod`. (chefranov's project warns about this too.) On Windows folder copies merge.
-5. Compare with the tree in the [README](../README.md#prepare-the-sd-card), then eject safely.
-6. If you already installed an earlier test version: run its `RESTORE` first (or `CHECK` to see the state), then copy this release: the `uk-localization/` folder and **only the files** `mod/custom.sh`, `mod/command.sh` (not the whole `mod/` folder: it holds M.I.B.'s files).
+4. Extract the release: it holds a `mod/` folder. Copy its **contents** into the existing `mod` folder on
+   the card: the files **`custom.sh`**, **`command.sh`** and the **`uk-localization`** folder. Leave the card
+   root (`apps`, `config`, `esd`…) alone. No extra wrapper folder — the most common mistake.
+   **macOS:** dragging the `mod` folder in Finder **replaces** the existing one instead of merging, destroying M.I.B.'s own files (`mod/sshd`, `mod/ringtones`…). Copy the folder's contents. (chefranov's project warns about this too.) On Windows folder copies merge.
+5. Compare with the tree in the [README](#reference-english), then eject safely.
+6. If you already installed an earlier test version: run its `RESTORE` first (or `CHECK` to see the state), then copy this release as in step 4. The `uk-localization` folder used to sit at the card root: delete it from there.
 
 ### Stage 4. First check — `CHECK`
 
@@ -487,7 +617,7 @@ a cold start. REM uses the **lower** half of the right key instead; do not confu
    “Place command.sh with script in /mod/ folder”). Older versions: `Run Custom Script` /
    `Run /mod/custom.sh from m.i.b. SD`.
 3. Expect **`CHECK PASS`** and exit code **`0`**. If the output scrolled away, read
-   `uk-localization/logs/run-….log` on the card.
+   `mod/uk-localization/logs/run-….log` on the card.
 4. The M.I.B. message “execution finished” (V3.7.1: “it is all done!”) means nothing; rely on `CHECK PASS` /
    `SUCCESS` / `ERROR` and the code. See the [troubleshooting table](#if-something-goes-wrong).
 5. After `CHECK PASS` you will see a hint like `Nothing was changed. To INSTALL, run this same
@@ -553,6 +683,9 @@ No laptop and no file editing: the action is chosen by **running the same GEM it
 4. While it runs: do not remove the card, press Back, run other M.I.B. operations or switch
    ignition off.
 5. Expect **`SUCCESS: INSTALL`** and exit code **`0`**. There is **no automatic reboot**.
+   If something breaks after writing has begun, the script **puts the originals back by itself**: you see
+   `ROLLED BACK` (the unit is as it was; you can retry). Only if the rollback fails too do you get
+   “Changes may remain. Do not reboot”: then run the GEM item three times (RESTORE) or use telnet/SSH.
 6. **If the install was interrupted (`PENDING` state / `Interrupted operation recorded`), do not
    reboot.** Go to the troubleshooting section and run `RESTORE`.
 
@@ -564,19 +697,19 @@ If the MMI was restarted between runs, or an error occurred, counting starts ove
 A word other than `CHECK` in `ACTION.txt` runs **at once, in a single launch** (needed e.g. for
 `VOICE_INSTALL`).
 
-1. Remove the card and on the computer set the single word in `uk-localization/ACTION.txt`
+1. Remove the card and on the computer set the single word in `mod/uk-localization/ACTION.txt`
    (`INSTALL`, `RESTORE`…).
 
    > **Trap:** the script accepts the word with an **LF** line ending only. Windows Notepad
    > usually saves **CRLF**, which gives `Invalid action`. Use (replace `E:`):
 
    ```powershell
-   [IO.File]::WriteAllText("E:\uk-localization\ACTION.txt", "INSTALL`n")
-   [IO.File]::ReadAllBytes("E:\uk-localization\ACTION.txt").Length
+   [IO.File]::WriteAllText("E:\mod\uk-localization\ACTION.txt", "INSTALL`n")
+   [IO.File]::ReadAllBytes("E:\mod\uk-localization\ACTION.txt").Length
    ```
 
    The second command must print **8** for `INSTALL` (9 means CRLF). macOS / Linux:
-   `printf 'INSTALL\n' > /Volumes/SDCARD/uk-localization/ACTION.txt`. In an editor use
+   `printf 'INSTALL\n' > /Volumes/SDCARD/mod/uk-localization/ACTION.txt`. In an editor use
    UTF-8 **without BOM**.
 2. Eject safely, insert in **SD1**, run the GEM item once. Afterwards the script resets
    `ACTION.txt` to `CHECK` itself.
@@ -603,10 +736,10 @@ A word other than `CHECK` in `ACTION.txt` runs **at once, in a single launch** (
 | --- | --- | --- |
 | No `m.i.b.` entry in GEM | No card in SD1 or the unit is still starting | Check the slot, wait up to 5 min |
 | `Nothing to do!` after “Run individual script” | `mod/command.sh` is missing on the card (M.I.B. V3.6+ looks for it) | Copy `mod/command.sh` from the latest release next to `custom.sh` |
-| `syntax error` / `unexpected` in `localization.sh` | The unit's shell failed to parse the script; no `run-*.log` is created in that case | Send a photo of the screen and `uk-localization/logs/launcher-errors.txt` (kept on the card) |
+| `syntax error` / `unexpected` in `localization.sh` | The unit's shell failed to parse the script; no `run-*.log` is created in that case | Send a photo of the screen and `mod/uk-localization/logs/launcher-errors.txt` (kept on the card) |
 | `Required M.I.B. tool is missing: …` | A required utility is absent from M.I.B. (M.I.B. V3.7+ ships no `apps/sbin/awk`; the script uses the unit's own `awk`) | Use the latest release. If another file is named, check the card holds the full M.I.B. (`apps/sbin/…`) |
 | `mkdir: …/logs: Read-only file system`, no log | The unit mounts the SD read-only | Use the latest release. Also check that the card's write-protect switch is unlocked |
-| `uk-localization package is missing from SD1` | Folder not in the card root | Fix nesting (Stage 3, step 4) |
+| `the uk-localization folder is missing from SD1/mod` | Folder not inside `mod/` | Fix the location (Stage 3, step 4) |
 | `step 1 of 3 done` / `step 2 of 3` | A hint, not an error | Do nothing unless you want to continue |
 | `Invalid action…` | Only if you edited `ACTION.txt` by hand: stray CR / space / BOM | Rewrite with the Stage 6 fallback command |
 | `HMI is not the exact reviewed K3346/MU1438 binary`, “not stock” | Wrong version, or already modified | Do not force; unsupported. Send the log |
@@ -643,7 +776,7 @@ boot QNX at all, that is beyond this package; use the full M.I.B. backup from St
 <summary>What to send when asking for help</summary>
 
 Open an [issue](https://github.com/yety-ua/mhi2-ukrainian-localization/issues) with the contents of
-`uk-localization/logs/run-*.log`, the stage you stopped at, the car model and MMI version.
+`mod/uk-localization/logs/run-*.log`, the stage you stopped at, the car model and MMI version.
 Do **not** post VINs, passwords or personal data found in logs.
 
 </details>
@@ -657,3 +790,96 @@ Do **not** post VINs, passwords or personal data found in logs.
 install and make sure the Ukrainian UI works first.
 
 </details>
+
+### Reference (English)
+
+Material from the previous README: card preparation, check/install, `ACTION.txt` modes, restore.
+
+#### Prepare the SD card
+
+> **New to M.I.B.?** Read the [step-by-step guide](docs/INSTALL_GUIDE.md#english): glossary, checksum verification, telnet fallback, troubleshooting table.
+
+1. Download the release ZIP and its `.sha256` from
+   [Releases](https://github.com/yety-ua/mhi2-ukrainian-localization/releases).
+   GitHub's Source code ZIP is the repository, not a ready SD-root overlay.
+2. Use a writable FAT32 card (full-size, not microSD, 4 GB or more, freshly formatted, write-protect off;
+   per the M.I.B. docs a bad card is the most common cause of failures) in **SD1**, with the full existing M.I.B. distribution
+   at its root. M.I.B. must already be installed on the unit; this overlay does not
+   include or reinstall M.I.B.
+3. Extract the release on the computer: it holds a `mod/` folder. Copy its **contents** into the
+   existing `mod/` folder on the card: the files `custom.sh`, `command.sh` and the `uk-localization/`
+   folder. Leave the card root (`apps`, `config`…) alone. On macOS do not drag the `mod` folder itself
+   (Finder replaces instead of merging): copy its contents. Do not add an enclosing release-name folder.
+4. If a custom `mod/custom.sh` or `mod/command.sh` exists, save copies under other names before replacement.
+   The new entry point does not chain existing commands. The SD tree is shown above.
+5. **If you already installed an earlier test version.** The installer requires the stock language files on the head unit: run its RESTORE first, then CHECK/INSTALL from this release. The `uk-localization/` folder used to sit at the card root: delete it from there after copying the new one into `mod/`.
+
+#### Check and install
+
+1. Insert the prepared SD card into **the head unit's first SD slot — SD1**.
+   No file editing is needed for the first run: the package already selects
+   **check mode**, which does not install the localization or change language settings.
+   This mode is selected by the word `CHECK` in `mod/uk-localization/ACTION.txt` on the card.
+2. Open GEM → `m.i.b.` → `Advanced Settings` → **`Run individual script`** (M.I.B. V3.6+;
+   older versions: `Run Custom Script` / `Run /mod/custom.sh from m.i.b. SD`). Require **CHECK PASS and exit code 0**.
+   CHECK writes only the SD log and temporary files; no app remount/resource/persistence write.
+   **Note:** three runs of this item in a row = installation (see step 4). To only verify, do not run it a third time.
+3. Before the first vehicle trial, confirm recovery telnet on port 23 (needs a USB-Ethernet adapter and the password from the M.I.B. list, see the [guide](docs/INSTALL_GUIDE.md#stage-5-safety-net-before-installing)), make/verify
+   the complete M.I.B. backup and connect stable external power. Installation transport
+   uses only SD, but the first trial still needs independent laptop recovery verification.
+   At least 40000 KiB free in `/mnt/app` is required.
+4. **No file editing is needed.** Run the same GEM item **two more times**: after
+   `CHECK PASS` the screen tells you the next step. The second run only shows a checklist
+   (power, recovery access, backup); the **third** installs. A pending step is forgotten
+   when the MMI restarts. Do not remove SD, press Back or run other M.I.B. backup/reboot/flash operations concurrently.
+   *Fallback:* set ACTION.txt to `INSTALL` on a computer (**LF**, not CRLF; Windows Notepad will
+   fail; see the [guide](docs/INSTALL_GUIDE.md#stage-6-install--install)) — the action then runs in a single launch.
+5. Baselines are stored on SD and the unit;
+   resources are installed before 2D00 and verified by read-back. 0x280 is unchanged
+   during installation. Unknown existing modifications cause an abort.
+6. Only after **SUCCESS: INSTALL and exit code 0**, reboot manually and select Ukrainian
+   under Settings > Language. Check menus/input/diagnostics and a cold boot without SD.
+   Operation without SD is intended after installation but remains a vehicle test.
+
+There is **no automatic reboot**. If an error occurs after writing has begun, the script puts the saved
+originals back by itself: the screen shows `ROLLED BACK` and the install can be repeated. Only if the
+rollback fails too does `PENDING` remain with a “Do not reboot” message: then run the GEM item three
+times (RESTORE) or use telnet/SSH. For errors, inspect `mod/uk-localization/logs/run-*.log`.
+PENDING indicates an interrupted operation: do not reboot until restoration has been
+checked. Writes are ordered/journalled, not a power-loss-atomic transaction. The outer
+M.I.B. “execution finished” (V3.7.1: “it is all done!”) message is unconditional; use this package's SUCCESS/ERROR
+and exit code. Actions are CHECK, INSTALL, VOICE_INSTALL, VOICE_RESTORE and RESTORE.
+For help, send a photo of the screen, `mod/uk-localization/logs/run-*.log` and
+`mod/uk-localization/logs/launcher-errors.txt` (errors from the unit's own shell).
+
+#### English voice fallback
+
+Usually ACTION.txt needs no editing: CHECK, INSTALL and RESTORE are chosen by running the GEM
+item repeatedly; the file is for `VOICE_*` and as a fallback (a word other than CHECK runs at once).
+
+After validating UI, set ACTION.txt to `VOICE_INSTALL` and run the same GEM item.
+After success, reboot manually and switch away from Ukrainian and back. English
+speech resources must exist on the unit. Verify actual microphone/audio behavior;
+this is not Ukrainian speech support. `VOICE_RESTORE` removes only this managed hook.
+
+#### Restore and recover
+
+When the package is installed (or an install was interrupted, or files drifted from the
+package), run the same GEM item **three times**: the first shows the state and offers
+restoration, the second shows a checklist, the third performs `RESTORE`. Or set ACTION.txt to
+`RESTORE` and run the item once. It restores baseline
+ZIP/config/LUT and 2D00/0x280, removes only its originally absent hooks/flag, checks
+read-back and keeps backups/logs. Reinstallation retains the original baseline.
+
+If HMI/GEM cannot start, use the previously verified telnet connection to **MMX**:
+
+```sh
+/bin/sh /mnt/app/root/uk-localization/recovery/scripts/localization.sh RESTORE
+```
+
+The internal package includes required M.I.B. tools, so this recovery route does not
+require the SD card. Require SUCCESS: RESTORE and exit code 0 before rebooting.
+An unreadable current persistence value does not prevent restoring a trusted complete
+baseline. Missing/damaged COMPLETE requires investigation; do not force or remove state.
+A crashed shell can leave `/tmp/uk-localization.lock`; inspect active operations before
+removing it. Resource rollback is not boot recovery for a unit unable to run QNX.

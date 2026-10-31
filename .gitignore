@@ -2,5 +2,5 @@ dist/
 __pycache__/
 *.pyc
 .DS_Store
-sd-card/uk-localization/logs/
-sd-card/uk-localization/backups/
+sd-card/mod/uk-localization/logs/
+sd-card/mod/uk-localization/backups/

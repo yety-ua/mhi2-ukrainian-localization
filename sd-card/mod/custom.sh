@@ -1,8 +1,13 @@
 #!/bin/sh
 # M.I.B. GEM entry point. Copy to SD1/mod/custom.sh; keep LF line endings.
-PACKAGE=/net/mmx/fs/sda0/uk-localization
+# The package lives next to this file: SD1/mod/uk-localization (M.I.B. runs us as /net/mmx/fs/sda0/mod/custom.sh).
+case $0 in
+    */*) SELF_DIR=${0%/*} ;;
+    *) SELF_DIR=/net/mmx/fs/sda0/mod ;;
+esac
+PACKAGE=$SELF_DIR/uk-localization
 if [ ! -f "$PACKAGE/scripts/localization.sh" ]; then
-    echo 'ERROR: uk-localization package is missing from SD1.'
+    echo 'ERROR: the uk-localization folder is missing from SD1/mod.'
     exit 1
 fi
 # The SD is mounted read-only by default; the log folder and ACTION.txt need it writable.
@@ -13,7 +18,7 @@ if mkdir -p "$PACKAGE/logs" 2>/dev/null && { cat /dev/null > "$ERRLOG"; } 2>/dev
     on -f mmx /bin/sh "$PACKAGE/scripts/localization.sh" 2> "$ERRLOG"
     result=$?
     if [ -s "$ERRLOG" ]; then
-        echo '--- shell errors (also saved in uk-localization/logs/launcher-errors.txt) ---'
+        echo '--- shell errors (also saved in mod/uk-localization/logs/launcher-errors.txt) ---'
         cat "$ERRLOG"
     fi
 else

@@ -13,9 +13,9 @@
 SD-карти через [M.I.B.](https://github.com/Mr-MIBonk/M.I.B._More-Incredible-Bash).
 Пакет додає ресурси й параметризацію; повна прошивка не перепрошивається.
 
-**Статус: preview для перевірки на автомобілі.** Структуру ресурсів та інсталятор
-перевірено офлайн, українські екрани показані в емуляторі. Виконання інсталятора
-на справжньому QNX, встановлення й відновлення на автомобілі ще не підтверджені.
+**Статус: перевірено на одному авто** (A4 B9, K3346 / MU1438): встановлення,
+`RESTORE` і повторне встановлення з SD-карти пройшли, українська працює в меню MMI.
+Інші автомобілі й версії прошивки не перевірялися.
 Це не твердження про 100% перекладу кожного доступного екрана. Повний опис
 реалізованих частин і залишкових питань — у [документі глибини](docs/LOCALIZATION_DEPTH.md).
 
@@ -57,8 +57,9 @@ SD-карти через [M.I.B.](https://github.com/Mr-MIBonk/M.I.B._More-Incre
 | Носій | FAT32 SD-карта в **SD1** з повним M.I.B. (повнорозмірна, не microSD, від 4 ГБ, свіжо відформатована, без захисту від запису) |
 | M.I.B. | V3.6+ (`Run individual script`); старіші версії запускають `Run Custom Script`. На авто пробувалась лише V3.7.1 MHIG (GEM 4.5s) |
 
+Докладно, з доказами й перевіркою за пунктами: [яких авто стосується пакет](docs/COMPATIBILITY.md).
 Інші MHI2, Audi A3 `AU37x/P5089`, MHI2Q, MIB3 та інші MU не підтримуються.
-Інсталятор звіряє реальний train/MU з EEPROM і точний хеш HMI. A3 була
+Інсталятор звіряє точний хеш образу HMI, а також train/MU (з файлів блока, запасно з EEPROM). A3 була
 додатковим джерелом перекладів за збігом тексту, але структура, ID, класи й
 параметризація цільового пакета належать A4 K3346. [Докази походження](docs/A4_PROVENANCE.md).
 
@@ -84,122 +85,22 @@ SD-карти через [M.I.B.](https://github.com/Mr-MIBonk/M.I.B._More-Incre
 На окремих екранах емулятор неповністю відображає графічні віджети; це не
 підтвердження такого самого дефекту на автомобілі. [Походження знімків](docs/screenshots.json).
 
-### Підготовка SD-карти
+### Швидке встановлення
 
-> **Вперше з M.I.B.?** Читайте [покрокову інструкцію](docs/INSTALL_GUIDE.md#українська): словник термінів, перевірка контрольної суми, запасний вхід по telnet, таблиця помилок.
+1. Завантажте з [Releases](https://github.com/yety-ua/mhi2-ukrainian-localization/releases) файли `.zip` і `.sha256`, звірте SHA-256.
+2. M.I.B. вже має стояти в голові (повний M.I.B. лежить на SD1). Розпакуйте архів і скопіюйте **вміст** його теки `mod/` у наявну `mod/` на SD-карті (саму теку `mod` не замінюйте).
+3. Вставте карту в SD1 → GEM → `m.i.b.` → `Advanced Settings` → **`Run individual script`**.
+4. **Читайте кінець виводу:** там статус і підказка, що робити далі. Повторюйте той самий пункт, доки не побачите `SUCCESS` (кожна дія: два запуски показують чеклист, третій виконує).
+   - Нова голова: `CHECK PASS` → `INSTALL`.
+   - Уже стоїть попередня версія пакета: `CHECK` запропонує `RESTORE` → потім `CHECK` → `INSTALL`.
+5. Після `SUCCESS: INSTALL` повністю вимкніть запалювання (двері, замок, 3–5 хвилин) і ввімкніть. Виберіть «Українська» в Налаштування → MMI → Мова.
 
-1. Завантажте `mhi2-ukrainian-localization-k3346-v1.0.0-preview.10.zip` і `.sha256`
-   з [Releases](https://github.com/yety-ua/mhi2-ukrainian-localization/releases).
-   **GitHub Source code ZIP — це репозиторій, а не готовий корінь SD.**
-2. M.I.B. має вже бути встановлений у голові; його повний дистрибутив має лежати
-   в корені writable FAT32 SD-карти. Цей пакет не містить і не перевстановлює M.I.B.
-   За документацією M.I.B., погана SD-карта — найчастіша причина збоїв: використовуйте
-   повнорозмірну карту від 4 ГБ, відформатовану FAT32 заново, з вимкненим захистом від запису.
-3. Розпакуйте реліз на комп'ютері. Скопіюйте **`uk-localization/` у корінь SD**, а
-   **`mod/custom.sh` і `mod/command.sh` у наявну папку `mod/`**. На macOS не перетягуйте саму папку `mod` (Finder замінює, а не зливає): копіюйте тільки ці два файли. Не додавайте зовнішню папку з назвою архіву.
-4. Якщо на SD уже є власний `mod/custom.sh` чи `mod/command.sh`, спочатку збережіть їх копії під іншою
-   назвою. Новий entry point не запускає старі команди. Інші файли M.I.B. збережіть.
-5. **Якщо ви вже ставили якусь із попередніх тестових версій.** Інсталятор вимагає штатний (stock) стан мовних файлів у голові: спершу виконайте її RESTORE, потім CHECK/INSTALL з цього релізу. Копіюйте теку `uk-localization/` і лише файли `mod/custom.sh`, `mod/command.sh` (не всю теку `mod/`).
-
-```text
-SD1/
-├── apps/                         повний наявний M.I.B.
-├── config/                       наявний M.I.B.
-├── esd/                          наявний M.I.B.
-├── Launcher/                     наявний M.I.B.
-├── mod/
-│   ├── custom.sh                 entry point із цього релізу
-│   └── command.sh                для M.I.B. V3.6+ («Run individual script»)
-├── ...                           решта файлів M.I.B. збережена
-└── uk-localization/
-    ├── ACTION.txt                CHECK за замовчуванням
-    ├── HMI.sha1
-    ├── SHA1SUMS
-    ├── package.json
-    ├── scripts/
-    ├── payload/
-    ├── stock/
-    ├── target/
-    ├── logs/                     створюється під час запуску
-    └── backups/                  створюється під час встановлення
-```
-
-### Перевірка і встановлення
-
-1. Вставте підготовлену SD-карту в **перший слот голови — SD1**.
-   Для першого запуску нічого редагувати не потрібно: у пакеті вже вибрано режим
-   **перевірки**, який не встановлює локалізацію й не змінює мовні налаштування.
-   Цей режим задано словом `CHECK` у файлі `uk-localization/ACTION.txt` на карті.
-2. Відкрийте GEM → `m.i.b.` → `Advanced Settings` → **`Run individual script`** (у M.I.B. V3.6+;
-   у старіших версіях — `Run Custom Script` / `Run /mod/custom.sh from m.i.b. SD`). Потрібні **`CHECK PASS` і код 0**.
-   CHECK записує лише SD-лог і тимчасові файли; не змінює мовні ресурси чи параметризацію.
-   **Увага:** три запуски цього пункту поспіль = встановлення (див. крок 4). Лише перевіряєте — не запускайте його втретє.
-3. Перед першою автомобільною інсталяцією перевірте recovery telnet на порту 23 (потрібні USB-Ethernet адаптер і пароль зі списку M.I.B., див. [посібник](docs/INSTALL_GUIDE.md#етап-5-страховка-перед-встановленням)),
-   зробіть і перевірте повний резервний знімок M.I.B., підключіть стабільне зовнішнє
-   живлення. Ноутбук не потрібний для перенесення пакета, але потрібен для незалежної
-   recovery-перевірки першого випробування. Потрібно щонайменше 40000 KiB у `/mnt/app`.
-4. **Файли редагувати не потрібно.** Запустіть той самий пункт GEM ще **двічі**: після
-   `CHECK PASS` екран підкаже наступний крок. Другий запуск лише показує чеклист
-   (перевірте живлення, recovery-доступ і бекап), **третій** встановлює. Незавершений крок
-   «забувається» при перезапуску MMI. Не виймайте SD, не натискайте Back, не запускайте інші операції M.I.B.
-   *Запасний шлях:* записати `INSTALL` у `ACTION.txt` на комп'ютері (**LF**, не CRLF; Блокнот
-   Windows не підходить, команда — у [посібнику](docs/INSTALL_GUIDE.md#етап-6-встановлення--install)) — тоді дія виконується за один запуск.
-5. Інсталятор збереже оригінали в голові та на SD,
-   встановить ресурси, запише `2D00` останнім і перевірить результат. `0x280` під час
-   встановлення не змінюється. Невідомі попередні модифікації спричиняють зупинку.
-6. Лише після **`SUCCESS: INSTALL` і коду 0** перезавантажте MMI вручну. Виберіть
-   «Українська» в налаштуваннях мови. Перевірте меню, введення, діагностику та холодний
-   запуск без SD. Очікується робота без карти після інсталяції; на авто це ще не доведено.
-
-**Автоматичного перезавантаження немає.** За будь-якої помилки дивіться
-`uk-localization/logs/run-*.log`. Якщо залишився `PENDING`, ресурси могли бути частково
-змінені: не перезавантажуйте голову до відновлення. Запис упорядкований і журналюється,
-але не є атомарною транзакцією при втраті живлення.
-Зовнішнє повідомлення M.I.B. «execution finished» (у V3.7.1 — «it is all done!») не означає успішної інсталяції;
-орієнтуйтеся на SUCCESS/ERROR та код саме цього пакета.
-Якщо потрібна допомога, надішліть фото екрана, `uk-localization/logs/run-*.log` і
-`uk-localization/logs/launcher-errors.txt` (помилки самої оболонки блока).
-
-### Дії ACTION.txt (запасний шлях)
-
-Зазвичай `ACTION.txt` редагувати не треба: `CHECK`, `INSTALL` і `RESTORE` вибираються повторним
-запуском пункту GEM. Файл потрібен для `VOICE_*` і як запасний шлях: слово, відмінне від
-`CHECK`, виконується одразу, за один запуск.
-
-| Значення | Дія |
-| --- | --- |
-| `CHECK` | Перевірка без зміни ресурсів/параметризації |
-| `INSTALL` | Встановлення українського інтерфейсу й клавіатури |
-| `VOICE_INSTALL` | Окреме встановлення англійського голосового fallback після перевірки UI |
-| `VOICE_RESTORE` | Прибрати лише керований голосовий hook |
-| `RESTORE` | Відновити оригінальні ресурси та датасети |
-
-Для VOICE_INSTALL потрібні англійські ресурси в голові. Після успіху — окремий ручний
-reboot і перемикання з української на іншу мову й назад. Це не український голос.
+**Вперше з M.I.B.?** Є окрема [покрокова інструкція](docs/INSTALL_GUIDE.md#українська): словник, страховка (telnet, резервні копії), що робити, якщо щось пішло не так.
+Перевірено: встановлення, `RESTORE` і повторне встановлення з SD-карти на одному авто (A4 B9, K3346 / MU1438, 2026-10-31). Інші авто й версії не перевірялися.
 
 ### Відновлення
 
-Коли пакет встановлено (або встановлення перервалося, або файли розійшлися з пакетом),
-запустіть той самий пункт GEM **тричі**: перший покаже стан і запропонує відновлення,
-другий — чеклист, третій виконає `RESTORE`. Або запишіть `RESTORE` у ACTION.txt і запустіть
-пункт один раз. Пакет відновлює
-оригінальні ZIP/config/LUT, `2D00/0x280`, прибирає лише свої початково відсутні
-hooks/прапорець і перевіряє запис. Бекапи та логи зберігаються; після відновлення
-можна повторити інсталяцію з тією самою базою.
-
-Якщо HMI/GEM не запускається, через заздалегідь перевірений telnet до **MMX** запустіть
-внутрішню копію (скрипти й потрібні інструменти M.I.B. скопійовані в голову):
-
-```sh
-/bin/sh /mnt/app/root/uk-localization/recovery/scripts/localization.sh RESTORE
-```
-
-Дочекайтеся SUCCESS: RESTORE і коду 0 перед перезавантаженням. Пошкоджене поточне
-значення persistence не блокує повернення повної перевіреної бази. Якщо COMPLETE
-відсутній або пошкоджений — зупиніться, не використовуйте force і не видаляйте стан.
-Після аварії shell може лишитися `/tmp/uk-localization.lock`; не видаляйте його,
-доки не підтверджено відсутність активної операції. Відкат мовних ресурсів не замінює
-recovery голови, яка взагалі не може завантажити QNX.
+Якщо щось пішло не так, або треба повернути оригінал: запустіть той самий пункт GEM (`Run individual script`); `CHECK` запропонує `RESTORE`, його виконує третій запуск поспіль. Запис, що перервався, інсталятор відкочує сам (`ROLLED BACK`). Детальні кроки, запасний шлях через telnet і довідка по `ACTION.txt` — у [докладному посібнику](docs/INSTALL_GUIDE.md#довідка-українська).
 
 ### Глибина, походження та обмеження
 
@@ -219,7 +120,7 @@ recovery голови, яка взагалі не може завантажит�
 | Автомобілі / гілка VC | Версія VC | Попередній результат |
 | --- | --- | --- |
 | A4/A5/Q5, AU491 | **0313** | **Українську не підхопить:** штатна версія відхиляє код мови 43 |
-| A4/A5/Q5, AU491 | **0379** | **Мовна підтримка є:** код 43 і власні українські ресурси підтверджені; показ на авто перевіряється окремо |
+| A4/A5/Q5, AU491 | **0379** | **Працює на авто:** код 43 і власні українські ресурси підтверджені; на A4 B9 (блок 8W5 920 790 D, H15, ПЗ 0379, оновлено з 0313) українська показується в кокпіті, 2026-10-31 |
 | Q7, AU736 | **0310** | **Українську не підхопить:** перевірений бінарник відхиляє код мови 43 |
 | Q7, AU736 | **0378** | **Мовна підтримка є:** код 43 і власні українські ресурси підтверджені бінарно |
 | Q7, AU736 | **0416** | **Мовна підтримка є:** код 43 і власні українські ресурси підтверджені бінарно |
@@ -241,11 +142,10 @@ installed from a single FAT32 SD1 card through M.I.B. It includes Ukrainian UI
 tables, language selection, the Ukrainian alphabet band and reversible resource
 installation with language parameterization. No full firmware/IFS update is performed.
 
-**Status: preview for vehicle validation.** Host simulations and structural checks
-pass, and Ukrainian screens run in the K3346 emulator. The SD installer has not
-been executed on the physical QNX head unit; vehicle installation, restoration,
-cold-boot persistence and full UI/speech behavior are not yet verified. This is
-not a claim of complete translation of every reachable screen.
+**Status: verified on one car** (A4 B9, K3346 / MU1438): install, `RESTORE` and
+re-install from the SD card passed, and Ukrainian works in the MMI menus. Other
+cars and firmware versions are untested. This is not a claim of complete
+translation of every reachable screen.
 
 ### Free distribution and installation
 
@@ -275,6 +175,7 @@ resources retain their own licenses and terms, which this repository does not ch
 
 Only `MHI2_ER_AUG22_K3346`, MU1438, G22/MLB Evo,
 `HMI_AU_MIB2_H_EU_G22_C6_190300` / EvoHigh are supported.
+Details, evidence and the check list: [which cars the package fits](docs/COMPATIBILITY.md).
 A3 AU37x/P5089, MHI2Q, MIB3 and different firmware/MU versions are rejected.
 A3 supplied additional dictionary translations matched by the **A4 source text**;
 its table IDs, layout, classes and vehicle coding were not transplanted.
@@ -293,90 +194,22 @@ They are UI evidence, not vehicle acceptance. They precede the nine Connectivity
 publication text fixes; none of the shown modules changed. Some emulated widget
 rendering is incomplete. [Capture provenance](docs/screenshots.json).
 
-### Prepare the SD card
+### Quick install
 
-> **New to M.I.B.?** Read the [step-by-step guide](docs/INSTALL_GUIDE.md#english): glossary, checksum verification, telnet fallback, troubleshooting table.
+1. Download the `.zip` and `.sha256` from [Releases](https://github.com/yety-ua/mhi2-ukrainian-localization/releases) and check the SHA-256.
+2. M.I.B. must already be installed (its full folder on SD1). Unpack the archive and copy the **contents** of its `mod/` folder into the existing `mod/` on the card (do not replace `mod` itself).
+3. Insert the card in SD1 → GEM → `m.i.b.` → `Advanced Settings` → **`Run individual script`**.
+4. **Read the end of the output:** it shows the status and what to do next. Run the same item again until you see `SUCCESS` (for each action, two runs show a checklist and the third executes).
+   - Fresh unit: `CHECK PASS` → `INSTALL`.
+   - An earlier version of this package is installed: `CHECK` offers `RESTORE` → then `CHECK` → `INSTALL`.
+5. After `SUCCESS: INSTALL` switch the ignition fully off (doors, lock, 3-5 minutes) and on. Choose "Українська" in Settings > MMI > Language.
 
-1. Download the release ZIP and its `.sha256` from
-   [Releases](https://github.com/yety-ua/mhi2-ukrainian-localization/releases).
-   GitHub's Source code ZIP is the repository, not a ready SD-root overlay.
-2. Use a writable FAT32 card (full-size, not microSD, 4 GB or more, freshly formatted, write-protect off;
-   per the M.I.B. docs a bad card is the most common cause of failures) in **SD1**, with the full existing M.I.B. distribution
-   at its root. M.I.B. must already be installed on the unit; this overlay does not
-   include or reinstall M.I.B.
-3. Extract the release on the computer. Copy **`uk-localization/` to the SD root**
-   and **`mod/custom.sh` and `mod/command.sh` into the existing `mod/` directory**. On macOS do not drag the `mod` folder itself (Finder replaces instead of merging): copy just those two files. Do not add an enclosing
-   release-name directory. Preserve the remaining M.I.B. files.
-4. If a custom `mod/custom.sh` or `mod/command.sh` exists, save copies under other names before replacement.
-   The new entry point does not chain existing commands. The SD tree is shown above.
-5. **If you already installed an earlier test version.** The installer requires the stock language files on the head unit: run its RESTORE first, then CHECK/INSTALL from this release. Copy the `uk-localization/` folder and only the files `mod/custom.sh`, `mod/command.sh` (not the whole `mod/` folder).
+**First time with M.I.B.?** There is a separate [step-by-step guide](docs/INSTALL_GUIDE.md#english): glossary, safety net (telnet, backups), and what to do when something goes wrong.
+Verified: install, `RESTORE` and re-install from the SD card on one car (A4 B9, K3346 / MU1438, 2026-10-31). Other cars and versions are untested.
 
-### Check and install
+### Restore
 
-1. Insert the prepared SD card into **the head unit's first SD slot — SD1**.
-   No file editing is needed for the first run: the package already selects
-   **check mode**, which does not install the localization or change language settings.
-   This mode is selected by the word `CHECK` in `uk-localization/ACTION.txt` on the card.
-2. Open GEM → `m.i.b.` → `Advanced Settings` → **`Run individual script`** (M.I.B. V3.6+;
-   older versions: `Run Custom Script` / `Run /mod/custom.sh from m.i.b. SD`). Require **CHECK PASS and exit code 0**.
-   CHECK writes only the SD log and temporary files; no app remount/resource/persistence write.
-   **Note:** three runs of this item in a row = installation (see step 4). To only verify, do not run it a third time.
-3. Before the first vehicle trial, confirm recovery telnet on port 23 (needs a USB-Ethernet adapter and the password from the M.I.B. list, see the [guide](docs/INSTALL_GUIDE.md#stage-5-safety-net-before-installing)), make/verify
-   the complete M.I.B. backup and connect stable external power. Installation transport
-   uses only SD, but the first trial still needs independent laptop recovery verification.
-   At least 40000 KiB free in `/mnt/app` is required.
-4. **No file editing is needed.** Run the same GEM item **two more times**: after
-   `CHECK PASS` the screen tells you the next step. The second run only shows a checklist
-   (power, recovery access, backup); the **third** installs. A pending step is forgotten
-   when the MMI restarts. Do not remove SD, press Back or run other M.I.B. backup/reboot/flash operations concurrently.
-   *Fallback:* set ACTION.txt to `INSTALL` on a computer (**LF**, not CRLF; Windows Notepad will
-   fail; see the [guide](docs/INSTALL_GUIDE.md#stage-6-install--install)) — the action then runs in a single launch.
-5. Baselines are stored on SD and the unit;
-   resources are installed before 2D00 and verified by read-back. 0x280 is unchanged
-   during installation. Unknown existing modifications cause an abort.
-6. Only after **SUCCESS: INSTALL and exit code 0**, reboot manually and select Ukrainian
-   under Settings > Language. Check menus/input/diagnostics and a cold boot without SD.
-   Operation without SD is intended after installation but remains a vehicle test.
-
-There is **no automatic reboot**. For errors, inspect `uk-localization/logs/run-*.log`.
-PENDING indicates an interrupted operation: do not reboot until restoration has been
-checked. Writes are ordered/journalled, not a power-loss-atomic transaction. The outer
-M.I.B. “execution finished” (V3.7.1: “it is all done!”) message is unconditional; use this package's SUCCESS/ERROR
-and exit code. Actions are CHECK, INSTALL, VOICE_INSTALL, VOICE_RESTORE and RESTORE.
-For help, send a photo of the screen, `uk-localization/logs/run-*.log` and
-`uk-localization/logs/launcher-errors.txt` (errors from the unit's own shell).
-
-### English voice fallback
-
-Usually ACTION.txt needs no editing: CHECK, INSTALL and RESTORE are chosen by running the GEM
-item repeatedly; the file is for `VOICE_*` and as a fallback (a word other than CHECK runs at once).
-
-After validating UI, set ACTION.txt to `VOICE_INSTALL` and run the same GEM item.
-After success, reboot manually and switch away from Ukrainian and back. English
-speech resources must exist on the unit. Verify actual microphone/audio behavior;
-this is not Ukrainian speech support. `VOICE_RESTORE` removes only this managed hook.
-
-### Restore and recover
-
-When the package is installed (or an install was interrupted, or files drifted from the
-package), run the same GEM item **three times**: the first shows the state and offers
-restoration, the second shows a checklist, the third performs `RESTORE`. Or set ACTION.txt to
-`RESTORE` and run the item once. It restores baseline
-ZIP/config/LUT and 2D00/0x280, removes only its originally absent hooks/flag, checks
-read-back and keeps backups/logs. Reinstallation retains the original baseline.
-
-If HMI/GEM cannot start, use the previously verified telnet connection to **MMX**:
-
-```sh
-/bin/sh /mnt/app/root/uk-localization/recovery/scripts/localization.sh RESTORE
-```
-
-The internal package includes required M.I.B. tools, so this recovery route does not
-require the SD card. Require SUCCESS: RESTORE and exit code 0 before rebooting.
-An unreadable current persistence value does not prevent restoring a trusted complete
-baseline. Missing/damaged COMPLETE requires investigation; do not force or remove state.
-A crashed shell can leave `/tmp/uk-localization.lock`; inspect active operations before
-removing it. Resource rollback is not boot recovery for a unit unable to run QNX.
+If something goes wrong, or you want the original back: run the same GEM item (`Run individual script`); `CHECK` offers `RESTORE`, executed by the third consecutive run. An interrupted write is rolled back automatically (`ROLLED BACK`). Detailed steps, the telnet fallback and the `ACTION.txt` reference are in the [detailed guide](docs/INSTALL_GUIDE.md#reference-english).
 
 ### Localization depth and limits
 
@@ -395,7 +228,7 @@ own language resources; this SD overlay never installs or flashes VC firmware.
 | Models / VC family | VC software | Preliminary result |
 | --- | --- | --- |
 | A4/A5/Q5, AU491 | **0313** | **No native Ukrainian from this package:** stock VC rejects language code 43 |
-| A4/A5/Q5, AU491 | **0379** | **Language support confirmed in protocol/resources:** physical rendering and update eligibility are separate |
+| A4/A5/Q5, AU491 | **0379** | **Works on a car:** protocol/resources confirmed; on an A4 B9 (cluster 8W5 920 790 D, H15, SW 0379, updated from 0313) Ukrainian is shown in the cluster, 2026-10-31 |
 | Q7, AU736 | **0310** | **No native Ukrainian from this package:** inspected binary rejects language code 43 |
 | Q7, AU736 | **0378** | **Language support confirmed in protocol/resources** by native binary inspection |
 | Q7, AU736 | **0416** | **Language support confirmed in protocol/resources** by native binary inspection |
@@ -422,7 +255,7 @@ ASCII or UTF-8 without BOM, and LF line endings. No format conversion is needed 
 python3 -m unittest discover -s tests -v
 UK_TEST_SHELL=oksh python3 -m unittest discover -s tests   # also mksh: the unit's /bin/sh is a pdksh
 python3 tools/audit_resources.py --output docs/resource-audit.json
-sh -n sd-card/mod/custom.sh sd-card/mod/command.sh sd-card/uk-localization/scripts/localization.sh
+sh -n sd-card/mod/custom.sh sd-card/mod/command.sh sd-card/mod/uk-localization/scripts/localization.sh
 python3 tools/package_release.py
 ```
 

@@ -2,7 +2,7 @@
 """Validate the reviewed SD overlay and create a fresh release ZIP.
 
 Usage: python3 tools/package_release.py
-Output: dist/mhi2-ukrainian-localization-k3346-v1.0.0-preview.10.zip
+Output: dist/mhi2-ukrainian-localization-k3346-v1.0.0.zip
 """
 import argparse
 import hashlib
@@ -12,14 +12,14 @@ import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
 CARD = ROOT / 'sd-card'
-PACKAGE = CARD / 'uk-localization'
+PACKAGE = CARD / 'mod' / 'uk-localization'
 
 
 def validated_sources():
     metadata = json.loads((PACKAGE / 'package.json').read_text())
     result = {}
     lines = (PACKAGE / 'SHA1SUMS').read_text().splitlines()
-    if len(lines) != 14:
+    if len(lines) != 15:
         raise ValueError('Incomplete manifest')
     seen = set()
     for line in lines:
@@ -76,5 +76,5 @@ def build(output):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--output', type=Path, default=ROOT / 'dist/mhi2-ukrainian-localization-k3346-v1.0.0-preview.10.zip')
+    parser.add_argument('--output', type=Path, default=ROOT / 'dist/mhi2-ukrainian-localization-k3346-v1.0.0.zip')
     build(parser.parse_args().output.resolve())

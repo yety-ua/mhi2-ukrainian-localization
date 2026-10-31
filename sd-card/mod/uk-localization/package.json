@@ -4,24 +4,25 @@
   "mu": "1438",
   "hmi": "HMI_AU_MIB2_H_EU_G22_C6_190300",
   "mib_reference_commit": "0e041895a1ce36da4cb0835437d48aa5dbbf262a",
-  "status": "offline-tested; vehicle installation and QNX execution not verified",
+  "status": "installed, restored and re-installed over SD on one Audi A4 B9 K3346/MU1438 unit (2026-10-31)",
   "default_action": "CHECK",
   "automatic_reboot": false,
   "voice": "separate VOICE_INSTALL; English fallback only",
   "sha256": {
     "HMI.sha1": "edce387ad99d8544217a1953fab543c9ed6b60770e51d417024e7f6b41e31e60",
     "payload/1100076.png": "8010f37d33765f762386b0d51b8c9b61e74545e602fdf8b703d1ceb5c1536ce9",
-    "payload/lang_data.zip": "995440ea06cec135a37f53a4ac8fdff279b6e6d0d289e4d056738612fd4710b3",
-    "payload/lang_hmi_builtin.config": "8253d68a310967591392d3622d2db417065545aa2e970b775c4b8b3360bfedb4",
-    "payload/lang_uk_hook.jar": "35baff7f32c2e2378faa8e7fc0b769e673f6eb5aa6d25b3a9bdc4b01490a8a19",
+    "payload/lang_data.zip": "965f285b7c626632ee47f331fda7ab5665b6d11792dd86d31ad4e242b1fc9988",
+    "payload/lang_hmi_builtin.config": "c27671404b77ee14f30be87b3144ec3dda8e57c6a2431693266e48d534bd4a1e",
+    "payload/lang_uk_hook.jar": "2f785f456a087b939caf1b384c3c6adbe5d8bcddade944c4ec38a84d526baa3f",
     "payload/lang_uk_voice.jar": "3783f6cc588360fd4408a46fd761750da87b1d91c4fe8a8b4090bf7a9f94d230",
-    "scripts/blob.awk": "c37405d8304e0881e041616f28cb7759b47677c47b06a952d815d1a807c08c75",
-    "scripts/localization.sh": "450ca10eff2cd4b06cddbda97791de03d43c44a0a8a4138017e583f87ddb0397",
+    "scripts/blob.awk": "c3ee02dc936d94eda307e7a4bec2a6c5d161a9eda35bcc0603748669edfc45b4",
+    "scripts/localization.sh": "2d064dcddf646d2d4da24e8338634dbbb1c4250857ca8fc0d1a2fed4ac023ffe",
+    "stock/1100066.png": "6d3132cb1545f257869239aee94f269ee26aa87be3304fbb5625c1c7a4f08f93",
     "stock/lang_data.zip": "82558f1e6808f9f27a6c1f0102f8421c9aac86c9498a928b7d76428de54991cf",
     "stock/lang_hmi_builtin.config": "6b2364211842688b534efc134ce52179e39deb556e123507e62ef770d0f05568",
     "stock/language_lut_hmi.txt": "42ea7dd4ac804fdc69d1804b7fa5ebbe9267cd8aa2de4a25154738c658ac97d4",
     "target/280.original.hex": "8bc48b6b3b6e7584ba8b611b8ecc750abaa5d534dc97b37bc70080f4178ca551",
     "target/2d00.original.hex": "699d24f4db953dff836bd16b61f97f6de208d89e28996f681361b06bcf8ee173",
-    "target/2d00.uk.hex": "58e9c3aeabc5590993faf813d61550ec6d90213c4c0052168c9364bb55c89274"
+    "target/2d00.uk.hex": "42eb7293f9163845cc257219441020ec144aa68ffd214c5055db143b8a7c0690"
   }
 }

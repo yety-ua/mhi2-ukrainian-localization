@@ -1,6 +1,6 @@
 # Parse dumb_persistence_reader output; accept one unambiguous CRC-valid blob.
 # No bitwise awk extensions required. Usage: awk -v bytes=389 -f blob.awk file
-function xor(a,b, r,p,x,y) {
+function crc_xor(a,b, r,p,x,y) {
     r=0; p=1
     while (a || b) {
         x=a%2; y=b%2; if (x!=y) r+=p
@@ -21,9 +21,9 @@ function valid(s, crc,i,j,b) {
     if(length(s)!=bytes*2 || s ~ /[^0-9A-F]/) return 0
     crc=65535
     for(i=1;i<=length(s)-4;i+=2) {
-        b=hex(substr(s,i,2)); crc=xor(crc,b*256)
+        b=hex(substr(s,i,2)); crc=crc_xor(crc,b*256)
         for(j=0;j<8;j++) {
-            if(crc>=32768) crc=xor((crc*2)%65536,4129)
+            if(crc>=32768) crc=crc_xor((crc*2)%65536,4129)
             else crc=(crc*2)%65536
         }
     }

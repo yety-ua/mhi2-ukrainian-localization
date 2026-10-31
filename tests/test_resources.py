@@ -18,7 +18,7 @@ class ResourceTests(unittest.TestCase):
 
     def test_connectivity_statuses_are_ukrainian(self):
         import zipfile
-        with zipfile.ZipFile(ROOT / 'sd-card/uk-localization/payload/lang_data.zip') as archive:
+        with zipfile.ZipFile(ROOT / 'sd-card/mod/uk-localization/payload/lang_data.zip') as archive:
             strings, _ = resource_audit.unpack(archive.read('resources/HMIConnectivityEvoHigh/strings_uk_UA.data'))
         self.assertEqual(strings[586:593], ['Видимий', 'Невидимий', 'Вимкнено', 'Точка доступу', 'Режим модема', 'Без мережі', 'У мережі'])
         self.assertEqual(strings[888], 'Wi-Fi')

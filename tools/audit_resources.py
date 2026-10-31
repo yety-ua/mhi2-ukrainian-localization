@@ -13,7 +13,7 @@ import struct
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
-PACKAGE = ROOT / 'sd-card/uk-localization'
+PACKAGE = ROOT / 'sd-card/mod/uk-localization'
 
 
 def unpack(data):
@@ -62,8 +62,11 @@ def audit():
                 continue
             a, af = unpack(stock.read(name))
             b, bf = unpack(released.read(name))
-            if (not name.startswith('resources/HMISettingsEvoHigh/strings_') or len(b) != len(a) + 1
-                    or b[:-1] != a or (bf[:-1] if bf else None) != af or b[-1] != 'Українська'):
+            # Appended language-name slots: Українська (1490), then British and American English (1491, 1492).
+            loc = name.rsplit('strings_', 1)[1][:-5]
+            names = ('Британська англійська', 'Американська англійська') if loc == 'uk_UA' else ('English (UK)', 'English (US)')
+            if (not name.startswith('resources/HMISettingsEvoHigh/strings_') or len(b) != len(a) + 3
+                    or b[:-3] != a or (bf[:-3] if bf else None) != af or tuple(b[-3:]) != ('Українська',) + names):
                 raise ValueError('Unexpected stock change: ' + name)
             changed_stock.append(name)
         tables = 0
@@ -80,8 +83,8 @@ def audit():
             en, flags = unpack(stock.read(f'resources/{module}/strings_en_GB.data'))
             uk, uf = unpack(released.read(f'resources/{module}/strings_uk_UA.data'))
             if module == 'HMISettingsEvoHigh':
-                uk = uk[:-1]
-                uf = uf[:-1] if uf else None
+                uk = uk[:-3]
+                uf = uf[:-3] if uf else None
             if len(uk) != len(en) or uf != flags or list(map(bool, uk)) != list(map(bool, en)):
                 raise ValueError('Target slot/flag/empty shape differs: ' + module)
             counts = {'module': module, 'nonempty_slots': 0, 'non_cyrillic_candidates': 0,
@@ -106,11 +109,11 @@ def audit():
         return {'sha256': hashlib.sha256(path.read_bytes()).hexdigest(), 'entries': len(released.namelist()),
                 'modules': len(modules), 'tables': tables,
                 'nonempty_stock_counterpart_slots': sum(d['nonempty_slots'] for d in details),
-                'appended_language_name_slots': 1,
+                'appended_language_name_slots': 3,
                 'non_cyrillic_candidates': sum(d['non_cyrillic_candidates'] for d in details),
                 'same_as_english_candidates': sum(d['same_as_english_candidates'] for d in details),
                 'differing_candidates': sum(d['differing_candidates'] for d in details),
-                'stock_locale_changes': 'Only appended Ukrainian language name in HMISettingsEvoHigh',
+                'stock_locale_changes': 'Only appended Ukrainian, British English and American English language names in HMISettingsEvoHigh',
                 'target_structure': 'All 22 Ukrainian modules preserve A4 K3346 slot, flag, empty and placeholder structure',
                 'model_token_audit': terminology, 'errors': [], 'modules_detail': details,
                 'note': 'Candidate counts include brands, numbers, diagnostics, proper names and intentional English speech commands. Not a translation-completeness percentage.'}
