@@ -258,7 +258,7 @@ Patch / Restore / SW Update. Потім скопіюйте створену те
 <summary>Запасний шлях: вибрати дію через файл ACTION.txt (потрібен комп'ютер)</summary>
 
 Слово в `ACTION.txt`, відмінне від `CHECK`, виконується **одразу, за один запуск**. Знадобиться,
-наприклад, для `VOICE_INSTALL`.
+наприклад, для `INSTALL` без голосу.
 
 1. Вийміть карту з блока й на комп'ютері замініть вміст `mod/uk-localization/ACTION.txt` на одне слово
    (`INSTALL`, `RESTORE`…).
@@ -359,15 +359,16 @@ Patch / Restore / SW Update. Потім скопіюйте створену те
 
 </details>
 
-### Необов'язкове: англійський голос
+### Англійський голос входить до встановлення
 
 <details>
-<summary>Англійський голос (необов'язково, для першого встановлення пропустіть)</summary>
+<summary>Англійський голос (ставиться разом з інтерфейсом автоматично)</summary>
 
-`VOICE_INSTALL` — окремий компонент, **не українські голос і розпізнавання**: голосовий помічник (PTT)
-і підказки навігації звучать англійською (жіночий голос) при українському інтерфейсі. Перевірено на
-одному авто (2026-11-06). Для першого встановлення його **пропустіть**: спершу переконайтеся, що
-український інтерфейс працює.
+Пункт GEM «встановити» (третій запуск) ставить український інтерфейс **разом з англійським голосом**:
+**не українські голос і розпізнавання**, а голосовий помічник (PTT) і підказки навігації англійською
+(жіночий голос) при українському інтерфейсі. Перевірено на одному авто (2026-11-06). Окремо нічого
+вибирати не треба; при помилці відкочується все. Якщо пакет v1.0.0 уже стоїть: зробіть `RESTORE`
+і встановіть заново.
 
 </details>
 
@@ -462,19 +463,19 @@ SD1/
 #### Дії ACTION.txt (запасний шлях)
 
 Зазвичай `ACTION.txt` редагувати не треба: `CHECK`, `INSTALL` і `RESTORE` вибираються повторним
-запуском пункту GEM. Файл потрібен для `VOICE_*` і як запасний шлях: слово, відмінне від
+запуском пункту GEM (`INSTALL` у GEM включає голос). Файл потрібен для `INSTALL` без голосу, `VOICE_*` і як запасний шлях: слово, відмінне від
 `CHECK`, виконується одразу, за один запуск.
 
 | Значення | Дія |
 | --- | --- |
 | `CHECK` | Перевірка без зміни ресурсів/параметризації |
-| `INSTALL` | Встановлення українського інтерфейсу й клавіатури |
-| `INSTALL_WITH_VOICE` | Те саме, що `INSTALL`, плюс англійський голос (помічник і підказки навігації) за один запуск; при помилці відкочується все |
-| `VOICE_INSTALL` | Окреме встановлення англійського голосу після перевірки UI |
+| `INSTALL` | Лише український інтерфейс і клавіатура, без голосу (через ACTION.txt). Пункт GEM «встановити» ставить інтерфейс з голосом |
+| `INSTALL_WITH_VOICE` | Інтерфейс і англійський голос (помічник і підказки навігації) за один запуск; при помилці відкочується все. Те саме робить пункт GEM «встановити» |
+| `VOICE_INSTALL` | Додати лише англійський голос до вже встановленого інтерфейсу (для просунутих) |
 | `VOICE_RESTORE` | Прибрати лише керований голосовий hook |
 | `RESTORE` | Відновити оригінальні ресурси та датасети |
 
-Для VOICE_INSTALL потрібні англійські ресурси в голові. Після успіху — окремий ручний
+Для голосу потрібні англійські ресурси в голові. Після успіху — окремий ручний
 reboot. Перемикати мову не обов'язково. Це не український голос.
 
 #### Відновлення
@@ -698,7 +699,7 @@ If the MMI was restarted between runs, or an error occurred, counting starts ove
 <summary>Fallback: choose the action through ACTION.txt (needs a computer)</summary>
 
 A word other than `CHECK` in `ACTION.txt` runs **at once, in a single launch** (needed e.g. for
-`VOICE_INSTALL`).
+`INSTALL` without the voice).
 
 1. Remove the card and on the computer set the single word in `mod/uk-localization/ACTION.txt`
    (`INSTALL`, `RESTORE`…).
@@ -784,14 +785,15 @@ Do **not** post VINs, passwords or personal data found in logs.
 
 </details>
 
-### Optional: English voice
+### The English voice is part of the install
 
 <details>
-<summary>English voice (optional, skip on the first install)</summary>
+<summary>English voice (installed together with the UI automatically)</summary>
 
-`VOICE_INSTALL` is a separate component, **not Ukrainian speech**: the voice assistant (PTT) and
-the navigation prompts speak English (female voice) while the UI is Ukrainian. Verified on one car
-(2026-11-06). Skip it on the first install and make sure the Ukrainian UI works first.
+The GEM install item (third run) installs the Ukrainian UI **together with the English voice**:
+**not Ukrainian speech**, but the voice assistant (PTT) and the navigation prompts in English (female
+voice) while the UI is Ukrainian. Verified on one car (2026-11-06). Nothing extra to choose; a failure
+rolls everything back. If v1.0.0 is already installed: run `RESTORE`, then install again.
 
 </details>
 
@@ -859,9 +861,9 @@ For help, send a photo of the screen, `mod/uk-localization/logs/run-*.log` and
 #### English voice fallback
 
 Usually ACTION.txt needs no editing: CHECK, INSTALL and RESTORE are chosen by running the GEM
-item repeatedly; the file is for `VOICE_*` and as a fallback (a word other than CHECK runs at once).
+item repeatedly, and the GEM INSTALL already includes the English voice (the same as `INSTALL_WITH_VOICE`; a failure rolls back everything). The file is for UI-only `INSTALL`, `VOICE_*` and as a fallback (a word other than CHECK runs at once).
 
-To install the UI and the English voice in one run, set ACTION.txt to `INSTALL_WITH_VOICE` and run the GEM item (it runs at once, like any word other than CHECK; a failure rolls back everything). Otherwise, after validating the UI, set ACTION.txt to `VOICE_INSTALL` and run the same GEM item.
+To install only the UI without the voice, set ACTION.txt to `INSTALL`; to add the voice to an installed UI later, set it to `VOICE_INSTALL`, then run the GEM item.
 After success, reboot manually (switching the language is not required). English
 speech resources must exist on the unit. Verify actual microphone/audio behavior;
 this is not Ukrainian speech support. `VOICE_RESTORE` removes only this managed hook.

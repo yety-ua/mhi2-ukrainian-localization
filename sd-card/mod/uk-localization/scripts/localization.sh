@@ -139,7 +139,13 @@ menu_step() {
         fi
     fi
     if [ "$MENU_STEP" = 2 ]; then
-        say "Step 3 of 3 confirmed: running $MENU_TARGET now."
+        # The GEM install always includes the English voice (assistant and navigation prompts).
+        if [ "$MENU_TARGET" = INSTALL ]; then
+            WITH_VOICE=1
+            say 'Step 3 of 3 confirmed: running INSTALL now (Ukrainian UI + English voice).'
+        else
+            say "Step 3 of 3 confirmed: running $MENU_TARGET now."
+        fi
         ACTION=$MENU_TARGET
         PROBLEM=
         return 0
@@ -150,7 +156,7 @@ menu_step() {
     say ''
     if [ "$MENU_STEP" = 0 ]; then
         if [ "$MENU_TARGET" = INSTALL ]; then
-            say 'Nothing was changed. To INSTALL, run this same GEM item again (step 1 of 3 done).'
+            say 'Nothing was changed. To INSTALL (Ukrainian UI + English voice), run this same GEM item again (step 1 of 3 done).'
             say 'The next run only shows a checklist; the run after it installs.'
             say 'To cancel, do nothing: the pending step is forgotten when the MMI restarts.'
         elif [ -n "$PROBLEM" ]; then

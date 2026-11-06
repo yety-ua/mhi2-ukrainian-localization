@@ -564,6 +564,23 @@ if [ -n "${TEST_BAD_READ:-}" ]; then echo invalid; else cat "$TEST_ROOT/persiste
         self.assertEqual((self.lsd / 'jars/lang_data.zip').read_bytes(), self.sources['stock/lang_data.zip'])
         self.assertIsNone(self.arm())
 
+    def test_menu_install_includes_the_english_voice_and_restore_removes_it(self):
+        voice = self.lsd / 'jars/lang_uk_voice.jar'
+        self.success(self.press())
+        self.assertIn('Ukrainian UI + English voice', self.result.stdout)
+        self.success(self.press())
+        self.success(self.press())
+        self.assertIn('SUCCESS: INSTALL', self.result.stdout)
+        self.assertIn('INSTALL_WITH_VOICE', self.result.stdout)
+        self.assertEqual(voice.read_bytes(), self.sources['payload/lang_uk_voice.jar'])
+        self.success(self.press())
+        self.assertEqual(self.arm(), 'RESTORE 1')
+        self.assertIn('English voice fallback is installed', self.result.stdout)
+        self.success(self.press())
+        self.success(self.press())
+        self.assertFalse(voice.exists())
+        self.assertFalse((self.lsd / 'jars/lang_uk_hook.jar').exists())
+
     def test_restart_forgets_pending_step(self):
         self.success(self.press())
         self.success(self.press())

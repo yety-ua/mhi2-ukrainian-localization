@@ -5,7 +5,7 @@ c568e6b15c914612154f14f7c972c878b241dde8  payload/lang_data.zip
 6aee2395954637745a79b65f6730a615494cb5e4  payload/lang_uk_hook.jar
 542faad0d9cf386b58a6832b430e408f76f21b5e  payload/lang_uk_voice.jar
 b48edced1caae18e15831478f6651d4f1c0f115a  scripts/blob.awk
-f883b025d152aca0ef691871bec338315aefd163  scripts/localization.sh
+aff0ff26a464ee7a60d1004a19a8242b42fe08b4  scripts/localization.sh
 347d38249074556fdd30e6b70b3592619921dba7  stock/lang_data.zip
 45e4c8c7c35c3a04dc4ce3f34bea35ba93a584e5  stock/lang_hmi_builtin.config
 d1d14651b4100cf405589e42bbdb99ab9493b9ac  stock/language_lut_hmi.txt

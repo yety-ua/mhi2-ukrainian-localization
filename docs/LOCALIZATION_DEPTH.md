@@ -20,7 +20,7 @@
 | Рукописне введення | Java-шлях приймає українські літери; у попередньому локальному тесті прийнято друковані ҐЄІЇ | Рушій лишається ru_RU; це не доказ розпізнавання штрихів/курсиву. Потрібні тести всіх літер і кандидатів; російські літери можуть лишатися в репертуарі |
 | Шрифти | Штатні шрифти підтримують Ґґ Єє Іі Її; для звичайного UI новий шрифт не потрібний | Апостроф U+02BC відсутній у попередньому аудиті; U+0027/U+2019 є. Контакти й введення перевіряються окремо |
 | Навігація | Українські таблиці HMINavi; запит NAVI/TTS мов маршрутизується окремо | Реальні карти, український пошук адрес, POI, маршрути, вимова |
-| Голос | Необов'язковий англійський fallback; окремий install/reboot цикл | Готовність NAVI/TTS/SDS, мікрофон, аудіо. Українського голосу/моделей немає |
+| Голос | Англійський голос (помічник і підказки навігації) встановлюється разом з інтерфейсом | Готовність NAVI/TTS/SDS, мікрофон, аудіо. Українського голосу/моделей немає |
 | Connectivity | 9 статусних/термінологічних правок, зокрема видимість Bluetooth | Показ усіх цих станів на авто; не всі доступні в емуляторі |
 | Редакційні правки 20.10.2026 | 95 слотів термінології («вказівка» → «повідомлення», «підказка», «сповіщення» тощо) 174 слоти перекладу в Navi, Media, Tuner, Online, Messaging, Phone, Settings 22 слоти формулювань меню («Ввести пункт призначення», «Дорожні повідомлення», «дозволити/уникати», «автоматично» тощо), 28 слотів «указати» → «вказати», 33 слоти «Ввести адресу» і 240 видимих німецьких/англійських назв у Navi, Media, Car, Online, Settings, Phone, Tuner 189 слотів, де скорочення розгорнуто в повні слова (разом 891 слот відносно попереднього релізу); німецькі голосові приклади замінено штатним англійським текстом; маніфести в [language-reviews-2026-10-20](language-reviews-2026-10-20/) | 69 термінологічних слотів, зокрема заголовок «Повідомлення» (12 символів) при ліміті слота 10–11, перевірено лише за кількістю символів; в емуляторі «Audi smartphone interface: Повідомле…» обрізається. Попап гучності показує «Гучність» (емулятор) |
 | Virtual Cockpit | HMI просить мову 43; AU491/0379 та AU736/0378/0416 мають мовну карту й українські ресурси | AU491/0313 та AU736/0310 відхиляють BAP43. Фізичний показ, H15/компас, Q7/TPMS та update eligibility перевіряються окремо |
@@ -82,7 +82,7 @@ The native repertoire can still include Russian-only handwriting candidates.
 Native display fonts cover Ukrainian letters and ordinary/typographic apostrophes;
 U+02BC was absent in the prior font audit. Imported contacts/input need independent
 testing. Ukrainian navigation UI does not prove address search against installed maps.
-Optional speech routing uses English resources and has no Ukrainian speech models.
+Speech routing (installed with the UI) uses English resources and has no Ukrainian speech models.
 
 The HMI requests cluster language 43. AU491/0313 rejects BAP43; AU491/0379 offline
 mapping/resources are separate from physical rendering and safe update eligibility.
