@@ -11,7 +11,7 @@
 ### Спершу чесно
 
 - Пакет перевірено на комп'ютері, в емуляторі та на одному авто
-  (A4 B9, K3346 / MU1438): встановлення, `RESTORE` і повторне встановлення з SD. На інших блоках
+  (A4 B9, K3346 / MU1438): встановлення, `RESTORE` і повторне встановлення з SD; англійський голос перевірено окремо на тому ж авто. На інших блоках
   не перевірено, тому ризик реальний: помилка під час запису може залишити магнітолу, яка не завантажується.
 - Пакет **не перепрошиває** магнітолу, лише замінює мовні файли й один параметр. Усе, що
   він змінює, спершу копіюється, а `RESTORE` повертає оригінал.
@@ -46,7 +46,7 @@
 | 3 | Готуєте SD-карту на комп'ютері | ні |
 | 4 | Запускаєте пункт GEM: `CHECK` (крок 1 із 3) | **ні** |
 | 5 | Страховка: запасний вхід, бекап, живлення | створює копії |
-| 6 | Запускаєте той самий пункт ще **двічі** (чеклист, потім `INSTALL`) | **так** |
+| 6 | Запускаєте той самий пункт ще **двічі** (чеклист, потім `INSTALL`: інтерфейс і англійський голос) | **так** |
 | 7 | Перезавантаження й перевірка | — |
 
 ### Що потрібно мати
@@ -150,7 +150,7 @@
 4. Напис M.I.B. «execution finished» (у V3.7.1 — «it is all done!») **нічого не означає** — він з'являється навіть при
    помилці. Дивіться тільки на `CHECK PASS` / `SUCCESS` / `ERROR` і код.
 
-5. Після `CHECK PASS` ви побачите підказку на кшталт `Nothing was changed. To INSTALL, run
+5. Після `CHECK PASS` ви побачите підказку на кшталт `Nothing was changed. To INSTALL (Ukrainian UI + English voice), run
    this same GEM item again (step 1 of 3 done)`. Це **не помилка**, а перший із трьох кроків:
    встановлення почнеться лише після ще двох запусків поспіль. Не хочете встановлювати —
    просто не запускайте пункт знову.
@@ -240,11 +240,11 @@ Patch / Restore / SW Update. Потім скопіюйте створену те
 2. Запустіть пункт **вдруге**. З'явиться `CONFIRM (step 2 of 3)` і три умови (живлення,
    перевірений запасний вхід, повний бекап). Нічого не змінюється. Якщо хоч одна умова не
    виконана — зупиніться й перезапустіть MMI: крок скасується.
-3. Запустіть пункт **втретє**: `Step 3 of 3 confirmed: running INSTALL now.` — почнеться
-   встановлення.
+3. Запустіть пункт **втретє**: `Step 3 of 3 confirmed: running INSTALL now (Ukrainian UI + English voice).` — почнеться
+   встановлення інтерфейсу разом з англійським голосом.
 4. **Поки йде робота:** не виймайте карту, не натискайте Back, не запускайте інші операції
    M.I.B. (бекап, перезавантаження, прошивку), не вимикайте запалювання.
-5. Скрипт збереже оригінали (в блоці й на карті), встановить файли, запише параметр `2D00`
+5. Скрипт збереже оригінали (в блоці й на карті), встановить файли (зокрема англійський голосовий hook), запише параметр `2D00`
    останнім і перевірить запис.
 6. Очікуваний результат: **`SUCCESS: INSTALL`** і код **`0`**. Тільки тоді переходьте до
    Етапу 7. Автоматичного перезавантаження **немає**.
@@ -300,6 +300,8 @@ Patch / Restore / SW Update. Потім скопіюйте створену те
 2. Налаштування → Мова → оберіть **«Українська»**.
 3. Перевірте: головне меню; введення тексту (смуга з 33 літерами — це ручка/тачпад, не QWERTY);
    телефон; налаштування; діагностика — чи немає помилок у блоці.
+   **Голос:** натисніть PTT на кермі: помічник слухає й відповідає **англійською**; підказки навігації теж англійською.
+   Українського голосу немає. Якщо помічник не відповідає, повідомте про це (з логом).
 4. **Холодний старт без карти:** вийміть SD, вимкніть авто на кілька хвилин, увімкніть.
    Українська має лишитися. На авто це ще **не доведено** — ваш результат цінний.
 
@@ -512,7 +514,7 @@ see and what to do when you see something else.
 ### Honest status first
 
 - The package has been tested on a computer, in an emulator and on one car
-  (A4 B9, K3346 / MU1438): install, `RESTORE` and re-install from the SD card. Other units are
+  (A4 B9, K3346 / MU1438): install, `RESTORE` and re-install from the SD card; the English voice was verified separately on the same car. Other units are
   untested, and a failed write can leave a head unit that does not boot.
 - It does **not** flash firmware: it replaces language files and one parameter. Everything
   it touches is copied first, and `RESTORE` puts the originals back.
@@ -546,7 +548,7 @@ see and what to do when you see something else.
 | 3 | Prepare the SD card | no |
 | 4 | Run the GEM item: `CHECK` (step 1 of 3) | **no** |
 | 5 | Safety net: fallback access, backup, power | creates copies |
-| 6 | Run the same item **two more times** (checklist, then `INSTALL`) | **yes** |
+| 6 | Run the same item **two more times** (checklist, then `INSTALL`: the UI and the English voice) | **yes** |
 | 7 | Reboot and verify | — |
 
 ### What you need
@@ -624,7 +626,7 @@ a cold start. REM uses the **lower** half of the right key instead; do not confu
    `mod/uk-localization/logs/run-….log` on the card.
 4. The M.I.B. message “execution finished” (V3.7.1: “it is all done!”) means nothing; rely on `CHECK PASS` /
    `SUCCESS` / `ERROR` and the code. See the [troubleshooting table](#if-something-goes-wrong).
-5. After `CHECK PASS` you will see a hint like `Nothing was changed. To INSTALL, run this same
+5. After `CHECK PASS` you will see a hint like `Nothing was changed. To INSTALL (Ukrainian UI + English voice), run this same
    GEM item again (step 1 of 3 done)`. This is **not an error**; it is the first of three steps:
    installation starts only after two more runs in a row. If you do not want to install,
    simply do not run the item again.
@@ -683,7 +685,7 @@ No laptop and no file editing: the action is chosen by **running the same GEM it
 2. Run the item a **second time**. It shows `CONFIRM (step 2 of 3)` and three conditions (power,
    verified fallback access, full backup). Nothing changes. If any condition is not met, stop and
    restart the MMI: the step is cancelled.
-3. Run it a **third time**: `Step 3 of 3 confirmed: running INSTALL now.` — installation starts.
+3. Run it a **third time**: `Step 3 of 3 confirmed: running INSTALL now (Ukrainian UI + English voice).` — installation of the UI together with the English voice starts.
 4. While it runs: do not remove the card, press Back, run other M.I.B. operations or switch
    ignition off.
 5. Expect **`SUCCESS: INSTALL`** and exit code **`0`**. There is **no automatic reboot**.
@@ -728,6 +730,8 @@ A word other than `CHECK` in `ACTION.txt` runs **at once, in a single launch** (
 2. Settings → Language → **“Українська”**.
 3. Check the main menu, text entry (the 33-letter band is for the knob/touchpad, not QWERTY),
    phone, settings and diagnostics.
+   **Voice:** press PTT on the steering wheel: the assistant listens and answers in **English**; the navigation
+   prompts are English too. There is no Ukrainian voice. If the assistant does not answer, report it (with the log).
 4. **Cold boot without the card:** remove the SD, switch the car off for a few minutes,
    start again. Ukrainian should persist. This is **not yet proven** on a car, so your result matters.
 

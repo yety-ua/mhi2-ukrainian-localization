@@ -8,9 +8,9 @@
 
 ## Українська
 
-Українська локалізація для штатної прошивки **Audi MHI2 K3346 на A4, A5, Q5 та Q7**: українські тексти меню, вибір мови з прапорцем, українська клавіатура. Встановлюється з SD-карти через [M.I.B.](https://github.com/Mr-MIBonk/M.I.B._More-Incredible-Bash); прошивка не перепрошивається, оригінал можна повернути (`RESTORE`).
+Українська локалізація для штатної прошивки **Audi MHI2 K3346 на A4, A5, Q5 та Q7**: українські тексти меню, вибір мови з прапорцем, українська клавіатура, а також англійський голосовий помічник і англійські підказки навігації (українського голосу немає). Встановлюється з SD-карти через [M.I.B.](https://github.com/Mr-MIBonk/M.I.B._More-Incredible-Bash); прошивка не перепрошивається, оригінал можна повернути (`RESTORE`).
 
-**Перевірено на одному авто** (A4 B9, K3346 / MU1438): встановлення, `RESTORE` і повторне встановлення з SD пройшли, українська працює в меню MMI. Інші авто й версії прошивки не перевірялися. Не всі екрани й команди перекладено ([що саме](docs/LOCALIZATION_DEPTH.md)).
+**Перевірено на одному авто** (A4 B9, K3346 / MU1438): встановлення, `RESTORE` і повторне встановлення з SD пройшли, українська працює в меню MMI; англійський голосовий помічник і підказки навігації перевірено окремо на тому ж авто. Інші авто й версії прошивки не перевірялися. Не всі екрани й команди перекладено ([що саме](docs/LOCALIZATION_DEPTH.md)).
 
 ### Швидке встановлення
 
@@ -18,9 +18,9 @@
 2. M.I.B. вже має стояти в голові (повний M.I.B. лежить на SD1). Розпакуйте архів і скопіюйте **вміст** його теки `mod/` у наявну `mod/` на SD-карті (саму теку `mod` не замінюйте).
 3. Вставте карту в SD1 → GEM → `m.i.b.` → `Advanced Settings` → **`Run individual script`**.
 4. **Читайте кінець виводу:** там статус і підказка, що робити далі. Повторюйте той самий пункт, доки не побачите `SUCCESS` (кожна дія: два запуски показують чеклист, третій виконує).
-   - Нова голова: `CHECK PASS` → `INSTALL`.
-   - Уже стоїть попередня версія пакета: `CHECK` запропонує `RESTORE` → потім `CHECK` → `INSTALL`.
-5. Після `SUCCESS: INSTALL` повністю вимкніть запалювання (двері, замок, 3–5 хвилин) і ввімкніть. Виберіть «Українська» в Налаштування → MMI → Мова.
+   - Нова голова: `CHECK PASS` → `INSTALL` (інтерфейс і англійський голос ставляться разом).
+   - Уже стоїть попередня версія пакета (зокрема v1.0.0, щоб отримати голос): `CHECK` запропонує `RESTORE` → потім `CHECK` → `INSTALL`.
+5. Після `SUCCESS: INSTALL` повністю вимкніть запалювання (двері, замок, 3–5 хвилин) і ввімкніть. Виберіть «Українська» в Налаштування → MMI → Мова. Перевірте помічник (кнопка PTT на кермі: він слухає й говорить англійською) і підказки навігації англійською.
 
 **Вперше з M.I.B.?** [Покрокова інструкція](docs/INSTALL_GUIDE.md#українська): словник, страховка (telnet, резервні копії), що робити, якщо щось пішло не так.
 **Щось пішло не так?** Запустіть той самий пункт: `CHECK` запропонує `RESTORE` (третій запуск поспіль). Запис, що перервався, інсталятор відкочує сам (`ROLLED BACK`). Докладно: [довідка](docs/INSTALL_GUIDE.md#довідка-українська).
@@ -59,9 +59,9 @@ H15 не є автоматичною забороною для 0379, але ре
 
 ## English
 
-A Ukrainian localization for the stock **Audi MHI2 K3346 firmware on A4, A5, Q5 and Q7**: Ukrainian menu texts, a language entry with flag, and a Ukrainian keyboard. It installs from an SD card through [M.I.B.](https://github.com/Mr-MIBonk/M.I.B._More-Incredible-Bash); no firmware flash, and the original can be restored (`RESTORE`).
+A Ukrainian localization for the stock **Audi MHI2 K3346 firmware on A4, A5, Q5 and Q7**: Ukrainian menu texts, a language entry with flag, a Ukrainian keyboard, and an English voice assistant and English navigation prompts (there is no Ukrainian voice). It installs from an SD card through [M.I.B.](https://github.com/Mr-MIBonk/M.I.B._More-Incredible-Bash); no firmware flash, and the original can be restored (`RESTORE`).
 
-**Verified on one car** (A4 B9, K3346 / MU1438): install, `RESTORE` and re-install from the SD card passed, and Ukrainian works in the MMI menus. Other cars and firmware versions are untested. Not every screen and command is translated ([details](docs/LOCALIZATION_DEPTH.md)).
+**Verified on one car** (A4 B9, K3346 / MU1438): install, `RESTORE` and re-install from the SD card passed, and Ukrainian works in the MMI menus; the English voice assistant and navigation prompts were verified separately on the same car. Other cars and firmware versions are untested. Not every screen and command is translated ([details](docs/LOCALIZATION_DEPTH.md)).
 
 ### Quick install
 
@@ -69,9 +69,9 @@ A Ukrainian localization for the stock **Audi MHI2 K3346 firmware on A4, A5, Q5 
 2. M.I.B. must already be installed (its full folder on SD1). Unpack the archive and copy the **contents** of its `mod/` folder into the existing `mod/` on the card (do not replace `mod` itself).
 3. Insert the card in SD1 → GEM → `m.i.b.` → `Advanced Settings` → **`Run individual script`**.
 4. **Read the end of the output:** it shows the status and what to do next. Run the same item again until you see `SUCCESS` (for each action, two runs show a checklist and the third executes).
-   - Fresh unit: `CHECK PASS` → `INSTALL`.
-   - An earlier version of this package is installed: `CHECK` offers `RESTORE` → then `CHECK` → `INSTALL`.
-5. After `SUCCESS: INSTALL` switch the ignition fully off (doors, lock, 3-5 minutes) and on. Choose "Українська" in Settings > MMI > Language.
+   - Fresh unit: `CHECK PASS` → `INSTALL` (the UI and the English voice are installed together).
+   - An earlier version of this package is installed (including v1.0.0, to get the voice): `CHECK` offers `RESTORE` → then `CHECK` → `INSTALL`.
+5. After `SUCCESS: INSTALL` switch the ignition fully off (doors, lock, 3-5 minutes) and on. Choose "Українська" in Settings > MMI > Language. Test the assistant (PTT button on the steering wheel: it listens and speaks English) and the navigation prompts in English.
 
 **First time with M.I.B.?** [Step-by-step guide](docs/INSTALL_GUIDE.md#english): glossary, safety net (telnet, backups), troubleshooting.
 **Something went wrong?** Run the same item: `CHECK` offers `RESTORE` (third consecutive run). An interrupted write is rolled back automatically (`ROLLED BACK`). Details: [reference](docs/INSTALL_GUIDE.md#reference-english).
