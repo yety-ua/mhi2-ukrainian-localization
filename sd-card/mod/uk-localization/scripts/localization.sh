@@ -470,8 +470,15 @@ else
     ACTION=$(cat "$PACKAGE/ACTION.txt") || die 'Missing ACTION.txt'
     [ "$ACTION" != CHECK ] || MENU=1
 fi
-case $ACTION in CHECK|INSTALL|RESTORE|VOICE_INSTALL|VOICE_RESTORE) ;; *) die 'Invalid action; use CHECK, INSTALL, RESTORE, VOICE_INSTALL or VOICE_RESTORE' ;; esac
+case $ACTION in CHECK|INSTALL|INSTALL_WITH_VOICE|RESTORE|VOICE_INSTALL|VOICE_RESTORE) ;; *) die 'Invalid action; use CHECK, INSTALL, INSTALL_WITH_VOICE, RESTORE, VOICE_INSTALL or VOICE_RESTORE' ;; esac
 say "Ukrainian localization 1.0 / action=$ACTION"
+# INSTALL_WITH_VOICE = INSTALL plus the English voice hook in one run. It reuses the INSTALL path (checks, journal,
+# automatic rollback, which also removes the voice hook) and only adds the voice file and its read-back.
+WITH_VOICE=0
+if [ "$ACTION" = INSTALL_WITH_VOICE ]; then
+    WITH_VOICE=1
+    ACTION=INSTALL
+fi
 say "[${SECONDS}s] Checking the package files (15)..."
 verify_manifest
 EXPECTED_HMI=$(cat "$PACKAGE/HMI.sha1") || die 'Missing HMI fingerprint'
@@ -653,12 +660,16 @@ case $ACTION in
         activate "$PACKAGE/payload/lang_hmi_builtin.config" "$LSD/lang_hmi_builtin.config"
         activate "$PACKAGE/payload/lang_data.zip" "$LSD/jars/lang_data.zip"
         activate "$PACKAGE/payload/lang_uk_hook.jar" "$LSD/jars/lang_uk_hook.jar"
+        if [ "$WITH_VOICE" = 1 ]; then activate "$PACKAGE/payload/lang_uk_voice.jar" "$LSD/jars/lang_uk_voice.jar"; fi
         sync_progress || die 'Cannot sync resources'
         tick "Resource files are in place; now the language list dataset (written last)."
         write_blob "$KEY" "$PACKAGE/target/2d00.uk.hex" 389
         tick "Verifying the installed files..."
         CURRENT=$(blob "$KEY" 389) || die 'Cannot verify dataset'
         verify_ui
+        if [ "$WITH_VOICE" = 1 ]; then
+            equal "$LSD/jars/lang_uk_voice.jar" "$PACKAGE/payload/lang_uk_voice.jar" || die 'Installed voice hook differs'
+        fi
         echo 'UI' > "$STATE/INSTALLED" || die 'Cannot record installation'
         rm -f "$STATE/RESTORED" || die 'Cannot clear restoration marker'
         ;;
@@ -678,6 +689,7 @@ sync_progress || die 'Journal sync failed'
 MUTATING=0
 say "SUCCESS: $ACTION completed and file/dataset read-back verified. No automatic reboot."
 say 'Vehicle UI, persistence after cold boot, speech and Virtual Cockpit remain to be tested.'
+if [ "$WITH_VOICE" = 1 ]; then say 'English voice hook installed together with the UI (INSTALL_WITH_VOICE).'; fi
 case $ACTION in
     INSTALL) say "NEXT: restart the MMI yourself (ignition off, wait until it is fully off, ignition on), then choose Ukrainian in Settings > Language." ;;
     RESTORE) say "NEXT: restart the MMI yourself (ignition off, wait until it is fully off, ignition on)." ;;

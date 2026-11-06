@@ -1,0 +1,103 @@
+{
+ "description": "2026-11-06 owner review: regional stations wording, speed-volume title, Ukrainian phone number format (10 digits). Slot HMIToneEvoHigh 477 = left label of the speed-dependent volume dial (identified in the emulator with marker strings, 2026-11-06). Example name: Тарас Шевченко.",
+ "changes": [
+  {
+   "module": "HMITunerEvoHigh",
+   "slot": 485,
+   "en": "Switch regional stations",
+   "old": "Між регіональн. станціями",
+   "new": "Зміна регіональних станцій"
+  },
+  {
+   "module": "HMITunerEvoHigh",
+   "slot": 952,
+   "en": "Switch regional stations",
+   "old": "Між регіональн. станціями",
+   "new": "Зміна регіональних станцій"
+  },
+  {
+   "module": "HMITunerEvoHigh",
+   "slot": 1839,
+   "en": "Switch regional stations",
+   "old": "Між регіональн. станціями",
+   "new": "Зміна регіональних станцій"
+  },
+  {
+   "module": "HMITunerEvoHigh",
+   "slot": 860,
+   "en": "The setting \"Switch regional stations\" is\nunavailable because the \"Alternative\nfrequency\" function is not selected.",
+   "old": "Налаштування \"між регіональними станціями\"\nнедоступна, оскільки не вибрано\n\"Відстеження станцій\".",
+   "new": "Налаштування \"Зміна регіональних станцій\"\nнедоступна, оскільки не вибрано\n\"Відстеження станцій\"."
+  },
+  {
+   "module": "HMIToneEvoHigh",
+   "slot": 310,
+   "en": "Speed dep. volume",
+   "old": "Гучність від швидкості",
+   "new": "Гучність за швидкістю"
+  },
+  {
+   "module": "HMIToneEvoHigh",
+   "slot": 523,
+   "en": "Speed dep. volume",
+   "old": "Гучність від швидкості",
+   "new": "Гучність за швидкістю"
+  },
+  {
+   "module": "HMIMessagingEvoHigh",
+   "slot": 1363,
+   "en": "e.g. \"0800 699999\" or \"John Smith\"",
+   "old": "наприклад, \"0800 5555555\" або \"Іван Петренко\"",
+   "new": "наприклад \"097 232 30 88\" або \"Тарас Шевченко\""
+  },
+  {
+   "module": "HMIMessagingEvoHigh",
+   "slot": 1367,
+   "en": "e.g. \"0800 699999\" or \"John Smith\"",
+   "old": "наприклад, \"0800 5555555\" або \"Іван Петренко\"",
+   "new": "наприклад \"097 232 30 88\" або \"Тарас Шевченко\""
+  },
+  {
+   "module": "HMIPhoneEvoHigh",
+   "slot": 981,
+   "en": "e.g. \"0800 699999\" or \"John Smith\"",
+   "old": "наприклад, \"0800 5555555\" або \"Іван Петренко\"",
+   "new": "наприклад \"097 232 30 88\" або \"Тарас Шевченко\""
+  },
+  {
+   "module": "HMIPhoneEvoHigh",
+   "slot": 983,
+   "en": "e.g. \"0800 699999\" or \"John Smith\"",
+   "old": "наприклад, \"0800 5555555\" або \"Іван Петренко\"",
+   "new": "наприклад \"097 232 30 88\" або \"Тарас Шевченко\""
+  },
+  {
+   "module": "HMIPhoneEvoHigh",
+   "slot": 2492,
+   "en": "e.g. \"0800 699999\" or \"John Smith\"",
+   "old": "наприклад, \"0800 5555555\" або \"Іван Петренко\"",
+   "new": "наприклад \"097 232 30 88\" або \"Тарас Шевченко\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1644,
+   "en": "\"0800 699999\"\n\"John Smith\"\n\"Smith, John\"",
+   "old": "\"0800 5555555\"\n\"Іван Петренко\"\n\"Петренко, Іван\"",
+   "new": "\"097 232 30 88\"\n\"Тарас Шевченко\"\n\"Шевченко, Тарас\""
+  },
+  {
+   "module": "HMIToneEvoHigh",
+   "slot": 477,
+   "en": "off",
+   "old": "вимкнено",
+   "new": "мін"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1647,
+   "en": "\"London, Regent Street\"\n\"Heathrow Airport\"\n\"John Smith\"",
+   "old": "\"Львів, Свободи просп.\"\n\"Аеропорт Харків\"\n\"Іван Петренко\"",
+   "new": "\"Львів, Свободи просп.\"\n\"Аеропорт Харків\"\n\"Тарас Шевченко\""
+  }
+ ]
+}

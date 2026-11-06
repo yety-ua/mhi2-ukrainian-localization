@@ -1,0 +1,1573 @@
+{
+ "description": "2026-11-06 owner: short Ukrainian example names (Ivan Moroz, Olha Bondar, Iryna) and Ukrainian radio names (Radio ROKS, Hit FM, Ensemble Kyiv) instead of John Smith / BBC Radio 2 / Classic FM; Shevchenko examples shortened.",
+ "changes": [
+  {
+   "module": "HMICarEvoHigh",
+   "slot": 1768,
+   "en": "Drive me to \"John Smith\"",
+   "old": "Drive me to \"John Smith\"",
+   "new": "Drive me to \"Ivan Moroz\""
+  },
+  {
+   "module": "HMICarEvoHigh",
+   "slot": 1776,
+   "en": "Call \"John Smith\"",
+   "old": "Call \"John Smith\"",
+   "new": "Call \"Ivan Moroz\""
+  },
+  {
+   "module": "HMIMediaEvoHigh",
+   "slot": 1379,
+   "en": "Call \"John Smith\"",
+   "old": "Call \"John Smith\"",
+   "new": "Call \"Ivan Moroz\""
+  },
+  {
+   "module": "HMIMediaEvoHigh",
+   "slot": 1380,
+   "en": "Drive me to \"John Smith\"",
+   "old": "Drive me to \"John Smith\"",
+   "new": "Drive me to \"Ivan Moroz\""
+  },
+  {
+   "module": "HMIMediaEvoHigh",
+   "slot": 1381,
+   "en": "Dictate text message to \"John Smith\"",
+   "old": "Dictate text message to \"John Smith\"",
+   "new": "Dictate text message to \"Ivan Moroz\""
+  },
+  {
+   "module": "HMIMessagingEvoHigh",
+   "slot": 427,
+   "en": "Drive me to \"John Smith\"",
+   "old": "Drive me to \"John Smith\"",
+   "new": "Drive me to \"Ivan Moroz\""
+  },
+  {
+   "module": "HMIMessagingEvoHigh",
+   "slot": 432,
+   "en": "Station \"BBC Radio 2\"",
+   "old": "Station \"BBC Radio 2\"",
+   "new": "Station \"Radio ROKS\""
+  },
+  {
+   "module": "HMIMessagingEvoHigh",
+   "slot": 435,
+   "en": "Dictate text message to \"John Smith\"",
+   "old": "Dictate text message to \"John Smith\"",
+   "new": "Dictate text message to \"Ivan Moroz\""
+  },
+  {
+   "module": "HMIMessagingEvoHigh",
+   "slot": 474,
+   "en": "Dictate e-mail to \"John Smith\"",
+   "old": "Dictate e-mail to \"John Smith\"",
+   "new": "Dictate e-mail to \"Ivan Moroz\""
+  },
+  {
+   "module": "HMIMessagingEvoHigh",
+   "slot": 795,
+   "en": "Dictate e-mail to \"John Smith\"",
+   "old": "Dictate e-mail to \"John Smith\"",
+   "new": "Dictate e-mail to \"Ivan Moroz\""
+  },
+  {
+   "module": "HMIMessagingEvoHigh",
+   "slot": 1363,
+   "en": "e.g. \"0800 699999\" or \"John Smith\"",
+   "old": "наприклад \"097 232 30 88\" або \"Тарас Шевченко\"",
+   "new": "наприклад \"097 232 30 88\" або \"Іван Мороз\""
+  },
+  {
+   "module": "HMIMessagingEvoHigh",
+   "slot": 1367,
+   "en": "e.g. \"0800 699999\" or \"John Smith\"",
+   "old": "наприклад \"097 232 30 88\" або \"Тарас Шевченко\"",
+   "new": "наприклад \"097 232 30 88\" або \"Іван Мороз\""
+  },
+  {
+   "module": "HMIMessagingEvoHigh",
+   "slot": 1388,
+   "en": "Call \"John Smith\"",
+   "old": "Call \"John Smith\"",
+   "new": "Call \"Ivan Moroz\""
+  },
+  {
+   "module": "HMIMessagingEvoHigh",
+   "slot": 1390,
+   "en": "Set station \"B B C Radio 2\" / \"88.1\" / \"Classic FM\"",
+   "old": "Станція \"B B C Radio 2\" / \"88.1\" / \"Classic FM\"",
+   "new": "Станція \"Radio ROKS\" / \"88.1\" / \"Hit FM\""
+  },
+  {
+   "module": "HMIMessagingEvoHigh",
+   "slot": 1391,
+   "en": "Set station \"B B C Radio 2\" / \"88.1\" / \"Classic FM\"",
+   "old": "Станція \"B B C Radio 2\" / \"88.1\" / \"Classic FM\"",
+   "new": "Станція \"Radio ROKS\" / \"88.1\" / \"Hit FM\""
+  },
+  {
+   "module": "HMINaviEvoHigh",
+   "slot": 595,
+   "en": "Drive me to \"John Smith\"",
+   "old": "Drive me to \"John Smith\"",
+   "new": "Drive me to \"Ivan Moroz\""
+  },
+  {
+   "module": "HMINaviEvoHigh",
+   "slot": 688,
+   "en": "Call \"John Smith\"",
+   "old": "Call \"John Smith\"",
+   "new": "Call \"Ivan Moroz\""
+  },
+  {
+   "module": "HMINaviEvoHigh",
+   "slot": 696,
+   "en": "Station \"BBC Radio 2\"",
+   "old": "Station \"BBC Radio 2\"",
+   "new": "Station \"Radio ROKS\""
+  },
+  {
+   "module": "HMINaviEvoHigh",
+   "slot": 752,
+   "en": "Dictate text message to \"John Smith\"",
+   "old": "Dictate text message to \"John Smith\"",
+   "new": "Dictate text message to \"Ivan Moroz\""
+  },
+  {
+   "module": "HMINaviEvoHigh",
+   "slot": 771,
+   "en": "Drive me to \"John Smith\"",
+   "old": "Drive me to \"John Smith\"",
+   "new": "Drive me to \"Ivan Moroz\""
+  },
+  {
+   "module": "HMINaviEvoHigh",
+   "slot": 1017,
+   "en": "Navigate to \"John Smith\"",
+   "old": "Navigate to \"John Smith\"",
+   "new": "Navigate to \"Ivan Moroz\""
+  },
+  {
+   "module": "HMINaviEvoHigh",
+   "slot": 1020,
+   "en": "Dictate text message to \"John Smith\"",
+   "old": "Dictate text message to \"John Smith\"",
+   "new": "Dictate text message to \"Ivan Moroz\""
+  },
+  {
+   "module": "HMIOnlineEvoHigh",
+   "slot": 203,
+   "en": "Dictate text message to \"John Smith\"",
+   "old": "Dictate text message to \"John Smith\"",
+   "new": "Dictate text message to \"Ivan Moroz\""
+  },
+  {
+   "module": "HMIOnlineEvoHigh",
+   "slot": 245,
+   "en": "Call \"John Smith\"",
+   "old": "Call \"John Smith\"",
+   "new": "Call \"Ivan Moroz\""
+  },
+  {
+   "module": "HMIOnlineEvoHigh",
+   "slot": 246,
+   "en": "Drive me to \"John Smith\"",
+   "old": "Drive me to \"John Smith\"",
+   "new": "Drive me to \"Ivan Moroz\""
+  },
+  {
+   "module": "HMIOnlineEvoHigh",
+   "slot": 247,
+   "en": "Station \"BBC Radio 2\"",
+   "old": "Station \"BBC Radio 2\"",
+   "new": "Station \"Radio ROKS\""
+  },
+  {
+   "module": "HMIPhoneEvoHigh",
+   "slot": 542,
+   "en": "Call \"John Smith's\" private/business\nnumber",
+   "old": "Call \"John Smith's\" private/business\nnumber",
+   "new": "Call \"Ivan Moroz's\" private/business\nnumber"
+  },
+  {
+   "module": "HMIPhoneEvoHigh",
+   "slot": 640,
+   "en": "Call \"John Smith\"",
+   "old": "Call \"John Smith\"",
+   "new": "Call \"Ivan Moroz\""
+  },
+  {
+   "module": "HMIPhoneEvoHigh",
+   "slot": 641,
+   "en": "Dictate text message to \"John Smith\"",
+   "old": "Dictate text message to \"John Smith\"",
+   "new": "Dictate text message to \"Ivan Moroz\""
+  },
+  {
+   "module": "HMIPhoneEvoHigh",
+   "slot": 656,
+   "en": "Station \"BBC Radio 2\"",
+   "old": "Station \"BBC Radio 2\"",
+   "new": "Station \"Radio ROKS\""
+  },
+  {
+   "module": "HMIPhoneEvoHigh",
+   "slot": 927,
+   "en": "Call \"John Smith's\" private/business\nnumber",
+   "old": "Call \"John Smith's\" private/business\nnumber",
+   "new": "Call \"Ivan Moroz's\" private/business\nnumber"
+  },
+  {
+   "module": "HMIPhoneEvoHigh",
+   "slot": 951,
+   "en": "Drive me to \"John Smith\"",
+   "old": "Drive me to \"John Smith\"",
+   "new": "Drive me to \"Ivan Moroz\""
+  },
+  {
+   "module": "HMIPhoneEvoHigh",
+   "slot": 952,
+   "en": "\"John Smith\"",
+   "old": "\"John Smith\"",
+   "new": "\"Ivan Moroz\""
+  },
+  {
+   "module": "HMIPhoneEvoHigh",
+   "slot": 981,
+   "en": "e.g. \"0800 699999\" or \"John Smith\"",
+   "old": "наприклад \"097 232 30 88\" або \"Тарас Шевченко\"",
+   "new": "наприклад \"097 232 30 88\" або \"Іван Мороз\""
+  },
+  {
+   "module": "HMIPhoneEvoHigh",
+   "slot": 983,
+   "en": "e.g. \"0800 699999\" or \"John Smith\"",
+   "old": "наприклад \"097 232 30 88\" або \"Тарас Шевченко\"",
+   "new": "наприклад \"097 232 30 88\" або \"Іван Мороз\""
+  },
+  {
+   "module": "HMIPhoneEvoHigh",
+   "slot": 1462,
+   "en": "Navigate to \"John Smith\"",
+   "old": "Navigate to \"John Smith\"",
+   "new": "Navigate to \"Ivan Moroz\""
+  },
+  {
+   "module": "HMIPhoneEvoHigh",
+   "slot": 1464,
+   "en": "Dictate text message to \"John Smith\"",
+   "old": "Dictate text message to \"John Smith\"",
+   "new": "Dictate text message to \"Ivan Moroz\""
+  },
+  {
+   "module": "HMIPhoneEvoHigh",
+   "slot": 2239,
+   "en": "Call \"John Smith\"",
+   "old": "Call \"John Smith\"",
+   "new": "Call \"Ivan Moroz\""
+  },
+  {
+   "module": "HMIPhoneEvoHigh",
+   "slot": 2492,
+   "en": "e.g. \"0800 699999\" or \"John Smith\"",
+   "old": "наприклад \"097 232 30 88\" або \"Тарас Шевченко\"",
+   "new": "наприклад \"097 232 30 88\" або \"Іван Мороз\""
+  },
+  {
+   "module": "HMISettingsEvoHigh",
+   "slot": 396,
+   "en": "Call \"John Smith's\" mobile number",
+   "old": "Call \"John Smith's\" mobile number",
+   "new": "Call \"Ivan Moroz's\" mobile number"
+  },
+  {
+   "module": "HMISettingsEvoHigh",
+   "slot": 485,
+   "en": "Navigate to \"John Smith\"",
+   "old": "Navigate to \"John Smith\"",
+   "new": "Navigate to \"Ivan Moroz\""
+  },
+  {
+   "module": "HMISettingsEvoHigh",
+   "slot": 490,
+   "en": "Call \"John Smith's\" business number",
+   "old": "Call \"John Smith's\" business number",
+   "new": "Call \"Ivan Moroz's\" business number"
+  },
+  {
+   "module": "HMISettingsEvoHigh",
+   "slot": 491,
+   "en": "Dictate text message to \"John Smith\"",
+   "old": "Dictate text message to \"John Smith\"",
+   "new": "Dictate text message to \"Ivan Moroz\""
+  },
+  {
+   "module": "HMISettingsEvoHigh",
+   "slot": 492,
+   "en": "Dictate e-mail to \"John Smith\"",
+   "old": "Dictate e-mail to \"John Smith\"",
+   "new": "Dictate e-mail to \"Ivan Moroz\""
+  },
+  {
+   "module": "HMISettingsEvoHigh",
+   "slot": 498,
+   "en": "Station \"BBC Radio 2\"",
+   "old": "Station \"BBC Radio 2\"",
+   "new": "Station \"Radio ROKS\""
+  },
+  {
+   "module": "HMISettingsEvoHigh",
+   "slot": 504,
+   "en": "Station \"BBC Radio 2\"",
+   "old": "Station \"BBC Radio 2\"",
+   "new": "Station \"Radio ROKS\""
+  },
+  {
+   "module": "HMISettingsEvoHigh",
+   "slot": 507,
+   "en": "Ensemble \"BBC\"",
+   "old": "Ensemble \"BBC\"",
+   "new": "Ensemble \"Kyiv\""
+  },
+  {
+   "module": "HMISettingsEvoHigh",
+   "slot": 658,
+   "en": "Call \"John Smith's\" business number",
+   "old": "Call \"John Smith's\" business number",
+   "new": "Call \"Ivan Moroz's\" business number"
+  },
+  {
+   "module": "HMISettingsEvoHigh",
+   "slot": 659,
+   "en": "Call \"John Smith's\" mobile number",
+   "old": "Call \"John Smith's\" mobile number",
+   "new": "Call \"Ivan Moroz's\" mobile number"
+  },
+  {
+   "module": "HMISettingsEvoHigh",
+   "slot": 660,
+   "en": "Dictate text message to \"John Smith\"",
+   "old": "Dictate text message to \"John Smith\"",
+   "new": "Dictate text message to \"Ivan Moroz\""
+  },
+  {
+   "module": "HMISettingsEvoHigh",
+   "slot": 661,
+   "en": "Dictate e-mail to \"John Smith\"",
+   "old": "Dictate e-mail to \"John Smith\"",
+   "new": "Dictate e-mail to \"Ivan Moroz\""
+  },
+  {
+   "module": "HMISettingsEvoHigh",
+   "slot": 922,
+   "en": "Call \"John Smith's\" business number",
+   "old": "Call \"John Smith's\" business number",
+   "new": "Call \"Ivan Moroz's\" business number"
+  },
+  {
+   "module": "HMISettingsEvoHigh",
+   "slot": 923,
+   "en": "Call \"John Smith's\" mobile number",
+   "old": "Call \"John Smith's\" mobile number",
+   "new": "Call \"Ivan Moroz's\" mobile number"
+  },
+  {
+   "module": "HMISettingsEvoHigh",
+   "slot": 929,
+   "en": "Station \"BBC Radio 2\"",
+   "old": "Station \"BBC Radio 2\"",
+   "new": "Station \"Radio ROKS\""
+  },
+  {
+   "module": "HMISettingsEvoHigh",
+   "slot": 932,
+   "en": "Ensemble \"BBC\"",
+   "old": "Ensemble \"BBC\"",
+   "new": "Ensemble \"Kyiv\""
+  },
+  {
+   "module": "HMISettingsEvoHigh",
+   "slot": 1297,
+   "en": "Call \"John Smith's\" mobile number",
+   "old": "Call \"John Smith's\" mobile number",
+   "new": "Call \"Ivan Moroz's\" mobile number"
+  },
+  {
+   "module": "HMISettingsEvoHigh",
+   "slot": 1305,
+   "en": "Call \"John Smith's\" business number",
+   "old": "Call \"John Smith's\" business number",
+   "new": "Call \"Ivan Moroz's\" business number"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 34,
+   "en": "Sagen Sie zum Beispiel Ralf Schmidt oder Nummer zwei.",
+   "old": "For example, say Taras Shevchenko or number two.",
+   "new": "For example, say Ivan Moroz or number two."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 46,
+   "en": "Bitte nennen Sie den Vor- und Nachnamen des Empfängers, sagen Sie zum Beispiel \"Ralf Schmidt\".",
+   "old": "Please say the first and last name of the recipient. For example, say \"Taras Shevchenko\".",
+   "new": "Please say the first and last name of the recipient. For example, say \"Ivan Moroz\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 102,
+   "en": "Dictate e-mail to \"John Smith\".",
+   "old": "Dictate e-mail to \"John Smith\".",
+   "new": "Dictate e-mail to \"Ivan Moroz\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 106,
+   "en": "Dictate text message to \"John Smith\".",
+   "old": "Dictate text message to \"John Smith\".",
+   "new": "Dictate text message to \"Ivan Moroz\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 107,
+   "en": "Navigate to \"John Smith\",",
+   "old": "Navigate to \"John Smith\",",
+   "new": "Navigate to \"Ivan Moroz\","
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 375,
+   "en": "Bitte diktieren Sie den Text inklusive Satzzeichen. Beginnen Sie die Aufnahme durch kurzes Drücken der Sprechtaste. Sagen Sie zum Beispiel: Hallo Ralf Komma wie geht es Dir Fragezeichen.",
+   "old": "Please dictate the text including punctuation. Start the recording by briefly pressing the talk button. For example, say: Hello Taras comma how are you question mark.",
+   "new": "Please dictate the text including punctuation. Start the recording by briefly pressing the talk button. For example, say: Hello Ivan comma how are you question mark."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 689,
+   "en": "Drive me to \"John Smith\".",
+   "old": "Drive me to \"John Smith\".",
+   "new": "Drive me to \"Ivan Moroz\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 859,
+   "en": "Navigiere zu Ralf Schmidt privat,",
+   "old": "Navigate to Taras Shevchenko private,",
+   "new": "Navigate to Ivan Moroz private,"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1084,
+   "en": "Dictate text message to \"John Smith\",",
+   "old": "Dictate text message to \"John Smith\",",
+   "new": "Dictate text message to \"Ivan Moroz\","
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1086,
+   "en": "anrufen bei Ralf Schmidt privat mobil,",
+   "old": "call Taras Shevchenko private mobile,",
+   "new": "call Ivan Moroz private mobile,"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1144,
+   "en": "and, for example, \"Ensemble B B C\" to choose an ensemble.",
+   "old": "and, for example, \"Ensemble B B C\" to choose an ensemble.",
+   "new": "and, for example, \"Ensemble Kyiv\" to choose an ensemble."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1145,
+   "en": "To tune to a station, say the name, for example say \"station B B C Radio 2\",",
+   "old": "To tune to a station, say the name, for example say \"station B B C Radio 2\",",
+   "new": "To tune to a station, say the name, for example say \"station Radio ROKS\","
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1155,
+   "en": "To change a station or a waveband, say, for example, \"Station B B C Radio 2\" .",
+   "old": "To change a station or a waveband, say, for example, \"Station B B C Radio 2\" .",
+   "new": "To change a station or a waveband, say, for example, \"Station Radio ROKS\" ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1525,
+   "en": "Please say a name or the line number. For example, say \"John Smith\" or \"Line 1\" .",
+   "old": "Please say a name or the line number. For example, say \"John Smith\" or \"Line 1\" .",
+   "new": "Please say a name or the line number. For example, say \"Ivan Moroz\" or \"Line 1\" ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1526,
+   "en": "You can now say the name or the line number. For example, say \"John Smith\" or \"Line 1\" .",
+   "old": "You can now say the name or the line number. For example, say \"John Smith\" or \"Line 1\" .",
+   "new": "You can now say the name or the line number. For example, say \"Ivan Moroz\" or \"Line 1\" ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1622,
+   "en": "Call \"John Smith's\" business number.",
+   "old": "Call \"John Smith's\" business number.",
+   "new": "Call \"Ivan Moroz's\" business number."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1628,
+   "en": "Call \"John Smith's\" mobile number.",
+   "old": "Call \"John Smith's\" mobile number.",
+   "new": "Call \"Ivan Moroz's\" mobile number."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1798,
+   "en": "Please say an address, a special destination or a directory contact. For example, say \"London, Kingston Road, 50\" or \"John Smith\".",
+   "old": "Please say an address, a special destination or a directory contact. For example, say \"Kyiv, Khreshchatyk, 50\" or \"John Smith\".",
+   "new": "Please say an address, a special destination or a directory contact. For example, say \"Kyiv, Khreshchatyk, 50\" or \"Ivan Moroz\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1799,
+   "en": "You can now say an address, a special destination or a directory contact. For example, say \"London, Kingston Road, 50\" or \"John Smith\".",
+   "old": "You can now say an address, a special destination or a directory contact. For example, say \"Kyiv, Khreshchatyk, 50\" or \"John Smith\".",
+   "new": "You can now say an address, a special destination or a directory contact. For example, say \"Kyiv, Khreshchatyk, 50\" or \"Ivan Moroz\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1804,
+   "en": "What would you like to do? Please say \"Enter address\", \"Enter special destination\" or \"Navigate to John Smith\".",
+   "old": "What would you like to do? Please say \"Enter address\", \"Enter special destination\" or \"Navigate to John Smith\".",
+   "new": "What would you like to do? Please say \"Enter address\", \"Enter special destination\" or \"Navigate to Ivan Moroz\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1805,
+   "en": "Would you like to enter an address or a special destination? Or say \"Navigate to John Smith\".",
+   "old": "Would you like to enter an address or a special destination? Or say \"Navigate to John Smith\".",
+   "new": "Would you like to enter an address or a special destination? Or say \"Navigate to Ivan Moroz\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1807,
+   "en": "Please say \"Enter address\", \"Enter special destination\" or \"Navigate to John Smith\".",
+   "old": "Please say \"Enter address\", \"Enter special destination\" or \"Navigate to John Smith\".",
+   "new": "Please say \"Enter address\", \"Enter special destination\" or \"Navigate to Ivan Moroz\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1945,
+   "en": "Call \"John Smith's\" private or business number,",
+   "old": "Call \"John Smith's\" private or business number,",
+   "new": "Call \"Ivan Moroz's\" private or business number,"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1956,
+   "en": "Call \"John Smith's\" private or business number,",
+   "old": "Call \"John Smith's\" private or business number,",
+   "new": "Call \"Ivan Moroz's\" private or business number,"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2027,
+   "en": "Navigate to \"John Smith\",",
+   "old": "Navigate to \"John Smith\",",
+   "new": "Navigate to \"Ivan Moroz\","
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2171,
+   "en": "Please say the name or the line number of the contact you would like to navigate to. For example, say \"John Smith\".",
+   "old": "Please say the name or the line number of the contact you would like to navigate to. For example, say \"John Smith\".",
+   "new": "Please say the name or the line number of the contact you would like to navigate to. For example, say \"Ivan Moroz\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2172,
+   "en": "You can now say the name or the line number. For example, say \"John Smith\".",
+   "old": "You can now say the name or the line number. For example, say \"John Smith\".",
+   "new": "You can now say the name or the line number. For example, say \"Ivan Moroz\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2274,
+   "en": "Navigate to \"John Smith\".",
+   "old": "Navigate to \"John Smith\".",
+   "new": "Navigate to \"Ivan Moroz\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2306,
+   "en": "Please say the name or the line number of the favourite you would like to navigate to. For example, say \"John Smith\".",
+   "old": "Please say the name or the line number of the favourite you would like to navigate to. For example, say \"John Smith\".",
+   "new": "Please say the name or the line number of the favourite you would like to navigate to. For example, say \"Ivan Moroz\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2307,
+   "en": "You can now say the name or the line number. For example, say \"John Smith\".",
+   "old": "You can now say the name or the line number. For example, say \"John Smith\".",
+   "new": "You can now say the name or the line number. For example, say \"Ivan Moroz\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2321,
+   "en": "Where would you like to go? Please say \"Enter address\", \"Enter special destination\" or \"Navigate to John Smith\".",
+   "old": "Where would you like to go? Please say \"Enter address\", \"Enter special destination\" or \"Navigate to John Smith\".",
+   "new": "Where would you like to go? Please say \"Enter address\", \"Enter special destination\" or \"Navigate to Ivan Moroz\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2322,
+   "en": "What would you like to do? Please say \"Enter address\", \"Enter special destination\" or \"Navigate to John Smith\".",
+   "old": "What would you like to do? Please say \"Enter address\", \"Enter special destination\" or \"Navigate to John Smith\".",
+   "new": "What would you like to do? Please say \"Enter address\", \"Enter special destination\" or \"Navigate to Ivan Moroz\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2323,
+   "en": "Would you like to enter an address or a special destination? Or say \"Navigate to John Smith\".",
+   "old": "Would you like to enter an address or a special destination? Or say \"Navigate to John Smith\".",
+   "new": "Would you like to enter an address or a special destination? Or say \"Navigate to Ivan Moroz\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2324,
+   "en": "Where would you like to go? Please say \"Enter address\", \"Enter special destination\" or \"Navigate to John Smith\".",
+   "old": "Where would you like to go? Please say \"Enter address\", \"Enter special destination\" or \"Navigate to John Smith\".",
+   "new": "Where would you like to go? Please say \"Enter address\", \"Enter special destination\" or \"Navigate to Ivan Moroz\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2349,
+   "en": "Please say the name or the line number of the myAudi contact you would like to navigate to. For example, say \"John Smith\".",
+   "old": "Please say the name or the line number of the myAudi contact you would like to navigate to. For example, say \"John Smith\".",
+   "new": "Please say the name or the line number of the myAudi contact you would like to navigate to. For example, say \"Ivan Moroz\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2350,
+   "en": "You can now say the name or the line number. For example, say \"John Smith\".",
+   "old": "You can now say the name or the line number. For example, say \"John Smith\".",
+   "new": "You can now say the name or the line number. For example, say \"Ivan Moroz\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2387,
+   "en": "Please say the name or the line number of the contact you would like to navigate to. For example, say \"John Smith\".",
+   "old": "Please say the name or the line number of the contact you would like to navigate to. For example, say \"John Smith\".",
+   "new": "Please say the name or the line number of the contact you would like to navigate to. For example, say \"Ivan Moroz\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2388,
+   "en": "You can now say the name or the line number. For example, say \"John Smith\".",
+   "old": "You can now say the name or the line number. For example, say \"John Smith\".",
+   "new": "You can now say the name or the line number. For example, say \"Ivan Moroz\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2503,
+   "en": "Dictate e-mail to \"John Smith\".",
+   "old": "Dictate e-mail to \"John Smith\".",
+   "new": "Dictate e-mail to \"Ivan Moroz\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2566,
+   "en": "Please say the name of the contact you would like to send an e-mail to. For example, say \"John Smith\".",
+   "old": "Please say the name of the contact you would like to send an e-mail to. For example, say \"John Smith\".",
+   "new": "Please say the name of the contact you would like to send an e-mail to. For example, say \"Ivan Moroz\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2567,
+   "en": "You can now say the contact's name. For example, say \"John Smith\".",
+   "old": "You can now say the contact's name. For example, say \"John Smith\".",
+   "new": "You can now say the contact's name. For example, say \"Ivan Moroz\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2680,
+   "en": "Please say the name of the contact you would like to write to. For example, say \"John Smith\" or \"Line 1\" .",
+   "old": "Please say the name of the contact you would like to write to. For example, say \"John Smith\" or \"Line 1\" .",
+   "new": "Please say the name of the contact you would like to write to. For example, say \"Ivan Moroz\" or \"Line 1\" ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2681,
+   "en": "You can now say the name or the line number. For example, say \"John Smith\" or \"Line 1\" .",
+   "old": "You can now say the name or the line number. For example, say \"John Smith\" or \"Line 1\" .",
+   "new": "You can now say the name or the line number. For example, say \"Ivan Moroz\" or \"Line 1\" ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2757,
+   "en": "Please say the name of the contact you would like to send a text message to. For example, say \"John Smith\".",
+   "old": "Please say the name of the contact you would like to send a text message to. For example, say \"John Smith\".",
+   "new": "Please say the name of the contact you would like to send a text message to. For example, say \"Ivan Moroz\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2758,
+   "en": "You can now say the contact's name. For example, say \"John Smith\".",
+   "old": "You can now say the contact's name. For example, say \"John Smith\".",
+   "new": "You can now say the contact's name. For example, say \"Ivan Moroz\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2862,
+   "en": "Please say the name of the contact you would like to call. For example, say \"John Smith\".",
+   "old": "Please say the name of the contact you would like to call. For example, say \"John Smith\".",
+   "new": "Please say the name of the contact you would like to call. For example, say \"Ivan Moroz\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2863,
+   "en": "You can now say the contact's name. For example, say \"John Smith\".",
+   "old": "You can now say the contact's name. For example, say \"John Smith\".",
+   "new": "You can now say the contact's name. For example, say \"Ivan Moroz\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 3027,
+   "en": "Dictate text message to \"John Smith\".",
+   "old": "Dictate text message to \"John Smith\".",
+   "new": "Dictate text message to \"Ivan Moroz\"."
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 217,
+   "en": "Call \"John Smith\"",
+   "old": "Call \"John Smith\"",
+   "new": "Call \"Ivan Moroz\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 225,
+   "en": "Drive me to \"John Smith\"",
+   "old": "Drive me to \"John Smith\"",
+   "new": "Drive me to \"Ivan Moroz\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 231,
+   "en": "Dictate text message to \"John Smith\"",
+   "old": "Dictate text message to \"John Smith\"",
+   "new": "Dictate text message to \"Ivan Moroz\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 234,
+   "en": "Station \"BBC Radio 2\"",
+   "old": "Station \"BBC Radio 2\"",
+   "new": "Station \"Radio ROKS\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 262,
+   "en": "Enter address •\nStation \"BBC Radio 2\" • Help",
+   "old": "Enter address •\nStation \"BBC Radio 2\" • Help",
+   "new": "Enter address •\nStation \"Radio ROKS\" • Help"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 310,
+   "en": "Station \"BBC Radio 2\"",
+   "old": "Station \"BBC Radio 2\"",
+   "new": "Station \"Radio ROKS\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 313,
+   "en": "Station \"BBC Radio 2\"",
+   "old": "Station \"BBC Radio 2\"",
+   "new": "Station \"Radio ROKS\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 317,
+   "en": "No, I meant station \"BBC Radio 2\".",
+   "old": "No, I meant station \"BBC Radio 2\".",
+   "new": "No, I meant station \"Radio ROKS\"."
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 344,
+   "en": "No, I meant \"John Smith\"",
+   "old": "No, I meant \"John Smith\"",
+   "new": "No, I meant \"Ivan Moroz\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 373,
+   "en": "No, I meant \"John Smith\"",
+   "old": "No, I meant \"John Smith\"",
+   "new": "No, I meant \"Ivan Moroz\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 408,
+   "en": "\"John Smith\"",
+   "old": "\"John Smith\"",
+   "new": "\"Ivan Moroz\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 409,
+   "en": "No, I meant \"John Smith\"",
+   "old": "No, I meant \"John Smith\"",
+   "new": "No, I meant \"Ivan Moroz\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 413,
+   "en": "\"Elizabeth Smith\"",
+   "old": "\"Elizabeth Smith\"",
+   "new": "\"Olha Bondar\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 577,
+   "en": "\"John Smith\"",
+   "old": "\"John Smith\"",
+   "new": "\"Ivan Moroz\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 580,
+   "en": "No, I meant \"John Smith\"",
+   "old": "No, I meant \"John Smith\"",
+   "new": "No, I meant \"Ivan Moroz\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 604,
+   "en": "Name? e.g. \"John Smith\"",
+   "old": "Name? e.g. \"John Smith\"",
+   "new": "Name? e.g. \"Ivan Moroz\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 628,
+   "en": "Station \"BBC Radio 2\" • Help •\nCorrection • Cancel",
+   "old": "Station \"BBC Radio 2\" • Help •\nCorrection • Cancel",
+   "new": "Station \"Radio ROKS\" • Help •\nCorrection • Cancel"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 633,
+   "en": "Call \"John Smith's\" mobile number",
+   "old": "Call \"John Smith's\" mobile number",
+   "new": "Call \"Ivan Moroz's\" mobile number"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 644,
+   "en": "Call \"John Smith\"",
+   "old": "Call \"John Smith\"",
+   "new": "Call \"Ivan Moroz\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 645,
+   "en": "Call \"John Smith's\" private number",
+   "old": "Call \"John Smith's\" private number",
+   "new": "Call \"Ivan Moroz's\" private number"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 660,
+   "en": "Station \"BBC Radio 2\"",
+   "old": "Station \"BBC Radio 2\"",
+   "new": "Station \"Radio ROKS\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 671,
+   "en": "Station \"BBC Radio 2\"",
+   "old": "Station \"BBC Radio 2\"",
+   "new": "Station \"Radio ROKS\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 678,
+   "en": "Call \"John Smith\" •\nEnter number • Help",
+   "old": "Call \"John Smith\" •\nEnter number • Help",
+   "new": "Call \"Ivan Moroz\" •\nEnter number • Help"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 865,
+   "en": "\"Hi John, how's it going?\"",
+   "old": "\"Hi John, how's it going?\"",
+   "new": "\"Hi Ivan, how's it going?\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 866,
+   "en": "\"Hi John, I'll be a bit late today.\"",
+   "old": "\"Hi John, I'll be a bit late today.\"",
+   "new": "\"Hi Ivan, I'll be a bit late today.\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 867,
+   "en": "\"Hi John, I'm on my way.\"",
+   "old": "\"Hi John, I'm on my way.\"",
+   "new": "\"Hi Ivan, I'm on my way.\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 908,
+   "en": "Station \"BBC Radio 2\"",
+   "old": "Station \"BBC Radio 2\"",
+   "new": "Station \"Radio ROKS\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 911,
+   "en": "Station \"BBC Radio 2\"",
+   "old": "Station \"BBC Radio 2\"",
+   "new": "Station \"Radio ROKS\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 928,
+   "en": "Call \"John Smith\"",
+   "old": "Call \"John Smith\"",
+   "new": "Call \"Ivan Moroz\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 935,
+   "en": "No, I meant \"John Smith\"",
+   "old": "No, I meant \"John Smith\"",
+   "new": "No, I meant \"Ivan Moroz\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 936,
+   "en": "\"John Smith\"",
+   "old": "\"John Smith\"",
+   "new": "\"Ivan Moroz\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 940,
+   "en": "No, I meant \"John Smith\"",
+   "old": "No, I meant \"John Smith\"",
+   "new": "No, I meant \"Ivan Moroz\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 941,
+   "en": "\"John Smith\"",
+   "old": "\"John Smith\"",
+   "new": "\"Ivan Moroz\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 942,
+   "en": "No, I meant \"John Smith\"",
+   "old": "No, I meant \"John Smith\"",
+   "new": "No, I meant \"Ivan Moroz\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 943,
+   "en": "\"Elizabeth Smith\"",
+   "old": "\"Elizabeth Smith\"",
+   "new": "\"Olha Bondar\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 978,
+   "en": "No, I meant \"Iris\" private.",
+   "old": "No, I meant \"Iris\" private.",
+   "new": "No, I meant \"Iryna\" private."
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 992,
+   "en": "Call \"John Smith\"",
+   "old": "Call \"John Smith\"",
+   "new": "Call \"Ivan Moroz\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 993,
+   "en": "Station \"BBC Radio 2\"",
+   "old": "Station \"BBC Radio 2\"",
+   "new": "Station \"Radio ROKS\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 999,
+   "en": "Call \"John Smith\"",
+   "old": "Call \"John Smith\"",
+   "new": "Call \"Ivan Moroz\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1000,
+   "en": "Call \"John Smith\" private",
+   "old": "Call \"John Smith\" private",
+   "new": "Call \"Ivan Moroz\" private"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1033,
+   "en": "\"Hi John, how's it going?\"",
+   "old": "\"Hi John, how's it going?\"",
+   "new": "\"Hi Ivan, how's it going?\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1034,
+   "en": "\"Hi John, I'm running late.\"",
+   "old": "\"Hi John, I'm running late.\"",
+   "new": "\"Hi Ivan, I'm running late.\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1035,
+   "en": "\"Hi John, I'm on my way.\"",
+   "old": "\"Hi John, I'm on my way.\"",
+   "new": "\"Hi Ivan, I'm on my way.\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1106,
+   "en": "Dictate e-mail to \"John\"",
+   "old": "Dictate e-mail to \"John\"",
+   "new": "Dictate e-mail to \"Ivan\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1259,
+   "en": "Navigate to \"John Smith\"",
+   "old": "Navigate to \"John Smith\"",
+   "new": "Navigate to \"Ivan Moroz\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1331,
+   "en": "Enter address • Station \"BBC Radio 2\" • Help",
+   "old": "Enter address • Station \"BBC Radio 2\" • Help",
+   "new": "Enter address • Station \"Radio ROKS\" • Help"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1395,
+   "en": "Name? e.g. \"John Smith\"",
+   "old": "Name? e.g. \"John Smith\"",
+   "new": "Name? e.g. \"Ivan Moroz\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1403,
+   "en": "Station \"BBC Radio 2\" • Help • Correction • Cancel",
+   "old": "Station \"BBC Radio 2\" • Help • Correction • Cancel",
+   "new": "Station \"Radio ROKS\" • Help • Correction • Cancel"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1404,
+   "en": "Call \"John Smith\" • Enter number • Help • Correction",
+   "old": "Call \"John Smith\" • Enter number • Help • Correction",
+   "new": "Call \"Ivan Moroz\" • Enter number • Help • Correction"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1506,
+   "en": "Navigate to \"John Smith\"",
+   "old": "Navigate to \"John Smith\"",
+   "new": "Navigate to \"Ivan Moroz\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1507,
+   "en": "Drive me to \"John's\" house.",
+   "old": "Drive me to \"John's\" house.",
+   "new": "Drive me to \"Ivan's\" house."
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1510,
+   "en": "Navigate to \"John Smith\"",
+   "old": "Navigate to \"John Smith\"",
+   "new": "Navigate to \"Ivan Moroz\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1511,
+   "en": "Drive me to \"John Smith's\" private address.",
+   "old": "Drive me to \"John Smith's\" private address.",
+   "new": "Drive me to \"Ivan Moroz's\" private address."
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1544,
+   "en": "\"Elizabeth Smith\"",
+   "old": "\"Elizabeth Smith\"",
+   "new": "\"Olha Bondar\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1545,
+   "en": "Navigate to \"John Smith\"",
+   "old": "Navigate to \"John Smith\"",
+   "new": "Navigate to \"Ivan Moroz\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1549,
+   "en": "\"Elizabeth Smith\"",
+   "old": "\"Elizabeth Smith\"",
+   "new": "\"Olha Bondar\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1550,
+   "en": "Navigate to \"John Smith\"",
+   "old": "Navigate to \"John Smith\"",
+   "new": "Navigate to \"Ivan Moroz\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1553,
+   "en": "\"Elizabeth Smith\"",
+   "old": "\"Elizabeth Smith\"",
+   "new": "\"Olha Bondar\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1554,
+   "en": "No, I meant \"John Smith\"",
+   "old": "No, I meant \"John Smith\"",
+   "new": "No, I meant \"Ivan Moroz\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1555,
+   "en": "\"Elizabeth Smith\"",
+   "old": "\"Elizabeth Smith\"",
+   "new": "\"Olha Bondar\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1556,
+   "en": "No, I meant \"John Smith\"",
+   "old": "No, I meant \"John Smith\"",
+   "new": "No, I meant \"Ivan Moroz\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1568,
+   "en": "\"John Smith\"",
+   "old": "\"John Smith\"",
+   "new": "\"Ivan Moroz\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1570,
+   "en": "Dictate message to \"John\"",
+   "old": "Dictate message to \"John\"",
+   "new": "Dictate message to \"Ivan\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1571,
+   "en": "No, I meant \"John\" private",
+   "old": "No, I meant \"John\" private",
+   "new": "No, I meant \"Ivan\" private"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1578,
+   "en": "Dictate e-mail to \"John Smith\"",
+   "old": "Dictate e-mail to \"John Smith\"",
+   "new": "Dictate e-mail to \"Ivan Moroz\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1586,
+   "en": "No, I meant \"John Smith's\" private address.",
+   "old": "No, I meant \"John Smith's\" private address.",
+   "new": "No, I meant \"Ivan Moroz's\" private address."
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1611,
+   "en": "No, I meant \"BBC Radio 2\"",
+   "old": "No, I meant \"BBC Radio 2\"",
+   "new": "No, I meant \"Radio ROKS\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1618,
+   "en": "\"John Smith\"",
+   "old": "\"John Smith\"",
+   "new": "\"Ivan Moroz\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1619,
+   "en": "Call \"John Smith\"",
+   "old": "Call \"John Smith\"",
+   "new": "Call \"Ivan Moroz\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1620,
+   "en": "Drive me to \"John Smith\"",
+   "old": "Drive me to \"John Smith\"",
+   "new": "Drive me to \"Ivan Moroz\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1623,
+   "en": "Drive me to \"John Smith\"",
+   "old": "Drive me to \"John Smith\"",
+   "new": "Drive me to \"Ivan Moroz\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1644,
+   "en": "\"0800 699999\"\n\"John Smith\"\n\"Smith, John\"",
+   "old": "\"097 232 30 88\"\n\"Taras Shevchenko\"\n\"Shevchenko, Taras\"",
+   "new": "\"097 232 30 88\"\n\"Ivan Moroz\"\n\"Moroz, Ivan\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1647,
+   "en": "\"London, Regent Street\"\n\"Heathrow Airport\"\n\"John Smith\"",
+   "old": "\"Kyiv, Khreshchatyk Street\"\n\"Boryspil Airport\"\n\"Taras Shevchenko\"",
+   "new": "\"Kyiv, Khreshchatyk Street\"\n\"Boryspil Airport\"\n\"Ivan Moroz\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1686,
+   "en": "Drive me to \"John Smith\"",
+   "old": "Drive me to \"John Smith\"",
+   "new": "Drive me to \"Ivan Moroz\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1688,
+   "en": "Station \"BBC Radio 2\"",
+   "old": "Station \"BBC Radio 2\"",
+   "new": "Station \"Radio ROKS\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1700,
+   "en": "Call \"John Smith\"",
+   "old": "Call \"John Smith\"",
+   "new": "Call \"Ivan Moroz\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1706,
+   "en": "\"John Smith\"",
+   "old": "\"John Smith\"",
+   "new": "\"Ivan Moroz\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1707,
+   "en": "Call \"John Smith\"",
+   "old": "Call \"John Smith\"",
+   "new": "Call \"Ivan Moroz\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1708,
+   "en": "Drive me to \"John Smith\"",
+   "old": "Drive me to \"John Smith\"",
+   "new": "Drive me to \"Ivan Moroz\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1714,
+   "en": "Station \"BBC Radio 2\"",
+   "old": "Station \"BBC Radio 2\"",
+   "new": "Station \"Radio ROKS\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1746,
+   "en": "Call \"John Smith's\" private/business number",
+   "old": "Call \"John Smith's\" private/business number",
+   "new": "Call \"Ivan Moroz's\" private/business number"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1761,
+   "en": "Dictate message to \"John\"",
+   "old": "Dictate message to \"John\"",
+   "new": "Dictate message to \"Ivan\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1762,
+   "en": "Dictate text message to \"John Smith\"",
+   "old": "Dictate text message to \"John Smith\"",
+   "new": "Dictate text message to \"Ivan Moroz\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1789,
+   "en": "No, I meant \"Iris\" at work.",
+   "old": "No, I meant \"Iris\" at work.",
+   "new": "No, I meant \"Iryna\" at work."
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1790,
+   "en": "No, I meant \"Iris\" private.",
+   "old": "No, I meant \"Iris\" private.",
+   "new": "No, I meant \"Iryna\" private."
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1796,
+   "en": "\"Elizabeth Smith\"",
+   "old": "\"Elizabeth Smith\"",
+   "new": "\"Olha Bondar\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1797,
+   "en": "No, I meant \"John Smith\"",
+   "old": "No, I meant \"John Smith\"",
+   "new": "No, I meant \"Ivan Moroz\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1801,
+   "en": "Navigate to \"John Smith\"",
+   "old": "Navigate to \"John Smith\"",
+   "new": "Navigate to \"Ivan Moroz\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1828,
+   "en": "\"Elizabeth Smith\"",
+   "old": "\"Elizabeth Smith\"",
+   "new": "\"Olha Bondar\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 2124,
+   "en": "Call \"John Smith\" private",
+   "old": "Call \"John Smith\" private",
+   "new": "Call \"Ivan Moroz\" private"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 2312,
+   "en": "Drive me to \"John Smith\"",
+   "old": "Drive me to \"John Smith\"",
+   "new": "Drive me to \"Ivan Moroz\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 2923,
+   "en": "Call \"John Smith's\" private/business number",
+   "old": "Call \"John Smith's\" private/business number",
+   "new": "Call \"Ivan Moroz's\" private/business number"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 2928,
+   "en": "Call \"John Smith\"",
+   "old": "Call \"John Smith\"",
+   "new": "Call \"Ivan Moroz\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 2946,
+   "en": "\"John Smith\"",
+   "old": "\"John Smith\"",
+   "new": "\"Ivan Moroz\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 2962,
+   "en": "Call \"John Smith's\" private/business number",
+   "old": "Call \"John Smith's\" private/business number",
+   "new": "Call \"Ivan Moroz's\" private/business number"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3202,
+   "en": "Call \"John Smith\"",
+   "old": "Call \"John Smith\"",
+   "new": "Call \"Ivan Moroz\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3203,
+   "en": "Set station \"B B C Radio 2\" / \"88.1\" / \"Classic FM\"",
+   "old": "Set station \"B B C Radio 2\" / \"88.1\" / \"Classic FM\"",
+   "new": "Set station \"Radio ROKS\" / \"88.1\" / \"Hit FM\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3210,
+   "en": "Call \"John Smith's\" private number",
+   "old": "Call \"John Smith's\" private number",
+   "new": "Call \"Ivan Moroz's\" private number"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3229,
+   "en": "Navigate to \"John Smith\"",
+   "old": "Navigate to \"John Smith\"",
+   "new": "Navigate to \"Ivan Moroz\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3230,
+   "en": "Drive me to \"John Smith's\" private address.",
+   "old": "Drive me to \"John Smith's\" private address.",
+   "new": "Drive me to \"Ivan Moroz's\" private address."
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3245,
+   "en": "Play station \"BBC Radio 2\"",
+   "old": "Play station \"BBC Radio 2\"",
+   "new": "Play station \"Radio ROKS\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3247,
+   "en": "Station \"BBC Radio 2\"",
+   "old": "Station \"BBC Radio 2\"",
+   "new": "Station \"Radio ROKS\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3378,
+   "en": "\"John Smith\"",
+   "old": "\"John Smith\"",
+   "new": "\"Ivan Moroz\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3379,
+   "en": "\"Elizabeth Smith\"",
+   "old": "\"Elizabeth Smith\"",
+   "new": "\"Olha Bondar\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3382,
+   "en": "\"John Smith\"",
+   "old": "\"John Smith\"",
+   "new": "\"Ivan Moroz\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3383,
+   "en": "\"Elizabeth Smith\"",
+   "old": "\"Elizabeth Smith\"",
+   "new": "\"Olha Bondar\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3791,
+   "en": "Navigate to \"John Smith\"",
+   "old": "Navigate to \"John Smith\"",
+   "new": "Navigate to \"Ivan Moroz\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3792,
+   "en": "Drive me to \"John's\" house.",
+   "old": "Drive me to \"John's\" house.",
+   "new": "Drive me to \"Ivan's\" house."
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3810,
+   "en": "Call \"John Smith\"",
+   "old": "Call \"John Smith\"",
+   "new": "Call \"Ivan Moroz\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3811,
+   "en": "Call \"John Smith\" private",
+   "old": "Call \"John Smith\" private",
+   "new": "Call \"Ivan Moroz\" private"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3845,
+   "en": "No, I meant station \"BBC Radio 2\".",
+   "old": "No, I meant station \"BBC Radio 2\".",
+   "new": "No, I meant station \"Radio ROKS\"."
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3850,
+   "en": "No, I meant \"BBC Radio 2\"",
+   "old": "No, I meant \"BBC Radio 2\"",
+   "new": "No, I meant \"Radio ROKS\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 4035,
+   "en": "Drive me to \"John Smith\"",
+   "old": "Drive me to \"John Smith\"",
+   "new": "Drive me to \"Ivan Moroz\""
+  },
+  {
+   "module": "HMITunerEvoHigh",
+   "slot": 584,
+   "en": "Station \"BBC Radio 2\"",
+   "old": "Station \"BBC Radio 2\"",
+   "new": "Station \"Radio ROKS\""
+  },
+  {
+   "module": "HMITunerEvoHigh",
+   "slot": 592,
+   "en": "Ensemble \"BBC\"",
+   "old": "Ensemble \"BBC\"",
+   "new": "Ensemble \"Kyiv\""
+  },
+  {
+   "module": "HMITunerEvoHigh",
+   "slot": 605,
+   "en": "Station \"BBC Radio 2\"",
+   "old": "Station \"BBC Radio 2\"",
+   "new": "Station \"Radio ROKS\""
+  },
+  {
+   "module": "HMITunerEvoHigh",
+   "slot": 616,
+   "en": "Call \"John Smith\"",
+   "old": "Call \"John Smith\"",
+   "new": "Call \"Ivan Moroz\""
+  },
+  {
+   "module": "HMITunerEvoHigh",
+   "slot": 617,
+   "en": "Drive me to \"John Smith\"",
+   "old": "Drive me to \"John Smith\"",
+   "new": "Drive me to \"Ivan Moroz\""
+  },
+  {
+   "module": "HMITunerEvoHigh",
+   "slot": 1640,
+   "en": "Set station \"B B C Radio 2\" / \"88.1\" / \"Classic FM\"",
+   "old": "Станція \"B B C Radio 2\" / \"88.1\" / \"Classic FM\"",
+   "new": "Станція \"Radio ROKS\" / \"88.1\" / \"Hit FM\""
+  }
+ ]
+}

@@ -1,0 +1,2525 @@
+{
+ "description": "2026-11-06 owner rule: everything the user says or the car voice speaks is English. German leftovers in spoken prompts and examples -> English (en_GB text where it exists, hand translation otherwise); example places localised to Ukraine (Kyiv, Khreshchatyk, Boryspil Airport, Lviv, Odesa).",
+ "changes": [
+  {
+   "module": "HMICarEvoHigh",
+   "slot": 1767,
+   "en": "Drive me to \"London, Kingston Road, 50\"",
+   "old": "Drive me to \"London, Kingston Road, 50\"",
+   "new": "Drive me to \"Kyiv, Khreshchatyk, 50\""
+  },
+  {
+   "module": "HMIMediaEvoHigh",
+   "slot": 1375,
+   "en": "Drive me to \"London, Kingston Road, 50\"",
+   "old": "Drive me to \"London, Kingston Road, 50\"",
+   "new": "Drive me to \"Kyiv, Khreshchatyk, 50\""
+  },
+  {
+   "module": "HMIMessagingEvoHigh",
+   "slot": 424,
+   "en": "Drive me to \"London, Kingston Road, 50\"",
+   "old": "Drive me to \"London, Kingston Road, 50\"",
+   "new": "Drive me to \"Kyiv, Khreshchatyk, 50\""
+  },
+  {
+   "module": "HMIMessagingEvoHigh",
+   "slot": 734,
+   "en": "Drive me to \"London, Kingston Road, 50\"",
+   "old": "Drive me to \"London, Kingston Road, 50\"",
+   "new": "Drive me to \"Kyiv, Khreshchatyk, 50\""
+  },
+  {
+   "module": "HMINaviEvoHigh",
+   "slot": 755,
+   "en": "Drive me to \"London, Kingston Road, 50\"",
+   "old": "Drive me to \"London, Kingston Road, 50\"",
+   "new": "Drive me to \"Kyiv, Khreshchatyk, 50\""
+  },
+  {
+   "module": "HMINaviEvoHigh",
+   "slot": 763,
+   "en": "Drive me to \"London, Kingston Road, 50\"",
+   "old": "Drive me to \"London, Kingston Road, 50\"",
+   "new": "Drive me to \"Kyiv, Khreshchatyk, 50\""
+  },
+  {
+   "module": "HMINaviEvoHigh",
+   "slot": 1018,
+   "en": "Drive me to \"London, Kingston Road, 50\"",
+   "old": "Drive me to \"London, Kingston Road, 50\"",
+   "new": "Drive me to \"Kyiv, Khreshchatyk, 50\""
+  },
+  {
+   "module": "HMINaviEvoHigh",
+   "slot": 2543,
+   "en": "e.g. \"London\"",
+   "old": "e.g. \"London\"",
+   "new": "e.g. \"Kyiv\""
+  },
+  {
+   "module": "HMINaviEvoHigh",
+   "slot": 3584,
+   "en": "Drive me to \"London, Kingston Road, 50\"",
+   "old": "Drive me to \"London, Kingston Road, 50\"",
+   "new": "Drive me to \"Kyiv, Khreshchatyk, 50\""
+  },
+  {
+   "module": "HMINaviEvoHigh",
+   "slot": 3585,
+   "en": "Drive me to \"London, Kingston Road, 50\"",
+   "old": "Drive me to \"London, Kingston Road, 50\"",
+   "new": "Drive me to \"Kyiv, Khreshchatyk, 50\""
+  },
+  {
+   "module": "HMIOnlineEvoHigh",
+   "slot": 242,
+   "en": "Drive me to \"London, Kingston Road, 50\"",
+   "old": "Drive me to \"London, Kingston Road, 50\"",
+   "new": "Drive me to \"Kyiv, Khreshchatyk, 50\""
+  },
+  {
+   "module": "HMIOnlineEvoHigh",
+   "slot": 525,
+   "en": "Drive me to \"London, Kingston Road, 50\"",
+   "old": "Drive me to \"London, Kingston Road, 50\"",
+   "new": "Drive me to \"Kyiv, Khreshchatyk, 50\""
+  },
+  {
+   "module": "HMIPhoneEvoHigh",
+   "slot": 648,
+   "en": "Drive me to \"London, Kingston Road, 50\"",
+   "old": "Drive me to \"London, Kingston Road, 50\"",
+   "new": "Drive me to \"Kyiv, Khreshchatyk, 50\""
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 24,
+   "en": "I'm afraid I couldn't find a contact with this name.",
+   "old": "Es wurde leider kein Kontakt mit diesem Namen gefunden.",
+   "new": "I'm afraid I couldn't find a contact with this name."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 26,
+   "en": "I'm afraid I couldn't find a private address for <say-as interpret-as=\"name\">%1</say-as>.",
+   "old": "Es konnte leider keine Privatadresse zu <say-as interpret-as=\"name\">%1</say-as> gefunden werden.",
+   "new": "I'm afraid I couldn't find a private address for <say-as interpret-as=\"name\">%1</say-as>."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 27,
+   "en": "I'm afraid I couldn't find any addresses for <say-as interpret-as=\"name\">%1</say-as>.",
+   "old": "Es konnten leider keine Adressen zu <say-as interpret-as=\"name\">%1</say-as> gefunden werden.",
+   "new": "I'm afraid I couldn't find any addresses for <say-as interpret-as=\"name\">%1</say-as>."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 29,
+   "en": "Bitte legen Sie die S D Karte mit den Navigationsdaten ein.",
+   "old": "Bitte legen Sie die S D Karte mit den Navigationsdaten ein.",
+   "new": "Please insert the SD card with the navigation data."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 31,
+   "en": "Bitte nennen Sie das Navigationsziel, das übernommen werden soll: Privat- oder Geschäftsadresse?",
+   "old": "Bitte nennen Sie das Navigationsziel, das übernommen werden soll: Privat- oder Geschäftsadresse?",
+   "new": "Please say which navigation destination should be used: home or business address?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 32,
+   "en": "Wie bitte?",
+   "old": "Wie bitte?",
+   "new": "Pardon?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 33,
+   "en": "Bitte nennen Sie den Eintrag oder die Zeilennummer des gewünschten Kontaktes.",
+   "old": "Bitte nennen Sie den Eintrag oder die Zeilennummer des gewünschten Kontaktes.",
+   "new": "Please say the entry or the line number of the contact you want."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 34,
+   "en": "Sagen Sie zum Beispiel Ralf Schmidt oder Nummer zwei.",
+   "old": "Sagen Sie zum Beispiel Ralf Schmidt oder Nummer zwei.",
+   "new": "For example, say Taras Shevchenko or number two."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 46,
+   "en": "Bitte nennen Sie den Vor- und Nachnamen des Empfängers, sagen Sie zum Beispiel \"Ralf Schmidt\".",
+   "old": "Bitte nennen Sie den Vor- und Nachnamen des Empfängers, sagen Sie zum Beispiel \"Ralf Schmidt\".",
+   "new": "Please say the first and last name of the recipient. For example, say \"Taras Shevchenko\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 51,
+   "en": "Bitte wählen Sie eines der folgenden Themengebiete:",
+   "old": "Bitte wählen Sie eines der folgenden Themengebiete:",
+   "new": "Please choose one of the following topics:"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 127,
+   "en": "Wie bitte?",
+   "old": "Wie bitte?",
+   "new": "Pardon?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 139,
+   "en": "Bitte nennen Sie den Eintrag oder die Zeilennummer!",
+   "old": "Bitte nennen Sie den Eintrag oder die Zeilennummer!",
+   "new": "Please say the entry or the line number!"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 284,
+   "en": "Bitte nennen Sie den Namen des Genres, sagen Sie zum Beispiel „Rock“.",
+   "old": "Bitte nennen Sie den Namen des Genres, sagen Sie zum Beispiel „Rock“.",
+   "new": "Please say the name of the genre. For example, say \"Rock\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 285,
+   "en": "Bitte nennen Sie den Namen des Titels, sagen Sie zum Beispiel \"Summer of 69\" .",
+   "old": "Bitte nennen Sie den Namen des Titels, sagen Sie zum Beispiel \"Summer of 69\" .",
+   "new": "Please say the name of the track. For example, say \"Summer of 69\" ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 286,
+   "en": "Bitte nennen Sie den Namen des Videos, sagen Sie zum Beispiel „Die 24 Stunden von Le Mans“.",
+   "old": "Bitte nennen Sie den Namen des Videos, sagen Sie zum Beispiel „Die 24 Stunden von Le Mans“.",
+   "new": "Please say the name of the video. For example, say \"The 24 Hours of Le Mans\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 287,
+   "en": "Bitte nennen Sie den Namen des Albums, sagen Sie zum Beispiel \"Greatest Hits\".",
+   "old": "Bitte nennen Sie den Namen des Albums, sagen Sie zum Beispiel \"Greatest Hits\".",
+   "new": "Please say the name of the album. For example, say \"Greatest Hits\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 288,
+   "en": "Bitte nennen Sie den Namen des Interpreten, sagen Sie zum Beispiel \"Bryan Adams\".",
+   "old": "Bitte nennen Sie den Namen des Interpreten, sagen Sie zum Beispiel \"Bryan Adams\".",
+   "new": "Please say the name of the artist. For example, say \"Bryan Adams\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 289,
+   "en": "Bitte nennen Sie den Namen der Wiedergabeliste, sagen Sie zum Beispiel „Greatest Hits“.",
+   "old": "Bitte nennen Sie den Namen der Wiedergabeliste, sagen Sie zum Beispiel „Greatest Hits“.",
+   "new": "Please say the name of the playlist. For example, say \"Greatest Hits\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 304,
+   "en": "Um in der Ordnerstruktur zu navigieren, sagen Sie:",
+   "old": "Um in der Ordnerstruktur zu navigieren, sagen Sie:",
+   "new": "To navigate in the folder structure, say:"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 358,
+   "en": "Bitte nennen Sie den Vor- und Nachnamen des Empfängers!",
+   "old": "Bitte nennen Sie den Vor- und Nachnamen des Empfängers!",
+   "new": "Please say the first and last name of the recipient!"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 366,
+   "en": "Es sind keine Nachrichten verfügbar. Bitte prüfen Sie die Vertragskonditionen ihrer SIM-Karte.",
+   "old": "Es sind keine Nachrichten verfügbar. Bitte prüfen Sie die Vertragskonditionen ihrer SIM-Karte.",
+   "new": "No messages are available. Please check the contract terms of your SIM card."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 368,
+   "en": "Bitte nennen Sie den Vor- und Nachnamen des weiteren Empfängers.",
+   "old": "Bitte nennen Sie den Vor- und Nachnamen des weiteren Empfängers.",
+   "new": "Please say the first and last name of the additional recipient."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 370,
+   "en": "Bitte nennen Sie die Zeilennummer!",
+   "old": "Bitte nennen Sie die Zeilennummer!",
+   "new": "Please say the line number!"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 371,
+   "en": "Bitte nennen Sie die Zeilennummer, sagen Sie zum Beispiel \"Zeile 2\" .",
+   "old": "Bitte nennen Sie die Zeilennummer, sagen Sie zum Beispiel \"Zeile 2\" .",
+   "new": "Please say the line number. For example, say \"Line 2\" ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 375,
+   "en": "Bitte diktieren Sie den Text inklusive Satzzeichen. Beginnen Sie die Aufnahme durch kurzes Drücken der Sprechtaste. Sagen Sie zum Beispiel: Hallo Ralf Komma wie geht es Dir Fragezeichen.",
+   "old": "Bitte diktieren Sie den Text inklusive Satzzeichen. Beginnen Sie die Aufnahme durch kurzes Drücken der Sprechtaste. Sagen Sie zum Beispiel: Hallo Ralf Komma wie geht es Dir Fragezeichen.",
+   "new": "Please dictate the text including punctuation. Start the recording by briefly pressing the talk button. For example, say: Hello Taras comma how are you question mark."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 383,
+   "en": "Der Betreff wird verarbeitet.",
+   "old": "Der Betreff wird verarbeitet.",
+   "new": "The subject is being processed."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 384,
+   "en": "Bitte diktieren Sie den Betreff inklusive Satzzeichen. Drücken Sie zum Starten kurz die Sprechtaste.",
+   "old": "Bitte diktieren Sie den Betreff inklusive Satzzeichen. Drücken Sie zum Starten kurz die Sprechtaste.",
+   "new": "Please dictate the subject including punctuation. Briefly press the talk button to start."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 385,
+   "en": "Bitte diktieren Sie den Betreff inklusive Satzzeichen. Beginnen Sie die Aufnahme durch kurzes Drücken der Sprechtaste. Sagen Sie zum Beispiel: Findet das Treffen morgen statt Fragezeichen.",
+   "old": "Bitte diktieren Sie den Betreff inklusive Satzzeichen. Beginnen Sie die Aufnahme durch kurzes Drücken der Sprechtaste. Sagen Sie zum Beispiel: Findet das Treffen morgen statt Fragezeichen.",
+   "new": "Please dictate the subject including punctuation. Start the recording by briefly pressing the talk button. For example, say: Is the meeting tomorrow question mark."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 386,
+   "en": "Bitte antworten Sie mit „Ja“, wenn der Hinweis erneut angezeigt werden soll oder mit „Nein“, um nicht erneut gewarnt zu werden.",
+   "old": "Bitte antworten Sie mit „Ja“, wenn der Hinweis erneut angezeigt werden soll oder mit „Nein“, um nicht erneut gewarnt zu werden.",
+   "new": "Please say \"Yes\" if the notice should be shown again, or \"No\" if you do not want to be warned again."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 388,
+   "en": "Möchten Sie den Hinweis erneut angezeigt bekommen?",
+   "old": "Möchten Sie den Hinweis erneut angezeigt bekommen?",
+   "new": "Would you like the notice to be shown again?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 389,
+   "en": "Freischaltung nicht möglich. Bitte suchen Sie ihren Händler auf.",
+   "old": "Freischaltung nicht möglich. Bitte suchen Sie ihren Händler auf.",
+   "new": "Activation is not possible. Please contact your dealer."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 390,
+   "en": "Bitte aktivieren Sie Ihre Lizenz zur Nutzung von Onlinediensten.",
+   "old": "Bitte aktivieren Sie Ihre Lizenz zur Nutzung von Onlinediensten.",
+   "new": "Please activate your licence to use online services."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 392,
+   "en": "Bitte sagen Sie „Ja“, um den Text zu übernehmen und „nein“ um den Text zu ändern. Oder sagen Sie \"senden\", um die S M S zu senden.",
+   "old": "Bitte sagen Sie „Ja“, um den Text zu übernehmen und „nein“ um den Text zu ändern. Oder sagen Sie \"senden\", um die S M S zu senden.",
+   "new": "Please say \"Yes\" to accept the text and \"No\" to change the text. Or say \"send\" to send the S M S."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 393,
+   "en": "Neu. Bitte schreiben Sie das neue Wort mit dem Touchpad.",
+   "old": "Neu. Bitte schreiben Sie das neue Wort mit dem Touchpad.",
+   "new": "New. Please write the new word on the touchpad."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 395,
+   "en": "Möchten Sie den Text übernehmen?",
+   "old": "Möchten Sie den Text übernehmen?",
+   "new": "Would you like to accept the text?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 397,
+   "en": "Sie haben die maximale Anzahl an Zeichen, die Sie während der Fahrt ändern können, erreicht.",
+   "old": "Sie haben die maximale Anzahl an Zeichen, die Sie während der Fahrt ändern können, erreicht.",
+   "new": "You have reached the maximum number of characters that you can change while driving."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 398,
+   "en": "Bitte sagen Sie „Ja“, um die S M S zu senden und „nein“ um den Text weiter zu ändern. Weitere wichtige Befehle sind: \"S M S erweitern\" oder \"Empfänger hinzufügen\".",
+   "old": "Bitte sagen Sie „Ja“, um die S M S zu senden und „nein“ um den Text weiter zu ändern. Weitere wichtige Befehle sind: \"S M S erweitern\" oder \"Empfänger hinzufügen\".",
+   "new": "Please say \"Yes\" to send the S M S and \"No\" to keep changing the text. Other important commands are: \"Extend S M S\" or \"Add recipient\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 399,
+   "en": "Bitte sagen Sie „Ja“, um die E Mail zu senden und „nein“ um den Text weiter zu ändern. Weitere wichtige Befehle sind \"E Mail erweitern\" oder \"Empfänger hinzufügen\".",
+   "old": "Bitte sagen Sie „Ja“, um die E Mail zu senden und „nein“ um den Text weiter zu ändern. Weitere wichtige Befehle sind \"E Mail erweitern\" oder \"Empfänger hinzufügen\".",
+   "new": "Please say \"Yes\" to send the e-mail and \"No\" to keep changing the text. Other important commands are \"Extend e-mail\" or \"Add recipient\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 400,
+   "en": "Bitte sagen Sie „Senden“, um die S M S zu senden oder Vorlage einfügen um eine Vorlage einzufügen",
+   "old": "Bitte sagen Sie „Senden“, um die S M S zu senden oder Vorlage einfügen um eine Vorlage einzufügen",
+   "new": "Please say \"Send\" to send the S M S, or \"Insert template\" to insert a template"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 401,
+   "en": "Bitte diktieren Sie den Text inklusive Satzzeichen. Drücken Sie zum Starten kurz die Sprechtaste.",
+   "old": "Bitte diktieren Sie den Text inklusive Satzzeichen. Drücken Sie zum Starten kurz die Sprechtaste.",
+   "new": "Please dictate the text including punctuation. Briefly press the talk button to start."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 402,
+   "en": "Bitte diktieren Sie den Text nach dem Druck auf die Sprechtaste.",
+   "old": "Bitte diktieren Sie den Text nach dem Druck auf die Sprechtaste.",
+   "new": "Please dictate the text after pressing the talk button."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 403,
+   "en": "Bitte diktieren Sie den Text.",
+   "old": "Bitte diktieren Sie den Text.",
+   "new": "Please dictate the text."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 404,
+   "en": "Möchten Sie den folgenden Betreff übernehmen: $<0> ?",
+   "old": "Möchten Sie den folgenden Betreff übernehmen: $<0> ?",
+   "new": "Would you like to accept the following subject: $<0> ?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 405,
+   "en": "Bitte wählen Sie das zu ändernde Wort mit dem Steuerungsknopf aus.",
+   "old": "Bitte wählen Sie das zu ändernde Wort mit dem Steuerungsknopf aus.",
+   "new": "Please select the word to change with the rotary control."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 406,
+   "en": "Die Änderung $<0> wurde übernommen. Bitte korrigieren Sie den weiteren Text oder drücken Sie die Sprechtaste.",
+   "old": "Die Änderung $<0> wurde übernommen. Bitte korrigieren Sie den weiteren Text oder drücken Sie die Sprechtaste.",
+   "new": "The change $<0> has been accepted. Please correct the rest of the text or press the talk button."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 658,
+   "en": "Bitte nennen Sie den Namen des gesuchten Sonderziels.",
+   "old": "Bitte nennen Sie den Namen des gesuchten Sonderziels.",
+   "new": "Please say the name of the special destination you are looking for."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 659,
+   "en": "Bitte nennen Sie die Kategorie!",
+   "old": "Bitte nennen Sie die Kategorie!",
+   "new": "Please say the category!"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 660,
+   "en": "Der Suchbegriff konnte nicht erkannt werden.",
+   "old": "Der Suchbegriff konnte nicht erkannt werden.",
+   "new": "The search term could not be recognised."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 664,
+   "en": "Die Sprachbedienung für Online Ziele ist in dieser Sprache nicht verfügbar.",
+   "old": "Die Sprachbedienung für Online Ziele ist in dieser Sprache nicht verfügbar.",
+   "new": "Voice control for online destinations is not available in this language."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 665,
+   "en": "Der Suchbegriff konnte nicht erkannt werden. Bitte wiederholen Sie Ihre Eingabe!",
+   "old": "Der Suchbegriff konnte nicht erkannt werden. Bitte wiederholen Sie Ihre Eingabe!",
+   "new": "The search term could not be recognised. Please repeat your input!"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 671,
+   "en": "I'm starting the search.",
+   "old": "Gut, die Suche wird gestartet.",
+   "new": "I'm starting the search."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 678,
+   "en": "Es konnten leider keine Ergebnisse zu diesem Suchbegriff gefunden werden.",
+   "old": "Es konnten leider keine Ergebnisse zu diesem Suchbegriff gefunden werden.",
+   "new": "Unfortunately, no results were found for this search term."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 681,
+   "en": "Es wurde nur ein Onlineziel für $<0> gefunden.",
+   "old": "Es wurde nur ein Onlineziel für $<0> gefunden.",
+   "new": "Only one online destination was found for $<0>."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 684,
+   "en": "Bitte nennen Sie die Zeilennummer.",
+   "old": "Bitte nennen Sie die Zeilennummer.",
+   "new": "Please say the line number."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 700,
+   "en": "Switching on the traffic map.",
+   "old": "Okay, hier ist die Verkehrskarte.",
+   "new": "Switching on the traffic map."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 707,
+   "en": "Switching on the standard map.",
+   "old": "Okay, hier ist die Standardkarte.",
+   "new": "Switching on the standard map."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 723,
+   "en": "Sie haben die maximale Anzahl an Zwischenzielen erreicht. Bitte löschen Sie ein Zwischenziel mit dem M M I Bedienteil.",
+   "old": "Sie haben die maximale Anzahl an Zwischenzielen erreicht. Bitte löschen Sie ein Zwischenziel mit dem M M I Bedienteil.",
+   "new": "You have reached the maximum number of stopovers. Please delete a stopover using the MMI control panel."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 735,
+   "en": "Die Sperrung überschreitet die Länge ihrer Route.",
+   "old": "Die Sperrung überschreitet die Länge ihrer Route.",
+   "new": "The closure exceeds the length of your route."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 747,
+   "en": "Sagen Sie zum Beispiel Zeile zwei.",
+   "old": "Sagen Sie zum Beispiel Zeile zwei.",
+   "new": "For example, say line two."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 755,
+   "en": "Bitte nennen Sie die Nummer der gewünschten Route, sagen Sie zum Beispiel Route 1 .",
+   "old": "Bitte nennen Sie die Nummer der gewünschten Route, sagen Sie zum Beispiel Route 1 .",
+   "new": "Please say the number of the route you want. For example, say route 1 ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 763,
+   "en": "Die Suche in diesem Suchbereich ist nicht möglich. Bitte wählen Sie einen der möglichen Suchbereiche.",
+   "old": "Die Suche in diesem Suchbereich ist nicht möglich. Bitte wählen Sie einen der möglichen Suchbereiche.",
+   "new": "The search is not possible in this search area. Please choose one of the possible search areas."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 765,
+   "en": "Bitte wählen Sie den Bereich, in dem Ihr Sonderziel gesucht werden soll.",
+   "old": "Bitte wählen Sie den Bereich, in dem Ihr Sonderziel gesucht werden soll.",
+   "new": "Please choose the area in which your special destination should be searched."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 766,
+   "en": "Sagen Sie zum Beispiel Standortumkreis oder in neuem Ort.",
+   "old": "Sagen Sie zum Beispiel Standortumkreis oder in neuem Ort.",
+   "new": "For example, say around current location or in new town."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 801,
+   "en": "Sagen Sie zum Beispiel Standortumkreis oder Zielumkreis.",
+   "old": "Sagen Sie zum Beispiel Standortumkreis oder Zielumkreis.",
+   "new": "For example, say around current location or around destination."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 817,
+   "en": "Die Kreuzung konnte nicht erkannt werden.",
+   "old": "Die Kreuzung konnte nicht erkannt werden.",
+   "new": "The intersection could not be recognised."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 819,
+   "en": "Die Eingabe einer Kreuzung ist für dieses Ziel nicht möglich.",
+   "old": "Die Eingabe einer Kreuzung ist für dieses Ziel nicht möglich.",
+   "new": "Entering an intersection is not possible for this destination."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 829,
+   "en": "Die Straße konnte nicht erkannt werden.",
+   "old": "Die Straße konnte nicht erkannt werden.",
+   "new": "The street could not be recognised."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 850,
+   "en": "das Sonderziel und den Suchbereich, zum Beispiel Suche ein Coffeeshop am Standortumkreis,",
+   "old": "das Sonderziel und den Suchbereich, zum Beispiel Suche ein Coffeeshop am Standortumkreis,",
+   "new": "the special destination and the search area, for example find a coffee shop around current location,"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 851,
+   "en": "das Sonderziel und den Suchbereich, zum Beispiel Suche ein Coffeeshop entlang der Route,",
+   "old": "das Sonderziel und den Suchbereich, zum Beispiel Suche ein Coffeeshop entlang der Route,",
+   "new": "the special destination and the search area, for example find a coffee shop along the route,"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 856,
+   "en": "das Sonderziel und den Suchbereich, zum Beispiel \"Suche ein italienisches Restaurant am Standortumkreis\",",
+   "old": "das Sonderziel und den Suchbereich, zum Beispiel \"Suche ein italienisches Restaurant am Standortumkreis\",",
+   "new": "the special destination and the search area, for example \"find an Italian restaurant around current location\","
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 857,
+   "en": "das Sonderziel und den Suchbereich, zum Beispiel \"Suche ein italienisches Restaurant entlang der Route\",",
+   "old": "das Sonderziel und den Suchbereich, zum Beispiel \"Suche ein italienisches Restaurant entlang der Route\",",
+   "new": "the special destination and the search area, for example \"find an Italian restaurant along the route\","
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 859,
+   "en": "Navigiere zu Ralf Schmidt privat,",
+   "old": "Navigiere zu Ralf Schmidt privat,",
+   "new": "Navigate to Taras Shevchenko private,"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 886,
+   "en": "Die Hausnummer ist nicht vorhanden.",
+   "old": "Die Hausnummer ist nicht vorhanden.",
+   "new": "The house number does not exist."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 892,
+   "en": "Please say the town or the line number of the town which you would like to navigate to. For example, say \"Birmingham\".",
+   "old": "Please say the town or the line number of the town which you would like to navigate to. For example, say \"Birmingham\".",
+   "new": "Please say the town or the line number of the town which you would like to navigate to. For example, say \"Lviv\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 897,
+   "en": "Bitte nennen Sie die Zeilennummer des Sonderziels.",
+   "old": "Bitte nennen Sie die Zeilennummer des Sonderziels.",
+   "new": "Please say the line number of the special destination."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 899,
+   "en": "Bitte nennen Sie die Zeilennummer der kreuzenden Straße.",
+   "old": "Bitte nennen Sie die Zeilennummer der kreuzenden Straße.",
+   "new": "Please say the line number of the cross street."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 900,
+   "en": "Bitte nennen Sie die Zeilennummer des Suchkriteriums für Ihr Sonderziel.",
+   "old": "Bitte nennen Sie die Zeilennummer des Suchkriteriums für Ihr Sonderziel.",
+   "new": "Please say the line number of the search criterion for your special destination."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 909,
+   "en": "Die Eingabe eines Ortsteils ist für dieses Ziel nicht möglich.",
+   "old": "Die Eingabe eines Ortsteils ist für dieses Ziel nicht möglich.",
+   "new": "Entering a district is not possible for this destination."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 917,
+   "en": "Welchen Teil der Adresse möchten Sie ändern?",
+   "old": "Welchen Teil der Adresse möchten Sie ändern?",
+   "new": "Which part of the address would you like to change?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 918,
+   "en": "Bitte geben Sie den Adressteil an, welchen Sie ändern möchten.",
+   "old": "Bitte geben Sie den Adressteil an, welchen Sie ändern möchten.",
+   "new": "Please say which part of the address you want to change."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 919,
+   "en": "Sagen sie zum Beispiel Ort oder Straße.",
+   "old": "Sagen sie zum Beispiel Ort oder Straße.",
+   "new": "For example, say town or street."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 920,
+   "en": "Möchten Sie das Ziel als nächstes Zwischenziel einfügen?",
+   "old": "Möchten Sie das Ziel als nächstes Zwischenziel einfügen?",
+   "new": "Would you like to insert the destination as the next stopover?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 921,
+   "en": "Bitte antworten Sie mit \"Ja\", um die Zielführung für ein neues Ziel zu starten , oder mit \"Nein\", um das Ziel als nächstes Zwischenziel einzufügen.",
+   "old": "Bitte antworten Sie mit \"Ja\", um die Zielführung für ein neues Ziel zu starten , oder mit \"Nein\", um das Ziel als nächstes Zwischenziel einzufügen.",
+   "new": "Please answer \"Yes\" to start route guidance for a new destination, or \"No\" to insert the destination as the next stopover."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 922,
+   "en": "Bitte antworten Sie mit \"Ja\", wenn Sie die Zielführung starten möchten, oder mit \"Nein\", um den Dialog zu beenden. Mit dem Kommando „In Karte anzeigen“ können Sie das Sonderziel in der Karte sehen.",
+   "old": "Bitte antworten Sie mit \"Ja\", wenn Sie die Zielführung starten möchten, oder mit \"Nein\", um den Dialog zu beenden. Mit dem Kommando „In Karte anzeigen“ können Sie das Sonderziel in der Karte sehen.",
+   "new": "Please answer \"Yes\" if you want to start route guidance, or \"No\" to end the dialogue. With the command \"Show on map\" you can see the special destination on the map."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 923,
+   "en": "Bitte antworten Sie mit \"Ja\", um die Zielführung für ein neues Ziel zu starten , oder mit \"Nein\", um das Ziel als nächstes Zwischenziel einzufügen. Mit dem Kommando „In Karte anzeigen“ können Sie das Sonderziel in der Karte sehen.",
+   "old": "Bitte antworten Sie mit \"Ja\", um die Zielführung für ein neues Ziel zu starten , oder mit \"Nein\", um das Ziel als nächstes Zwischenziel einzufügen. Mit dem Kommando „In Karte anzeigen“ können Sie das Sonderziel in der Karte sehen.",
+   "new": "Please answer \"Yes\" to start route guidance for a new destination, or \"No\" to insert the destination as the next stopover. With the command \"Show on map\" you can see the special destination on the map."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 924,
+   "en": "Die Eingabe eines Tourplans ist per Sprachdialogsystem nicht möglich.",
+   "old": "Die Eingabe eines Tourplans ist per Sprachdialogsystem nicht möglich.",
+   "new": "Entering a route plan is not possible via the speech dialogue system."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 926,
+   "en": "Möchten Sie den Tourplan löschen und die Zielführung starten?",
+   "old": "Möchten Sie den Tourplan löschen und die Zielführung starten?",
+   "new": "Would you like to delete the route plan and start route guidance?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 927,
+   "en": "Bitte antworten Sie mit \"Ja\", wenn Sie die Zielführung starten möchten. Dabei wird der aktive Tourplan gelöscht. \"Nein\" beendet die Spracheingabe.",
+   "old": "Bitte antworten Sie mit \"Ja\", wenn Sie die Zielführung starten möchten. Dabei wird der aktive Tourplan gelöscht. \"Nein\" beendet die Spracheingabe.",
+   "new": "Please answer \"Yes\" if you want to start route guidance. The active route plan will be deleted. \"No\" ends the voice input."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 933,
+   "en": "Möchten Sie das Ziel als neues Ziel übernehmen und das Zwischenziel löschen?",
+   "old": "Möchten Sie das Ziel als neues Ziel übernehmen und das Zwischenziel löschen?",
+   "new": "Would you like to accept the destination as the new destination and delete the stopover?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 934,
+   "en": "Möchten Sie das Ziel als neues Ziel übernehmen und den Tourplan löschen?",
+   "old": "Möchten Sie das Ziel als neues Ziel übernehmen und den Tourplan löschen?",
+   "new": "Would you like to accept the destination as the new destination and delete the route plan?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 935,
+   "en": "Bitte antworten Sie mit \"Ja\", wenn Sie eine neue Adresse eingeben möchten. Dabei wird das bisher eingegebene Zwischenziel gelöscht. \"Nein\" beendet die Spracheingabe.",
+   "old": "Bitte antworten Sie mit \"Ja\", wenn Sie eine neue Adresse eingeben möchten. Dabei wird das bisher eingegebene Zwischenziel gelöscht. \"Nein\" beendet die Spracheingabe.",
+   "new": "Please answer \"Yes\" if you want to enter a new address. The stopover entered so far will be deleted. \"No\" ends the voice input."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 936,
+   "en": "Möchten Sie das Zwischenziel löschen und eine neue Adresse eingeben?",
+   "old": "Möchten Sie das Zwischenziel löschen und eine neue Adresse eingeben?",
+   "new": "Would you like to delete the stopover and enter a new address?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 937,
+   "en": "Bitte antworten Sie mit \"Ja\", um eine neue Adresse einzugeben. Dabei werden alle bisher eingegebenen Zwischenziele gelöscht. Oder antworten Sie mit \"Nein\", um das Ziel als nächstes Zwischenziel einzufügen.",
+   "old": "Bitte antworten Sie mit \"Ja\", um eine neue Adresse einzugeben. Dabei werden alle bisher eingegebenen Zwischenziele gelöscht. Oder antworten Sie mit \"Nein\", um das Ziel als nächstes Zwischenziel einzufügen.",
+   "new": "Please answer \"Yes\" to enter a new address. All stopovers entered so far will be deleted. Or answer \"No\" to insert the destination as the next stopover."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 940,
+   "en": "Bitte buchstabieren Sie die Kreuzung!",
+   "old": "Bitte buchstabieren Sie die Kreuzung!",
+   "new": "Please spell the intersection!"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 941,
+   "en": "Die Kreuzung bitte!",
+   "old": "Die Kreuzung bitte!",
+   "new": "The intersection, please!"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 944,
+   "en": "Bitte buchstabieren Sie die Erste Straße!",
+   "old": "Bitte buchstabieren Sie die Erste Straße!",
+   "new": "Please spell the first street!"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 947,
+   "en": "Bitte geben Sie die erste Straße ein!",
+   "old": "Bitte geben Sie die erste Straße ein!",
+   "new": "Please enter the first street!"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 952,
+   "en": "Bitte wiederholen Sie die Hausnummer, die Straße und den Ort.",
+   "old": "Bitte wiederholen Sie die Hausnummer, die Straße und den Ort.",
+   "new": "Please repeat the house number, the street and the town."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 953,
+   "en": "Sprechen Sie den Namen des Bundesstaates. Sagen Sie zum Beispiel Kalifornien.",
+   "old": "Sprechen Sie den Namen des Bundesstaates. Sagen Sie zum Beispiel Kalifornien.",
+   "new": "Say the name of the state. For example, say California."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 954,
+   "en": "Bitte buchstabieren Sie den Namen der kreuzenden Straße. Sagen Sie zum Beispiel b a h n.",
+   "old": "Bitte buchstabieren Sie den Namen der kreuzenden Straße. Sagen Sie zum Beispiel b a h n.",
+   "new": "Please spell the name of the cross street. For example, say b a h n."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 955,
+   "en": "Sprechen Sie den Namen der kreuzenden Straße. Sagen Sie zum Beispiel Bahnhofstraße.",
+   "old": "Sprechen Sie den Namen der kreuzenden Straße. Sagen Sie zum Beispiel Bahnhofstraße.",
+   "new": "Say the name of the cross street. For example, say Khreshchatyk."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 958,
+   "en": "Bitte nennen Sie den Eintrag oder die Zeilennummer für den eingestellten Suchbereich.",
+   "old": "Bitte nennen Sie den Eintrag oder die Zeilennummer für den eingestellten Suchbereich.",
+   "new": "Please say the entry or the line number for the selected search area."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 959,
+   "en": "Bitte nennen Sie den Eintrag oder die Zeilennummer für den eingestellten Suchbereich entlang der Route.",
+   "old": "Bitte nennen Sie den Eintrag oder die Zeilennummer für den eingestellten Suchbereich entlang der Route.",
+   "new": "Please say the entry or the line number for the selected search area along the route."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 960,
+   "en": "Bitte nennen Sie den Eintrag oder die Zeilennummer für den eingestellten Suchbereich Zielumkreis.",
+   "old": "Bitte nennen Sie den Eintrag oder die Zeilennummer für den eingestellten Suchbereich Zielumkreis.",
+   "new": "Please say the entry or the line number for the selected search area around destination."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 961,
+   "en": "Bitte nennen Sie den Eintrag oder die Zeilennummer für den eingestellten Suchbereich Zwischenzielumkreis.",
+   "old": "Bitte nennen Sie den Eintrag oder die Zeilennummer für den eingestellten Suchbereich Zwischenzielumkreis.",
+   "new": "Please say the entry or the line number for the selected search area around stopover."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 962,
+   "en": "Bitte nennen Sie den Eintrag oder die Zeilennummer für den eingestellten Suchbereich Standortumkreis.",
+   "old": "Bitte nennen Sie den Eintrag oder die Zeilennummer für den eingestellten Suchbereich Standortumkreis.",
+   "new": "Please say the entry or the line number for the selected search area around current location."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 963,
+   "en": "Bitte nennen Sie den Eintrag oder die Zeilennummer für den eingestellten Suchbereich im eingegebenen Land.",
+   "old": "Bitte nennen Sie den Eintrag oder die Zeilennummer für den eingestellten Suchbereich im eingegebenen Land.",
+   "new": "Please say the entry or the line number for the selected search area in the entered country."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 964,
+   "en": "Bitte nennen Sie den Eintrag oder die Zeilennummer für den eingestellten Suchbereich überregional.",
+   "old": "Bitte nennen Sie den Eintrag oder die Zeilennummer für den eingestellten Suchbereich überregional.",
+   "new": "Please say the entry or the line number for the selected search area nationwide."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 965,
+   "en": "Bitte nennen Sie den Eintrag oder die Zeilennummer für den eingestellten Suchbereich im eingegebenen Ort.",
+   "old": "Bitte nennen Sie den Eintrag oder die Zeilennummer für den eingestellten Suchbereich im eingegebenen Ort.",
+   "new": "Please say the entry or the line number for the selected search area in the entered town."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 966,
+   "en": "Please say the name of the street you would like to navigate to. For example, say \"Oxford Street\".",
+   "old": "Please say the name of the street you would like to navigate to. For example, say \"Oxford Street\".",
+   "new": "Please say the name of the street you would like to navigate to. For example, say \"Khreshchatyk\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 968,
+   "en": "Sprechen Sie den Namen der ersten Straße. Sagen Sie zum Beispiel Hauptstraße.",
+   "old": "Sprechen Sie den Namen der ersten Straße. Sagen Sie zum Beispiel Hauptstraße.",
+   "new": "Say the name of the first street. For example, say Sofiivska."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 970,
+   "en": "Bitte buchstabieren Sie den Namen der ersten Straße. Sagen Sie zum Beispiel h a u p t.",
+   "old": "Bitte buchstabieren Sie den Namen der ersten Straße. Sagen Sie zum Beispiel h a u p t.",
+   "new": "Please spell the name of the first street. For example, say s o f i."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 976,
+   "en": "Please say the name of the town. For example, say \"Birmingham\".",
+   "old": "Please say the name of the town. For example, say \"Birmingham\".",
+   "new": "Please say the name of the town. For example, say \"Lviv\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 977,
+   "en": "Please say the town, the street, and the house number. For example, say \"London, Kingston Road, 50\".",
+   "old": "Please say the town, the street, and the house number. For example, say \"London, Kingston Road, 50\".",
+   "new": "Please say the town, the street, and the house number. For example, say \"Kyiv, Khreshchatyk, 50\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1022,
+   "en": "Die Datenverbindung ist nicht möglich.",
+   "old": "Die Datenverbindung ist nicht möglich.",
+   "new": "The data connection is not possible."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1023,
+   "en": "Bitte prüfen Sie die Netzabdeckung und versuchen Sie es später noch einmal.",
+   "old": "Bitte prüfen Sie die Netzabdeckung und versuchen Sie es später noch einmal.",
+   "new": "Please check the network coverage and try again later."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1026,
+   "en": "Bitte antworten Sie mit „Ja“, wenn Sie eine Onlineverbindung herstellen möchten oder mit „Nein“, wenn Sie keine Onlineverbindung aufbauen möchten.",
+   "old": "Bitte antworten Sie mit „Ja“, wenn Sie eine Onlineverbindung herstellen möchten oder mit „Nein“, wenn Sie keine Onlineverbindung aufbauen möchten.",
+   "new": "Please answer \"Yes\" if you want to establish an online connection, or \"No\" if you do not want to establish an online connection."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1027,
+   "en": "Möchten Sie eine Datenverbindung aufbauen? Je nach Mobilfunkvertrag können Verbindungskosten anfallen.",
+   "old": "Möchten Sie eine Datenverbindung aufbauen? Je nach Mobilfunkvertrag können Verbindungskosten anfallen.",
+   "new": "Would you like to establish a data connection? Depending on your mobile contract, connection costs may apply."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1029,
+   "en": "Bitte überprüfen Sie die Einstellungen der Datenverbindung.",
+   "old": "Bitte überprüfen Sie die Einstellungen der Datenverbindung.",
+   "new": "Please check the data connection settings."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1031,
+   "en": "Bitte legen Sie eine SIM Karte ein.",
+   "old": "Bitte legen Sie eine SIM Karte ein.",
+   "new": "Please insert a SIM card."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1034,
+   "en": "Bitte verbinden Sie Ihr Mobiltelefon als Autotelefon oder legen Sie die SIM Karte ein!",
+   "old": "Bitte verbinden Sie Ihr Mobiltelefon als Autotelefon oder legen Sie die SIM Karte ein!",
+   "new": "Please connect your mobile phone as a car phone or insert the SIM card!"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1035,
+   "en": "Es ist kein Datendienst möglich. Bitte legen Sie die SIM Karte ein!",
+   "old": "Es ist kein Datendienst möglich. Bitte legen Sie die SIM Karte ein!",
+   "new": "No data service is possible. Please insert the SIM card!"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1040,
+   "en": "Um die PIN Nummer einzugeben, sagen Sie PIN eingeben.",
+   "old": "Um die PIN Nummer einzugeben, sagen Sie PIN eingeben.",
+   "new": "To enter the PIN, say enter PIN."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1050,
+   "en": "Das Telefon ist nicht bereit.",
+   "old": "Das Telefon ist nicht bereit.",
+   "new": "The phone is not ready."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1051,
+   "en": "Bitte prüfen Sie die sim Karte!",
+   "old": "Bitte prüfen Sie die sim Karte!",
+   "new": "Please check the SIM card!"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1053,
+   "en": "Die sim Karte wird gelesen. Bitte warten.",
+   "old": "Die sim Karte wird gelesen. Bitte warten.",
+   "new": "The SIM card is being read. Please wait."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1058,
+   "en": "I'm afraid the PIN is too long.",
+   "old": "Die PIN ist leider zu lang.",
+   "new": "I'm afraid the PIN is too long."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1060,
+   "en": "A PIN already exists.",
+   "old": "Es ist bereits eine PIN vorhanden.",
+   "new": "A PIN already exists."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1065,
+   "en": "Es ist keine gewählte Nummer für die Wahlwiederholung verfügbar.",
+   "old": "Es ist keine gewählte Nummer für die Wahlwiederholung verfügbar.",
+   "new": "There is no dialled number available for redial."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1069,
+   "en": "Die Nummer ist nicht wählbar.",
+   "old": "Die Nummer ist nicht wählbar.",
+   "new": "The number cannot be dialled."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1075,
+   "en": "Um die neueste Nachricht vorlesen zu lassen, sagen Sie:",
+   "old": "Um die neueste Nachricht vorlesen zu lassen, sagen Sie:",
+   "new": "To have the latest message read out, say:"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1083,
+   "en": "To have a text message read out, say:",
+   "old": "Um eine S M S vorlesen zu lassen sagen Sie:",
+   "new": "To have a text message read out, say:"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1086,
+   "en": "anrufen bei Ralf Schmidt privat mobil,",
+   "old": "anrufen bei Ralf Schmidt privat mobil,",
+   "new": "call Taras Shevchenko private mobile,"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1098,
+   "en": "Bitte sprechen Sie die Nummer in einzelnen Ziffern. Sagen Sie zum Beispiel \"1 2 3 4\" .",
+   "old": "Bitte sprechen Sie die Nummer in einzelnen Ziffern. Sagen Sie zum Beispiel \"1 2 3 4\" .",
+   "new": "Please say the number digit by digit. For example, say \"1 2 3 4\" ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1138,
+   "en": "Traffic programme off.",
+   "old": "Gut, Verkehrsfunk aus.",
+   "new": "Traffic programme off."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1176,
+   "en": "Switching on the day map.",
+   "old": "Okay, hier ist die Tagkarte.",
+   "new": "Switching on the day map."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1177,
+   "en": "Switching on the night map.",
+   "old": "Okay, hier ist die Nachtkarte.",
+   "new": "Switching on the night map."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1253,
+   "en": "Wählen Sie einen Eintrag oder sprechen Sie ein Kommando!",
+   "old": "Wählen Sie einen Eintrag oder sprechen Sie ein Kommando!",
+   "new": "Select an entry or say a command!"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1254,
+   "en": "Nennen Sie einen Eintrag oder sprechen Sie ein Kommando!",
+   "old": "Nennen Sie einen Eintrag oder sprechen Sie ein Kommando!",
+   "new": "Name an entry or say a command!"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1255,
+   "en": "Bitte wählen Sie aus!",
+   "old": "Bitte wählen Sie aus!",
+   "new": "Please choose!"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1256,
+   "en": "Bitte wählen Sie einen Eintrag!",
+   "old": "Bitte wählen Sie einen Eintrag!",
+   "new": "Please choose an entry!"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1260,
+   "en": "The PIN?",
+   "old": "Okay. Die PIN?",
+   "new": "The PIN?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1263,
+   "en": "I'll add the route information.",
+   "old": "Der Kartenzusatz mit den Routeninformationen wird hinzugeschaltet.",
+   "new": "I'll add the route information."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1265,
+   "en": "Additional info off.",
+   "old": "Okay, Kartenzusatz aus.",
+   "new": "Additional info off."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1275,
+   "en": "I'm afraid the PIN is too short.",
+   "old": "Die PIN ist leider zu kurz.",
+   "new": "I'm afraid the PIN is too short."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1322,
+   "en": "You can now say the town. For example, say \"Birmingham\".",
+   "old": "You can now say the town. For example, say \"Birmingham\".",
+   "new": "You can now say the town. For example, say \"Lviv\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1349,
+   "en": "You can now say the street. For example, say \"Oxford Street\".",
+   "old": "You can now say the street. For example, say \"Oxford Street\".",
+   "new": "You can now say the street. For example, say \"Khreshchatyk\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1429,
+   "en": "Should I add the entered destination as a stopover?",
+   "old": "Soll das eingegebene Ziel Ihr Zwischenziel sein?",
+   "new": "Should I add the entered destination as a stopover?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1437,
+   "en": "Should I replace the stopover?",
+   "old": "Soll das eingegebene Ziel Ihr neues Zwischenziel sein?",
+   "new": "Should I replace the stopover?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1439,
+   "en": "You can now say the town or the line number. For example, say \"Birmingham\".",
+   "old": "You can now say the town or the line number. For example, say \"Birmingham\".",
+   "new": "You can now say the town or the line number. For example, say \"Lviv\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1467,
+   "en": "Voice guidance off.",
+   "old": "Okay, Navigationsansage aus.",
+   "new": "Voice guidance off."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1511,
+   "en": "There is no connection to the online media.",
+   "old": "Es besteht keine Verbindung zu den Online Medien.",
+   "new": "There is no connection to the online media."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1532,
+   "en": "There are no playable files on the U S B partition.",
+   "old": "Es sind keine spielbaren Dateien auf der U S B Partition vorhanden.",
+   "new": "There are no playable files on the U S B partition."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1652,
+   "en": "Traffic avoidance off.",
+   "old": "Okay, Stauumfahrung aus.",
+   "new": "Traffic avoidance off."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1656,
+   "en": "You can now say the town, the street and the house number. For example, say \"London, Kingston Road, 50\".",
+   "old": "You can now say the town, the street and the house number. For example, say \"London, Kingston Road, 50\".",
+   "new": "You can now say the town, the street and the house number. For example, say \"Kyiv, Khreshchatyk, 50\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1660,
+   "en": "You will reach the destination in <say-as interpret-as=\"distance\">%1 m</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> .",
+   "old": "Sie erreichen das Ziel in <say-as interpret-as=\"distance\">%1 m</say-as> um <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> .",
+   "new": "You will reach the destination in <say-as interpret-as=\"distance\">%1 m</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1664,
+   "en": "You will reach the destination in <say-as interpret-as=\"distance\">%1 km</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> .",
+   "old": "Sie erreichen das Ziel in <say-as interpret-as=\"distance\">%1 km</say-as> um <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> .",
+   "new": "You will reach the destination in <say-as interpret-as=\"distance\">%1 km</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1668,
+   "en": "You will reach the destination in <say-as interpret-as=\"distance\">%1 mi</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> .",
+   "old": "Sie erreichen das Ziel in <say-as interpret-as=\"distance\">%1 mi</say-as> um <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> .",
+   "new": "You will reach the destination in <say-as interpret-as=\"distance\">%1 mi</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1672,
+   "en": "You will reach the destination in <say-as interpret-as=\"distance\">%1 yd</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> .",
+   "old": "Sie erreichen das Ziel in <say-as interpret-as=\"distance\">%1 yd</say-as> um <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> .",
+   "new": "You will reach the destination in <say-as interpret-as=\"distance\">%1 yd</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1683,
+   "en": "You will reach the stopover in <say-as interpret-as=\"distance\">%1 yd</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> .",
+   "old": "Sie erreichen das Zwischenziel in <say-as interpret-as=\"distance\">%1 yd</say-as> um <say-as interpret-as=\"time\" format=\"hms24\">%2 </say-as> .",
+   "new": "You will reach the stopover in <say-as interpret-as=\"distance\">%1 yd</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1685,
+   "en": "You will reach the stopover in <say-as interpret-as=\"distance\">%1 mi</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> .",
+   "old": "Sie erreichen das Zwischenziel in <say-as interpret-as=\"distance\">%1 mi</say-as> um <say-as interpret-as=\"time\" format=\"hms24\">%2 </say-as> .",
+   "new": "You will reach the stopover in <say-as interpret-as=\"distance\">%1 mi</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1691,
+   "en": "You will reach the stopover in <say-as interpret-as=\"distance\">%1 m</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> .",
+   "old": "Sie erreichen das Zwischenziel in <say-as interpret-as=\"distance\">%1 m</say-as> um <say-as interpret-as=\"time\" format=\"hms24\">%2 </say-as> .",
+   "new": "You will reach the stopover in <say-as interpret-as=\"distance\">%1 m</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1693,
+   "en": "You will reach the stopover in <say-as interpret-as=\"distance\">%1 km</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> .",
+   "old": "Sie erreichen das Zwischenziel in <say-as interpret-as=\"distance\">%1 km</say-as> um <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> .",
+   "new": "You will reach the stopover in <say-as interpret-as=\"distance\">%1 km</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1741,
+   "en": "The general speed limits apply.",
+   "old": "Es gelten die allgemeinen Geschwindigkeitsbegrenzungen.",
+   "new": "The general speed limits apply."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1798,
+   "en": "Please say an address, a special destination or a directory contact. For example, say \"London, Kingston Road, 50\" or \"John Smith\".",
+   "old": "Please say an address, a special destination or a directory contact. For example, say \"London, Kingston Road, 50\" or \"John Smith\".",
+   "new": "Please say an address, a special destination or a directory contact. For example, say \"Kyiv, Khreshchatyk, 50\" or \"John Smith\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1799,
+   "en": "You can now say an address, a special destination or a directory contact. For example, say \"London, Kingston Road, 50\" or \"John Smith\".",
+   "old": "You can now say an address, a special destination or a directory contact. For example, say \"London, Kingston Road, 50\" or \"John Smith\".",
+   "new": "You can now say an address, a special destination or a directory contact. For example, say \"Kyiv, Khreshchatyk, 50\" or \"John Smith\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1813,
+   "en": "You can now say the destination or the line number. For example, say \"London, Kingston Road, 50\".",
+   "old": "You can now say the destination or the line number. For example, say \"London, Kingston Road, 50\".",
+   "new": "You can now say the destination or the line number. For example, say \"Kyiv, Khreshchatyk, 50\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1860,
+   "en": "To navigate through the folders, say:",
+   "old": "Um in der Ordnerstruktur zu navigieren, sagen Sie:",
+   "new": "To navigate through the folders, say:"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1885,
+   "en": "To display the radio lists, say:",
+   "old": "Zur Anzeige der Radiolisten, sagen Sie:",
+   "new": "To display the radio lists, say:"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1908,
+   "en": "The contact has several private land line numbers.",
+   "old": "Welche private Festnetznummer soll ich anrufen?",
+   "new": "The contact has several private land line numbers."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1914,
+   "en": "The contact has several mobile numbers.",
+   "old": "Welche der Mobilnummern soll ich anrufen?",
+   "new": "The contact has several mobile numbers."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1917,
+   "en": "The contact has several private mobile numbers.",
+   "old": "Welche private Mobilnummer soll ich anrufen?",
+   "new": "The contact has several private mobile numbers."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1920,
+   "en": "The contact has several private numbers.",
+   "old": "Welche private Telefonnummer soll ich anrufen?",
+   "new": "The contact has several private numbers."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1923,
+   "en": "The contact has several land line numbers.",
+   "old": "Welche Festnetznummer soll ich anrufen?",
+   "new": "The contact has several land line numbers."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1928,
+   "en": "The line number?",
+   "old": "Okay. Die Zeilennummer?",
+   "new": "The line number?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1962,
+   "en": "Would you perhaps like to call one of these numbers?",
+   "old": "Vielleicht wollen Sie einer dieser Nummern anrufen?",
+   "new": "Would you perhaps like to call one of these numbers?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2026,
+   "en": "Which special destination are you looking for?",
+   "old": "Welchen POI suchen Sie?",
+   "new": "Which special destination are you looking for?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2077,
+   "en": "In vicinity of route.",
+   "old": "Okay, entlang der Route.",
+   "new": "In vicinity of route."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2090,
+   "en": "Please say the name of the online destination.",
+   "old": "Nennen Sie den Namen des Onlineziels.",
+   "new": "Please say the name of the online destination."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2092,
+   "en": "The mailbox number has been stored.",
+   "old": "Gut, die Mailboxnummer wird gespeichert.",
+   "new": "The mailbox number has been stored."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2093,
+   "en": "I've stored the mailbox number.",
+   "old": "Okay, ich habe die Mailboxnummer gespeichert.",
+   "new": "I've stored the mailbox number."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2096,
+   "en": "Sorry, no results were found for this search term.",
+   "old": "Es wurden leider keine Ergebnisse zu diesem Suchbegriff gefunden.",
+   "new": "Sorry, no results were found for this search term."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2106,
+   "en": "Which entry did you mean?",
+   "old": "Welchen Eintrag haben Sie gemeint?",
+   "new": "Which entry did you mean?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2108,
+   "en": "Which special destination in the vicinity of the route are you looking for?",
+   "old": "Welchen POI entlang der Route suchen Sie?",
+   "new": "Which special destination in the vicinity of the route are you looking for?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2173,
+   "en": "Blue route.",
+   "old": "Okay, die blaue Route.",
+   "new": "Blue route."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2178,
+   "en": "You can now say the colour or the number of the desired route. For example, say \"Route 1\".",
+   "old": "Sagen Sie Ihre Route. Zum Beispiel Route 1 .",
+   "new": "You can now say the colour or the number of the desired route. For example, say \"Route 1\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2188,
+   "en": "Red route.",
+   "old": "Okay, die rote Route",
+   "new": "Red route."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2220,
+   "en": "Your home is therefore at <say-as interpret-as=\"city\">%1</say-as>, <say-as interpret-as=\"street\">%2</say-as>, <say-as interpret-as=\"housenumber\">%3</say-as> .",
+   "old": "Okay, Sie wohnen also in  <say-as interpret-as=\"city\">%1</say-as> <say-as interpret-as=\"street\">%2</say-as> <say-as interpret-as=\"housenumber\">%3</say-as> .",
+   "new": "Your home is therefore at <say-as interpret-as=\"city\">%1</say-as>, <say-as interpret-as=\"street\">%2</say-as>, <say-as interpret-as=\"housenumber\">%3</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2221,
+   "en": "Please say the town, the street, and the house number of your home address. For example, say \"London, Kingston Road, 50\".",
+   "old": "Please say the town, the street, and the house number of your home address. For example, say \"London, Kingston Road, 50\".",
+   "new": "Please say the town, the street, and the house number of your home address. For example, say \"Kyiv, Khreshchatyk, 50\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2222,
+   "en": "You can now say your home address. For example, say \"London, Kingston Road, 50\".",
+   "old": "You can now say your home address. For example, say \"London, Kingston Road, 50\".",
+   "new": "You can now say your home address. For example, say \"Kyiv, Khreshchatyk, 50\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2252,
+   "en": "With u turns.",
+   "old": "Okay, mit umkehren.",
+   "new": "With u turns."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2266,
+   "en": "You are already on the optimum route.",
+   "old": "Sie befinden sich bereits auf der optimalen Route.",
+   "new": "You are already on the optimum route."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2270,
+   "en": "The detour route.",
+   "old": "Okay, die andere Route",
+   "new": "The detour route."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2330,
+   "en": "I'm afraid I couldn't find any addresses for <say-as interpret-as=\"name\">%1</say-as>.",
+   "old": "Es konnten leider keine Adressen zu <say-as interpret-as=\"name\">%1</say-as> gefunden werden.",
+   "new": "I'm afraid I couldn't find any addresses for <say-as interpret-as=\"name\">%1</say-as>."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2404,
+   "en": "The new mailbox number?",
+   "old": "Okay. Die neue Mailboxnummer?",
+   "new": "The new mailbox number?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2409,
+   "en": "The PIN?",
+   "old": "Okay. Die PIN?",
+   "new": "The PIN?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2413,
+   "en": "You are already on the highest level.",
+   "old": "Sie befinden sich bereits auf der obersten Ebene.",
+   "new": "You are already on the highest level."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2422,
+   "en": "Drive me to \"London, Kingston Road, 50\".",
+   "old": "Drive me to \"London, Kingston Road, 50\".",
+   "new": "Drive me to \"Kyiv, Khreshchatyk, 50\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2464,
+   "en": "Which entry did you mean?",
+   "old": "Welchen Eintrag haben Sie gemeint?",
+   "new": "Which entry did you mean?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2483,
+   "en": "Should I send the e-mail?",
+   "old": "Soll die Email gesendet werden?",
+   "new": "Should I send the e-mail?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2509,
+   "en": "To have an e-mail read out, say:",
+   "old": "Um eine E-Mail vorlesen zu lassen sagen Sie:",
+   "new": "To have an e-mail read out, say:"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2515,
+   "en": "The subject was deleted.",
+   "old": "Gut, der Betreff wurde entfernt.",
+   "new": "The subject was deleted."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2531,
+   "en": "The text has been deleted.",
+   "old": "Gut, der Text wurde entfernt.",
+   "new": "The text has been deleted."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2599,
+   "en": "Do you wish to edit the subject?",
+   "old": "Soll der Betreff noch bearbeitet werden?",
+   "new": "Do you wish to edit the subject?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2600,
+   "en": "Edit the subject now?",
+   "old": "Soll der Betreff bearbeitet werden?",
+   "new": "Edit the subject now?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2606,
+   "en": "What is the rest of the subject?",
+   "old": "Wie lautet der weitere Betreff?",
+   "new": "What is the rest of the subject?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2607,
+   "en": "Please enter the rest of the subject.",
+   "old": "Der weitere Betreff?",
+   "new": "Please enter the rest of the subject."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2612,
+   "en": "What is the subject?",
+   "old": "Wie lautet der Betreff?",
+   "new": "What is the subject?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2614,
+   "en": "I'm processing the subject.",
+   "old": "Gut, der Betreff wird verarbeitet.",
+   "new": "I'm processing the subject."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2615,
+   "en": "The subject is being processed.",
+   "old": "Okay, der Betrefftext wird erstellt.",
+   "new": "The subject is being processed."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2619,
+   "en": "Should the text be edited further?",
+   "old": "Soll der Text noch bearbeitet werden?",
+   "new": "Should the text be edited further?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2620,
+   "en": "Edit the text further?",
+   "old": "Soll der Text bearbeitet werden?",
+   "new": "Edit the text further?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2624,
+   "en": "Please enter the rest of the text.",
+   "old": "Wie lautet der weitere Text?",
+   "new": "Please enter the rest of the text."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2625,
+   "en": "Please enter the rest of the text.",
+   "old": "Wie lautet der weitere Text?",
+   "new": "Please enter the rest of the text."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2632,
+   "en": "Please enter the text.",
+   "old": "Wie lautet der Text?",
+   "new": "Please enter the text."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2633,
+   "en": "Please enter the text.",
+   "old": "Wie lautet der Text?",
+   "new": "Please enter the text."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2634,
+   "en": "I'm processing the text.",
+   "old": "Gut, der Text wird verarbeitet.",
+   "new": "I'm processing the text."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2635,
+   "en": "The text is being processed.",
+   "old": "Okay, der Text wird erstellt.",
+   "new": "The text is being processed."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2640,
+   "en": "Please say the e-mail address you would like to send the e-mail to.",
+   "old": "Welche ist denn die Richtige?",
+   "new": "Please say the e-mail address you would like to send the e-mail to."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2652,
+   "en": "You have not yet entered a subject.",
+   "old": "Sie haben noch kein Betreff eingegeben.",
+   "new": "You have not yet entered a subject."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2653,
+   "en": "The subject of the e-mail is missing.",
+   "old": "Es fehlt noch der Betreff in der Email.",
+   "new": "The subject of the e-mail is missing."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2655,
+   "en": "The e-mail's subject is missing.",
+   "old": "Der Betreff der Email fehlt noch.",
+   "new": "The e-mail's subject is missing."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2661,
+   "en": "The subject is too long.",
+   "old": "Der Betreff ist zu lang.",
+   "new": "The subject is too long."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2663,
+   "en": "The maximum number of characters has been reached.",
+   "old": "Der Betreff hat zu viele Zeichen.",
+   "new": "The maximum number of characters has been reached."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2665,
+   "en": "The maximum number of characters has been reached.",
+   "old": "Der Betreff hat zu viele Zeichen.",
+   "new": "The maximum number of characters has been reached."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2667,
+   "en": "The text is too long.",
+   "old": "Der Text ist zu lang.",
+   "new": "The text is too long."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2691,
+   "en": "Should the message be sent?",
+   "old": "Soll die SMS gesendet werden?",
+   "new": "Should the message be sent?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2700,
+   "en": "The text has been deleted.",
+   "old": "Gut, der Text wurde entfernt.",
+   "new": "The text has been deleted."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2719,
+   "en": "The land line number will be used.",
+   "old": "Gut, ich nehme die Festnetznummer.",
+   "new": "The land line number will be used."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2723,
+   "en": "The mobile number will be used.",
+   "old": "Gut, ich nehme die Mobilnummer.",
+   "new": "The mobile number will be used."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2725,
+   "en": "The private mobile number will be used.",
+   "old": "Gut, ich nehme die private Mobilnummer.",
+   "new": "The private mobile number will be used."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2748,
+   "en": "The private land line number will be used.",
+   "old": "Gut, ich nehme die private Festnetznummer.",
+   "new": "The private land line number will be used."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2750,
+   "en": "The private number will be used.",
+   "old": "Gut, ich nehme die Privatnummer.",
+   "new": "The private number will be used."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2770,
+   "en": "Should the text be edited further?",
+   "old": "Soll der Text noch bearbeitet werden?",
+   "new": "Should the text be edited further?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2771,
+   "en": "Edit the text further?",
+   "old": "Soll der Text bearbeitet werden?",
+   "new": "Edit the text further?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2777,
+   "en": "Please enter the rest of the text.",
+   "old": "Wie lautet der weitere Text?",
+   "new": "Please enter the rest of the text."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2778,
+   "en": "Please enter the rest of the text.",
+   "old": "Wie lautet der weitere Text?",
+   "new": "Please enter the rest of the text."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2783,
+   "en": "Please enter the text.",
+   "old": "Wie lautet der Text?",
+   "new": "Please enter the text."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2785,
+   "en": "I'm processing the text.",
+   "old": "Gut, der Text wird verarbeitet.",
+   "new": "I'm processing the text."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2786,
+   "en": "The text is being processed.",
+   "old": "Okay, der Text wird erstellt.",
+   "new": "The text is being processed."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2789,
+   "en": "Please tell me which number you would like to send the text message to.",
+   "old": "Welche ist denn die Richtige?",
+   "new": "Please tell me which number you would like to send the text message to."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2806,
+   "en": "The maximum number of characters has been reached.",
+   "old": "Der Betreff hat zu viele Zeichen.",
+   "new": "The maximum number of characters has been reached."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2808,
+   "en": "I'm afraid the text is too long.",
+   "old": "Der Text ist zu lang.",
+   "new": "I'm afraid the text is too long."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2835,
+   "en": "The search term has been filtered.",
+   "old": "Der Suchbegriff wurde gefiltert.",
+   "new": "The search term has been filtered."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2869,
+   "en": "Which online station should I select?",
+   "old": "Welchen Onlinesender soll ich einstellen?",
+   "new": "Which online station should I select?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2875,
+   "en": "Which channel should I select?",
+   "old": "Welchen Kanal soll ich einstellen?",
+   "new": "Which channel should I select?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2944,
+   "en": "I'm searching for <say-as interpret-as=\"POICategory\">%1</say-as> in the vicinity of the route.",
+   "old": "Gut, <say-as interpret-as=\"POICategory\">%1</say-as> entlang der Route wird gesucht.",
+   "new": "I'm searching for <say-as interpret-as=\"POICategory\">%1</say-as> in the vicinity of the route."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2945,
+   "en": "Searching for <say-as interpret-as=\"POICategory\">%1</say-as> in vicinity of route.",
+   "old": "Okay, <say-as interpret-as=\"POICategory\">%1</say-as> entlang der Route.",
+   "new": "Searching for <say-as interpret-as=\"POICategory\">%1</say-as> in vicinity of route."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2956,
+   "en": "Please say the name or category of the special destination and the location. For example, say \"filling station in Hamburg\".",
+   "old": "Please say the name or category of the special destination and the location. For example, say \"filling station in Hamburg\".",
+   "new": "Please say the name or category of the special destination and the location. For example, say \"filling station in Odesa\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2957,
+   "en": "You can now say the name or the category of the special destination. For example, say \"filling station in Hamburg\".",
+   "old": "You can now say the name or the category of the special destination. For example, say \"filling station in Hamburg\".",
+   "new": "You can now say the name or the category of the special destination. For example, say \"filling station in Odesa\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2982,
+   "en": "I'm looking for a filling station in the vicinity of the route.",
+   "old": "Gut, Tankstelle entlang der Route wird gesucht.",
+   "new": "I'm looking for a filling station in the vicinity of the route."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2984,
+   "en": "I'm looking for a rest area in the vicinity of the route.",
+   "old": "Gut, Rastplatz entlang der Route wird gesucht.",
+   "new": "I'm looking for a rest area in the vicinity of the route."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2986,
+   "en": "I'm looking for a rest area with toilet facilities in the vicinity of the route.",
+   "old": "Gut, Rastplatz mit W C entlang der Route wird gesucht.",
+   "new": "I'm looking for a rest area with toilet facilities in the vicinity of the route."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2987,
+   "en": "I'm looking for a rest area with toilet facilities in the immediate vicinity.",
+   "old": "Gut, Rastplatz mit W C im Standortumkreis wird gesucht.",
+   "new": "I'm looking for a rest area with toilet facilities in the immediate vicinity."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 3001,
+   "en": "The destination will be replaced. The current stopover will not be changed.",
+   "old": "Das Endziel wird ersetzte. Das vorherige Zwischenziel bleibt erhalten.",
+   "new": "The destination will be replaced. The current stopover will not be changed."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 3044,
+   "en": "Which contact should I display?",
+   "old": "Welchen Kontakt soll ich anzeigen?",
+   "new": "Which contact should I display?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 3140,
+   "en": "Please say the location immediately after the category. For example, say \"restaurant in London\".",
+   "old": "Please say the location immediately after the category. For example, say \"restaurant in London\".",
+   "new": "Please say the location immediately after the category. For example, say \"restaurant in Kyiv\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 3218,
+   "en": "Please say the town, the street, and the house number. For example, say \"London, Kingston Road, 50\".",
+   "old": "Please say the town, the street, and the house number. For example, say \"London, Kingston Road, 50\".",
+   "new": "Please say the town, the street, and the house number. For example, say \"Kyiv, Khreshchatyk, 50\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 3219,
+   "en": "You can now say the town, the street and the house number. For example, say \"London, Kingston Road, 50\".",
+   "old": "You can now say the town, the street and the house number. For example, say \"London, Kingston Road, 50\".",
+   "new": "You can now say the town, the street and the house number. For example, say \"Kyiv, Khreshchatyk, 50\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 3256,
+   "en": "Please say the name of the town. For example, say \"Birmingham\".",
+   "old": "Please say the name of the town. For example, say \"Birmingham\".",
+   "new": "Please say the name of the town. For example, say \"Lviv\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 3257,
+   "en": "You can now say the town. For example, say \"Birmingham\".",
+   "old": "You can now say the town. For example, say \"Birmingham\".",
+   "new": "You can now say the town. For example, say \"Lviv\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 3292,
+   "en": "Please say the town, the street, and the house number of your home address. For example, say \"London, Kingston Road, 50\".",
+   "old": "Please say the town, the street, and the house number of your home address. For example, say \"London, Kingston Road, 50\".",
+   "new": "Please say the town, the street, and the house number of your home address. For example, say \"Kyiv, Khreshchatyk, 50\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 3293,
+   "en": "You can now say your home address. For example, say \"London, Kingston Road, 50\".",
+   "old": "You can now say your home address. For example, say \"London, Kingston Road, 50\".",
+   "new": "You can now say your home address. For example, say \"Kyiv, Khreshchatyk, 50\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 3305,
+   "en": "You can now say your home address. For example, say \"London, Kingston Road, 50\".",
+   "old": "You can now say your home address. For example, say \"London, Kingston Road, 50\".",
+   "new": "You can now say your home address. For example, say \"Kyiv, Khreshchatyk, 50\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 3322,
+   "en": "Please say the name of the street you would like to navigate to. For example, say \"Oxford Street\".",
+   "old": "Please say the name of the street you would like to navigate to. For example, say \"Oxford Street\".",
+   "new": "Please say the name of the street you would like to navigate to. For example, say \"Khreshchatyk\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 3373,
+   "en": "Please say the name of the street you would like to navigate to. For example, say \"Oxford Street\".",
+   "old": "Please say the name of the street you would like to navigate to. For example, say \"Oxford Street\".",
+   "new": "Please say the name of the street you would like to navigate to. For example, say \"Khreshchatyk\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 3374,
+   "en": "You can now say the street. For example, say \"Oxford Street\".",
+   "old": "You can now say the street. For example, say \"Oxford Street\".",
+   "new": "You can now say the street. For example, say \"Khreshchatyk\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 3447,
+   "en": "Your home is therefore at <say-as interpret-as=\"city\">%1</say-as>, <say-as interpret-as=\"street\">%2</say-as>, <say-as interpret-as=\"housenumber\">%3</say-as> .",
+   "old": "Okay, Sie wohnen also in  <say-as interpret-as=\"city\">%1</say-as> <say-as interpret-as=\"street\">%2</say-as> <say-as interpret-as=\"housenumber\">%3</say-as> .",
+   "new": "Your home is therefore at <say-as interpret-as=\"city\">%1</say-as>, <say-as interpret-as=\"street\">%2</say-as>, <say-as interpret-as=\"housenumber\">%3</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 3793,
+   "en": "Your home is therefore at <say-as interpret-as=\"housenumber\">%1</say-as>, <say-as interpret-as=\"street\">%2</say-as>, <say-as interpret-as=\"city\">%3</say-as> .",
+   "old": "Okay, Sie wohnen also in <say-as interpret-as=\"housenumber\">%1</say-as> <say-as interpret-as=\"street\">%2</say-as> <say-as interpret-as=\"city\">%3</say-as>",
+   "new": "Your home is therefore at <say-as interpret-as=\"housenumber\">%1</say-as>, <say-as interpret-as=\"street\">%2</say-as>, <say-as interpret-as=\"city\">%3</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 3837,
+   "en": "To set a state within the U S A, say",
+   "old": "Um innerhalb den USA einen Staat einzugeben, sagen Sie",
+   "new": "To set a state within the U S A, say"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 3858,
+   "en": "Switching on the range map.",
+   "old": "Okay, hier ist die Reichweitenkarte.",
+   "new": "Switching on the range map."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 3954,
+   "en": "For example, say \"London\" or \"filling station\".",
+   "old": "For example, say \"London\" or \"filling station\".",
+   "new": "For example, say \"Kyiv\" or \"filling station\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 3965,
+   "en": "These are your results, including the addresses in <say-as interpret-as=\"country\">%1</say-as>.",
+   "old": "Hier sind ihre Ergebnisse inklusive der Adressen aus dem Land <say-as interpret-as=\"country\">%1</say-as>.",
+   "new": "These are your results, including the addresses in <say-as interpret-as=\"country\">%1</say-as>."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 3966,
+   "en": "Switching on the additional info manoeuvre display.",
+   "old": "Der Kartenzusatz mit Maneuver wird zugeschaltet.",
+   "new": "Switching on the additional info manoeuvre display."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 3997,
+   "en": "You will reach the stopover in <say-as interpret-as=\"distance\">%1 km</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> .",
+   "old": "Sie erreichen das Zwischenziel in <say-as interpret-as=\"distance\">%1 km</say-as> um <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> .",
+   "new": "You will reach the stopover in <say-as interpret-as=\"distance\">%1 km</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 4001,
+   "en": "You will reach the stopover in <say-as interpret-as=\"distance\">%1 m</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> .",
+   "old": "Sie erreichen das Zwischenziel in <say-as interpret-as=\"distance\">%1 m</say-as> um <say-as interpret-as=\"time\" format=\"hms24\">%2 </say-as> .",
+   "new": "You will reach the stopover in <say-as interpret-as=\"distance\">%1 m</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 4005,
+   "en": "You will reach the stopover in <say-as interpret-as=\"distance\">%1 mi</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> .",
+   "old": "Sie erreichen das Zwischenziel in <say-as interpret-as=\"distance\">%1 mi</say-as> um <say-as interpret-as=\"time\" format=\"hms24\">%2 </say-as> .",
+   "new": "You will reach the stopover in <say-as interpret-as=\"distance\">%1 mi</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 4009,
+   "en": "You will reach the stopover in <say-as interpret-as=\"distance\">%1 yd</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> .",
+   "old": "Sie erreichen das Zwischenziel in <say-as interpret-as=\"distance\">%1 yd</say-as> um <say-as interpret-as=\"time\" format=\"hms24\">%2 </say-as> .",
+   "new": "You will reach the stopover in <say-as interpret-as=\"distance\">%1 yd</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 4013,
+   "en": "You will reach the destination in <say-as interpret-as=\"distance\">%1 km</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> .",
+   "old": "Sie erreichen das Ziel in <say-as interpret-as=\"distance\">%1 km</say-as> um <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> .",
+   "new": "You will reach the destination in <say-as interpret-as=\"distance\">%1 km</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 4017,
+   "en": "You will reach the destination in <say-as interpret-as=\"distance\">%1 m</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> .",
+   "old": "Sie erreichen das Ziel in <say-as interpret-as=\"distance\">%1 m</say-as> um <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> .",
+   "new": "You will reach the destination in <say-as interpret-as=\"distance\">%1 m</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 4021,
+   "en": "You will reach the destination in <say-as interpret-as=\"distance\">%1 mi</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> .",
+   "old": "Sie erreichen das Ziel in <say-as interpret-as=\"distance\">%1 mi</say-as> um <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> .",
+   "new": "You will reach the destination in <say-as interpret-as=\"distance\">%1 mi</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 4025,
+   "en": "You will reach the destination in <say-as interpret-as=\"distance\">%1 yd</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> .",
+   "old": "Sie erreichen das Ziel in <say-as interpret-as=\"distance\">%1 yd</say-as> um <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> .",
+   "new": "You will reach the destination in <say-as interpret-as=\"distance\">%1 yd</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> ."
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 228,
+   "en": "Drive me to \"London, Kingston Road, 50\"",
+   "old": "Drive me to \"London, Kingston Road, 50\"",
+   "new": "Drive me to \"Kyiv, Khreshchatyk, 50\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 261,
+   "en": "Drive me to \"London, Kingston\nRoad, 50\" • Help",
+   "old": "Drive me to \"London, Kingston\nRoad, 50\" • Help",
+   "new": "Drive me to \"Kyiv, Khreshchatyk,\n50\" • Help"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 301,
+   "en": "\"London\"",
+   "old": "Berlin",
+   "new": "Kyiv"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 302,
+   "en": "\"London\"",
+   "old": "Berlin",
+   "new": "Kyiv"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 334,
+   "en": "No, I meant \"1 2 3\"",
+   "old": "Nein, ich meinte \"1 2 3\"",
+   "new": "No, I meant \"1 2 3\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 471,
+   "en": "No, I meant \"Germany\".",
+   "old": "Nein, ich meinte England",
+   "new": "No, I meant \"Germany\"."
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 484,
+   "en": "\"London\"",
+   "old": "Berlin",
+   "new": "Kyiv"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 485,
+   "en": "No, I meant \"London\".",
+   "old": "No, I meant \"London\".",
+   "new": "No, I meant \"Kyiv\"."
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 486,
+   "en": "\"London\"",
+   "old": "Berlin",
+   "new": "Kyiv"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 547,
+   "en": "\"London Oxford Street\"",
+   "old": "\"London Oxford Street\"",
+   "new": "\"Kyiv Khreshchatyk\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 548,
+   "en": "No, I meant \"London\".",
+   "old": "No, I meant \"London\".",
+   "new": "No, I meant \"Kyiv\"."
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 554,
+   "en": "\"London Oxford Street\"",
+   "old": "\"London Oxford Street\"",
+   "new": "\"Kyiv Khreshchatyk\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 555,
+   "en": "\"London, Kingston Rd, 50\"",
+   "old": "\"London, Kingston Rd, 50\"",
+   "new": "\"Kyiv, Khreshchatyk, 50\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 562,
+   "en": "\"London, Kingston Rd, 50\"",
+   "old": "\"London, Kingston Rd, 50\"",
+   "new": "\"Kyiv, Khreshchatyk, 50\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 564,
+   "en": "\"London\"",
+   "old": "Berlin",
+   "new": "Kyiv"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 591,
+   "en": "Nein, ich meinte Fahrzeugeinstellungen",
+   "old": "Nein, ich meinte Fahrzeugeinstellungen",
+   "new": "No, I meant vehicle settings"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 852,
+   "en": "No, I meant \"pizza\"",
+   "old": "Nein, ich meinte \"neuer Suchbegriff\"",
+   "new": "No, I meant \"pizza\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 880,
+   "en": "No, I meant \"Germany\".",
+   "old": "Nein, ich meinte England",
+   "new": "No, I meant \"Germany\"."
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 891,
+   "en": "\"London\"",
+   "old": "Berlin",
+   "new": "Kyiv"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 892,
+   "en": "\"London\"",
+   "old": "Berlin",
+   "new": "Kyiv"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 894,
+   "en": "\"London\"",
+   "old": "Berlin",
+   "new": "Kyiv"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 895,
+   "en": "No, I meant \"London\".",
+   "old": "No, I meant \"London\".",
+   "new": "No, I meant \"Kyiv\"."
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 896,
+   "en": "\"London\"",
+   "old": "Berlin",
+   "new": "Kyiv"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 949,
+   "en": "\"London Oxford Street\"",
+   "old": "\"London Oxford Street\"",
+   "new": "\"Kyiv Khreshchatyk\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 950,
+   "en": "No, I meant \"London\".",
+   "old": "No, I meant \"London\".",
+   "new": "No, I meant \"Kyiv\"."
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 955,
+   "en": "\"London Oxford Street\"",
+   "old": "\"London Oxford Street\"",
+   "new": "\"Kyiv Khreshchatyk\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 956,
+   "en": "\"London, Kingston Rd, 50\"",
+   "old": "\"London, Kingston Rd, 50\"",
+   "new": "\"Kyiv, Khreshchatyk, 50\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 963,
+   "en": "\"London, Kingston Rd, 50\"",
+   "old": "\"London, Kingston Rd, 50\"",
+   "new": "\"Kyiv, Khreshchatyk, 50\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 965,
+   "en": "\"London\"",
+   "old": "Berlin",
+   "new": "Kyiv"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 987,
+   "en": "Nein, ich meinte Fahrzeugeinstellungen",
+   "old": "Nein, ich meinte Fahrzeugeinstellungen",
+   "new": "No, I meant vehicle settings"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1276,
+   "en": "\"London Trafalgar Square\"",
+   "old": "\"London Trafalgar Square\"",
+   "new": "\"Kyiv Independence Square\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1279,
+   "en": "\"London\"",
+   "old": "Berlin",
+   "new": "Kyiv"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1280,
+   "en": "No, I meant \"London\".",
+   "old": "No, I meant \"London\".",
+   "new": "No, I meant \"Kyiv\"."
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1285,
+   "en": "\"London\"",
+   "old": "Berlin",
+   "new": "Kyiv"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1288,
+   "en": "\"London Trafalgar Square\"",
+   "old": "\"London Trafalgar Square\"",
+   "new": "\"Kyiv Independence Square\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1291,
+   "en": "No, I meant \"London\".",
+   "old": "No, I meant \"London\".",
+   "new": "No, I meant \"Kyiv\"."
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1330,
+   "en": "Drive me to \"London, Kingston Road, 50\" • Help",
+   "old": "Drive me to \"London, Kingston Road, 50\" • Help",
+   "new": "Drive me to \"Kyiv, Khreshchatyk, 50\" • Help"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1471,
+   "en": "\"Restaurant\" in \"Liverpool\"",
+   "old": "\"Restaurant\" in \"Liverpool\"",
+   "new": "\"Restaurant\" in \"Lviv\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1473,
+   "en": "\"Museum\" in \"London\"",
+   "old": "\"Museum\" in \"London\"",
+   "new": "\"Museum\" in \"Kyiv\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1482,
+   "en": "\"Restaurant\" in \"Liverpool\"",
+   "old": "\"Restaurant\" in \"Liverpool\"",
+   "new": "\"Restaurant\" in \"Lviv\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1484,
+   "en": "\"Museum\" in \"London\"",
+   "old": "\"Museum\" in \"London\"",
+   "new": "\"Museum\" in \"Kyiv\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1571,
+   "en": "No, I meant \"John\" private",
+   "old": "Nein, ich meinte Max Mustermann privat",
+   "new": "No, I meant \"John\" private"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1586,
+   "en": "No, I meant \"John Smith's\" private address.",
+   "old": "Nein, ich meinte Max Mustermann privat",
+   "new": "No, I meant \"John Smith's\" private address."
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1621,
+   "en": "Drive me to \"London, Kingston Road, 50\"",
+   "old": "Drive me to \"London, Kingston Road, 50\"",
+   "new": "Drive me to \"Kyiv, Khreshchatyk, 50\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1622,
+   "en": "Drive me to \"London, Kingston Road, 50\"",
+   "old": "Drive me to \"London, Kingston Road, 50\"",
+   "new": "Drive me to \"Kyiv, Khreshchatyk, 50\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1647,
+   "en": "\"London, Regent Street\"\n\"Heathrow Airport\"\n\"John Smith\"",
+   "old": "\"London, Regent Street\"\n\"Heathrow Airport\"\n\"Taras Shevchenko\"",
+   "new": "\"Kyiv, Khreshchatyk Street\"\n\"Boryspil Airport\"\n\"Taras Shevchenko\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1681,
+   "en": "Drive me to \"London\"",
+   "old": "Drive me to \"London\"",
+   "new": "Drive me to \"Kyiv\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1685,
+   "en": "Drive me to \"London\"",
+   "old": "Drive me to \"London\"",
+   "new": "Drive me to \"Kyiv\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1811,
+   "en": "No, I meant \"1 2 3\"",
+   "old": "Nein, ich meinte \"1 2 3\"",
+   "new": "No, I meant \"1 2 3\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 2112,
+   "en": "No, I meant \"pizza\"",
+   "old": "Nein, ich meinte \"neuer Suchbegriff\"",
+   "new": "No, I meant \"pizza\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 2311,
+   "en": "Drive me to \"London, Kingston Road, 50\"",
+   "old": "Drive me to \"London, Kingston Road, 50\"",
+   "new": "Drive me to \"Kyiv, Khreshchatyk, 50\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 2622,
+   "en": "Drive me to \"London, Kingston Road, 50\"",
+   "old": "Drive me to \"London, Kingston Road, 50\"",
+   "new": "Drive me to \"Kyiv, Khreshchatyk, 50\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 2927,
+   "en": "No, I meant \"1 2 3\"",
+   "old": "Nein, ich meinte \"1 2 3\"",
+   "new": "No, I meant \"1 2 3\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3878,
+   "en": "\"Oxford Street, London\"",
+   "old": "\"Oxford Street, London\"",
+   "new": "\"Khreshchatyk, Kyiv\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3880,
+   "en": "\"Library\" in \"London\"",
+   "old": "Bibliothek in Berlin",
+   "new": "Library in Kyiv"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3884,
+   "en": "\"Oxford Street\"",
+   "old": "\"Oxford Street\"",
+   "new": "\"Khreshchatyk\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3886,
+   "en": "\"Oxford Street, London\"",
+   "old": "\"Oxford Street, London\"",
+   "new": "\"Khreshchatyk, Kyiv\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3888,
+   "en": "\"Library\" in \"London\"",
+   "old": "Bibliothek in Berlin",
+   "new": "Library in Kyiv"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3892,
+   "en": "\"Oxford Street\"",
+   "old": "\"Oxford Street\"",
+   "new": "\"Khreshchatyk\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3906,
+   "en": "\"Oxford Street, London\"",
+   "old": "\"Oxford Street, London\"",
+   "new": "\"Khreshchatyk, Kyiv\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3907,
+   "en": "\"Oxford Street, London\"",
+   "old": "\"Oxford Street, London\"",
+   "new": "\"Khreshchatyk, Kyiv\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3909,
+   "en": "\"Oxford Street, London\"",
+   "old": "\"Oxford Street, London\"",
+   "new": "\"Khreshchatyk, Kyiv\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3955,
+   "en": "\"London\"",
+   "old": "Berlin",
+   "new": "Kyiv"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 4066,
+   "en": "Drive me to \"London\"",
+   "old": "Drive me to \"London\"",
+   "new": "Drive me to \"Kyiv\""
+  },
+  {
+   "module": "HMITunerEvoHigh",
+   "slot": 601,
+   "en": "Drive me to \"London, Kingston Road, 50\"",
+   "old": "Drive me to \"London, Kingston Road, 50\"",
+   "new": "Drive me to \"Kyiv, Khreshchatyk, 50\""
+  }
+ ]
+}

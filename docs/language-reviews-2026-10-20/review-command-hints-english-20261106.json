@@ -1,0 +1,2028 @@
+{
+ "description": "2026-11-06 owner rule: phrases the user must SAY stay English (command hint lines, examples, corrections, spoken prompts for the English TTS); instructions for the user stay Ukrainian. HMISystemEvoHigh command hints + examples, HMISpeechEvoHigh TTS prompts.",
+ "changes": [
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 260,
+   "en": "Number? e.g. \"one two\" •\nPause • Help • Cancel",
+   "old": "Номер? Напр., \"один два\" •\nПауза • Довідка",
+   "new": "Number? e.g. \"one two\" •\nPause • Help • Cancel"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 266,
+   "en": "Line 1 - %1 • Next page • Folder\nup • Help • Correction • Cancel",
+   "old": "Рядок 1 - %1 • Наступна стор. •\nРівень угору • Довідка",
+   "new": "Line 1 - %1 • Next page • Folder\nup • Help • Correction • Cancel"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 276,
+   "en": "Line 1 - %1 • Next page • More\ncommands • Help • Correction",
+   "old": "Рядок 1 - %1 • Наступна стор. •\nІнші команди • Довідка",
+   "new": "Line 1 - %1 • Next page • More\ncommands • Help • Correction"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 280,
+   "en": "Station? • Line 1 - %1 •\nPrevious page • Help",
+   "old": "Станція? • Рядок 1 - %1 •\nПопередня стор. • Довідка",
+   "new": "Station? • Line 1 - %1 •\nPrevious page • Help"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 286,
+   "en": "Line 1 - %1 • Help • Correction •\nCancel",
+   "old": "Рядок 1 - %1 • Довідка •\nВиправити • Скасувати",
+   "new": "Line 1 - %1 • Help • Correction •\nCancel"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 293,
+   "en": "Private address •\nBusiness address •  Help",
+   "old": "Домашня адреса •\nСлужбова адреса • Довідка",
+   "new": "Private address •\nBusiness address •  Help"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 295,
+   "en": "Town? Street? House number?\n• Change country • Help",
+   "old": "Місто? Вулиця? Номер будинку?\n• Змінити країну",
+   "new": "Town? Street? House number?\n• Change country • Help"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 440,
+   "en": "Post code? • Line 1 - %1 •\nNext page • Pause • Help",
+   "old": "Індекс? • Рядок 1 - %1 •\nНаступна стор. • Пауза",
+   "new": "Post code? • Line 1 - %1 •\nNext page • Pause • Help"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 442,
+   "en": "Street? • Line 1 - %1 •\nNext page • Pause • Help",
+   "old": "Вулиця? • Рядок 1 - %1 •\nНаступна стор. • Пауза",
+   "new": "Street? • Line 1 - %1 •\nNext page • Pause • Help"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 444,
+   "en": "Town? • Line 1 - %1 •\nNext page • Pause • Help",
+   "old": "Місто? • Рядок 1 - %1 •\nНаступна стор. • Пауза",
+   "new": "Town? • Line 1 - %1 •\nNext page • Pause • Help"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 445,
+   "en": "Name? • Line 1 - %1 •\nNext page • Help",
+   "old": "Ім'я? • Рядок 1 - %1 •\nНаступна стор. • Довідка",
+   "new": "Name? • Line 1 - %1 •\nNext page • Help"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 483,
+   "en": "No, I meant \"1 0 1 1 7\".",
+   "old": "Ні, я казав \"1 0 1 1 7\"",
+   "new": "No, I meant \"1 0 1 1 7\"."
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 493,
+   "en": "No, I meant \"H I G H\".",
+   "old": "Ні, я казав \"Н О В А\"",
+   "new": "No, I meant \"H I G H\"."
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 500,
+   "en": "Yes • No • Drive to street •\nHelp • Correction",
+   "old": "Так • Ні • Їхати на вулицю •\nДовідка • Виправити",
+   "new": "Yes • No • Drive to street •\nHelp • Correction"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 547,
+   "en": "\"London Oxford Street\"",
+   "old": "\"Київ Хрещатик\"",
+   "new": "\"London Oxford Street\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 554,
+   "en": "\"London Oxford Street\"",
+   "old": "\"Київ Хрещатик\"",
+   "new": "\"London Oxford Street\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 555,
+   "en": "\"London, Kingston Rd, 50\"",
+   "old": "\"Київ, Хрещатик, 50\"",
+   "new": "\"London, Kingston Rd, 50\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 562,
+   "en": "\"London, Kingston Rd, 50\"",
+   "old": "\"Київ, Хрещатик, 50\"",
+   "new": "\"London, Kingston Rd, 50\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 606,
+   "en": "PIN? e.g. \"one two\" •\nPause • Help • Cancel",
+   "old": "PIN? Напр., \"один два\" •\nПауза • Довідка",
+   "new": "PIN? e.g. \"one two\" •\nPause • Help • Cancel"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 627,
+   "en": "Line 1 - %1 • Previous page •\nHelp • Correction",
+   "old": "Рядок 1 - %1 • Попередня стор. •\nДовідка • Виправити",
+   "new": "Line 1 - %1 • Previous page •\nHelp • Correction"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 638,
+   "en": "Town? Street? House\nnumber? • Help • Correction",
+   "old": "Місто? Вулиця? Номер\nбудинку? • Довідка",
+   "new": "Town? Street? House\nnumber? • Help • Correction"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 824,
+   "en": "Line 1 - %1 • Help • Correction •\nCancel",
+   "old": "Рядок 1 - %1 • Довідка •\nВиправити • Скасувати",
+   "new": "Line 1 - %1 • Help • Correction •\nCancel"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 832,
+   "en": "Press talk button for: Replace\nwith \"...\" • Continue",
+   "old": "Натисніть кнопку мовлення для:\nЗамінити на \"…\"",
+   "new": "Press talk button for: Replace\nwith \"...\" • Continue"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 890,
+   "en": "No, I meant \"1 0 1 1 7\".",
+   "old": "Ні, я казав \"1 0 1 1 7\"",
+   "new": "No, I meant \"1 0 1 1 7\"."
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 903,
+   "en": "No, I meant \"H I G H\".",
+   "old": "Ні, я казав \"Н О В А\"",
+   "new": "No, I meant \"H I G H\"."
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 949,
+   "en": "\"London Oxford Street\"",
+   "old": "\"Київ Хрещатик\"",
+   "new": "\"London Oxford Street\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 955,
+   "en": "\"London Oxford Street\"",
+   "old": "\"Київ Хрещатик\"",
+   "new": "\"London Oxford Street\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 956,
+   "en": "\"London, Kingston Rd, 50\"",
+   "old": "\"Київ, Хрещатик, 50\"",
+   "new": "\"London, Kingston Rd, 50\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 963,
+   "en": "\"London, Kingston Rd, 50\"",
+   "old": "\"Київ, Хрещатик, 50\"",
+   "new": "\"London, Kingston Rd, 50\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 978,
+   "en": "No, I meant \"Iris\" private.",
+   "old": "Я маю на увазі \"Іра\" дом.",
+   "new": "No, I meant \"Iris\" private."
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1137,
+   "en": "Line 1 - %1 • Help • Correction •\nCancel",
+   "old": "Рядок 1 - %1 • Довідка •\nВиправити • Скасувати",
+   "new": "Line 1 - %1 • Help • Correction •\nCancel"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1138,
+   "en": "Line 1 - %1 • Help • Correction •\nCancel",
+   "old": "Рядок 1 - %1 • Довідка •\nВиправити • Скасувати",
+   "new": "Line 1 - %1 • Help • Correction •\nCancel"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1282,
+   "en": "Last destination? • Line 1 - %1 •\nHelp • Correction",
+   "old": "Остання ціль? • Рядок 1 - %1 •\nДовідка • Виправити",
+   "new": "Last destination? • Line 1 - %1 •\nHelp • Correction"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1283,
+   "en": "Last destination? • Line 1 - %1 •\nNext page • Help",
+   "old": "Остання ціль? • Рядок 1 - %1 •\nНаступна стор.",
+   "new": "Last destination? • Line 1 - %1 •\nNext page • Help"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1309,
+   "en": "Line 1 - %1 • Previous page •\nHelp • Correction • Cancel",
+   "old": "Рядок 1 - %1 • Попередня сторінка •\nДовідка • Виправити",
+   "new": "Line 1 - %1 • Previous page •\nHelp • Correction • Cancel"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1332,
+   "en": "Suchbegriff? Z.B. Licht • Sitzeinstellung • ACC • Lane Assist",
+   "old": "Ключове слово? Напр. Світло • Налашт. сидінь • ACC",
+   "new": "Keyword? e.g. Light • Seat adjustment • ACC • Lane assist"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1334,
+   "en": "Line 1 - %1 • Folder up • Help • Correction • Cancel",
+   "old": "Рядок 1 - %1 • Рівень угору • Довідка",
+   "new": "Line 1 - %1 • Folder up • Help • Correction • Cancel"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1335,
+   "en": "Line 1 - %1 • Next page • Folder up • Help",
+   "old": "Рядок 1 - %1 • Наступна стор. • Довідка",
+   "new": "Line 1 - %1 • Next page • Folder up • Help"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1336,
+   "en": "Line 1 or 2 • More commands • Help",
+   "old": "Рядок 1 або 2 • Інші команди • Довідка",
+   "new": "Line 1 or 2 • More commands • Help"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1337,
+   "en": "Line 1 - %1 • More commands • Help • Correction",
+   "old": "Рядок 1 - %1 • Інші команди • Довідка",
+   "new": "Line 1 - %1 • More commands • Help • Correction"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1342,
+   "en": "Station? • Line 1 - %1 • Previous page • Help",
+   "old": "Станція? • Рядок 1 - %1 • Попередня стор. • Довідка",
+   "new": "Station? • Line 1 - %1 • Previous page • Help"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1345,
+   "en": "Line 1 - %1 • Help • Correction • Cancel",
+   "old": "Рядок 1 - %1 • Довідка • Виправити",
+   "new": "Line 1 - %1 • Help • Correction • Cancel"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1351,
+   "en": "Name? • Help • Correction • Cancel",
+   "old": "Ім'я? • Довідка • Виправити",
+   "new": "Name? • Help • Correction • Cancel"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1352,
+   "en": "Private address • Business address •  Help",
+   "old": "Домашня адреса • Службова адреса • Довідка",
+   "new": "Private address • Business address •  Help"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1353,
+   "en": "Enter address • Enter special destination",
+   "old": "Вказати адресу • Вказати об'єкт",
+   "new": "Enter address • Enter special destination"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1357,
+   "en": "Name? • Line 1 - %1 • Previous page • Help",
+   "old": "Ім'я? • Рядок 1 - %1 • Попередня стор.",
+   "new": "Name? • Line 1 - %1 • Previous page • Help"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1358,
+   "en": "Name? • Line 1 - %1 • Next page • Help",
+   "old": "Ім'я? • Рядок 1 - %1 • Наступна стор.",
+   "new": "Name? • Line 1 - %1 • Next page • Help"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1359,
+   "en": "Line 1 - %1 • Next page • Help • Correction • Cancel",
+   "old": "Рядок 1 - %1 • Наступна сторінка • Довідка • Виправити",
+   "new": "Line 1 - %1 • Next page • Help • Correction • Cancel"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1363,
+   "en": "Name? • Line 1 - %1 • Next page • Help",
+   "old": "Ім'я? • Рядок 1 - %1 • Наступна стор.",
+   "new": "Name? • Line 1 - %1 • Next page • Help"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1368,
+   "en": "Line 1 - %1 • Previous page • Help • Correction • Cancel",
+   "old": "Рядок 1 - %1 • Попередня сторінка • Довідка • Виправити",
+   "new": "Line 1 - %1 • Previous page • Help • Correction • Cancel"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1369,
+   "en": "Name? • Help • Correction • Cancel",
+   "old": "Ім'я? • Довідка • Виправити",
+   "new": "Name? • Help • Correction • Cancel"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1372,
+   "en": "Country? • Line 1 - %1 • Next page • Help • Correction",
+   "old": "Країна? • Рядок 1 - %1 • Наступна стор. • Довідка",
+   "new": "Country? • Line 1 - %1 • Next page • Help • Correction"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1374,
+   "en": "Post code? • Line 1 - %1 • Next page • Help",
+   "old": "Індекс? • Рядок 1 - %1 • Наступна стор.",
+   "new": "Post code? • Line 1 - %1 • Next page • Help"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1376,
+   "en": "Street? • Line 1 - %1 • Next page • Help • Correction",
+   "old": "Вулиця? • Рядок 1 - %1 • Наступна стор.",
+   "new": "Street? • Line 1 - %1 • Next page • Help • Correction"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1378,
+   "en": "Town? • Line 1 - %1 • Next page • Help • Correction",
+   "old": "Місто? • Рядок 1 - %1 • Наступна стор.",
+   "new": "Town? • Line 1 - %1 • Next page • Help • Correction"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1379,
+   "en": "Town? Street? House number? • Name? • Category?",
+   "old": "Місто? Вулиця? Номер будинку? • Ім'я? • Категорія?",
+   "new": "Town? Street? House number? • Name? • Category?"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1382,
+   "en": "myAudi special destination? • Line 1 - %1 • Help",
+   "old": "Об'єкт myAudi? • Рядок 1 - %1 • Довідка",
+   "new": "myAudi special destination? • Line 1 - %1 • Help"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1384,
+   "en": "Name? • Help • Correction • Cancel",
+   "old": "Ім'я? • Довідка • Виправити",
+   "new": "Name? • Help • Correction • Cancel"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1391,
+   "en": "OK • Delete PIN • Help • Correction • Cancel",
+   "old": "OK • Видалити PIN • Довідка • Виправити",
+   "new": "OK • Delete PIN • Help • Correction • Cancel"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1392,
+   "en": "Save • Delete number • Help • Correction • Cancel",
+   "old": "Зберегти • Видалити номер • Довідка",
+   "new": "Save • Delete number • Help • Correction • Cancel"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1393,
+   "en": "Dial • Delete number • No, I meant \"one two\" • Help",
+   "old": "Набрати • Видалити номер • Довідка",
+   "new": "Dial • Delete number • No, I meant \"one two\" • Help"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1397,
+   "en": "PIN? e.g. \"one two\" or \"twelve\" • Help • Correction",
+   "old": "PIN? Напр., \"один два\" або \"дванадцять\"",
+   "new": "PIN? e.g. \"one two\" or \"twelve\" • Help • Correction"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1398,
+   "en": "Dial • Delete number • No, I meant \"one two\" • Help",
+   "old": "Набрати • Видалити номер • Довідка",
+   "new": "Dial • Delete number • No, I meant \"one two\" • Help"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1421,
+   "en": "Press talk button for: Replace with \"...\" • Continue",
+   "old": "Натисніть кнопку мовлення для: Замінити на \"…\"",
+   "new": "Press talk button for: Replace with \"...\" • Continue"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1422,
+   "en": "Save • Delete number • Help • Correction",
+   "old": "Зберегти • Видалити номер • Довідка",
+   "new": "Save • Delete number • Help • Correction"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1424,
+   "en": "Home • Line 1 - %1 • Next page • Help",
+   "old": "Дім • Рядок 1 - %1 • Наступна стор. • Довідка",
+   "new": "Home • Line 1 - %1 • Next page • Help"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1427,
+   "en": "Last destination? • Line 1 - %1 • Help • Correction",
+   "old": "Остання ціль? • Рядок 1 - %1 • Довідка",
+   "new": "Last destination? • Line 1 - %1 • Help • Correction"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1428,
+   "en": "Last destination? • Line 1 - %1 • Next page • Help",
+   "old": "Остання ціль? • Рядок 1 - %1 • Наступна стор.",
+   "new": "Last destination? • Line 1 - %1 • Next page • Help"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1471,
+   "en": "\"Restaurant\" in \"Liverpool\"",
+   "old": "АЗС уздовж маршруту",
+   "new": "\"Restaurant\" in \"Liverpool\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1473,
+   "en": "\"Museum\" in \"London\"",
+   "old": "\"Музей\" у \"Києві\"",
+   "new": "\"Museum\" in \"London\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1482,
+   "en": "\"Restaurant\" in \"Liverpool\"",
+   "old": "АЗС уздовж маршруту",
+   "new": "\"Restaurant\" in \"Liverpool\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1484,
+   "en": "\"Museum\" in \"London\"",
+   "old": "\"Музей\" у \"Києві\"",
+   "new": "\"Museum\" in \"London\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1487,
+   "en": "Ensemble? • Line 1 - %1 •\nNext page • Help",
+   "old": "Ансамбль? • Рядок 1 - %1 •\nНаступна стор. • Довідка",
+   "new": "Ensemble? • Line 1 - %1 •\nNext page • Help"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1494,
+   "en": "Ensemble? • Line 1 - %1 • Next page • Help",
+   "old": "Ансамбль? • Рядок 1 - %1 • Наступна стор. • Довідка",
+   "new": "Ensemble? • Line 1 - %1 • Next page • Help"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1558,
+   "en": "myAudi contact? • Line 1 - %1 •\nHelp • Correction",
+   "old": "Контакт myAudi? • Рядок 1 - %1 •\nДовідка • Виправити",
+   "new": "myAudi contact? • Line 1 - %1 •\nHelp • Correction"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1564,
+   "en": "myAudi contact? • Line 1 - %1 • Help • Correction",
+   "old": "Контакт myAudi? • Рядок 1 - %1 • Довідка",
+   "new": "myAudi contact? • Line 1 - %1 • Help • Correction"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1632,
+   "en": "Line 1 - %1 • Help • Correction •\nCancel",
+   "old": "Рядок 1 - %1 • Довідка •\nВиправити • Скасувати",
+   "new": "Line 1 - %1 • Help • Correction •\nCancel"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1635,
+   "en": "Line 1 - %1 • Previous page •\nHelp • Correction • Cancel",
+   "old": "Рядок 1 - %1 • Попередня сторінка •\nДовідка • Виправити",
+   "new": "Line 1 - %1 • Previous page •\nHelp • Correction • Cancel"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1638,
+   "en": "Destination? • Line 1 - %1 • Next page • Help",
+   "old": "Пункт призн.? • Рядок 1 - %1 • Наступна стор.",
+   "new": "Destination? • Line 1 - %1 • Next page • Help"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1662,
+   "en": "Category? • Line 1 - %1 • Next page • Help • Correction",
+   "old": "Категорія? • Рядок 1 - %1 • Наступна стор.",
+   "new": "Category? • Line 1 - %1 • Next page • Help • Correction"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1789,
+   "en": "No, I meant \"Iris\" at work.",
+   "old": "Я маю на увазі \"Іра\" служб.",
+   "new": "No, I meant \"Iris\" at work."
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1790,
+   "en": "No, I meant \"Iris\" private.",
+   "old": "Я маю на увазі \"Іра\" дом.",
+   "new": "No, I meant \"Iris\" private."
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1802,
+   "en": "Line 1 - %1 • Help • Correction •\nCancel",
+   "old": "Рядок 1 - %1 • Довідка •\nВиправити • Скасувати",
+   "new": "Line 1 - %1 • Help • Correction •\nCancel"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1844,
+   "en": "myAudi special destination? • Help • Correction",
+   "old": "Об'єкт myAudi? • Довідка • Виправити",
+   "new": "myAudi special destination? • Help • Correction"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1853,
+   "en": "Yes • No • Start route guidance • Help • Correction",
+   "old": "Так • Ні • Почати ведення • Довідка",
+   "new": "Yes • No • Start route guidance • Help • Correction"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1859,
+   "en": "Yes • No •\nStart route guidance • Help",
+   "old": "Так • Ні •\nПочати ведення • Довідка",
+   "new": "Yes • No •\nStart route guidance • Help"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1864,
+   "en": "Town? Street? House number? • Help • Correction",
+   "old": "Місто? Вулиця? Номер будинку? • Довідка",
+   "new": "Town? Street? House number? • Help • Correction"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1868,
+   "en": "Line 1 - %1 • Previous page •\nHelp • Correction • Cancel",
+   "old": "Рядок 1 - %1 • Попередня сторінка •\nДовідка • Виправити",
+   "new": "Line 1 - %1 • Previous page •\nHelp • Correction • Cancel"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1872,
+   "en": "Line 1 - %1 • Previous page •\nHelp • Correction • Cancel",
+   "old": "Рядок 1 - %1 • Попередня сторінка •\nДовідка • Виправити",
+   "new": "Line 1 - %1 • Previous page •\nHelp • Correction • Cancel"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 2092,
+   "en": "Line 1 - %1 • Previous page • Help • Correction • Cancel",
+   "old": "Рядок 1 - %1 • Попередня сторінка • Довідка • Виправити",
+   "new": "Line 1 - %1 • Previous page • Help • Correction • Cancel"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 2095,
+   "en": "myAudi special destination? • Line 1 - %1 • Prev. page",
+   "old": "Об'єкт myAudi? • Рядок 1 - %1 • Попередня стор.",
+   "new": "myAudi special destination? • Line 1 - %1 • Prev. page"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 2118,
+   "en": "Name? • Help •\nCorrection • Cancel",
+   "old": "Ім'я? • Довідка •\nВиправити",
+   "new": "Name? • Help •\nCorrection • Cancel"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 2168,
+   "en": "Artist? • Line 1 - %1 • Help •\nCorrection • Cancel",
+   "old": "Виконавець? • Рядок 1 - %1 •\nДовідка • Виправити",
+   "new": "Artist? • Line 1 - %1 • Help •\nCorrection • Cancel"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 2170,
+   "en": "Album? • Line 1 - %1 •\nNext page • Help",
+   "old": "Альбом? • Рядок 1 - %1 •\nНаступна стор. • Довідка",
+   "new": "Album? • Line 1 - %1 •\nNext page • Help"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 2172,
+   "en": "Artist? • Line 1 - %1 •\nNext page • Help • Correction",
+   "old": "Виконавець? • Рядок 1 - %1 •\nНаступна стор. • Довідка",
+   "new": "Artist? • Line 1 - %1 •\nNext page • Help • Correction"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 2175,
+   "en": "Artist? • Line 1 - %1 • Help • Correction • Cancel",
+   "old": "Виконавець? • Рядок 1 - %1 • Довідка • Виправити",
+   "new": "Artist? • Line 1 - %1 • Help • Correction • Cancel"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 2177,
+   "en": "Album? • Line 1 - %1 • Next page • Help",
+   "old": "Альбом? • Рядок 1 - %1 • Наступна стор. • Довідка",
+   "new": "Album? • Line 1 - %1 • Next page • Help"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 2179,
+   "en": "Artist? • Line 1 - %1 • Next page • Help • Correction",
+   "old": "Виконавець? • Рядок 1 - %1 • Наступна стор. • Довідка",
+   "new": "Artist? • Line 1 - %1 • Next page • Help • Correction"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 2189,
+   "en": "Artist? • Line 1 - %1 • Previous page • Help • Correction",
+   "old": "Виконавець? • Рядок 1 - %1 • Попередня стор. • Довідка",
+   "new": "Artist? • Line 1 - %1 • Previous page • Help • Correction"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 2190,
+   "en": "Track? • Line 1 - %1 • Previous page • Help • Correction",
+   "old": "Трек? • Рядок 1 - %1 • Попередня стор. • Довідка",
+   "new": "Track? • Line 1 - %1 • Previous page • Help • Correction"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 2194,
+   "en": "Track? • Line 1 - %1 • Next page • Help • Correction",
+   "old": "Трек? • Рядок 1 - %1 • Наступна стор. • Довідка",
+   "new": "Track? • Line 1 - %1 • Next page • Help • Correction"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 2195,
+   "en": "Track? • Line 1 - %1 •\nNext page • Help • Correction",
+   "old": "Трек? • Рядок 1 - %1 •\nНаступна стор. • Довідка",
+   "new": "Track? • Line 1 - %1 •\nNext page • Help • Correction"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 2199,
+   "en": "Line 1 - %1 • Correction • Cancel",
+   "old": "Рядок 1 - %1 • Виправити",
+   "new": "Line 1 - %1 • Correction • Cancel"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 2206,
+   "en": "Country? • Line 1 - %1 •\nPrevious page • Pause • Help",
+   "old": "Країна? • Рядок 1 - %1 •\nПопередня стор. • Пауза",
+   "new": "Country? • Line 1 - %1 •\nPrevious page • Pause • Help"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 2208,
+   "en": "Street? • Line 1 - %1 •\nPrevious page • Pause • Help",
+   "old": "Вулиця? • Рядок 1 - %1 •\nПопередня стор. • Пауза",
+   "new": "Street? • Line 1 - %1 •\nPrevious page • Pause • Help"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 2210,
+   "en": "Destination? • Line 1 - %1 •\nPrevious page • Pause • Help",
+   "old": "Пункт призн.? • Рядок 1 - %1 •\nПопередня стор. • Пауза",
+   "new": "Destination? • Line 1 - %1 •\nPrevious page • Pause • Help"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 2214,
+   "en": "Genre? • Line 1 - %1 •\nPrevious page • Help",
+   "old": "Жанр? • Рядок 1 - %1 •\nПопередня стор. • Довідка",
+   "new": "Genre? • Line 1 - %1 •\nPrevious page • Help"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 2215,
+   "en": "Name? • Line 1 - %1 • Previous page • Help",
+   "old": "Ім'я? • Рядок 1 - %1 • Попередня стор.",
+   "new": "Name? • Line 1 - %1 • Previous page • Help"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 2216,
+   "en": "Name? • Line 1 - %1 • Previous page • Help",
+   "old": "Ім'я? • Рядок 1 - %1 • Попередня стор.",
+   "new": "Name? • Line 1 - %1 • Previous page • Help"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 2217,
+   "en": "Country? • Line 1 - %1 • Previous page • Help",
+   "old": "Країна? • Рядок 1 - %1 • Попередня стор. • Довідка",
+   "new": "Country? • Line 1 - %1 • Previous page • Help"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 2218,
+   "en": "Post code? • Line 1 - %1 • Previous page • Help",
+   "old": "Індекс? • Рядок 1 - %1 • Попередня стор. • Довідка",
+   "new": "Post code? • Line 1 - %1 • Previous page • Help"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 2219,
+   "en": "Street? • Line 1 - %1 • Previous page • Help",
+   "old": "Вулиця? • Рядок 1 - %1 • Попередня стор. • Довідка",
+   "new": "Street? • Line 1 - %1 • Previous page • Help"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 2222,
+   "en": "Category? • Line 1 - %1 • Previous page • Help",
+   "old": "Категорія? • Рядок 1 - %1 • Попередня стор. • Довідка",
+   "new": "Category? • Line 1 - %1 • Previous page • Help"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 2225,
+   "en": "Genre? • Line 1 - %1 • Previous page • Help",
+   "old": "Жанр? • Рядок 1 - %1 • Попередня стор. • Довідка",
+   "new": "Genre? • Line 1 - %1 • Previous page • Help"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 2229,
+   "en": "Line 1 - %1 • Correction • Cancel",
+   "old": "Рядок 1 - %1 • Виправити",
+   "new": "Line 1 - %1 • Correction • Cancel"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 2241,
+   "en": "Name? • Line 1 - %1 •\nPrevious page • Help",
+   "old": "Ім'я? • Рядок 1 - %1 •\nПопередня стор. • Довідка",
+   "new": "Name? • Line 1 - %1 •\nPrevious page • Help"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 2568,
+   "en": "Town? • Line 1 - %1 •\nNext page • Pause • Help",
+   "old": "Місто? • Рядок 1 - %1 •\nНаступна стор. • Пауза",
+   "new": "Town? • Line 1 - %1 •\nNext page • Pause • Help"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 2577,
+   "en": "Street? • Line 1 - %1 •\nNext page • Pause • Help",
+   "old": "Вулиця? • Рядок 1 - %1 •\nНаступна стор. • Пауза",
+   "new": "Street? • Line 1 - %1 •\nNext page • Pause • Help"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 2578,
+   "en": "Street? • Line 1 - %1 •\nPrevious page • Help",
+   "old": "Вулиця? • Рядок 1 - %1 •\nПопередня стор. • Довідка",
+   "new": "Street? • Line 1 - %1 •\nPrevious page • Help"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 2588,
+   "en": "Line 1 - %1 • Previous page •\nHelp • Correction",
+   "old": "Рядок 1 - %1 • Попередня стор. •\nДовідка • Виправити",
+   "new": "Line 1 - %1 • Previous page •\nHelp • Correction"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 2615,
+   "en": "House number? Intersection? •\nHelp • Correction",
+   "old": "Номер будинку? Перехрестя? •\nДовідка • Виправити",
+   "new": "House number? Intersection? •\nHelp • Correction"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 2619,
+   "en": "Line 1 - %1 • Previous page •\nHelp • Correction • Cancel",
+   "old": "Рядок 1 - %1 • Попередня сторінка •\nДовідка • Виправити",
+   "new": "Line 1 - %1 • Previous page •\nHelp • Correction • Cancel"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 2626,
+   "en": "Town? • Line 1 - %1 • Next page • Help • Correction",
+   "old": "Місто? • Рядок 1 - %1 • Наступна стор.",
+   "new": "Town? • Line 1 - %1 • Next page • Help • Correction"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 2628,
+   "en": "Street? • Line 1 - %1 • Next page • Help • Correction",
+   "old": "Вулиця? • Рядок 1 - %1 • Наступна стор.",
+   "new": "Street? • Line 1 - %1 • Next page • Help • Correction"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 2631,
+   "en": "Line 1 - %1 • Next page • Help • Correction • Cancel",
+   "old": "Рядок 1 - %1 • Наступна сторінка • Довідка • Виправити",
+   "new": "Line 1 - %1 • Next page • Help • Correction • Cancel"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 2633,
+   "en": "House number? Intersection? • Help • Correction",
+   "old": "Номер будинку? Перехрестя? • Довідка",
+   "new": "House number? Intersection? • Help • Correction"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 2635,
+   "en": "Line 1 - %1 • Next page • Help • Correction • Cancel",
+   "old": "Рядок 1 - %1 • Наступна сторінка • Довідка • Виправити",
+   "new": "Line 1 - %1 • Next page • Help • Correction • Cancel"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 2640,
+   "en": "Town? Street? House\nnumber? • Help • Correction",
+   "old": "Місто? Вулиця? Номер\nбудинку? • Довідка",
+   "new": "Town? Street? House\nnumber? • Help • Correction"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 2641,
+   "en": "Town? Street? House number? • Help • Correction",
+   "old": "Місто? Вулиця? Номер будинку? • Довідка",
+   "new": "Town? Street? House number? • Help • Correction"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3001,
+   "en": "Template? • Line 1 - %1 • Next page • Help",
+   "old": "Шаблон? • Рядок 1 - %1 • Наступна стор. • Довідка",
+   "new": "Template? • Line 1 - %1 • Next page • Help"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3043,
+   "en": "Town? Street? House number? • Help • Correction",
+   "old": "Місто? Вулиця? Номер будинку? • Довідка",
+   "new": "Town? Street? House number? • Help • Correction"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3045,
+   "en": "Town? Street? House\nnumber? • Help • Correction",
+   "old": "Місто? Вулиця? Номер\nбудинку? • Довідка",
+   "new": "Town? Street? House\nnumber? • Help • Correction"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3103,
+   "en": "State? • Line 1 - %1 • Next page • Help • Correction",
+   "old": "Штат? • Рядок 1 - %1 • Наступна стор. • Довідка",
+   "new": "State? • Line 1 - %1 • Next page • Help • Correction"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3115,
+   "en": "State? • Line 1 - %1 •\nNext page • Pause • Help",
+   "old": "Штат? • Рядок 1 - %1 •\nНаступна стор. • Пауза",
+   "new": "State? • Line 1 - %1 •\nNext page • Pause • Help"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3137,
+   "en": "State? • Line 1 - %1 •\nPrevious page • Pause • Help",
+   "old": "Штат? • Рядок 1 - %1 •\nПопередня стор. • Пауза",
+   "new": "State? • Line 1 - %1 •\nPrevious page • Pause • Help"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3139,
+   "en": "State? • Line 1 - %1 • Previous page • Help",
+   "old": "Штат? • Рядок 1 - %1 • Попередня стор. • Довідка",
+   "new": "State? • Line 1 - %1 • Previous page • Help"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3201,
+   "en": "Find \"filling station\" / \"restaurant\"/ \"Audi dealer\"",
+   "old": "Знайти \"АЗС\" / \"ресторан\" / \"дилера Audi\"",
+   "new": "Find \"filling station\" / \"restaurant\"/ \"Audi dealer\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3203,
+   "en": "Set station \"B B C Radio 2\" / \"88.1\" / \"Classic FM\"",
+   "old": "Станція \"B B C Radio 2\" / \"88.1\" / \"Classic FM\"",
+   "new": "Set station \"B B C Radio 2\" / \"88.1\" / \"Classic FM\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3274,
+   "en": "Line 1 - %1 • Help • Correction •\nCancel",
+   "old": "Рядок 1 - %1 • Довідка •\nВиправити • Скасувати",
+   "new": "Line 1 - %1 • Help • Correction •\nCancel"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3276,
+   "en": "Line 1 - %1 • Previous page •\nHelp • Correction • Cancel",
+   "old": "Рядок 1 - %1 • Попередня сторінка •\nДовідка • Виправити",
+   "new": "Line 1 - %1 • Previous page •\nHelp • Correction • Cancel"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3285,
+   "en": "Line 1 - %1 • Previous page • Help • Correction • Cancel",
+   "old": "Рядок 1 - %1 • Попередня сторінка • Довідка • Виправити",
+   "new": "Line 1 - %1 • Previous page • Help • Correction • Cancel"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3320,
+   "en": "Line 1 - %1 • Help • Correction •\nCancel",
+   "old": "Рядок 1 - %1 • Довідка •\nВиправити • Скасувати",
+   "new": "Line 1 - %1 • Help • Correction •\nCancel"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3323,
+   "en": "Line 1 - %1 • Previous page •\nHelp • Correction",
+   "old": "Рядок 1 - %1 • Попередня стор. •\nДовідка • Виправити",
+   "new": "Line 1 - %1 • Previous page •\nHelp • Correction"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3335,
+   "en": "Frequency? • Line 1 - %1 • Next\npage • Help • Correction",
+   "old": "Частота? • Рядок 1 - %1 •\nНаступна стор. • Довідка",
+   "new": "Frequency? • Line 1 - %1 • Next\npage • Help • Correction"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3356,
+   "en": "E-mail? • Line 1 - %1 •\nNext page • Help",
+   "old": "E-mail? • Рядок 1 - %1 •\nНаступна стор. • Довідка",
+   "new": "E-mail? • Line 1 - %1 •\nNext page • Help"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3360,
+   "en": "E-mail? • Line 1 - %1 • Next page • Help",
+   "old": "E-mail? • Рядок 1 - %1 • Наступна стор. • Довідка",
+   "new": "E-mail? • Line 1 - %1 • Next page • Help"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3406,
+   "en": "Press talk button for: Replace\nwith \"...\" • Continue",
+   "old": "Натисніть кнопку мовлення для:\nЗамінити на \"…\"",
+   "new": "Press talk button for: Replace\nwith \"...\" • Continue"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3411,
+   "en": "Press talk button for: Replace with \"...\" • Continue",
+   "old": "Натисніть кнопку мовлення для: Замінити на \"…\"",
+   "new": "Press talk button for: Replace with \"...\" • Continue"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3608,
+   "en": "Destination? • Line 1 - %1 • Next page • Help",
+   "old": "Пункт призн.? • Рядок 1 - %1 • Наступна стор.",
+   "new": "Destination? • Line 1 - %1 • Next page • Help"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3697,
+   "en": "Line 1 - %1 • Previous page •\nHelp • Correction",
+   "old": "Рядок 1 - %1 • Попередня стор. •\nДовідка • Виправити",
+   "new": "Line 1 - %1 • Previous page •\nHelp • Correction"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3699,
+   "en": "Line 1 - %1 • Help • Correction • Cancel",
+   "old": "Рядок 1 - %1 • Довідка • Виправити",
+   "new": "Line 1 - %1 • Help • Correction • Cancel"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3700,
+   "en": "Line 1 - %1 • Next page • Help • Correction • Cancel",
+   "old": "Рядок 1 - %1 • Наступна сторінка • Довідка • Виправити",
+   "new": "Line 1 - %1 • Next page • Help • Correction • Cancel"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3702,
+   "en": "Line 1 - %1 • Previous page • Help • Correction • Cancel",
+   "old": "Рядок 1 - %1 • Попередня сторінка • Довідка • Виправити",
+   "new": "Line 1 - %1 • Previous page • Help • Correction • Cancel"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3839,
+   "en": "Line 1 - %1 • Previous page •\nHelp • Correction",
+   "old": "Рядок 1 - %1 • Попередня стор. •\nДовідка • Виправити",
+   "new": "Line 1 - %1 • Previous page •\nHelp • Correction"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3840,
+   "en": "Line 1 - %1 • Previous page • Help • Correction • Cancel",
+   "old": "Рядок 1 - %1 • Попередня сторінка • Довідка • Виправити",
+   "new": "Line 1 - %1 • Previous page • Help • Correction • Cancel"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3854,
+   "en": "Destination? • Change country • Help • Correction",
+   "old": "Ціль? • Змінити країну • Довідка",
+   "new": "Destination? • Change country • Help • Correction"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3861,
+   "en": "Destination? • Change\ncountry • Help • Correction",
+   "old": "Ціль? • Змінити\nкраїну • Довідка",
+   "new": "Destination? • Change\ncountry • Help • Correction"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3865,
+   "en": "Search term? • Line 1 - %1 •\nNext page • Help • Correction",
+   "old": "Ключове слово? • Рядок 1 - %1 •\nНаступна стор.",
+   "new": "Search term? • Line 1 - %1 •\nNext page • Help • Correction"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3915,
+   "en": "Destination? • Line 1 - %1 • Next page • Help",
+   "old": "Пункт призн.? • Рядок 1 - %1 • Наступна стор.",
+   "new": "Destination? • Line 1 - %1 • Next page • Help"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3919,
+   "en": "Destination? • Line 1 • Next page • Help • Correction",
+   "old": "Пункт призн.? • Рядок 1 • Наступна стор. • Довідка",
+   "new": "Destination? • Line 1 • Next page • Help • Correction"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 4003,
+   "en": "Line 1 - %1 • Help • Correction •\nCancel",
+   "old": "Рядок 1 - %1 • Довідка •\nВиправити • Скасувати",
+   "new": "Line 1 - %1 • Help • Correction •\nCancel"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1644,
+   "en": "\"0800 699999\"\n\"John Smith\"\n\"Smith, John\"",
+   "old": "\"097 232 30 88\"\n\"Тарас Шевченко\"\n\"Шевченко, Тарас\"",
+   "new": "\"097 232 30 88\"\n\"Taras Shevchenko\"\n\"Shevchenko, Taras\""
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1647,
+   "en": "\"London, Regent Street\"\n\"Heathrow Airport\"\n\"John Smith\"",
+   "old": "\"Львів, Свободи просп.\"\n\"Аеропорт Харків\"\n\"Тарас Шевченко\"",
+   "new": "\"London, Regent Street\"\n\"Heathrow Airport\"\n\"Taras Shevchenko\""
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 7,
+   "en": "No business number is available for <say-as interpret-as=\"name\">%1</say-as> .",
+   "old": "Для <say-as interpret-as=\"name\">%1</say-as> немає службового номера.",
+   "new": "No business number is available for <say-as interpret-as=\"name\">%1</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 8,
+   "en": "No business land line number is available for <say-as interpret-as=\"name\">%1</say-as> .",
+   "old": "Для <say-as interpret-as=\"name\">%1</say-as> немає службового стаціонарного номера.",
+   "new": "No business land line number is available for <say-as interpret-as=\"name\">%1</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 9,
+   "en": "No land line number available for <say-as interpret-as=\"name\">%1</say-as> .",
+   "old": "Немає стаціонарного номера для <say-as interpret-as=\"name\">%1</say-as> .",
+   "new": "No land line number available for <say-as interpret-as=\"name\">%1</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 10,
+   "en": "No private land line number available for <say-as interpret-as=\"name\">%1</say-as> .",
+   "old": "Немає приватного стаціонарного номера для <say-as interpret-as=\"name\">%1</say-as> .",
+   "new": "No private land line number available for <say-as interpret-as=\"name\">%1</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 17,
+   "en": "No land line number is available for <say-as interpret-as=\"name\">%1</say-as> .",
+   "old": "Для <say-as interpret-as=\"name\">%1</say-as> немає стаціонарного номера.",
+   "new": "No land line number is available for <say-as interpret-as=\"name\">%1</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 18,
+   "en": "No land line number has yet been saved for <say-as interpret-as=\"name\">%1</say-as> .",
+   "old": "Для <say-as interpret-as=\"name\">%1</say-as> не збережено стаціонарного номера.",
+   "new": "No land line number has yet been saved for <say-as interpret-as=\"name\">%1</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 19,
+   "en": "No private land line number is available for <say-as interpret-as=\"name\">%1</say-as> .",
+   "old": "Для <say-as interpret-as=\"name\">%1</say-as> немає приватного стаціонарного номера.",
+   "new": "No private land line number is available for <say-as interpret-as=\"name\">%1</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 20,
+   "en": "No private land line number has yet been saved for <say-as interpret-as=\"name\">%1</say-as> .",
+   "old": "Для <say-as interpret-as=\"name\">%1</say-as> не збережено приватного стаціонарного номера.",
+   "new": "No private land line number has yet been saved for <say-as interpret-as=\"name\">%1</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 21,
+   "en": "This function is currently unavailable.",
+   "old": "Функція наразі недоступна.",
+   "new": "This function is currently unavailable."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 23,
+   "en": "There are no contacts in the directory.",
+   "old": "В адресній книзі немає контактів.",
+   "new": "There are no contacts in the directory."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 28,
+   "en": "No business mobile number is available for <say-as interpret-as=\"name\">%1</say-as> .",
+   "old": "Для <say-as interpret-as=\"name\">%1</say-as> немає службового мобільного номера.",
+   "new": "No business mobile number is available for <say-as interpret-as=\"name\">%1</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 122,
+   "en": "This function is currently unavailable.",
+   "old": "Функція наразі недоступна.",
+   "new": "This function is currently unavailable."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 356,
+   "en": "This function is currently unavailable.",
+   "old": "Функція наразі недоступна.",
+   "new": "This function is currently unavailable."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 635,
+   "en": "I'll use <say-as interpret-as=\"POICategory\">%1</say-as> .",
+   "old": "Беру <say-as interpret-as=\"POICategory\">%1</say-as> .",
+   "new": "I'll use <say-as interpret-as=\"POICategory\">%1</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 682,
+   "en": "Only one online destination was found.",
+   "old": "Знайдено лише одну онлайн-ціль.",
+   "new": "Only one online destination was found."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 701,
+   "en": "I'll switch the Google Earth map on.",
+   "old": "Я вмикаю карту Google Earth.",
+   "new": "I'll switch the Google Earth map on."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 869,
+   "en": "Google Earth map,",
+   "old": "Карта Google Earth,",
+   "new": "Google Earth map,"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 871,
+   "en": "and",
+   "old": "і",
+   "new": "and"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1095,
+   "en": "and",
+   "old": "і",
+   "new": "and"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1123,
+   "en": "Frequency <say-as interpret-as=\"radiostation\">%1 mhz</say-as> .",
+   "old": "Частота <say-as interpret-as=\"radiostation\">%1 mhz</say-as> .",
+   "new": "Frequency <say-as interpret-as=\"radiostation\">%1 mhz</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1124,
+   "en": "F M frequency <say-as interpret-as=\"radiostation\">%1 mhz</say-as> .",
+   "old": "Частота F M <say-as interpret-as=\"radiostation\">%1 mhz</say-as> .",
+   "new": "F M frequency <say-as interpret-as=\"radiostation\">%1 mhz</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1125,
+   "en": "A M frequency <say-as interpret-as=\"radiostation\">%1 khz</say-as> .",
+   "old": "Частота A M <say-as interpret-as=\"radiostation\">%1 khz</say-as> .",
+   "new": "A M frequency <say-as interpret-as=\"radiostation\">%1 khz</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1126,
+   "en": "Frequency <say-as interpret-as=\"radiostation\">%1 khz</say-as> .",
+   "old": "Частота <say-as interpret-as=\"radiostation\">%1 khz</say-as> .",
+   "new": "Frequency <say-as interpret-as=\"radiostation\">%1 khz</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1248,
+   "en": "Switching on the Google Earth map.",
+   "old": "Увімкнення карти Google Earth.",
+   "new": "Switching on the Google Earth map."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1266,
+   "en": "I'll add the range map.",
+   "old": "Я додаю карту запасу ходу.",
+   "new": "I'll add the range map."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1344,
+   "en": "An unknown error has occurred.",
+   "old": "Сталася невідома помилка.",
+   "new": "An unknown error has occurred."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1345,
+   "en": "An unknown error has occurred.",
+   "old": "Сталася невідома помилка.",
+   "new": "An unknown error has occurred."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1533,
+   "en": "This function is currently unavailable.",
+   "old": "Функція наразі недоступна.",
+   "new": "This function is currently unavailable."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1581,
+   "en": "No numbers are available for <say-as interpret-as=\"name\">%1</say-as> .",
+   "old": "Для <say-as interpret-as=\"name\">%1</say-as> немає номерів.",
+   "new": "No numbers are available for <say-as interpret-as=\"name\">%1</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1582,
+   "en": "No numbers have yet been saved for <say-as interpret-as=\"name\">%1</say-as> .",
+   "old": "Для <say-as interpret-as=\"name\">%1</say-as> ще не збережено номерів.",
+   "new": "No numbers have yet been saved for <say-as interpret-as=\"name\">%1</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1583,
+   "en": "No numbers available for <say-as interpret-as=\"name\">%1</say-as> .",
+   "old": "Немає номерів для <say-as interpret-as=\"name\">%1</say-as> .",
+   "new": "No numbers available for <say-as interpret-as=\"name\">%1</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1588,
+   "en": "Would you like to call <say-as interpret-as=\"name\">%1</say-as>'s business number?",
+   "old": "Бажаєте зателефонувати <say-as interpret-as=\"name\">%1</say-as> на службовий номер?",
+   "new": "Would you like to call <say-as interpret-as=\"name\">%1</say-as>'s business number?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1589,
+   "en": "Should I call <say-as interpret-as=\"name\">%1</say-as>'s business number?",
+   "old": "Зателефонувати <say-as interpret-as=\"name\">%1</say-as> на службовий номер?",
+   "new": "Should I call <say-as interpret-as=\"name\">%1</say-as>'s business number?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1590,
+   "en": "Call <say-as interpret-as=\"name\">%1</say-as>'s business number?",
+   "old": "Телефонувати <say-as interpret-as=\"name\">%1</say-as> на службовий номер?",
+   "new": "Call <say-as interpret-as=\"name\">%1</say-as>'s business number?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1591,
+   "en": "Would you like to call <say-as interpret-as=\"name\">%1</say-as>'s business land line number?",
+   "old": "Бажаєте зателефонувати <say-as interpret-as=\"name\">%1</say-as> на службовий стаціонарний?",
+   "new": "Would you like to call <say-as interpret-as=\"name\">%1</say-as>'s business land line number?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1592,
+   "en": "Should I call <say-as interpret-as=\"name\">%1</say-as>'s business land line number?",
+   "old": "Зателефонувати <say-as interpret-as=\"name\">%1</say-as> на службовий стаціонарний?",
+   "new": "Should I call <say-as interpret-as=\"name\">%1</say-as>'s business land line number?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1593,
+   "en": "Call <say-as interpret-as=\"name\">%1</say-as>'s business land line number?",
+   "old": "Телефонувати <say-as interpret-as=\"name\">%1</say-as> на службовий стаціонарний?",
+   "new": "Call <say-as interpret-as=\"name\">%1</say-as>'s business land line number?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1594,
+   "en": "Would you like to call <say-as interpret-as=\"name\">%1</say-as>'s land line number?",
+   "old": "Бажаєте зателефонувати <say-as interpret-as=\"name\">%1</say-as> на стаціонарний номер?",
+   "new": "Would you like to call <say-as interpret-as=\"name\">%1</say-as>'s land line number?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1595,
+   "en": "Should I call <say-as interpret-as=\"name\">%1</say-as>'s land line number?",
+   "old": "Зателефонувати <say-as interpret-as=\"name\">%1</say-as> на стаціонарний номер?",
+   "new": "Should I call <say-as interpret-as=\"name\">%1</say-as>'s land line number?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1596,
+   "en": "Call <say-as interpret-as=\"name\">%1</say-as>'s land line number?",
+   "old": "Телефонувати <say-as interpret-as=\"name\">%1</say-as> на стаціонарний номер?",
+   "new": "Call <say-as interpret-as=\"name\">%1</say-as>'s land line number?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1597,
+   "en": "Would you like to call <say-as interpret-as=\"name\">%1</say-as>'s business mobile number?",
+   "old": "Бажаєте зателефонувати <say-as interpret-as=\"name\">%1</say-as> на службовий мобільний?",
+   "new": "Would you like to call <say-as interpret-as=\"name\">%1</say-as>'s business mobile number?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1598,
+   "en": "Should I call <say-as interpret-as=\"name\">%1</say-as>'s business mobile number?",
+   "old": "Зателефонувати <say-as interpret-as=\"name\">%1</say-as> на службовий мобільний?",
+   "new": "Should I call <say-as interpret-as=\"name\">%1</say-as>'s business mobile number?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1599,
+   "en": "Would you like to call <say-as interpret-as=\"name\">%1</say-as>'s private land line number?",
+   "old": "Бажаєте зателефонувати <say-as interpret-as=\"name\">%1</say-as> на приватний стаціонарний?",
+   "new": "Would you like to call <say-as interpret-as=\"name\">%1</say-as>'s private land line number?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1600,
+   "en": "Should I call <say-as interpret-as=\"name\">%1</say-as>'s private land line number?",
+   "old": "Зателефонувати <say-as interpret-as=\"name\">%1</say-as> на приватний стаціонарний?",
+   "new": "Should I call <say-as interpret-as=\"name\">%1</say-as>'s private land line number?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1601,
+   "en": "Call <say-as interpret-as=\"name\">%1</say-as>'s private land line number?",
+   "old": "Телефонувати <say-as interpret-as=\"name\">%1</say-as> на приватний стаціонарний?",
+   "new": "Call <say-as interpret-as=\"name\">%1</say-as>'s private land line number?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1602,
+   "en": "Call <say-as interpret-as=\"name\">%1</say-as>'s business mobile number?",
+   "old": "Телефонувати <say-as interpret-as=\"name\">%1</say-as> на службовий мобільний?",
+   "new": "Call <say-as interpret-as=\"name\">%1</say-as>'s business mobile number?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1603,
+   "en": "Would you like to call <say-as interpret-as=\"name\">%1</say-as>'s mobile number?",
+   "old": "Бажаєте зателефонувати <say-as interpret-as=\"name\">%1</say-as> на мобільний номер?",
+   "new": "Would you like to call <say-as interpret-as=\"name\">%1</say-as>'s mobile number?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1604,
+   "en": "Should I call <say-as interpret-as=\"name\">%1</say-as>'s mobile number?",
+   "old": "Зателефонувати <say-as interpret-as=\"name\">%1</say-as> на мобільний номер?",
+   "new": "Should I call <say-as interpret-as=\"name\">%1</say-as>'s mobile number?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1605,
+   "en": "Would you like to call <say-as interpret-as=\"name\">%1</say-as>'s private mobile number?",
+   "old": "Бажаєте зателефонувати <say-as interpret-as=\"name\">%1</say-as> на приватний мобільний?",
+   "new": "Would you like to call <say-as interpret-as=\"name\">%1</say-as>'s private mobile number?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1606,
+   "en": "Should I call <say-as interpret-as=\"name\">%1</say-as>'s private mobile number?",
+   "old": "Зателефонувати <say-as interpret-as=\"name\">%1</say-as> на приватний мобільний?",
+   "new": "Should I call <say-as interpret-as=\"name\">%1</say-as>'s private mobile number?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1607,
+   "en": "Call <say-as interpret-as=\"name\">%1</say-as>'s private mobile number?",
+   "old": "Телефонувати <say-as interpret-as=\"name\">%1</say-as> на приватний мобільний?",
+   "new": "Call <say-as interpret-as=\"name\">%1</say-as>'s private mobile number?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1608,
+   "en": "Call <say-as interpret-as=\"name\">%1</say-as>'s mobile number?",
+   "old": "Телефонувати <say-as interpret-as=\"name\">%1</say-as> на мобільний номер?",
+   "new": "Call <say-as interpret-as=\"name\">%1</say-as>'s mobile number?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1609,
+   "en": "Would you like to call <say-as interpret-as=\"name\">%1</say-as>'s private number?",
+   "old": "Бажаєте зателефонувати <say-as interpret-as=\"name\">%1</say-as> на приватний номер?",
+   "new": "Would you like to call <say-as interpret-as=\"name\">%1</say-as>'s private number?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1610,
+   "en": "Should I call <say-as interpret-as=\"name\">%1</say-as>'s private number?",
+   "old": "Зателефонувати <say-as interpret-as=\"name\">%1</say-as> на приватний номер?",
+   "new": "Should I call <say-as interpret-as=\"name\">%1</say-as>'s private number?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1611,
+   "en": "Call <say-as interpret-as=\"name\">%1</say-as>'s private number?",
+   "old": "Телефонувати <say-as interpret-as=\"name\">%1</say-as> на приватний номер?",
+   "new": "Call <say-as interpret-as=\"name\">%1</say-as>'s private number?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1612,
+   "en": "Would you like to call <say-as interpret-as=\"name\">%1</say-as> ?",
+   "old": "Бажаєте зателефонувати <say-as interpret-as=\"name\">%1</say-as> ?",
+   "new": "Would you like to call <say-as interpret-as=\"name\">%1</say-as> ?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1613,
+   "en": "Should I call <say-as interpret-as=\"name\">%1</say-as> ?",
+   "old": "Зателефонувати <say-as interpret-as=\"name\">%1</say-as> ?",
+   "new": "Should I call <say-as interpret-as=\"name\">%1</say-as> ?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1614,
+   "en": "Call <say-as interpret-as=\"name\">%1</say-as> ?",
+   "old": "Телефонувати <say-as interpret-as=\"name\">%1</say-as> ?",
+   "new": "Call <say-as interpret-as=\"name\">%1</say-as> ?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1825,
+   "en": "What would you like to listen to?",
+   "old": "Що бажаєте прослухати?",
+   "new": "What would you like to listen to?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1843,
+   "en": "and",
+   "old": "і",
+   "new": "and"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1858,
+   "en": "and",
+   "old": "і",
+   "new": "and"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1886,
+   "en": "and",
+   "old": "і",
+   "new": "and"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1892,
+   "en": "and",
+   "old": "і",
+   "new": "and"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1897,
+   "en": "What would you like to listen to?",
+   "old": "Що бажаєте прослухати?",
+   "new": "What would you like to listen to?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1934,
+   "en": "and",
+   "old": "і",
+   "new": "and"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1940,
+   "en": "and",
+   "old": "і",
+   "new": "and"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1953,
+   "en": "and",
+   "old": "і",
+   "new": "and"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1955,
+   "en": "and",
+   "old": "і",
+   "new": "and"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1970,
+   "en": "and",
+   "old": "і",
+   "new": "and"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1976,
+   "en": "and",
+   "old": "і",
+   "new": "and"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1995,
+   "en": "No business land line number has yet been saved for <say-as interpret-as=\"name\">%1</say-as> .",
+   "old": "Для <say-as interpret-as=\"name\">%1</say-as> не збережено службового стаціонарного номера.",
+   "new": "No business land line number has yet been saved for <say-as interpret-as=\"name\">%1</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1996,
+   "en": "No business number has yet been saved for <say-as interpret-as=\"name\">%1</say-as>.",
+   "old": "Для <say-as interpret-as=\"name\">%1</say-as> не збережено службового номера.",
+   "new": "No business number has yet been saved for <say-as interpret-as=\"name\">%1</say-as>."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1997,
+   "en": "No business number available for <say-as interpret-as=\"name\">%1</say-as> .",
+   "old": "Немає службового номера для <say-as interpret-as=\"name\">%1</say-as> .",
+   "new": "No business number available for <say-as interpret-as=\"name\">%1</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1998,
+   "en": "No business land line number available for <say-as interpret-as=\"name\">%1</say-as> .",
+   "old": "Немає службового стаціонарного номера для <say-as interpret-as=\"name\">%1</say-as> .",
+   "new": "No business land line number available for <say-as interpret-as=\"name\">%1</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2011,
+   "en": "No private number available for <say-as interpret-as=\"name\">%1</say-as> .",
+   "old": "Немає приватного номера для <say-as interpret-as=\"name\">%1</say-as> .",
+   "new": "No private number available for <say-as interpret-as=\"name\">%1</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2012,
+   "en": "No private number is available for <say-as interpret-as=\"name\">%1</say-as> .",
+   "old": "Для <say-as interpret-as=\"name\">%1</say-as> немає приватного номера.",
+   "new": "No private number is available for <say-as interpret-as=\"name\">%1</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2013,
+   "en": "No private number has yet been saved for <say-as interpret-as=\"name\">%1</say-as> .",
+   "old": "Для <say-as interpret-as=\"name\">%1</say-as> не збережено приватного номера.",
+   "new": "No private number has yet been saved for <say-as interpret-as=\"name\">%1</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2014,
+   "en": "No private mobile number available for <say-as interpret-as=\"name\">%1</say-as> .",
+   "old": "Немає приватного мобільного номера для <say-as interpret-as=\"name\">%1</say-as> .",
+   "new": "No private mobile number available for <say-as interpret-as=\"name\">%1</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2015,
+   "en": "No private mobile number is available for <say-as interpret-as=\"name\">%1</say-as> .",
+   "old": "Для <say-as interpret-as=\"name\">%1</say-as> немає приватного мобільного номера.",
+   "new": "No private mobile number is available for <say-as interpret-as=\"name\">%1</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2016,
+   "en": "No private mobile number has yet been saved for <say-as interpret-as=\"name\">%1</say-as> .",
+   "old": "Для <say-as interpret-as=\"name\">%1</say-as> не збережено приватного мобільного номера.",
+   "new": "No private mobile number has yet been saved for <say-as interpret-as=\"name\">%1</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2017,
+   "en": "No business mobile number has yet been saved for <say-as interpret-as=\"name\">%1</say-as> .",
+   "old": "Для <say-as interpret-as=\"name\">%1</say-as> не збережено службового мобільного номера.",
+   "new": "No business mobile number has yet been saved for <say-as interpret-as=\"name\">%1</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2018,
+   "en": "No business mobile number available for <say-as interpret-as=\"name\">%1</say-as> .",
+   "old": "Немає службового мобільного номера для <say-as interpret-as=\"name\">%1</say-as> .",
+   "new": "No business mobile number available for <say-as interpret-as=\"name\">%1</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2019,
+   "en": "No mobile number is available for <say-as interpret-as=\"name\">%1</say-as> .",
+   "old": "Для <say-as interpret-as=\"name\">%1</say-as> немає мобільного номера.",
+   "new": "No mobile number is available for <say-as interpret-as=\"name\">%1</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2020,
+   "en": "No mobile number has yet been saved for <say-as interpret-as=\"name\">%1</say-as> .",
+   "old": "Для <say-as interpret-as=\"name\">%1</say-as> не збережено мобільного номера.",
+   "new": "No mobile number has yet been saved for <say-as interpret-as=\"name\">%1</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2021,
+   "en": "No mobile number available for <say-as interpret-as=\"name\">%1</say-as> .",
+   "old": "Немає мобільного номера для <say-as interpret-as=\"name\">%1</say-as> .",
+   "new": "No mobile number available for <say-as interpret-as=\"name\">%1</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2079,
+   "en": "Who would you like to call?",
+   "old": "Кому бажаєте зателефонувати?",
+   "new": "Who would you like to call?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2138,
+   "en": "An unknown error has occurred.",
+   "old": "Сталася невідома помилка.",
+   "new": "An unknown error has occurred."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2191,
+   "en": "No myAudi special destinations are stored.",
+   "old": "Немає збережених об’єктів myAudi.",
+   "new": "No myAudi special destinations are stored."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2329,
+   "en": "Unfortunately no addresses could be found for <say-as interpret-as=\"name\">%1</say-as>.",
+   "old": "На жаль, для <say-as interpret-as=\"name\">%1</say-as> не знайдено адрес.",
+   "new": "Unfortunately no addresses could be found for <say-as interpret-as=\"name\">%1</say-as>."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2331,
+   "en": "Sorry, no addresses found for <say-as interpret-as=\"name\">%1</say-as>.",
+   "old": "Шкода, для <say-as interpret-as=\"name\">%1</say-as> адрес не знайдено.",
+   "new": "Sorry, no addresses found for <say-as interpret-as=\"name\">%1</say-as>."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2332,
+   "en": "No addresses found for <say-as interpret-as=\"name\">%1</say-as> .",
+   "old": "Для <say-as interpret-as=\"name\">%1</say-as> адрес не знайдено.",
+   "new": "No addresses found for <say-as interpret-as=\"name\">%1</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2336,
+   "en": "Which favourite?",
+   "old": "Що з вибраного шукаєте?",
+   "new": "Which favourite?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2372,
+   "en": "Which business address?",
+   "old": "Яка службова адреса?",
+   "new": "Which business address?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2379,
+   "en": "No addresses found for <say-as interpret-as=\"name\">%1</say-as> .",
+   "old": "Для <say-as interpret-as=\"name\">%1</say-as> адрес не знайдено.",
+   "new": "No addresses found for <say-as interpret-as=\"name\">%1</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2441,
+   "en": "Which private address?",
+   "old": "Яка приватна адреса?",
+   "new": "Which private address?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2442,
+   "en": "This function is currently unavailable.",
+   "old": "Функція наразі недоступна.",
+   "new": "This function is currently unavailable."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2443,
+   "en": "This function is currently unavailable.",
+   "old": "Функція наразі недоступна.",
+   "new": "This function is currently unavailable."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2492,
+   "en": "Please enter your home address in the country <say-as interpret-as=\"country\">%1</say-as> using the M M I control console.",
+   "old": "Уведіть домашню адресу в країні <say-as interpret-as=\"country\">%1</say-as> за допомогою консолі M M I.",
+   "new": "Please enter your home address in the country <say-as interpret-as=\"country\">%1</say-as> using the M M I control console."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2540,
+   "en": "Would you like to call <say-as interpret-as=\"name\">%1</say-as> ?",
+   "old": "Бажаєте зателефонувати <say-as interpret-as=\"name\">%1</say-as> ?",
+   "new": "Would you like to call <say-as interpret-as=\"name\">%1</say-as> ?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2541,
+   "en": "Should I call <say-as interpret-as=\"name\">%1</say-as> ?",
+   "old": "Зателефонувати <say-as interpret-as=\"name\">%1</say-as> ?",
+   "new": "Should I call <say-as interpret-as=\"name\">%1</say-as> ?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2542,
+   "en": "Call <say-as interpret-as=\"name\">%1</say-as> ?",
+   "old": "Телефонувати <say-as interpret-as=\"name\">%1</say-as> ?",
+   "new": "Call <say-as interpret-as=\"name\">%1</say-as> ?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2553,
+   "en": "Please check your SIM card.",
+   "old": "Перевірте SIM-карту.",
+   "new": "Please check your SIM card."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2574,
+   "en": "Unfortunately no addresses could be found for <say-as interpret-as=\"name\">%1</say-as>.",
+   "old": "На жаль, для <say-as interpret-as=\"name\">%1</say-as> не знайдено адрес.",
+   "new": "Unfortunately no addresses could be found for <say-as interpret-as=\"name\">%1</say-as>."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2827,
+   "en": "I could only find one online destination.",
+   "old": "Я знайшла лише одну онлайн-ціль.",
+   "new": "I could only find one online destination."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2833,
+   "en": "This function is currently unavailable.",
+   "old": "Функція наразі недоступна.",
+   "new": "This function is currently unavailable."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2856,
+   "en": "This function is currently unavailable.",
+   "old": "Функція наразі недоступна.",
+   "new": "This function is currently unavailable."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2913,
+   "en": "What would you like to listen to?",
+   "old": "Що бажаєте прослухати?",
+   "new": "What would you like to listen to?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2956,
+   "en": "Please say the name or category of the special destination and the location. For example, say \"filling station in Hamburg\".",
+   "old": "Скажіть, будь ласка, назву або категорію об'єкта й місто, наприклад \"А З С у Львові\".",
+   "new": "Please say the name or category of the special destination and the location. For example, say \"filling station in Hamburg\"."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2978,
+   "en": "No last destinations are available.",
+   "old": "Немає останніх пунктів призначення.",
+   "new": "No last destinations are available."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 3008,
+   "en": "Google Earth is offline. The Google Earth map will not be updated.",
+   "old": "Google Earth офлайн. Карта Google Earth не оновлюється.",
+   "new": "Google Earth is offline. The Google Earth map will not be updated."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 3035,
+   "en": "Random playback",
+   "old": "Випадковий порядок відтвор.",
+   "new": "Random playback"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 3050,
+   "en": "Would you like to call <say-as interpret-as=\"name\">%1</say-as> ?",
+   "old": "Бажаєте зателефонувати <say-as interpret-as=\"name\">%1</say-as> ?",
+   "new": "Would you like to call <say-as interpret-as=\"name\">%1</say-as> ?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 3051,
+   "en": "Should I call <say-as interpret-as=\"name\">%1</say-as> ?",
+   "old": "Зателефонувати <say-as interpret-as=\"name\">%1</say-as> ?",
+   "new": "Should I call <say-as interpret-as=\"name\">%1</say-as> ?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 3052,
+   "en": "Call <say-as interpret-as=\"name\">%1</say-as> ?",
+   "old": "Телефонувати <say-as interpret-as=\"name\">%1</say-as> ?",
+   "new": "Call <say-as interpret-as=\"name\">%1</say-as> ?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 3135,
+   "en": "You would save <say-as interpret-as=\"duration\">%1</say-as> .",
+   "old": "Ви зекономите <say-as interpret-as=\"duration\">%1</say-as> .",
+   "new": "You would save <say-as interpret-as=\"duration\">%1</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 3136,
+   "en": "The time saved would be <say-as interpret-as=\"duration\">%1</say-as> .",
+   "old": "Економія часу становить <say-as interpret-as=\"duration\">%1</say-as> .",
+   "new": "The time saved would be <say-as interpret-as=\"duration\">%1</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 3162,
+   "en": "I'll use <say-as interpret-as=\"city\">%1</say-as>, (placename)%2(placename_end), (chome)%2(chome_end), (number)%3(number_end) .",
+   "old": "Беру <say-as interpret-as=\"city\">%1</say-as>, (placename)%2(placename_end), (chome)%2(chome_end), (number)%3(number_end) .",
+   "new": "I'll use <say-as interpret-as=\"city\">%1</say-as>, (placename)%2(placename_end), (chome)%2(chome_end), (number)%3(number_end) ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 3461,
+   "en": "Please enter your home address in the country <say-as interpret-as=\"country\">%1</say-as> using the M M I control console.",
+   "old": "Уведіть домашню адресу в країні <say-as interpret-as=\"country\">%1</say-as> за допомогою консолі M M I.",
+   "new": "Please enter your home address in the country <say-as interpret-as=\"country\">%1</say-as> using the M M I control console."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 3853,
+   "en": "Compact route information on.",
+   "old": "Увімкнути скорочену інформацію про маршрут.",
+   "new": "Compact route information on."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 3854,
+   "en": "Compact route information is being activated.",
+   "old": "Активується скорочена інформація про маршрут.",
+   "new": "Compact route information is being activated."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 3857,
+   "en": "I'll add the range map.",
+   "old": "Я додаю карту запасу ходу.",
+   "new": "I'll add the range map."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 3917,
+   "en": "%1 has been set",
+   "old": "%1 встановлено",
+   "new": "%1 has been set"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 3935,
+   "en": "%1 has been set",
+   "old": "%1 встановлено",
+   "new": "%1 has been set"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 3950,
+   "en": "Where would you like to go?",
+   "old": "Куди бажаєте поїхати?",
+   "new": "Where would you like to go?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 3951,
+   "en": "Which destination?",
+   "old": "Який пункт шукаєте?",
+   "new": "Which destination?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 4030,
+   "en": "The data from the camera-based traffic sign recognition are currently unavailable for the speech dialogue system.",
+   "old": "Дані камери розпізнавання дорожніх знаків, на жаль, недоступні для діалогової системи.",
+   "new": "The data from the camera-based traffic sign recognition are currently unavailable for the speech dialogue system."
+  }
+ ]
+}

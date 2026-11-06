@@ -1,0 +1,2665 @@
+{
+ "description": "2026-11-06 final pass: remaining German strings -> English (spoken, stock en_GB text or hand translation) / Ukrainian (screen notices); Тарас Шевченко restored in the five phone-number example sentences.",
+ "changes": [
+  {
+   "module": "HMICarEvoHigh",
+   "slot": 1766,
+   "en": "Last destinations",
+   "old": "Letzte Ziele",
+   "new": "Last destinations"
+  },
+  {
+   "module": "HMIMessagingEvoHigh",
+   "slot": 1363,
+   "en": "e.g. \"0800 699999\" or \"John Smith\"",
+   "old": "наприклад \"097 232 30 88\" або \"Іван Мороз\"",
+   "new": "наприклад \"097 232 30 88\" або \"Тарас Шевченко\""
+  },
+  {
+   "module": "HMIMessagingEvoHigh",
+   "slot": 1367,
+   "en": "e.g. \"0800 699999\" or \"John Smith\"",
+   "old": "наприклад \"097 232 30 88\" або \"Іван Мороз\"",
+   "new": "наприклад \"097 232 30 88\" або \"Тарас Шевченко\""
+  },
+  {
+   "module": "HMIPhoneEvoHigh",
+   "slot": 981,
+   "en": "e.g. \"0800 699999\" or \"John Smith\"",
+   "old": "наприклад \"097 232 30 88\" або \"Іван Мороз\"",
+   "new": "наприклад \"097 232 30 88\" або \"Тарас Шевченко\""
+  },
+  {
+   "module": "HMIPhoneEvoHigh",
+   "slot": 983,
+   "en": "e.g. \"0800 699999\" or \"John Smith\"",
+   "old": "наприклад \"097 232 30 88\" або \"Іван Мороз\"",
+   "new": "наприклад \"097 232 30 88\" або \"Тарас Шевченко\""
+  },
+  {
+   "module": "HMIPhoneEvoHigh",
+   "slot": 2492,
+   "en": "e.g. \"0800 699999\" or \"John Smith\"",
+   "old": "наприклад \"097 232 30 88\" або \"Іван Мороз\"",
+   "new": "наприклад \"097 232 30 88\" або \"Тарас Шевченко\""
+  },
+  {
+   "module": "HMISWDLEvoHigh",
+   "slot": 524,
+   "en": "Fehler anzeigen",
+   "old": "Fehler anzeigen",
+   "new": "Показати помилку"
+  },
+  {
+   "module": "HMISWDLEvoHigh",
+   "slot": 1154,
+   "en": "Später nochmal erinnern",
+   "old": "Später nochmal erinnern",
+   "new": "Нагадати пізніше"
+  },
+  {
+   "module": "HMISWDLEvoHigh",
+   "slot": 1155,
+   "en": "Es steht eine neue Navigationsdatenbank zum\nDownload bereit. Unter www.myaudi.de finden\nSie eine Auswahl aller Länder Ihrer Region.",
+   "old": "Es steht eine neue Navigationsdatenbank zum\nDownload bereit. Unter www.myaudi.de finden\nSie eine Auswahl aller Länder Ihrer Region.",
+   "new": "Доступна нова база даних навігації для\nзавантаження. На сайті www.myaudi.de ви\nзнайдете вибір усіх країн вашого регіону."
+  },
+  {
+   "module": "HMISWDLEvoHigh",
+   "slot": 1441,
+   "en": "Später nochmal erinnern:",
+   "old": "Später nochmal erinnern:",
+   "new": "Нагадати пізніше:"
+  },
+  {
+   "module": "HMISWDLEvoHigh",
+   "slot": 1706,
+   "en": "Für Ihre Zielregion %1 stehen neue\nNavigationsdateien zum Online-Update bereit.\nUnter www.myaudi.de finden Sie eine\nAuswahl aller Länder Ihrer Region.",
+   "old": "Für Ihre Zielregion %1 stehen neue\nNavigationsdateien zum Online-Update bereit.\nUnter www.myaudi.de finden Sie eine\nAuswahl aller Länder Ihrer Region.",
+   "new": "Для вашого регіону призначення %1 доступні\nнові файли навігації для онлайн-оновлення.\nНа сайті www.myaudi.de ви знайдете\nвибір усіх країн вашого регіону."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 22,
+   "en": "Die gewählte Adresse enthält kein vollständiges Navigationsziel.",
+   "old": "Die gewählte Adresse enthält kein vollständiges Navigationsziel.",
+   "new": "The selected address does not contain a complete navigation destination."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 35,
+   "en": "Weitere wichtige Befehle sind Korrektur, nächste Seite oder vorherige Seite.",
+   "old": "Weitere wichtige Befehle sind Korrektur, nächste Seite oder vorherige Seite.",
+   "new": "Other important commands are correction, next page or previous page."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 53,
+   "en": "Befehle zur Karte.",
+   "old": "Befehle zur Karte.",
+   "new": "Map commands."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 56,
+   "en": "Befehle zur Zieleingabe,",
+   "old": "Befehle zur Zieleingabe,",
+   "new": "Destination entry commands,"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 57,
+   "en": "Befehle zur Route,",
+   "old": "Befehle zur Route,",
+   "new": "Route commands,"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 90,
+   "en": "Starting individual speech training.",
+   "old": "Das individuelle Sprachtraining beginnt nun.",
+   "new": "Starting individual speech training."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 135,
+   "en": "Dieses Gerät ist nicht verfügbar.",
+   "old": "Dieses Gerät ist nicht verfügbar.",
+   "new": "This device is not available."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 157,
+   "en": "Telephone.",
+   "old": "Telefon.",
+   "new": "Telephone."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 200,
+   "en": "Bluetooth.",
+   "old": "Gut, Bluetooth.",
+   "new": "Bluetooth."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 202,
+   "en": "Audi music interface.",
+   "old": "Gut, Audi music interface.",
+   "new": "Audi music interface."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 203,
+   "en": "Audi music interface is not connected.",
+   "old": "Es ist kein Audi music interface verbunden.",
+   "new": "Audi music interface is not connected."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 210,
+   "en": "C D changer.",
+   "old": "Gut, C D Wechsler.",
+   "new": "C D changer."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 215,
+   "en": "There is no C D in the C D changer.",
+   "old": "Es ist keine C D im CD Wechlser eingelegt.",
+   "new": "There is no C D in the C D changer."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 227,
+   "en": "Wi-Fi.",
+   "old": "Gut, Wlan.",
+   "new": "Wi-Fi."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 228,
+   "en": "The jukebox is empty.",
+   "old": "Die Jukebox ist leer.",
+   "new": "The jukebox is empty."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 230,
+   "en": "C D %1 .",
+   "old": "Gut, C D %1 .",
+   "new": "C D %1 ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 240,
+   "en": "You have reached the top folder.",
+   "old": "Sie haben den obersten Ordner erreicht.",
+   "new": "You have reached the top folder."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 303,
+   "en": "Ordner aufwärts.",
+   "old": "Ordner aufwärts.",
+   "new": "Folder up."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 321,
+   "en": "S D Karte,",
+   "old": "S D Karte,",
+   "new": "S D card,"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 354,
+   "en": "Es sind keine Nachrichten vorhanden.",
+   "old": "Es sind keine Nachrichten vorhanden.",
+   "new": "There are no messages."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 355,
+   "en": "Den Namen des Empfängers bitte!",
+   "old": "Den Namen des Empfängers bitte!",
+   "new": "The recipient's name, please!"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 360,
+   "en": "Die S M S wird versendet.",
+   "old": "Die S M S wird versendet.",
+   "new": "The S M S is being sent."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 364,
+   "en": "<say-as interpret-as=\"name\">$<0></say-as> wurde übernommen.",
+   "old": "<say-as interpret-as=\"name\">$<0></say-as> wurde übernommen.",
+   "new": "<say-as interpret-as=\"name\">$<0></say-as> has been accepted."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 365,
+   "en": "Es sind noch keine Nachrichten von ihrem Telefon heruntergeladen.",
+   "old": "Es sind noch keine Nachrichten von ihrem Telefon heruntergeladen.",
+   "new": "No messages have been downloaded from your phone yet."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 367,
+   "en": "Ihr Telefon kann keine E Mails senden und empfangen.",
+   "old": "Ihr Telefon kann keine E Mails senden und empfangen.",
+   "new": "Your phone cannot send and receive e-mails."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 376,
+   "en": "Der Text wird verarbeitet.",
+   "old": "Der Text wird verarbeitet.",
+   "new": "The text is being processed."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 378,
+   "en": "Die Verarbeitung läuft.",
+   "old": "Die Verarbeitung läuft.",
+   "new": "Processing is in progress."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 379,
+   "en": "Bitte warten.",
+   "old": "Bitte warten.",
+   "new": "Please wait."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 387,
+   "en": "Ihre Lizenz läuft am $<0> ab.",
+   "old": "Ihre Lizenz läuft am $<0> ab.",
+   "new": "Your licence expires on $<0>."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 391,
+   "en": "Ihre Lizenz zur Nutzung von Onlinediensten ist abgelaufen.",
+   "old": "Ihre Lizenz zur Nutzung von Onlinediensten ist abgelaufen.",
+   "new": "Your licence for using online services has expired."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 394,
+   "en": "Löschen.",
+   "old": "Löschen.",
+   "new": "Delete."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 640,
+   "en": "Im gewählten Suchbereich konnten keine Ergebnisse gefunden werden.",
+   "old": "Im gewählten Suchbereich konnten keine Ergebnisse gefunden werden.",
+   "new": "No results could be found in the selected search area."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 645,
+   "en": "Parkmöglichkeit.",
+   "old": "Parkmöglichkeit.",
+   "new": "Parking."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 653,
+   "en": "Raststätte.",
+   "old": "Raststätte.",
+   "new": "Rest area."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 654,
+   "en": "Nächste Polizei.",
+   "old": "Nächste Polizei.",
+   "new": "Nearest police."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 655,
+   "en": "Nächste Dieseltankstelle.",
+   "old": "Nächste Dieseltankstelle.",
+   "new": "Nearest diesel filling station."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 656,
+   "en": "Nächster A T M.",
+   "old": "Nächster A T M.",
+   "new": "Nearest A T M."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 657,
+   "en": "Nächster Coffee Shop.",
+   "old": "Nächster Coffee Shop.",
+   "new": "Nearest coffee shop."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 669,
+   "en": "Did you mean %1 ?",
+   "old": "Meinten Sie: %1 ?",
+   "new": "Did you mean %1 ?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 677,
+   "en": "Der Filter wurde aktiviert.",
+   "old": "Der Filter wurde aktiviert.",
+   "new": "The filter has been activated."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 683,
+   "en": "Die Onlineziele wurden geladen.",
+   "old": "Die Onlineziele wurden geladen.",
+   "new": "The online destinations have been loaded."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 692,
+   "en": "Last destinations,",
+   "old": "Letzte Ziele,",
+   "new": "Last destinations,"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 695,
+   "en": "Wenn die Karte angezeigt wird, gelten zusätzlich folgende Befehle:",
+   "old": "Wenn die Karte angezeigt wird, gelten zusätzlich folgende Befehle:",
+   "new": "When the map is displayed, the following commands also apply:"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 705,
+   "en": "I'll switch additional info off.",
+   "old": "Der Kartenzusatz wird weggeschaltet.",
+   "new": "I'll switch additional info off."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 709,
+   "en": "I'll switch the day map on.",
+   "old": "Die Tagkarte wird aktiviert.",
+   "new": "I'll switch the day map on."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 710,
+   "en": "I'll switch the 2 D north position map on.",
+   "old": "Die 2 D Nordkarte wird aktiviert.",
+   "new": "I'll switch the 2 D north position map on."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 713,
+   "en": "I'll switch the intersection map off.",
+   "old": "Die Kreuzungskarte wird deaktiviert.",
+   "new": "I'll switch the intersection map off."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 715,
+   "en": "I'll switch the intersection map on.",
+   "old": "Die Kreuzungskarte wird aktiviert.",
+   "new": "I'll switch the intersection map on."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 716,
+   "en": "I'll switch the night map on.",
+   "old": "Die Nachtkarte wird aktiviert.",
+   "new": "I'll switch the night map on."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 717,
+   "en": "Last destinations.",
+   "old": "Letzte Ziele.",
+   "new": "Last destinations."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 719,
+   "en": "Es sind keine letzten Ziele vorhanden.",
+   "old": "Es sind keine letzten Ziele vorhanden.",
+   "new": "There are no last destinations."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 726,
+   "en": "Es ist noch kein Ort eingegeben.",
+   "old": "Es ist noch kein Ort eingegeben.",
+   "new": "No town has been entered yet."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 728,
+   "en": "Es ist noch keine Straße eingegeben.",
+   "old": "Es ist noch keine Straße eingegeben.",
+   "new": "No street has been entered yet."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 729,
+   "en": "Zielführung starten.",
+   "old": "Zielführung starten.",
+   "new": "Start route guidance."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 730,
+   "en": "I'll exclude the route.",
+   "old": "Die Route wird gesperrt.",
+   "new": "I'll exclude the route."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 748,
+   "en": "Weitere wichtige Befehle sind Korrektur, nächste Seite oder vorherige Seite.",
+   "old": "Weitere wichtige Befehle sind Korrektur, nächste Seite oder vorherige Seite.",
+   "new": "Other important commands are correction, next page or previous page."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 751,
+   "en": "Alternative routes are being calculated.",
+   "old": "Die Alternativrouten werden berechnet.",
+   "new": "Alternative routes are being calculated."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 754,
+   "en": "Diese Funktion steht nur bei einem eingegebenen Ziel zur Verfügung.",
+   "old": "Diese Funktion steht nur bei einem eingegebenen Ziel zur Verfügung.",
+   "new": "This function is only available when a destination has been entered."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 759,
+   "en": "Dieser Suchbereich ist zur Zeit nicht möglich.",
+   "old": "Dieser Suchbereich ist zur Zeit nicht möglich.",
+   "new": "This search area is not possible at the moment."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 764,
+   "en": "Den Suchbereich bitte!",
+   "old": "Den Suchbereich bitte!",
+   "new": "The search area, please!"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 769,
+   "en": "The fast route is being activated.",
+   "old": "Die schnelle Route wird aktiviert.",
+   "new": "The fast route is being activated."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 772,
+   "en": "Voice guidance is switched off.",
+   "old": "Die Navigationsansage ist ausgeschaltet.",
+   "new": "Voice guidance is switched off."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 778,
+   "en": "Voice guidance is fully activated.",
+   "old": "Die komplette Navigationsansage ist eingeschaltet.",
+   "new": "Voice guidance is fully activated."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 779,
+   "en": "Nächster Audi Service.",
+   "old": "Nächster Audi Service.",
+   "new": "Nearest Audi service."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 780,
+   "en": "Nächste Tankstelle.",
+   "old": "Nächste Tankstelle.",
+   "new": "Nearest filling station."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 781,
+   "en": "Nächstes Hotel.",
+   "old": "Nächstes Hotel.",
+   "new": "Nearest hotel."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 782,
+   "en": "Nächster Bahnhof.",
+   "old": "Nächster Bahnhof.",
+   "new": "Nearest train station."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 783,
+   "en": "Nächste Raststätte.",
+   "old": "Nächste Raststätte.",
+   "new": "Nearest rest area."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 784,
+   "en": "Nächster Flughafen.",
+   "old": "Nächster Flughafen.",
+   "new": "Nearest airport."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 785,
+   "en": "Nächstes Restaurant.",
+   "old": "Nächstes Restaurant.",
+   "new": "Nearest restaurant."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 786,
+   "en": "Nächstes Krankenhaus.",
+   "old": "Nächstes Krankenhaus.",
+   "new": "Nearest hospital."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 787,
+   "en": "Nächste Parkmöglichkeit.",
+   "old": "Nächste Parkmöglichkeit.",
+   "new": "Nearest parking facility."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 792,
+   "en": "überregional.",
+   "old": "überregional.",
+   "new": "nationwide."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 820,
+   "en": "Diese kreuzende Straße kann nicht als Navigationsziel übernommen werden.",
+   "old": "Diese kreuzende Straße kann nicht als Navigationsziel übernommen werden.",
+   "new": "This cross street cannot be accepted as a navigation destination."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 823,
+   "en": "<say-as interpret-as=\"street\">%1</say-as> wurde übernommen.",
+   "old": "<say-as interpret-as=\"street\">%1</say-as> wurde übernommen.",
+   "new": "<say-as interpret-as=\"street\">%1</say-as> has been accepted."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 837,
+   "en": "<say-as interpret-as=\"state\">$<0></say-as> wurde übernommen.",
+   "old": "<say-as interpret-as=\"state\">$<0></say-as> wurde übernommen.",
+   "new": "<say-as interpret-as=\"state\">$<0></say-as> has been accepted."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 853,
+   "en": "I want to go to the lavatory.",
+   "old": "Ich muss aufs Klo.",
+   "new": "I want to go to the lavatory."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 860,
+   "en": "Karte,",
+   "old": "Karte,",
+   "new": "Map,"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 908,
+   "en": "Das Zentrum wurde übernommen.",
+   "old": "Das Zentrum wurde übernommen.",
+   "new": "The centre has been accepted."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 925,
+   "en": "Der Tourplan wird gelöscht.",
+   "old": "Der Tourplan wird gelöscht.",
+   "new": "The route plan is being deleted."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 931,
+   "en": "Die Zwischenziele werden gelöscht.",
+   "old": "Die Zwischenziele werden gelöscht.",
+   "new": "The stopovers are being deleted."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 932,
+   "en": "Das Zwischenziel wird gelöscht.",
+   "old": "Das Zwischenziel wird gelöscht.",
+   "new": "The stopover is being deleted."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1028,
+   "en": "Ihre Datenverbindung ist noch nicht konfiguriert.",
+   "old": "Ihre Datenverbindung ist noch nicht konfiguriert.",
+   "new": "Your data connection has not been configured yet."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1032,
+   "en": "Es ist kein Datendienst möglich.",
+   "old": "Es ist kein Datendienst möglich.",
+   "new": "No data service is possible."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1033,
+   "en": "Es ist noch keine PIN eingegeben.",
+   "old": "Es ist noch keine PIN eingegeben.",
+   "new": "No PIN has been entered yet."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1039,
+   "en": "Anrufliste,",
+   "old": "Anrufliste,",
+   "new": "Call list,"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1061,
+   "en": "No PIN has been set yet.",
+   "old": "Es ist noch keine PIN vorhanden.",
+   "new": "No PIN has been set yet."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1067,
+   "en": "Call list.",
+   "old": "Anrufliste.",
+   "new": "Call list."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1070,
+   "en": "Die Anrufliste ist leer.",
+   "old": "Die Anrufliste ist leer.",
+   "new": "The call list is empty."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1085,
+   "en": "Send,",
+   "old": "Senden",
+   "new": "Send,"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1087,
+   "en": "Festnetz oder geschäftlich,",
+   "old": "Festnetz oder geschäftlich,",
+   "new": "Landline or business,"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1088,
+   "en": "Nummer eingeben,",
+   "old": "Nummer eingeben,",
+   "new": "Enter number,"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1097,
+   "en": "Nummer löschen",
+   "old": "Nummer löschen",
+   "new": "Delete number"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1099,
+   "en": "Weitere Befehle sind:",
+   "old": "Weitere Befehle sind:",
+   "new": "Other commands are:"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1100,
+   "en": "oder sagen Sie Hilfe Telefon.",
+   "old": "oder sagen Sie Hilfe Telefon.",
+   "new": "or say Help Telephone."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1101,
+   "en": "und speichern.",
+   "old": "und speichern.",
+   "new": "and save."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1102,
+   "en": "und wählen.",
+   "old": "und wählen.",
+   "new": "and dial."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1114,
+   "en": "A M.",
+   "old": "Gut, A M.",
+   "new": "Okay, A M."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1116,
+   "en": "Sirius X M.",
+   "old": "Gut, Sirius.",
+   "new": "Sirius X M."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1131,
+   "en": "Ensemble <say-as interpret-as=\"ensemble\">%1</say-as> .",
+   "old": "Gut, Ensemble <say-as interpret-as=\"ensemble\">%1</say-as> .",
+   "new": "Okay, ensemble <say-as interpret-as=\"ensemble\">%1</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1135,
+   "en": "Channel <say-as interpret-as=\"radiostation\">%1</say-as> .",
+   "old": "Gut, Kanal <say-as interpret-as=\"radiostation\">%1</say-as> .",
+   "new": "Okay, channel <say-as interpret-as=\"radiostation\">%1</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1158,
+   "en": "What would you like to do?",
+   "old": "Sprechen Sie Ihr Kommando.",
+   "new": "What would you like to do?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1212,
+   "en": "F M and D A B.",
+   "old": "Gut, Commonlist.",
+   "new": "F M and D A B."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1239,
+   "en": "I'll switch the 2 D driving position map on.",
+   "old": "Die 2 D Fahrtkarte wird aktiviert.",
+   "new": "I'll switch the 2 D driving position map on."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1240,
+   "en": "I'll switch the destination map on.",
+   "old": "Die Zielkarte wird aktiviert.",
+   "new": "I'll switch the destination map on."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1247,
+   "en": "I'll switch the traffic map on.",
+   "old": "Die Verkehrskarte wird aktiviert.",
+   "new": "I'll switch the traffic map on."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1249,
+   "en": "I'll switch the standard map on.",
+   "old": "Die Standardkarte wird aktiviert.",
+   "new": "I'll switch the standard map on."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1258,
+   "en": "The PIN has already been entered.",
+   "old": "Die PIN wurde bereits eingegeben.",
+   "new": "The PIN has already been entered."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1272,
+   "en": "I'm afraid I don't have a PIN yet.",
+   "old": "Ich habe leider noch keine PIN.",
+   "new": "I'm afraid I don't have a PIN yet."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1273,
+   "en": "No PIN available.",
+   "old": "Noch keine PIN vorhanden.",
+   "new": "No PIN available."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1274,
+   "en": "I don't have a PIN.",
+   "old": "Ich habe noch keine PIN.",
+   "new": "I don't have a PIN."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1278,
+   "en": "Not enough numbers.",
+   "old": "Zu wenig Ziffern.",
+   "new": "Not enough numbers."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1281,
+   "en": "Further numbers?",
+   "old": "Weitere PIN Nummern?",
+   "new": "Further numbers?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1288,
+   "en": "You are already in the highest folder.",
+   "old": "Sie befinden sich bereits im obersten Ordner.",
+   "new": "You are already in the highest folder."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1295,
+   "en": "The country?",
+   "old": "Das Land?",
+   "new": "The country?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1321,
+   "en": "The town?",
+   "old": "Den Ort?",
+   "new": "The town?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1329,
+   "en": "No town recognised again.",
+   "old": "Erneut kein Ort erkannt.",
+   "new": "No town recognised again."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1335,
+   "en": "Spelling of the town?",
+   "old": "Den Ort in Einzelbuchstaben?",
+   "new": "Spelling of the town?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1336,
+   "en": "No town recognised this time either.",
+   "old": "Auch diesmal kein Ort erkannt.",
+   "new": "No town recognised this time either."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1363,
+   "en": "Last stations.",
+   "old": "Gut, History-Liste.",
+   "new": "Last stations."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1378,
+   "en": "The house number?",
+   "old": "Die Hausnummer?",
+   "new": "The house number?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1406,
+   "en": "The post code?",
+   "old": "Die Postleitzahl?",
+   "new": "The post code?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1430,
+   "en": "Add this destination as a stopover?",
+   "old": "Ist dies ein Zwischenziel?",
+   "new": "Add this destination as a stopover?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1434,
+   "en": "Replace previous stopover?",
+   "old": "Ist dies ein neues Zwischenziel?",
+   "new": "Replace previous stopover?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1435,
+   "en": "Replace stopover now?",
+   "old": "Das Zwischenziel ersetzen?",
+   "new": "Replace stopover now?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1469,
+   "en": "Voice guidance traffic.",
+   "old": "Okay, Navigationsansage Verkehr.",
+   "new": "Voice guidance traffic."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1470,
+   "en": "Voice guidance complete.",
+   "old": "Okay, Navigationsansage komplett.",
+   "new": "Voice guidance complete."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1476,
+   "en": "Fast route.",
+   "old": "Okay, schnelle Route.",
+   "new": "Fast route."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1481,
+   "en": "A destination has not yet been entered.",
+   "old": "Leider ist noch kein Ziel eingegeben.",
+   "new": "A destination has not yet been entered."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1482,
+   "en": "No destination entered yet.",
+   "old": "Noch kein Ziel vorhanden.",
+   "new": "No destination entered yet."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1493,
+   "en": "The media list is empty.",
+   "old": "Die Quellenliste ist leer.",
+   "new": "The media list is empty."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1500,
+   "en": "I couldn't find any playable files on this medium.",
+   "old": "Auf der Quelle konnten keine spielbaren Dateien gefunden werden.",
+   "new": "I couldn't find any playable files on this medium."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1504,
+   "en": "There is no connection to the Audi music interface.",
+   "old": "Kein Audi music interface ist angeschlossen.",
+   "new": "There is no connection to the Audi music interface."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1508,
+   "en": "The C D changer is empty.",
+   "old": "Der C D Wechsler ist leer.",
+   "new": "The C D changer is empty."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1509,
+   "en": "Online media.",
+   "old": "Gut, Online Medien.",
+   "new": "Online media."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1527,
+   "en": "U S B partition.",
+   "old": "Gut, U S B Partition.",
+   "new": "U S B partition."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1539,
+   "en": "Videos.",
+   "old": "Gut, Filme.",
+   "new": "Videos."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1553,
+   "en": "Playlists.",
+   "old": "Gut, Wiedergabelisten.",
+   "new": "Playlists."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1557,
+   "en": "Albums.",
+   "old": "Gut, Alben.",
+   "new": "Albums."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1559,
+   "en": "Tracks.",
+   "old": "Gut, Titel.",
+   "new": "Tracks."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1561,
+   "en": "Podcasts.",
+   "old": "Gut, Podcasts.",
+   "new": "Podcasts."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1563,
+   "en": "Genres.",
+   "old": "Gut, Genres.",
+   "new": "Genres."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1584,
+   "en": "%1 does not have any numbers.",
+   "old": "%1 hat keine Nummern.",
+   "new": "%1 does not have any numbers."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1621,
+   "en": "Call list.",
+   "old": "Anrufliste.",
+   "new": "Call list."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1624,
+   "en": "Next filling station.",
+   "old": "Wo kann ich tanken?",
+   "new": "Next filling station."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1626,
+   "en": "C D changer.",
+   "old": "Gut, C D Wechsler.",
+   "new": "C D changer."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1634,
+   "en": "Next service area.",
+   "old": "Ich muss auf die Toilette.",
+   "new": "Next service area."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1647,
+   "en": "I'll switch automatic traffic avoidance on.",
+   "old": "Automatische Stauumfahrung wird aktiviert.",
+   "new": "I'll switch automatic traffic avoidance on."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1648,
+   "en": "Automatic traffic avoidance.",
+   "old": "Okay, automatische Stauumfahrung.",
+   "new": "Automatic traffic avoidance."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1649,
+   "en": "I'll switch manual traffic avoidance on.",
+   "old": "Manuelle Stauumfahrung wird aktiviert.",
+   "new": "I'll switch manual traffic avoidance on."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1650,
+   "en": "Manual traffic avoidance.",
+   "old": "Okay, manuelle Stauumfahrung.",
+   "new": "Manual traffic avoidance."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1651,
+   "en": "I'll switch traffic avoidance off.",
+   "old": "Stauumfahrung wird ausgeschaltet.",
+   "new": "I'll switch traffic avoidance off."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1661,
+   "en": "You will arrive in <say-as interpret-as=\"distance\">%1 m</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> .",
+   "old": "Sie werden in <say-as interpret-as=\"distance\">%1 m</say-as> um <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> ankommen.",
+   "new": "You will arrive in <say-as interpret-as=\"distance\">%1 m</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1665,
+   "en": "You will arrive in <say-as interpret-as=\"distance\">%1 km</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as>.",
+   "old": "Sie werden in <say-as interpret-as=\"distance\">%1 km</say-as> um <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> ankommen.",
+   "new": "You will arrive in <say-as interpret-as=\"distance\">%1 km</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as>."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1669,
+   "en": "You will arrive in <say-as interpret-as=\"distance\">%1 mi</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> .",
+   "old": "Sie werden in <say-as interpret-as=\"distance\">%1 mi</say-as> um <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> ankommen.",
+   "new": "You will arrive in <say-as interpret-as=\"distance\">%1 mi</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1673,
+   "en": "You will arrive in <say-as interpret-as=\"distance\">%1 yd</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> .",
+   "old": "Sie werden in <say-as interpret-as=\"distance\">%1 yd</say-as> um <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> ankommen.",
+   "new": "You will arrive in <say-as interpret-as=\"distance\">%1 yd</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1684,
+   "en": "You will arrive at the stopover in <say-as interpret-as=\"distance\">%1 yd</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> .",
+   "old": "Sie werden in <say-as interpret-as=\"distance\">%1 yd</say-as> um <say-as interpret-as=\"time\" format=\"hms24\">%2 </say-as> am Zwischenziel ankommen.",
+   "new": "You will arrive at the stopover in <say-as interpret-as=\"distance\">%1 yd</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1686,
+   "en": "You will arrive at the stopover in <say-as interpret-as=\"distance\">%1 mi</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> .",
+   "old": "Sie werden in <say-as interpret-as=\"distance\">%1 mi</say-as> um <say-as interpret-as=\"time\" format=\"hms24\">%2 </say-as> am Zwischenziel ankommen.",
+   "new": "You will arrive at the stopover in <say-as interpret-as=\"distance\">%1 mi</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1692,
+   "en": "You will arrive at the stopover in <say-as interpret-as=\"distance\">%1 m</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> .",
+   "old": "Sie werden in <say-as interpret-as=\"distance\">%1 m</say-as> um <say-as interpret-as=\"time\" format=\"hms24\">%2 </say-as> am Zwischenziel ankommen.",
+   "new": "You will arrive at the stopover in <say-as interpret-as=\"distance\">%1 m</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1694,
+   "en": "You will arrive at the stopover in <say-as interpret-as=\"distance\">%1 km</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> .",
+   "old": "Sie werden in <say-as interpret-as=\"distance\">%1 km</say-as> um <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> am Zwischenziel ankommen.",
+   "new": "You will arrive at the stopover in <say-as interpret-as=\"distance\">%1 km</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1697,
+   "en": "S D card.",
+   "old": "Gut, S D.",
+   "new": "S D card."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1705,
+   "en": "U S B.",
+   "old": "Gut, U S B.",
+   "new": "U S B."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1710,
+   "en": "There are no playable files on the U S B device.",
+   "old": "Auf dem mit U S B verbundenen Medium sind keine spielbaren Dateien vorhanden.",
+   "new": "There are no playable files on the U S B device."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1711,
+   "en": "No U S B device is available.",
+   "old": "Es ist keine U S B Verbindung vorhanden.",
+   "new": "No U S B device is available."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1712,
+   "en": "No U S B device could be found.",
+   "old": "Es konnte keine U S B Verbindung gefunden werden.",
+   "new": "No U S B device could be found."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1719,
+   "en": "C D.",
+   "old": "Gut, C D.",
+   "new": "C D."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1721,
+   "en": "No C D is inserted.",
+   "old": "Es ist keine C D eingelegt.",
+   "new": "No C D is inserted."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1722,
+   "en": "No C D could be found.",
+   "old": "Der C D Spieler ist leer.",
+   "new": "No C D could be found."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1726,
+   "en": "No playable files are on the C D.",
+   "old": "Auf der C D sind keine spielbaren Dateien vorhanden.",
+   "new": "No playable files are on the C D."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1733,
+   "en": "%1 kilometres per hour is permitted here.",
+   "old": "Hier sind %1 Kilometer pro Stunde erlaubt.",
+   "new": "%1 kilometres per hour is permitted here."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1737,
+   "en": "%1 miles per hour is permitted here.",
+   "old": "Hier sind %1 Meilen pro Stunde erlaubt.",
+   "new": "%1 miles per hour is permitted here."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1742,
+   "en": "The general speed limit applies here.",
+   "old": "Die allgemeine Geschwindigkeitsbegrenzung gilt.",
+   "new": "The general speed limit applies here."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1745,
+   "en": "You can travel another <say-as interpret-as=\"distance\">%1 mi</say-as> .",
+   "old": "Sie kommen noch <say-as interpret-as=\"distance\">%1 mi</say-as> weit.",
+   "new": "You can still drive <say-as interpret-as=\"distance\">%1 mi</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1749,
+   "en": "You can travel another <say-as interpret-as=\"distance\">%1 yd</say-as> .",
+   "old": "Sie kommen noch <say-as interpret-as=\"distance\">%1 yd</say-as> weit.",
+   "new": "You can still drive <say-as interpret-as=\"distance\">%1 yd</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1754,
+   "en": "You can travel another <say-as interpret-as=\"distance\">%1 m</say-as> .",
+   "old": "Sie kommen noch <say-as interpret-as=\"distance\">%1 m</say-as> weit.",
+   "new": "You can still drive <say-as interpret-as=\"distance\">%1 m</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1757,
+   "en": "You can travel another <say-as interpret-as=\"distance\">%1 km</say-as> .",
+   "old": "Sie kommen noch <say-as interpret-as=\"distance\">%1 km</say-as> weit.",
+   "new": "You can still drive <say-as interpret-as=\"distance\">%1 km</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1759,
+   "en": "Exclude route.",
+   "old": "Okay, Route sperren.",
+   "new": "Exclude route."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1766,
+   "en": "For this reason, no part of the route can be excluded.",
+   "old": "Daher kann kein Routenabschnitt gesperrt werden.",
+   "new": "For this reason, no part of the route can be excluded."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1767,
+   "en": "Therefore no part of the route can be excluded.",
+   "old": "Es kann daher kein Routeabschnitt gesperrt werden.",
+   "new": "Therefore no part of the route can be excluded."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1768,
+   "en": "No route section will be excluded.",
+   "old": "Es wird kein Routeabschnitt gesperrt.",
+   "new": "No route section will be excluded."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1771,
+   "en": "Exclude route section.",
+   "old": "Okay, Streckenabschnitt sperren.",
+   "new": "Exclude route section."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1802,
+   "en": "No destination recognised.",
+   "old": "Kein Ziel erkannt.",
+   "new": "No destination recognised."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1809,
+   "en": "%1 .",
+   "old": "Okay, %1 .",
+   "new": "%1 ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1810,
+   "en": "I'm afraid I couldn't find any results.",
+   "old": "Es konnten leider keine Ergebnisse gefunden werden.",
+   "new": "I'm afraid I couldn't find any results."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1811,
+   "en": "Sorry, no results were found.",
+   "old": "Leider keine Ergebnisse gefunden.",
+   "new": "Sorry, no results were found."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1823,
+   "en": "Speech dialogue system settings.",
+   "old": "SDS Einstellungen",
+   "new": "Speech dialogue system settings."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1842,
+   "en": "Playlists.",
+   "old": "Gut, Wiedergabelisten.",
+   "new": "Playlists."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1850,
+   "en": "Or simply say:",
+   "old": "Oder sagen Sie direkt:",
+   "new": "Or simply say:"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1856,
+   "en": "Further commands are:",
+   "old": "Weitere Kommandos sind:",
+   "new": "Further commands are:"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1884,
+   "en": "Sirius X M.",
+   "old": "Gut, Sirius.",
+   "new": "Sirius X M."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1909,
+   "en": "Several private land line numbers available.",
+   "old": "Welche private Festnetznummer?",
+   "new": "Several private land line numbers available."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1915,
+   "en": "Several mobile numbers available.",
+   "old": "Welche Mobilnummer?",
+   "new": "Several mobile numbers available."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1918,
+   "en": "Several private mobile numbers available.",
+   "old": "Welche private Mobilnummer?",
+   "new": "Several private mobile numbers available."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1921,
+   "en": "Several private numbers available.",
+   "old": "Welche private Telefonnummer?",
+   "new": "Several private numbers available."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1924,
+   "en": "Several land line numbers available.",
+   "old": "Welche Festnetznummer?",
+   "new": "Several land line numbers available."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1948,
+   "en": "Call list,",
+   "old": "Anrufliste",
+   "new": "Call list,"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1967,
+   "en": "Further commands are:",
+   "old": "Weitere Kommandos sind:",
+   "new": "Further commands are:"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1973,
+   "en": "Further commands are:",
+   "old": "Weitere Kommandos sind:",
+   "new": "Further commands are:"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 1984,
+   "en": "I'm afraid I don't have a mailbox number yet.",
+   "old": "Ich habe leider noch keine Mailboxnummer.",
+   "new": "I'm afraid I don't have a mailbox number yet."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2022,
+   "en": "Find music.",
+   "old": "Gut, Musiksuche.",
+   "new": "Find music."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2031,
+   "en": "Or simply say:",
+   "old": "Oder sagen Sie direkt:",
+   "new": "Or simply say:"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2035,
+   "en": "I'm hungry.",
+   "old": "Ich habe Hunger.",
+   "new": "I'm hungry."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2038,
+   "en": "Where can I fill up?",
+   "old": "Wo kann ich tanken?",
+   "new": "Where can I fill up?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2040,
+   "en": "I need to refuel.",
+   "old": "Ich will tanken.",
+   "new": "I want to refuel."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2044,
+   "en": "I think I should sleep for a bit.",
+   "old": "Ich glaube ich sollte etwas schlafen.",
+   "new": "I think I should sleep for a bit."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2045,
+   "en": "I need to go to the toilet.",
+   "old": "Ich muss auf die Toilette",
+   "new": "I need to go to the toilet."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2049,
+   "en": "I want something to eat.",
+   "old": "Ich will etwas Essen.",
+   "new": "I want something to eat."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2050,
+   "en": "Or simply say:",
+   "old": "Oder sagen Sie direkt:",
+   "new": "Or simply say:"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2058,
+   "en": "The category?",
+   "old": "Zu welcher Kategorie?",
+   "new": "The category?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2059,
+   "en": "I'm searching for <say-as interpret-as=\"POICategory\">%1</say-as>.",
+   "old": "Gut, <say-as interpret-as=\"POICategory\">%1</say-as> wird gesucht.",
+   "new": "I'm searching for <say-as interpret-as=\"POICategory\">%1</say-as>."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2070,
+   "en": "The search area?",
+   "old": "Den Suchbereich?",
+   "new": "The search area?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2075,
+   "en": "Nearby.",
+   "old": "Okay, Standortumkreis.",
+   "new": "Nearby."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2076,
+   "en": "Near destination.",
+   "old": "Okay, Zielumkreis.",
+   "new": "Near destination."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2078,
+   "en": "Near stopover.",
+   "old": "Okay, Zwischenzielumkreis.",
+   "new": "Near stopover."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2085,
+   "en": "The search term?",
+   "old": "Den Suchbegriff?",
+   "new": "The search term?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2098,
+   "en": "Unfortunately no results were found.",
+   "old": "Es wurden leider keine Ergebnisse gefunden.",
+   "new": "Unfortunately no results were found."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2099,
+   "en": "Sorry, no results were found.",
+   "old": "Leider keine Ergebnisse gefunden.",
+   "new": "Sorry, no results were found."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2102,
+   "en": "Select %1 or another entry.",
+   "old": "Meinten Sie %1 ?",
+   "new": "Select %1 or another entry."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2112,
+   "en": "This contact has no further numbers.",
+   "old": "Dieser Kontakt hat keine weiteren Nummern.",
+   "new": "This contact has no further numbers."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2143,
+   "en": "Audi drive select,",
+   "old": "Fahrzeug",
+   "new": "Audi drive select,"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2181,
+   "en": "Which route?",
+   "old": "Welche Route?",
+   "new": "Which route?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2184,
+   "en": "No alternatives will be calculated.",
+   "old": "Es werden keine Alternativen berechnet.",
+   "new": "No alternatives will be calculated."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2199,
+   "en": "Online station %1 .",
+   "old": "Gut, Onlinesender %1 .",
+   "new": "Online station %1 ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2213,
+   "en": "Please tell me your address.",
+   "old": "Wo wohnen Sie?",
+   "new": "Please tell me your address."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2227,
+   "en": "Line %1 .",
+   "old": "Gut, Zeile %1 .",
+   "new": "Line %1 ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2228,
+   "en": "Line %1 .",
+   "old": "Gut, Zeile %1 .",
+   "new": "Line %1 ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2251,
+   "en": "The u turns option is being activated.",
+   "old": "Umkehren wird aktiviert.",
+   "new": "The u turns option is being activated."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2253,
+   "en": "The route can now be adjusted.",
+   "old": "Okay, Strecke verschieben.",
+   "new": "The route can now be adjusted."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2254,
+   "en": "Adjust route.",
+   "old": "Gut, Strecke verschieben.",
+   "new": "Adjust route."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2255,
+   "en": "Opening picturebook navigation.",
+   "old": "Okay, Bilderziele.",
+   "new": "Opening picturebook navigation."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2256,
+   "en": "Picturebook navigation.",
+   "old": "Gut, Bilderziele.",
+   "new": "Picturebook navigation."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2257,
+   "en": "The coordinates menu is being opened.",
+   "old": "Okay, Koordinaten.",
+   "new": "The coordinates menu is being opened."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2258,
+   "en": "Coordinates.",
+   "old": "Gut, Koordinaten.",
+   "new": "Coordinates."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2263,
+   "en": "Use the other route?",
+   "old": "Die andere Route nutzen?",
+   "new": "Use the other route?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2264,
+   "en": "The other route?",
+   "old": "Die andere Route?",
+   "new": "The other route?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2276,
+   "en": "Which contact would you like to select?",
+   "old": "Welchen Kontakt?",
+   "new": "Which contact would you like to select?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2279,
+   "en": "Call list.",
+   "old": "Anrufliste.",
+   "new": "Call list."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2283,
+   "en": "I'll deactivate the u turns option.",
+   "old": "Umkehren wird deaktiviert.",
+   "new": "I'll deactivate the u turns option."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2284,
+   "en": "Without u turns.",
+   "old": "Okay, ohne umkehren.",
+   "new": "Without u turns."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2285,
+   "en": "I'm sorry, I couldn't find a better route.",
+   "old": "Es tut mir leid. Ich konnte keine bessere Route berechnen.",
+   "new": "I'm sorry, I couldn't find a better route."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2286,
+   "en": "No better route could be found.",
+   "old": "Es konnte keine bessere Route gefunden werden.",
+   "new": "No better route could be found."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2289,
+   "en": "The detour route will not be used.",
+   "old": "Die Umleitung wird verworfen.",
+   "new": "The detour route will not be used."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2290,
+   "en": "Continue driving as before.",
+   "old": "Okay, weiterfahren wie bisher.",
+   "new": "Continue driving as before."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2298,
+   "en": "The route list is being displayed.",
+   "old": "Hier ist die Streckenliste.",
+   "new": "The route list is being displayed."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2299,
+   "en": "Route list.",
+   "old": "Okay, Streckenliste.",
+   "new": "Route list."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2305,
+   "en": "%1 .",
+   "old": "Okay, %1 .",
+   "new": "%1 ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2325,
+   "en": "I'm searching for <say-as interpret-as=\"POICategory\">%1</say-as>.",
+   "old": "Gut, <say-as interpret-as=\"POICategory\">%1</say-as> wird gesucht.",
+   "new": "I'm searching for <say-as interpret-as=\"POICategory\">%1</say-as>."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2327,
+   "en": "I'm searching for <say-as interpret-as=\"POI\">%1</say-as>.",
+   "old": "Gut, <say-as interpret-as=\"POI\">%1</say-as> wird gesucht.",
+   "new": "I'm searching for <say-as interpret-as=\"POI\">%1</say-as>."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2345,
+   "en": "Please say the last destination.",
+   "old": "Welches der Ziele?",
+   "new": "Please say the last destination."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2348,
+   "en": "%1 .",
+   "old": "Okay, %1 .",
+   "new": "%1 ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2353,
+   "en": "Navigation system update is being loaded.",
+   "old": "Update der Navigation wird geladen.",
+   "new": "Navigation system update is being loaded."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2356,
+   "en": "Unfortunately there are no saved myAudi contacts.",
+   "old": "Es sind leider keine gespeicherten myAudi Konakte vorhanden.",
+   "new": "Unfortunately there are no saved myAudi contacts."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2357,
+   "en": "No myAudi contacts are stored in the M M I.",
+   "old": "Es sind keine myAudi Kontakte im M M I hinterlegt.",
+   "new": "No myAudi contacts are stored in the M M I."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2367,
+   "en": "Unfortunately I couldn't find a private address for <say-as interpret-as=\"name\">%1</say-as>.",
+   "old": "Zu <say-as interpret-as=\"name\">%1</say-as> konnten leider keine private Adresse gefunden werden.",
+   "new": "Unfortunately I couldn't find a private address for <say-as interpret-as=\"name\">%1</say-as>."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2368,
+   "en": "I'm afraid I couldn't find any addresses for <say-as interpret-as=\"name\">%1</say-as> .",
+   "old": "Zu <say-as interpret-as=\"name\">%1</say-as> konnten leider keine Adressen gefunden werden.",
+   "new": "I'm afraid I couldn't find any addresses for <say-as interpret-as=\"name\">%1</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2383,
+   "en": "No private address found for <say-as interpret-as=\"name\">%1</say-as>.",
+   "old": "Leider keine private Adresse zu <say-as interpret-as=\"name\">%1</say-as> gefunden.",
+   "new": "No private address found for <say-as interpret-as=\"name\">%1</say-as>."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2391,
+   "en": "Please say the contact's name.",
+   "old": "Zu welchem Kontakt?",
+   "new": "Please say the contact's name."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2395,
+   "en": "Please say the contact's name.",
+   "old": "Zu welchem Kontakt?",
+   "new": "Please say the contact's name."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2403,
+   "en": "Please enter the new mailbox number.",
+   "old": "Neue Mailboxnummer?",
+   "new": "Please enter the new mailbox number."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2430,
+   "en": "Further commands are:",
+   "old": "Weitere Kommandos sind:",
+   "new": "Further commands are:"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2431,
+   "en": "Further commands are:",
+   "old": "Weitere Kommandos sind:",
+   "new": "Further commands are:"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2452,
+   "en": "The user account?",
+   "old": "Den Account?",
+   "new": "The user account?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2462,
+   "en": "Select %1 or another entry.",
+   "old": "Meinten Sie %1 ?",
+   "new": "Select %1 or another entry."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2484,
+   "en": "Send the e-mail now?",
+   "old": "Die Email jetzt senden?",
+   "new": "Send the e-mail now?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2491,
+   "en": "It is not possible to enter a home address using the speech dialogue system in the country <say-as interpret-as=\"country\">%1</say-as>.",
+   "old": "In dieser Sprache kann keine Heimatadresse in <say-as interpret-as=\"country\">%1</say-as> per Sprache eingegeben werden.",
+   "new": "It is not possible to enter a home address using the speech dialogue system in the country <say-as interpret-as=\"country\">%1</say-as>."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2497,
+   "en": "Home address is not set.",
+   "old": "Ihr Hause ist unbekannt.",
+   "new": "Home address is not set."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2498,
+   "en": "No home address stored.",
+   "old": "Zu Hause unbekannt.",
+   "new": "No home address stored."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2508,
+   "en": "Send.",
+   "old": "Senden",
+   "new": "Send."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2563,
+   "en": "The e-mail?",
+   "old": "Die Email?",
+   "new": "The e-mail?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2570,
+   "en": "Please say the contact's name.",
+   "old": "Zu welchem Kontakt?",
+   "new": "Please say the contact's name."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2575,
+   "en": "I'm afraid I couldn't find any addresses for <say-as interpret-as=\"name\">%1</say-as> .",
+   "old": "Zu <say-as interpret-as=\"name\">%1</say-as> konnten leider keine Adressen gefunden werden.",
+   "new": "I'm afraid I couldn't find any addresses for <say-as interpret-as=\"name\">%1</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2576,
+   "en": "Sorry, no e-mail addresses found for <say-as interpret-as=\"name\">%1</say-as>.",
+   "old": "Leider keine E-Mail-Adressen zu <say-as interpret-as=\"name\">%1</say-as> gefunden.",
+   "new": "Sorry, no e-mail addresses found for <say-as interpret-as=\"name\">%1</say-as>."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2591,
+   "en": "I'll use the navigation favourites.",
+   "old": "Okay, Navigation Favoriten.",
+   "new": "I'll use the navigation favourites."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2592,
+   "en": "Navigation favourites.",
+   "old": "Gut, Navigation Favoriten.",
+   "new": "Navigation favourites."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2593,
+   "en": "I'll use the telephone favourites.",
+   "old": "Okay, Telefon Favoriten.",
+   "new": "I'll use the telephone favourites."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2594,
+   "en": "Telephone favourites.",
+   "old": "Gut, Telefon Favoriten.",
+   "new": "Telephone favourites."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2601,
+   "en": "Edit subject?",
+   "old": "Den Betreff bearbeiten?",
+   "new": "Edit subject?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2621,
+   "en": "Edit the text?",
+   "old": "Den Text bearbeiten?",
+   "new": "Edit the text?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2642,
+   "en": "Send to which e-mail address?",
+   "old": "Welche Email-Adresse?",
+   "new": "Send to which e-mail address?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2656,
+   "en": "I'm sending the e-mail.",
+   "old": "Die Email wird gesendet.",
+   "new": "I'm sending the e-mail."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2668,
+   "en": "There are no e-mails.",
+   "old": "Es sind keine Emails vorhanden.",
+   "new": "There are no e-mails."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2669,
+   "en": "You do not have any e-mails.",
+   "old": "Es gibt keine Emails.",
+   "new": "You do not have any e-mails."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2670,
+   "en": "There are no messages.",
+   "old": "Sie haben keine Mitteilungen.",
+   "new": "There are no messages."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2671,
+   "en": "You do not have any messages.",
+   "old": "Es gibt keine Mitteilungen.",
+   "new": "You do not have any messages."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2672,
+   "en": "There are no new e-mails.",
+   "old": "Es sind keine ungelesenen Emails vorhanden.",
+   "new": "There are no new e-mails."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2673,
+   "en": "You do not have any new e-mails.",
+   "old": "Es gibt keine ungelesene Emails.",
+   "new": "You do not have any new e-mails."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2674,
+   "en": "There are no new messages.",
+   "old": "Sie haben keine neuen Mitteilungen.",
+   "new": "There are no new messages."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2675,
+   "en": "You do not have any new messages.",
+   "old": "Es gibt keine neuen Mitteilungen.",
+   "new": "You do not have any new messages."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2676,
+   "en": "There are no new text messages.",
+   "old": "Es sind keine ungelesenen Kurznachrichten vorhanden.",
+   "new": "There are no new text messages."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2677,
+   "en": "You do not have any new text messages.",
+   "old": "Es gibt keine ungelesene S M S.",
+   "new": "You do not have any new text messages."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2678,
+   "en": "There are no text messages.",
+   "old": "Es sind keine Kurznachrichten vorhanden.",
+   "new": "There are no text messages."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2679,
+   "en": "You do not have any text messages.",
+   "old": "Es gibt keine S M S.",
+   "new": "You do not have any text messages."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2692,
+   "en": "Send the message now?",
+   "old": "Die SMS jetzt senden?",
+   "new": "Send the message now?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2713,
+   "en": "The text message?",
+   "old": "Die SMS?",
+   "new": "The text message?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2763,
+   "en": "Please say the contact's name.",
+   "old": "Zu welchem Kontakt?",
+   "new": "Please say the contact's name."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2772,
+   "en": "Edit the text?",
+   "old": "Den Text bearbeiten?",
+   "new": "Edit the text?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2791,
+   "en": "Which number would you like to select?",
+   "old": "Welche Telefonnummer?",
+   "new": "Which number would you like to select?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2801,
+   "en": "I'm sending the text message.",
+   "old": "Die SMS wird gesendet.",
+   "new": "I'm sending the text message."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2820,
+   "en": "The country?",
+   "old": "Das Land?",
+   "new": "The country?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2834,
+   "en": "Therefore, no results could be found.",
+   "old": "Dadurch konnten leider keine Ergebnisse gefunden werden.",
+   "new": "Therefore, no results could be found."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2837,
+   "en": "No results could be found for the search term.",
+   "old": "Zu diesem Suchbegriff konnten keine Ergebnisse gefunden werden.",
+   "new": "No results could be found for the search term."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2844,
+   "en": "Your data connection is deactivated.",
+   "old": "Ihre Datenverbindung ist deaktiviert.",
+   "new": "Your data connection is deactivated."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2846,
+   "en": "Your data connection was cancelled because you are roaming.",
+   "old": "Ihre Datenverbindung wurde abgebrochen, da Sie im Roaming sind.",
+   "new": "Your data connection was cancelled because you are roaming."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2873,
+   "en": "Which ensemble should I display?",
+   "old": "Welches Ensemble soll ich anzeigen?",
+   "new": "Which ensemble should I display?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2877,
+   "en": "Which genre should I select?",
+   "old": "Welches Genre soll ich einstellen?",
+   "new": "Which genre should I select?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2889,
+   "en": "Which online destination are you looking for?",
+   "old": "Welches Onlineziel suchen Sie?",
+   "new": "Which online destination are you looking for?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2890,
+   "en": "Which e-mail would you like to have read out?",
+   "old": "Welche E-Mail soll vorgelesen werden?",
+   "new": "Which e-mail would you like to have read out?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2891,
+   "en": "Which text message would you like to be read out?",
+   "old": "Welche S M S soll vorgelesen werden?",
+   "new": "Which text message would you like to be read out?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2903,
+   "en": "Select %1 or another entry.",
+   "old": "Meinten Sie %1 ?",
+   "new": "Select %1 or another entry."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2920,
+   "en": "Select %1 or another entry.",
+   "old": "Meinten Sie %1 ?",
+   "new": "Select %1 or another entry."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2937,
+   "en": "The call list is empty.",
+   "old": "Die Anrufliste ist leer.",
+   "new": "The call list is empty."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2939,
+   "en": "Call list empty.",
+   "old": "Anrufliste leer.",
+   "new": "Call list empty."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2942,
+   "en": "No town can be entered for this country.",
+   "old": "In diesem Land kann leider kein Ort eingegeben werden.",
+   "new": "No town can be entered for this country."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2943,
+   "en": "No post code can be entered for this country.",
+   "old": "In diesem Land kann leider keine Postleitzahl eingegeben werden.",
+   "new": "No post code can be entered for this country."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2946,
+   "en": "I'm searching for <say-as interpret-as=\"POICategory\">%1</say-as> in <say-as interpret-as=\"city\">%2</say-as>.",
+   "old": "Gut, <say-as interpret-as=\"POICategory\">%1</say-as> in <say-as interpret-as=\"city\">%2</say-as> wird gesucht.",
+   "new": "I'm searching for <say-as interpret-as=\"POICategory\">%1</say-as> in <say-as interpret-as=\"city\">%2</say-as>."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2949,
+   "en": "I'm searching for <say-as interpret-as=\"POICategory\">%1</say-as>.",
+   "old": "Gut, <say-as interpret-as=\"POICategory\">%1</say-as> wird gesucht.",
+   "new": "I'm searching for <say-as interpret-as=\"POICategory\">%1</say-as>."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2951,
+   "en": "I'm searching for <say-as interpret-as=\"POICategory\">%1</say-as> in the immediate vicinity.",
+   "old": "Gut, <say-as interpret-as=\"POICategory\">%1</say-as> im Standortumkreis wird gesucht.",
+   "new": "I'm searching for <say-as interpret-as=\"POICategory\">%1</say-as> in the immediate vicinity."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2953,
+   "en": "I'm searching for <say-as interpret-as=\"POICategory\">%1</say-as> in the vicinity of the stopover.",
+   "old": "Gut, <say-as interpret-as=\"POICategory\">%1</say-as> im Zwischenzielumkreis wird gesucht.",
+   "new": "I'm searching for <say-as interpret-as=\"POICategory\">%1</say-as> in the vicinity of the stopover."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2955,
+   "en": "I'm searching for <say-as interpret-as=\"POICategory\">%1</say-as> in the vicinity of the destination.",
+   "old": "Gut, <say-as interpret-as=\"POICategory\">%1</say-as> im Zielumkreis wird gesucht.",
+   "new": "I'm searching for <say-as interpret-as=\"POICategory\">%1</say-as> in the vicinity of the destination."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2979,
+   "en": "No last destinations could be found.",
+   "old": "Es konnten keine letzten Ziele gefunden werden.",
+   "new": "No last destinations could be found."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2980,
+   "en": "There are no last destinations.",
+   "old": "Es gibt keine letzten Ziele.",
+   "new": "There are no last destinations."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2981,
+   "en": "No last destinations found.",
+   "old": "Keine letzten Ziele vorhanden.",
+   "new": "No last destinations found."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2983,
+   "en": "I'm looking for a filling station in the immediate vicinity.",
+   "old": "Gut, Tankstelle im Standortumkreis wird gesucht.",
+   "new": "I'm looking for a filling station in the immediate vicinity."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2985,
+   "en": "I'm looking for a rest area in the immediate vicinity.",
+   "old": "Gut, Rastplatz im Standortumkreis wird gesucht.",
+   "new": "I'm looking for a rest area in the immediate vicinity."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2997,
+   "en": "The destination entered will be added as a stopover.",
+   "old": "Das eingegebene Ziel wird Ihr Zwischenziel.",
+   "new": "The destination entered will be added as a stopover."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 2999,
+   "en": "I'll use this destination as your new destination.",
+   "old": "Das Ziel wird als neues Ziel eingetragen.",
+   "new": "I'll use this destination as your new destination."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 3000,
+   "en": "I'll replace the destination but won't change the stopover. ",
+   "old": "Endziel wird ersetzt. Zwischenziel bleibt bestehen.",
+   "new": "I'll replace the destination but won't change the stopover. "
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 3002,
+   "en": "I'll use this destination as your new destination.",
+   "old": "Das Ziel wird als neues Ziel eingetragen.",
+   "new": "I'll use this destination as your new destination."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 3005,
+   "en": "The destination entered will be set as your new stopover.",
+   "old": "Das eingegebene Ziel wird Ihr neues Zwischenziel.",
+   "new": "The destination entered will be set as your new stopover."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 3032,
+   "en": "Albums.",
+   "old": "Gut, Alben.",
+   "new": "Albums."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 3041,
+   "en": "Tracks.",
+   "old": "Gut, Titel.",
+   "new": "Tracks."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 3042,
+   "en": "U S B.",
+   "old": "Gut, U S B.",
+   "new": "U S B."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 3120,
+   "en": "I'll use the radio favourites.",
+   "old": "Okay, Radio Favoriten.",
+   "new": "I'll use the radio favourites."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 3121,
+   "en": "Radio favourites.",
+   "old": "Gut, Radio Favoriten.",
+   "new": "Radio favourites."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 3145,
+   "en": "The external audio input is empty.",
+   "old": "Der externe Audioeingang ist leer.",
+   "new": "The external audio input is empty."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 3169,
+   "en": "Say \"Yes\" to call the Audi connect Navigator or \"No\" to terminate the dialogue.",
+   "old": "If you say \"Yes\" , we will dial the call center; if you say \"No\" , the SDS dialog will end.",
+   "new": "Say \"Yes\" to call the Audi connect Navigator or \"No\" to terminate the dialogue."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 3190,
+   "en": "I'll use the Audi connect Navigator.",
+   "old": "Okay, concierge call.",
+   "new": "I'll use the Audi connect Navigator."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 3203,
+   "en": "You have entered the destination via the phone number.",
+   "old": "Okay, enter destination by phone number.",
+   "new": "You have entered the destination via the phone number."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 3460,
+   "en": "It is not possible to enter a home address using the speech dialogue system in the country <say-as interpret-as=\"country\">%1</say-as>.",
+   "old": "In dieser Sprache kann keine Heimatadresse in <say-as interpret-as=\"country\">%1</say-as> per Sprache eingegeben werden.",
+   "new": "It is not possible to enter a home address using the speech dialogue system in the country <say-as interpret-as=\"country\">%1</say-as>."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 3497,
+   "en": "A destination has not yet been entered.",
+   "old": "Leider ist noch kein Ziel eingegeben.",
+   "new": "A destination has not yet been entered."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 3707,
+   "en": "Which medium?",
+   "old": "Welches Medium?",
+   "new": "Which medium?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 3773,
+   "en": "The state?",
+   "old": "Den Bundesstaat?",
+   "new": "The state?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 3817,
+   "en": "Where in <say-as interpret-as=\"state\">%1</say-as> do you live?",
+   "old": "Wo in <say-as interpret-as=\"state\">%1</say-as> wohnen Sie?",
+   "new": "Where in <say-as interpret-as=\"state\">%1</say-as> do you live?"
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 3850,
+   "en": "Route information is being activated.",
+   "old": "Die Routeninformation wird aktiviert.",
+   "new": "Route information is being activated."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 3856,
+   "en": "Route information is being deactivated.",
+   "old": "Die Routeninformation wird deaktiviert.",
+   "new": "Route information is being deactivated."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 3942,
+   "en": "Station \"B B C Radio 2\" .",
+   "old": "Weitere Kommandos",
+   "new": "Station \"Radio ROKS\" ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 3990,
+   "en": "Unfortunately, there is a traffic jam on your route, and you will not arrive on time.",
+   "old": "Es befindet sich Stau auf ihrer Route.",
+   "new": "Unfortunately, there is a traffic jam on your route, and you will not arrive on time."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 3991,
+   "en": "I'm afraid there is a traffic jam on your route. Your arrival will be delayed.",
+   "old": "Es gibt leider Stau auf ihrer Route.",
+   "new": "I'm afraid there is a traffic jam on your route. Your arrival will be delayed."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 3992,
+   "en": "There is a traffic jam on your route.",
+   "old": "Leider ist Stau auf ihrer Route.",
+   "new": "There is a traffic jam on your route."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 3998,
+   "en": "You will arrive at the stopover in <say-as interpret-as=\"distance\">%1 km</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> .",
+   "old": "Sie werden in <say-as interpret-as=\"distance\">%1 km</say-as> um <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> am Zwischenziel ankommen.",
+   "new": "You will arrive at the stopover in <say-as interpret-as=\"distance\">%1 km</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 4002,
+   "en": "You will arrive at the stopover in <say-as interpret-as=\"distance\">%1 m</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> .",
+   "old": "Sie werden in <say-as interpret-as=\"distance\">%1 m</say-as> um <say-as interpret-as=\"time\" format=\"hms24\">%2 </say-as> am Zwischenziel ankommen.",
+   "new": "You will arrive at the stopover in <say-as interpret-as=\"distance\">%1 m</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 4006,
+   "en": "You will arrive at the stopover in <say-as interpret-as=\"distance\">%1 mi</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> .",
+   "old": "Sie werden in <say-as interpret-as=\"distance\">%1 mi</say-as> um <say-as interpret-as=\"time\" format=\"hms24\">%2 </say-as> am Zwischenziel ankommen.",
+   "new": "You will arrive at the stopover in <say-as interpret-as=\"distance\">%1 mi</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 4010,
+   "en": "You will arrive at the stopover in <say-as interpret-as=\"distance\">%1 yd</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> .",
+   "old": "Sie werden in <say-as interpret-as=\"distance\">%1 yd</say-as> um <say-as interpret-as=\"time\" format=\"hms24\">%2 </say-as> am Zwischenziel ankommen.",
+   "new": "You will arrive at the stopover in <say-as interpret-as=\"distance\">%1 yd</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 4014,
+   "en": "You will arrive in <say-as interpret-as=\"distance\">%1 km</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as>.",
+   "old": "Sie werden in <say-as interpret-as=\"distance\">%1 km</say-as> um <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> ankommen.",
+   "new": "You will arrive in <say-as interpret-as=\"distance\">%1 km</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as>."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 4018,
+   "en": "You will arrive in <say-as interpret-as=\"distance\">%1 m</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> .",
+   "old": "Sie werden in <say-as interpret-as=\"distance\">%1 m</say-as> um <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> ankommen.",
+   "new": "You will arrive in <say-as interpret-as=\"distance\">%1 m</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 4022,
+   "en": "You will arrive in <say-as interpret-as=\"distance\">%1 mi</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> .",
+   "old": "Sie werden in <say-as interpret-as=\"distance\">%1 mi</say-as> um <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> ankommen.",
+   "new": "You will arrive in <say-as interpret-as=\"distance\">%1 mi</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> ."
+  },
+  {
+   "module": "HMISpeechEvoHigh",
+   "slot": 4026,
+   "en": "You will arrive in <say-as interpret-as=\"distance\">%1 yd</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> .",
+   "old": "Sie werden in <say-as interpret-as=\"distance\">%1 yd</say-as> um <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> ankommen.",
+   "new": "You will arrive in <say-as interpret-as=\"distance\">%1 yd</say-as> at <say-as interpret-as=\"time\" format=\"hms24\">%2</say-as> ."
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 304,
+   "en": "I understood:",
+   "old": "Ich habe verstanden:",
+   "new": "I understood:"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 377,
+   "en": "Yes • No • More commands •\nPause • Help • Cancel",
+   "old": "Ja • Nein",
+   "new": "Yes • No • More commands •\nPause • Help • Cancel"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 829,
+   "en": "Processing text...",
+   "old": "Text wird verarbeitet...",
+   "new": "Processing text..."
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 831,
+   "en": "Yes • Send • No",
+   "old": "Ja • Senden • Nein",
+   "new": "Yes • Send • No"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1418,
+   "en": "Processing text...",
+   "old": "Text wird verarbeitet...",
+   "new": "Processing text..."
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1420,
+   "en": "Yes • Send • No",
+   "old": "Ja • Senden • Nein",
+   "new": "Yes • Send • No"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 2645,
+   "en": "nicht verfügbar",
+   "old": "nicht verfügbar",
+   "new": "недоступно"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3404,
+   "en": "Processing subject...",
+   "old": "Betreff wird verarbeitet...",
+   "new": "Processing subject..."
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3409,
+   "en": "Processing subject...",
+   "old": "Betreff wird verarbeitet...",
+   "new": "Processing subject..."
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3803,
+   "en": "Navigation / telephone, etc.",
+   "old": "Navigation/Telefon/Radio/Media",
+   "new": "Navigation / telephone, etc."
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3804,
+   "en": "Telephone / radio, etc.",
+   "old": "Telefon/Radio/Media",
+   "new": "Telephone / radio, etc."
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3818,
+   "en": "Telephone / radio, etc.",
+   "old": "Telefon/Radio/Media",
+   "new": "Telephone / radio, etc."
+  }
+ ]
+}

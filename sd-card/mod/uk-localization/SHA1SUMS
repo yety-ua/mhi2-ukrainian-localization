@@ -1,11 +1,11 @@
 0449967878cd36a11a69b4cbf5b0499ed92dda90  HMI.sha1
 cc45bd2d2ed1cc6e931cc6bf1a8ef985985bf314  payload/1100076.png
-1cd5d1eb39f76bdfe4f121a5f41788c877afcb16  payload/lang_data.zip
+c568e6b15c914612154f14f7c972c878b241dde8  payload/lang_data.zip
 038ccfc18b1e81885db03827fbb3f1d55a97f37b  payload/lang_hmi_builtin.config
 6aee2395954637745a79b65f6730a615494cb5e4  payload/lang_uk_hook.jar
-d685a74a506cca2a2e8d3563656956e7c59959af  payload/lang_uk_voice.jar
+542faad0d9cf386b58a6832b430e408f76f21b5e  payload/lang_uk_voice.jar
 b48edced1caae18e15831478f6651d4f1c0f115a  scripts/blob.awk
-d709c2d813e73e5db808d75c87a238df7ebd21c5  scripts/localization.sh
+f883b025d152aca0ef691871bec338315aefd163  scripts/localization.sh
 347d38249074556fdd30e6b70b3592619921dba7  stock/lang_data.zip
 45e4c8c7c35c3a04dc4ce3f34bea35ba93a584e5  stock/lang_hmi_builtin.config
 d1d14651b4100cf405589e42bbdb99ab9493b9ac  stock/language_lut_hmi.txt

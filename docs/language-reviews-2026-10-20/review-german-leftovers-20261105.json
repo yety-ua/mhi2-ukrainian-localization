@@ -1,0 +1,110 @@
+{
+ "description": "2026-11-05: German donor leftovers in uk_UA HMISystemEvoHigh (SDS pause hint, replace-destination, fuel example).",
+ "changes": [
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 551,
+   "en": "Only replace the final destination",
+   "old": "Nur das Endziel ersetzen",
+   "new": "Замінити лише кінцевий пункт"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 634,
+   "en": "Press talk button to\nend pause.",
+   "old": "Pause beenden mit Sprechtaste.",
+   "new": "Для завершення паузи\nнатисніть кнопку мовлення."
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 953,
+   "en": "Only replace final dest.",
+   "old": "Nur das Endziel ersetzen",
+   "new": "Лише кінцевий пункт"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1471,
+   "en": "\"Restaurant\" in \"Liverpool\"",
+   "old": "Tankstelle entlang der Route",
+   "new": "АЗС уздовж маршруту"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1482,
+   "en": "\"Restaurant\" in \"Liverpool\"",
+   "old": "Tankstelle entlang der Route",
+   "new": "АЗС уздовж маршруту"
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 1535,
+   "en": "Press talk button to end pause.",
+   "old": "Pause beenden mit Sprechtaste.",
+   "new": "Для завершення паузи натисніть кнопку мовлення."
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3046,
+   "en": "Press talk button to\nend pause.",
+   "old": "Pause beenden mit Sprechtaste.",
+   "new": "Для завершення паузи\nнатисніть кнопку мовлення."
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3047,
+   "en": "Press talk button to end\npause.",
+   "old": "Pause beenden mit Sprechtaste.",
+   "new": "Для завершення паузи\nнатисніть кнопку мовлення."
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3071,
+   "en": "Press talk button\nto end pause.",
+   "old": "Pause beenden mit Sprechtaste.",
+   "new": "Для завершення паузи\nнатисніть кнопку мовлення."
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3332,
+   "en": "Press talk button to\nend pause.",
+   "old": "Pause beenden mit Sprechtaste.",
+   "new": "Для завершення паузи\nнатисніть кнопку мовлення."
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3414,
+   "en": "Press talk button to end\npause.",
+   "old": "Pause beenden mit Sprechtaste.",
+   "new": "Для завершення паузи\nнатисніть кнопку мовлення."
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3725,
+   "en": "Press talk button to end\npause.",
+   "old": "Pause beenden mit Sprechtaste.",
+   "new": "Для завершення паузи\nнатисніть кнопку мовлення."
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3956,
+   "en": "Press talk button to\nend pause.",
+   "old": "Pause beenden mit Sprechtaste.",
+   "new": "Для завершення паузи\nнатисніть кнопку мовлення."
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 3990,
+   "en": "Press talk button to end\npause.",
+   "old": "Pause beenden mit Sprechtaste.",
+   "new": "Для завершення паузи\nнатисніть кнопку мовлення."
+  },
+  {
+   "module": "HMISystemEvoHigh",
+   "slot": 4059,
+   "en": "Press talk button\nto end pause.",
+   "old": "Pause beenden mit Sprechtaste.",
+   "new": "Для завершення паузи\nнатисніть кнопку мовлення."
+  }
+ ]
+}

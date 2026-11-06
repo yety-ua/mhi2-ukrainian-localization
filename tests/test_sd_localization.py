@@ -490,6 +490,41 @@ if [ -n "${TEST_BAD_READ:-}" ]; then echo invalid; else cat "$TEST_ROOT/persiste
         self.assertFalse((self.state / 'PENDING').exists())
         self.success(self.run_action('CHECK'))
 
+    def test_install_with_voice_installs_ui_and_voice_then_restore_removes_both(self):
+        result = self.run_action('INSTALL_WITH_VOICE')
+        self.success(result)
+        self.assertIn('INSTALL_WITH_VOICE', result.stdout)
+        self.assertEqual((self.package / 'ACTION.txt').read_text().strip(), 'CHECK')
+        self.assertEqual((self.lsd / 'jars/lang_data.zip').read_bytes(), self.sources['payload/lang_data.zip'])
+        self.assertEqual((self.lsd / 'jars/lang_uk_hook.jar').read_bytes(), self.sources['payload/lang_uk_hook.jar'])
+        self.assertEqual((self.lsd / 'jars/lang_uk_voice.jar').read_bytes(), self.sources['payload/lang_uk_voice.jar'])
+        self.assertEqual((self.state / 'INSTALLED').read_text().strip(), 'UI')
+        self.assertFalse((self.state / 'PENDING').exists())
+        checked = self.run_action('CHECK')
+        self.success(checked)
+        self.assertIn('English voice', checked.stdout)
+        self.success(self.run_action('VOICE_RESTORE'))
+        self.assertFalse((self.lsd / 'jars/lang_uk_voice.jar').exists())
+        self.success(self.run_action('VOICE_INSTALL'))
+        self.success(self.run_action('RESTORE'))
+        self.assert_back_to_stock()
+        self.assertFalse((self.lsd / 'jars/lang_uk_voice.jar').exists())
+
+    def test_install_with_voice_refuses_an_existing_voice_hook_without_writing(self):
+        (self.lsd / 'jars/lang_uk_voice.jar').write_bytes(b'unmanaged')
+        result = self.run_action('INSTALL_WITH_VOICE')
+        self.assertNotEqual(result.returncode, 0)
+        self.assertFalse(self.state.exists())
+        self.assertEqual((self.lsd / 'jars/lang_uk_voice.jar').read_bytes(), b'unmanaged')
+
+    def test_failed_voice_copy_during_install_with_voice_rolls_everything_back(self):
+        result = self.run_action('INSTALL_WITH_VOICE', TEST_CP_FAIL_ONCE='lang_uk_voice.jar.uk-new')
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn('ROLLED BACK', result.stdout)
+        self.assert_back_to_stock()
+        self.assertFalse((self.lsd / 'jars/lang_uk_voice.jar').exists())
+        self.assertFalse((self.lsd / 'jars/lang_uk_hook.jar').exists())
+
     def test_df_output_formats_including_the_units_headerless_one(self):
         for fmt in ('real', 'header', 'wrap'):
             with self.subTest(df=fmt):

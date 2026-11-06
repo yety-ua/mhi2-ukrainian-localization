@@ -104,21 +104,21 @@
 
 1. **Завантажте реліз**, а не вихідний код. На сторінці
    [Releases](https://github.com/yety-ua/mhi2-ukrainian-localization/releases) візьміть
-   `mhi2-ukrainian-localization-k3346-v1.0.0.zip` і поруч файл `.sha256`.
+   `mhi2-ukrainian-localization-k3346-v1.1.0.zip` і поруч файл `.sha256`.
    Кнопка «Source code (zip)» — **не те**: це вихідники, а не готова карта.
 2. **Перевірте, що файл не пошкоджений.** Порівняйте суму з вмістом `.sha256`.
 
    Windows (PowerShell, у теці із завантаженням):
 
    ```powershell
-   Get-FileHash .\mhi2-ukrainian-localization-k3346-v1.0.0.zip -Algorithm SHA256
-   Get-Content .\mhi2-ukrainian-localization-k3346-v1.0.0.zip.sha256
+   Get-FileHash .\mhi2-ukrainian-localization-k3346-v1.1.0.zip -Algorithm SHA256
+   Get-Content .\mhi2-ukrainian-localization-k3346-v1.1.0.zip.sha256
    ```
 
    macOS / Linux:
 
    ```sh
-   shasum -a 256 -c mhi2-ukrainian-localization-k3346-v1.0.0.zip.sha256
+   shasum -a 256 -c mhi2-ukrainian-localization-k3346-v1.1.0.zip.sha256
    ```
 
    Рядки хешу мають збігатися (у macOS — `OK`). Не збігаються — завантажте знову.
@@ -364,8 +364,10 @@ Patch / Restore / SW Update. Потім скопіюйте створену те
 <details>
 <summary>Англійський голос (необов'язково, для першого встановлення пропустіть)</summary>
 
-`VOICE_INSTALL` — окремий компонент, **не українські голос і розпізнавання**. Для першого
-встановлення його **пропустіть**. Спершу переконайтеся, що український інтерфейс працює.
+`VOICE_INSTALL` — окремий компонент, **не українські голос і розпізнавання**: голосовий помічник (PTT)
+і підказки навігації звучать англійською (жіночий голос) при українському інтерфейсі. Перевірено на
+одному авто (2026-11-06). Для першого встановлення його **пропустіть**: спершу переконайтеся, що
+український інтерфейс працює.
 
 </details>
 
@@ -379,7 +381,7 @@ Patch / Restore / SW Update. Потім скопіюйте створену те
 
 > **Вперше з M.I.B.?** Читайте [покрокову інструкцію](docs/INSTALL_GUIDE.md#українська): словник термінів, перевірка контрольної суми, запасний вхід по telnet, таблиця помилок.
 
-1. Завантажте `mhi2-ukrainian-localization-k3346-v1.0.0.zip` і `.sha256`
+1. Завантажте `mhi2-ukrainian-localization-k3346-v1.1.0.zip` і `.sha256`
    з [Releases](https://github.com/yety-ua/mhi2-ukrainian-localization/releases).
    **GitHub Source code ZIP — це репозиторій, а не готовий корінь SD.**
 2. M.I.B. має вже бути встановлений у голові; його повний дистрибутив має лежати
@@ -467,12 +469,13 @@ SD1/
 | --- | --- |
 | `CHECK` | Перевірка без зміни ресурсів/параметризації |
 | `INSTALL` | Встановлення українського інтерфейсу й клавіатури |
-| `VOICE_INSTALL` | Окреме встановлення англійського голосового fallback після перевірки UI |
+| `INSTALL_WITH_VOICE` | Те саме, що `INSTALL`, плюс англійський голос (помічник і підказки навігації) за один запуск; при помилці відкочується все |
+| `VOICE_INSTALL` | Окреме встановлення англійського голосу після перевірки UI |
 | `VOICE_RESTORE` | Прибрати лише керований голосовий hook |
 | `RESTORE` | Відновити оригінальні ресурси та датасети |
 
 Для VOICE_INSTALL потрібні англійські ресурси в голові. Після успіху — окремий ручний
-reboot і перемикання з української на іншу мову й назад. Це не український голос.
+reboot. Перемикати мову не обов'язково. Це не український голос.
 
 #### Відновлення
 
@@ -591,14 +594,14 @@ a cold start. REM uses the **lower** half of the right key instead; do not confu
    Windows:
 
    ```powershell
-   Get-FileHash .\mhi2-ukrainian-localization-k3346-v1.0.0.zip -Algorithm SHA256
-   Get-Content .\mhi2-ukrainian-localization-k3346-v1.0.0.zip.sha256
+   Get-FileHash .\mhi2-ukrainian-localization-k3346-v1.1.0.zip -Algorithm SHA256
+   Get-Content .\mhi2-ukrainian-localization-k3346-v1.1.0.zip.sha256
    ```
 
    macOS / Linux:
 
    ```sh
-   shasum -a 256 -c mhi2-ukrainian-localization-k3346-v1.0.0.zip.sha256
+   shasum -a 256 -c mhi2-ukrainian-localization-k3346-v1.1.0.zip.sha256
    ```
 
 3. Copy your whole working M.I.B. card to the computer as a spare. If `mod/custom.sh` or `mod/command.sh`
@@ -786,8 +789,9 @@ Do **not** post VINs, passwords or personal data found in logs.
 <details>
 <summary>English voice (optional, skip on the first install)</summary>
 
-`VOICE_INSTALL` is a separate component, **not Ukrainian speech**. Skip it on the first
-install and make sure the Ukrainian UI works first.
+`VOICE_INSTALL` is a separate component, **not Ukrainian speech**: the voice assistant (PTT) and
+the navigation prompts speak English (female voice) while the UI is Ukrainian. Verified on one car
+(2026-11-06). Skip it on the first install and make sure the Ukrainian UI works first.
 
 </details>
 
@@ -848,7 +852,7 @@ times (RESTORE) or use telnet/SSH. For errors, inspect `mod/uk-localization/logs
 PENDING indicates an interrupted operation: do not reboot until restoration has been
 checked. Writes are ordered/journalled, not a power-loss-atomic transaction. The outer
 M.I.B. “execution finished” (V3.7.1: “it is all done!”) message is unconditional; use this package's SUCCESS/ERROR
-and exit code. Actions are CHECK, INSTALL, VOICE_INSTALL, VOICE_RESTORE and RESTORE.
+and exit code. Actions are CHECK, INSTALL, INSTALL_WITH_VOICE, VOICE_INSTALL, VOICE_RESTORE and RESTORE.
 For help, send a photo of the screen, `mod/uk-localization/logs/run-*.log` and
 `mod/uk-localization/logs/launcher-errors.txt` (errors from the unit's own shell).
 
@@ -857,8 +861,8 @@ For help, send a photo of the screen, `mod/uk-localization/logs/run-*.log` and
 Usually ACTION.txt needs no editing: CHECK, INSTALL and RESTORE are chosen by running the GEM
 item repeatedly; the file is for `VOICE_*` and as a fallback (a word other than CHECK runs at once).
 
-After validating UI, set ACTION.txt to `VOICE_INSTALL` and run the same GEM item.
-After success, reboot manually and switch away from Ukrainian and back. English
+To install the UI and the English voice in one run, set ACTION.txt to `INSTALL_WITH_VOICE` and run the GEM item (it runs at once, like any word other than CHECK; a failure rolls back everything). Otherwise, after validating the UI, set ACTION.txt to `VOICE_INSTALL` and run the same GEM item.
+After success, reboot manually (switching the language is not required). English
 speech resources must exist on the unit. Verify actual microphone/audio behavior;
 this is not Ukrainian speech support. `VOICE_RESTORE` removes only this managed hook.
 

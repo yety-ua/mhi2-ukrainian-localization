@@ -31,6 +31,7 @@
 - Клавіатура: 33 українські літери (смуга для ручки/тачпада, не QWERTY), кирилиця за замовчуванням.
 - Перевірка точної прошивки й контрольних сум, резервні копії на SD та в голові, автоматичний відкат.
 - Необов'язково й окремо: англійський fallback для навігації/голосу. Українського голосу й розпізнавання мовлення немає.
+- Голосові підказки навігації: цей пакет їх не змінює. Зараз на авто вони звучать німецькою (система обирає мову сама). Додатковий голосовий пакет (англійська) ще не встановлювали й не перевіряли, тож невідомо, чи підказки стануть англійськими.
 
 ### Сумісність
 
@@ -80,7 +81,9 @@ A Ukrainian localization for the stock **Audi MHI2 K3346 firmware on A4, A5, Q5 
 - Ukrainian MMI interface (22 modules, over 15,000 strings) with a language entry and flag.
 - Keyboard: 33 Ukrainian letters (an alphabet band for the rotary/touch controller, not QWERTY), Cyrillic by default.
 - Exact firmware and checksum verification, backups on the SD and the unit, automatic rollback.
-- Optional and separate: English fallback for navigation/voice. No Ukrainian voice or speech recognition.
+- Optional (`VOICE_INSTALL` after the UI, or `INSTALL_WITH_VOICE` for both in one run): English voice assistant (PTT) and English navigation prompts while the interface is Ukrainian. There is no Ukrainian voice or speech recognition. Verified on one A4 B9 K3346/MU1438 unit on 2026-11-06 (English female voice, also after a cold start). Without this component the voice assistant and navigation prompts follow the stock behaviour of the unit (on the tested car: German prompts, no assistant for English).
+- Phrases to say are shown in English on the assistant screens (the assistant listens and speaks English); instructions for the user stay Ukrainian. Full parallel list: [docs/VOICE_COMMANDS_EN_UK.md](docs/VOICE_COMMANDS_EN_UK.md).
+- Why English did not work on the stock unit: the language list marks `en_SA` (male voice) and the firmware then asks for an English voice that is not installed in the European voice set. The voice component fixes the voice number of `en_GB` to the installed female voice.
 
 ### Compatibility
 
