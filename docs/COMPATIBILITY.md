@@ -13,7 +13,7 @@
 | # | Перевірка | Навіщо |
 | --- | --- | --- |
 | 1 | Образ HMI `/ifs/lsd.jxe` збігається з перевіреним (SHA-1 `9a22e891…46132e5f`, SHA-256 `e43d80e7…974b99ce`) | Це точна збірка `HMI_AU_MIB2_H_EU_G22_C6_190300`; наші ресурси й hook зібрані саме під неї |
-| 2 | Потяг `MHI2_ER_AUG22_K3346…` і MU `1438`, якщо їх вдалося прочитати (файли `CachedTrain.txt`/`CachedMuVersion.txt`, запасно EEPROM) | Друга думка. Якщо прочитати не вдалося, лише попередження: рішення тримається на п. 1 |
+| 2 | Потяг `MHI2_ER_AUG22_K3344…` або `MHI2_ER_AUG22_K3346…` і MU `1438`, якщо їх вдалося прочитати (файли `CachedTrain.txt`/`CachedMuVersion.txt`, запасно EEPROM) | Друга думка. Якщо прочитати не вдалося, лише попередження: рішення тримається на п. 1 |
 | 3 | Мовні файли блока (`lang_data.zip`, `lang_hmi_builtin.config`, `language_lut_hmi.txt`, прапорець `1100066.png`) збігаються з оригіналами в `stock/` | Не затираємо чужі зміни |
 | 4 | Набори даних персистенції `2D00` і `0x280` збігаються з оригіналами | Те саме для списку мов |
 | 5 | Немає наших чи чужих `lang_uk_hook.jar`, `lang_uk_voice.jar`, `1100076.png`; є папка `HMISettingsEvoHigh` | Невідомі модифікації зупиняють встановлення |
@@ -25,9 +25,9 @@
 
 | Що | Статус | Доказ |
 | --- | --- | --- |
-| **Audi A4 B9 (2016), MMI з `MHI2_ER_AUG22_K3346`, MU1438** | **`CHECK PASS` на автомобілі** 2026-10-25. Сам запис (`INSTALL`) ще не виконувався | Лог `run-….log` з карти: усі п. 1–6 пройдено, у т. ч. оригінальні набори даних |
+| **Audi A4 B9 (2016), MMI з `MHI2_ER_AUG22_K3346`, MU1438** | **Встановлення, RESTORE і повторне встановлення перевірено** 2026-10-31; англійський голос — окремо 2026-11-06. Повний ZIP v1.1.1 на авто ще не перевірено | Лог `run-….log` з карти: усі п. 1–6 пройдено, у т. ч. оригінальні набори даних |
 | A5, Q5, Q7 з **тим самим потягом K3346/MU1438** | Очікується, але **на цих авто не перевірялось** | Таблиця прошивок M.I.B. зараховує `MHI2_ER_AUG22_K3346_MU1438` до `A4/A5/Q5/Q7` (Audi, EU): це одна збірка ПЗ; а п. 1 вимагає байт-у-байт той самий образ HMI |
-| Блоки K3344/MU1438 | **Не підтримується (поки що)**: образ HMI там байт-у-байт той самий (SHA-256 `e43d80e7…` у профілі aberbic), але потяг відхиляється, а мовні файли й набори даних K3344 ми не перевіряли | Профіль `mu1438.json` (K3344) проєкту aberbic; M.I.B.: K3344 і K3346 — окремі потяги |
+| Блоки K3344/MU1438 | **Адаптовано у пакеті v1.1.1; в автомобілі ще не протестовано.** HMI та всі чотири штатні мовні файли збігаються з K3346; live-датасети мають пройти CHECK | Архів K3344/MU1438: app.img та mifs-stage2.img варіантів 50/70 мають ті самі SHA256, що K3346; локальна симуляція інсталятора |
 | Інші потяги Audi A4/A5/Q5/Q7: K3241/MU0678, K2161/MU1421, S2148/MU0442 | Відхиляються (інший образ HMI) | Для P3241/MU0678 HMI `…_160601`, не `…_190300` |
 | США (K3345/K3347, MU1439), Китай, Японія, MHI2Q (потяги `P…`) | Відхиляються | Інші потяги/MU |
 | A3 (AU37x), Q2, TT, R8, A6/A7/A8, а також VW, Škoda, SEAT, Porsche, Bentley | Відхиляються | Інші потяги (`AU37x`, `AU276`, `AU43x`, `AU57x`, …) |
@@ -55,7 +55,7 @@
 2. `CHECK PASS` означає, що ваш блок збігається з перевіреним зразком за п. 1–6.
    Помилка означає, що пакет туди не підходить; нічого не змінено.
 3. Якщо ваш блок інший, ми можемо розглянути його окремо: надішліть фото екрана і вміст
-   `mod/uk-localization/logs/`. Нові потяги додаються лише після порівняння їхніх файлів і наборів даних.
+   `mod/uk-localization/logs/`. Нові потяги додаються після порівняння файлів; датасети конкретного блока обов’язково перевіряються через CHECK.
 
 ## English
 
@@ -68,7 +68,7 @@ reviewed sample", which can be tested at no risk: `CHECK` changes nothing.
 | # | Check | Why |
 | --- | --- | --- |
 | 1 | The HMI image `/ifs/lsd.jxe` equals the reviewed one (SHA-1 `9a22e891…46132e5f`, SHA-256 `e43d80e7…974b99ce`) | It is the exact `HMI_AU_MIB2_H_EU_G22_C6_190300` build our resources and hook were made for |
-| 2 | Train `MHI2_ER_AUG22_K3346…` and MU `1438`, when readable (`CachedTrain.txt`/`CachedMuVersion.txt`, then EEPROM) | A second opinion. If unreadable it is only a warning; the decision rests on #1 |
+| 2 | Train `MHI2_ER_AUG22_K3344…` or `MHI2_ER_AUG22_K3346…` and MU `1438`, when readable (`CachedTrain.txt`/`CachedMuVersion.txt`, then EEPROM) | A second opinion. If unreadable it is only a warning; the decision rests on #1 |
 | 3 | The unit's language files (`lang_data.zip`, `lang_hmi_builtin.config`, `language_lut_hmi.txt`, flag `1100066.png`) equal the originals in `stock/` | We never overwrite someone else's changes |
 | 4 | The persistence datasets `2D00` and `0x280` equal the originals | Same for the language list |
 | 5 | No `lang_uk_hook.jar`, `lang_uk_voice.jar`, `1100076.png` present; the `HMISettingsEvoHigh` folder exists | Unknown modifications stop the install |
@@ -80,9 +80,9 @@ The script never reads or uses a model name, VIN or equipment code.
 
 | What | Status | Evidence |
 | --- | --- | --- |
-| **Audi A4 B9 (2016), MMI `MHI2_ER_AUG22_K3346`, MU1438** | **`CHECK PASS` on the car**, 2026-10-25. The write itself (`INSTALL`) has not run yet | The card's `run-….log`: checks 1–6 all passed, including the original datasets |
+| **Audi A4 B9 (2016), MMI `MHI2_ER_AUG22_K3346`, MU1438** | **Install, RESTORE and re-install verified** on 2026-10-31; English voice verified separately on 2026-11-06. The complete v1.1.1 ZIP has not yet been tested on the car | The card's `run-….log`: checks 1–6 all passed, including the original datasets |
 | A5, Q5, Q7 with the **same train K3346/MU1438** | Expected, but **not tested on those cars** | M.I.B.'s FW table lists `MHI2_ER_AUG22_K3346_MU1438` for `A4/A5/Q5/Q7` (Audi, EU): one software build; and #1 demands the byte-identical HMI image |
-| K3344/MU1438 units | **Not supported (yet)**: the HMI image there is byte-identical (SHA-256 `e43d80e7…` in aberbic's profile) but the train is refused, and K3344's language files and datasets were not reviewed | aberbic's `mu1438.json` profile (K3344); M.I.B. treats K3344 and K3346 as separate trains |
+| K3344/MU1438 units | **Adapted in package v1.1.1; not yet tested in a vehicle.** The HMI and all four stock language files match K3346; live datasets must pass CHECK | Supplied K3344/MU1438 archive: variants 50/70 app.img and mifs-stage2.img have the same SHA256 as K3346; isolated host installer simulation |
 | Other A4/A5/Q5/Q7 trains: K3241/MU0678, K2161/MU1421, S2148/MU0442 | Refused (different HMI image) | P3241/MU0678 carries HMI `…_160601`, not `…_190300` |
 | US (K3345/K3347, MU1439), China, Japan, MHI2Q (`P…` trains) | Refused | Different trains/MUs |
 | A3 (AU37x), Q2, TT, R8, A6/A7/A8, and VW, Škoda, SEAT, Porsche, Bentley | Refused | Other trains (`AU37x`, `AU276`, `AU43x`, `AU57x`, …) |

@@ -492,7 +492,7 @@ say "[${SECONDS}s] Fingerprinting the HMI image (about 58 MB, this can take a mi
 hash_progress /ifs/lsd.jxe 'HMI fingerprint' "${UK_HASH_LIMIT:-600}" || die 'Cannot fingerprint live HMI'
 ACTUAL_HMI=$HASH_RESULT
 say "[${SECONDS}s] HMI image hashed."
-[ "$ACTUAL_HMI" = "$EXPECTED_HMI" ] || die 'HMI is not the exact reviewed K3346/MU1438 binary'
+[ "$ACTUAL_HMI" = "$EXPECTED_HMI" ] || die 'HMI is not the exact reviewed K3344/K3346 MU1438 binary'
 # Same EEPROM offsets as upstream GLOBALS; require exactly the requested bytes.
 read_eeprom() {
     EEPROM_VALUE=
@@ -513,7 +513,7 @@ read_eeprom() {
     done
     return 1
 }
-# Firmware identity. The exact HMI fingerprint above already pins the reviewed K3346/MU1438 build; the train
+# Firmware identity. K3344 and K3346 share the reviewed HMI and stock language files; the train
 # and MU are a second opinion. Read them from the text files software updates leave on rcc, then from the
 # EEPROM. A readable value that differs stops everything; an unreadable one is only a warning.
 TRAIN=
@@ -532,7 +532,7 @@ if [ -z "$TRAIN" ] || [ -z "$MU" ]; then
     fi
 fi
 case $TRAIN in
-    MHI2_ER_AUG22_K3346*) ;;
+    MHI2_ER_AUG22_K3344*|MHI2_ER_AUG22_K3346*) ;;
     '') ;;
     *) die "Wrong firmware train: $TRAIN" ;;
 esac

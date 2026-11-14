@@ -1,6 +1,6 @@
 # 🇺🇦 Ukrainian localization for Audi MHI2 — A4 / A5 / Q5 / Q7
 
-**MHI2_ER_AUG22_K3346 · MU1438 · G22 · EvoHigh**
+**K3344 / K3346 · MU1438 · G22 · EvoHigh · package v1.1.1**
 
 [Українська](#українська) · [English](#english) · [Покрокова інструкція / Step-by-step guide](docs/INSTALL_GUIDE.md) · [Download / Завантажити](https://github.com/yety-ua/mhi2-ukrainian-localization/releases) · [Глибина / Coverage](docs/LOCALIZATION_DEPTH.md) · [A4 provenance](docs/A4_PROVENANCE.md)
 
@@ -8,9 +8,11 @@
 
 ## Українська
 
-Українська локалізація для штатної прошивки **Audi MHI2 K3346 на A4, A5, Q5 та Q7**: українські тексти меню, вибір мови з прапорцем, українська клавіатура, а також англійський голосовий помічник і англійські підказки навігації (українського голосу немає). Встановлюється з SD-карти через [M.I.B.](https://github.com/Mr-MIBonk/M.I.B._More-Incredible-Bash); прошивка не перепрошивається, оригінал можна повернути (`RESTORE`).
+Українська локалізація для штатної прошивки **Audi MHI2 K3344 / K3346 на A4, A5, Q5 та Q7**: українські тексти меню, вибір мови з прапорцем, українська клавіатура, а також англійський голосовий помічник і англійські підказки навігації (українського голосу немає). Встановлюється з SD-карти через [M.I.B.](https://github.com/Mr-MIBonk/M.I.B._More-Incredible-Bash); прошивка не перепрошивається, оригінал можна повернути (`RESTORE`).
 
 **Перевірено на одному авто** (A4 B9, K3346 / MU1438): встановлення, `RESTORE` і повторне встановлення з SD пройшли, українська працює в меню MMI; англійський голосовий помічник і підказки навігації перевірено окремо на тому ж авто. Інші авто й версії прошивки не перевірялися. Не всі екрани й команди перекладено ([що саме](docs/LOCALIZATION_DEPTH.md)).
+
+**K3344 / MU1438: адаптовано, але в автомобілі ще не протестовано.** HMI та штатні мовні файли з архіву K3344 точно збігаються з K3346; перевірки HMI, штатних файлів і датасетів збережено. Для K3344 завантажуйте окремий `mhi2-ukrainian-localization-k3344-k3346-v1.1.1.zip` та `.sha256`; старий ZIP v1.1.0 підтримує лише K3346.
 
 ### Швидке встановлення
 
@@ -35,7 +37,7 @@
 
 ### Сумісність
 
-Лише `MHI2_ER_AUG22_K3346`, MU `1438`, HMI `HMI_AU_MIB2_H_EU_G22_C6_190300` (G22 / MLB Evo; A4, A5, Q5, Q7). Потрібні M.I.B. V3.6+ (на авто пробувалась V3.7.1) і SD-карта FAT32 у **SD1** (повнорозмірна, від 4 ГБ, без захисту від запису).
+Лише `MHI2_ER_AUG22_K3344` або `MHI2_ER_AUG22_K3346`, MU `1438`, HMI `HMI_AU_MIB2_H_EU_G22_C6_190300` (G22 / MLB Evo; A4, A5, Q5, Q7). Потрібні M.I.B. V3.6+ (на авто пробувалась V3.7.1) і SD-карта FAT32 у **SD1** (повнорозмірна, від 4 ГБ, без захисту від запису).
 Інші MHI2 (зокрема A3 AU37x/P5089), MHI2Q, MIB3 та інші версії MU не підтримуються: інсталятор звіряє точний хеш образу HMI й зупиняється при розбіжності. Докладно: [яких авто стосується пакет](docs/COMPATIBILITY.md), [походження ресурсів](docs/A4_PROVENANCE.md).
 
 ### Українська у Virtual Cockpit
@@ -59,7 +61,9 @@ H15 не є автоматичною забороною для 0379, але ре
 
 ## English
 
-A Ukrainian localization for the stock **Audi MHI2 K3346 firmware on A4, A5, Q5 and Q7**: Ukrainian menu texts, a language entry with flag, a Ukrainian keyboard, and an English voice assistant and English navigation prompts (there is no Ukrainian voice). It installs from an SD card through [M.I.B.](https://github.com/Mr-MIBonk/M.I.B._More-Incredible-Bash); no firmware flash, and the original can be restored (`RESTORE`).
+A Ukrainian localization for the stock **Audi MHI2 K3344 / K3346 firmware on A4, A5, Q5 and Q7**: Ukrainian menu texts, a language entry with flag, a Ukrainian keyboard, and an English voice assistant and English navigation prompts (there is no Ukrainian voice). It installs from an SD card through [M.I.B.](https://github.com/Mr-MIBonk/M.I.B._More-Incredible-Bash); no firmware flash, and the original can be restored (`RESTORE`).
+
+**K3344 / MU1438: adapted, but not yet tested in a vehicle.** Its archived HMI and stock language files exactly match K3346; all HMI, stock-file and dataset checks remain in place. For K3344, download the separate `mhi2-ukrainian-localization-k3344-k3346-v1.1.1.zip` and `.sha256`; the old v1.1.0 ZIP supports K3346 only.
 
 **Verified on one car** (A4 B9, K3346 / MU1438): install, `RESTORE` and re-install from the SD card passed, and Ukrainian works in the MMI menus; the English voice assistant and navigation prompts were verified separately on the same car. Other cars and firmware versions are untested. Not every screen and command is translated ([details](docs/LOCALIZATION_DEPTH.md)).
 
@@ -87,7 +91,7 @@ A Ukrainian localization for the stock **Audi MHI2 K3346 firmware on A4, A5, Q5 
 
 ### Compatibility
 
-Only `MHI2_ER_AUG22_K3346`, MU `1438`, HMI `HMI_AU_MIB2_H_EU_G22_C6_190300` (G22 / MLB Evo; A4, A5, Q5, Q7). Needs M.I.B. V3.6+ (V3.7.1 was tried on the car) and a FAT32 SD card in **SD1** (full-size, 4 GB or more, not write-protected).
+Only `MHI2_ER_AUG22_K3344` or `MHI2_ER_AUG22_K3346`, MU `1438`, HMI `HMI_AU_MIB2_H_EU_G22_C6_190300` (G22 / MLB Evo; A4, A5, Q5, Q7). Needs M.I.B. V3.6+ (V3.7.1 was tried on the car) and a FAT32 SD card in **SD1** (full-size, 4 GB or more, not write-protected).
 Other MHI2 (including A3 AU37x/P5089), MHI2Q, MIB3 and other MU versions are not supported: the installer checks the exact HMI image hash and stops on a mismatch. Details: [which cars the package fits](docs/COMPATIBILITY.md), [provenance](docs/A4_PROVENANCE.md).
 
 ### Ukrainian in Virtual Cockpit

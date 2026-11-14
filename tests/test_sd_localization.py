@@ -116,7 +116,7 @@ shift 2
 [ "$1" = /net/rcc/usr/apps/modifyE2P ] || exit 1
 python3 - "$3" <<'PY'
 import os,sys
-value=os.environ.get('TEST_TRAIN','MHI2_ER_AUG22_K3346') if sys.argv[1]=='3A0' else '1438'
+value=os.environ.get('TEST_TRAIN','MHI2_ER_AUG22_K3346') if sys.argv[1]=='3A0' else os.environ.get('TEST_MU','1438')
 data = value.encode()
 fmt = os.environ.get('TEST_E2P_FORMAT', 'spaced')
 hexes = [f'{x:02x}' for x in data]
@@ -190,6 +190,44 @@ if [ -n "${TEST_BAD_READ:-}" ]; then echo invalid; else cat "$TEST_ROOT/persiste
         self.assertFalse((self.root / 'writes').exists())
         self.assertNotEqual(self.run_action('INSTALL', TEST_TRAIN='MHI2_ER_AU37x_P5089').returncode, 0)
         self.assertFalse(self.state.exists())
+
+    def test_k3344_check_install_with_voice_and_restore(self):
+        env = {'TEST_TRAIN': 'MHI2_ER_AUG22_K3344'}
+        self.success(self.run_action('CHECK', **env))
+        self.assertFalse(self.state.exists())
+        self.assertFalse((self.root / 'writes').exists())
+        self.success(self.run_action('INSTALL_WITH_VOICE', **env))
+        self.assertEqual((self.lsd / 'jars/lang_uk_voice.jar').read_bytes(), self.sources['payload/lang_uk_voice.jar'])
+        self.success(self.run_action('CHECK', **env))
+        self.success(self.run_action('RESTORE', **env))
+        self.assert_back_to_stock()
+
+    def test_k3344_keeps_hmi_stock_dataset_and_mu_guards(self):
+        env = {'TEST_TRAIN': 'MHI2_ER_AUG22_K3344'}
+        hmi = self.root / 'lsd.jxe'
+        original_hmi = hmi.read_bytes()
+        stock = self.lsd / 'lang_hmi_builtin.config'
+        original_stock = stock.read_bytes()
+        dataset = self.store / '3221422086'
+        original_dataset = dataset.read_bytes()
+        for label, path, content in [('HMI', hmi, b'wrong HMI'),
+                                     ('stock', stock, b'unknown config'),
+                                     ('dataset', dataset, self.sources['target/2d00.uk.hex'])]:
+            with self.subTest(guard=label):
+                previous = path.read_bytes()
+                path.write_bytes(content)
+                self.assertNotEqual(self.run_action('INSTALL', **env).returncode, 0)
+                self.assertFalse(self.state.exists())
+                self.assertFalse((self.root / 'writes').exists())
+                self.assertEqual(hmi.read_bytes(), content if path == hmi else original_hmi)
+                self.assertEqual(stock.read_bytes(), content if path == stock else original_stock)
+                self.assertEqual(dataset.read_bytes(), content if path == dataset else original_dataset)
+                path.write_bytes(previous)
+        for identity in [{'TEST_MU': '1439'}, {'TEST_TRAIN': 'MHI2_ER_AUG22_K3345'}]:
+            with self.subTest(identity=identity):
+                self.assertNotEqual(self.run_action('INSTALL', **(env | identity)).returncode, 0)
+                self.assertFalse(self.state.exists())
+                self.assertFalse((self.root / 'writes').exists())
 
     def test_full_install_voice_restore_and_reinstall(self):
         self.success(self.run_action('INSTALL'))

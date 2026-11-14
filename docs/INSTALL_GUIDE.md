@@ -54,7 +54,7 @@
 - SD-карта **FAT32**, яка вже використовується з M.I.B. (рекомендуємо до 32 ГБ, без захисту
   від запису — перемикач збоку карти у положенні «відкрито»).
 - Комп'ютер з кардрідером.
-- Автомобіль із **MMI K3346 / MU1438** (Етап 1) і вже встановленим **M.I.B.** (Етап 2).
+- Автомобіль із **MMI K3344 або K3346 / MU1438** (Етап 1) і вже встановленим **M.I.B.** (Етап 2).
 - Для страховки (Етап 5): ноутбук із Windows, USB-Ethernet адаптер, який магнітола
   розпізнає, і мережевий кабель; щоб блок не вимкнувся під час запису — зовнішнє живлення
   автомобіля (зарядний пристрій / підтримка живлення на час діагностики).
@@ -63,7 +63,9 @@
 
 ### Етап 1. Чи підходить вам пакет
 
-Пакет працює **лише** з прошивкою `MHI2_ER_AUG22_K3346`, MU `1438`, HMI
+**K3344 / MU1438 адаптовано за ідентичними HMI та мовними файлами, але в автомобілі ще не протестовано.** Перевірки датасетів конкретного блока збережено; потрібен `CHECK PASS`. Старий ZIP v1.1.0 призначений лише для K3346.
+
+Пакет v1.1.1 адаптовано **лише** для `MHI2_ER_AUG22_K3344` або `MHI2_ER_AUG22_K3346`, MU `1438`, HMI
 `HMI_AU_MIB2_H_EU_G22_C6_190300`. Інші версії інсталятор **відхилить сам** — це безпечно.
 
 Охоплені моделі (за цією прошивкою): **A4, A5, Q5, Q7**. **Не підтримуються:** A3
@@ -104,21 +106,21 @@
 
 1. **Завантажте реліз**, а не вихідний код. На сторінці
    [Releases](https://github.com/yety-ua/mhi2-ukrainian-localization/releases) візьміть
-   `mhi2-ukrainian-localization-k3346-v1.1.0.zip` і поруч файл `.sha256`.
+   `mhi2-ukrainian-localization-k3344-k3346-v1.1.1.zip` і поруч файл `.sha256`.
    Кнопка «Source code (zip)» — **не те**: це вихідники, а не готова карта.
 2. **Перевірте, що файл не пошкоджений.** Порівняйте суму з вмістом `.sha256`.
 
    Windows (PowerShell, у теці із завантаженням):
 
    ```powershell
-   Get-FileHash .\mhi2-ukrainian-localization-k3346-v1.1.0.zip -Algorithm SHA256
-   Get-Content .\mhi2-ukrainian-localization-k3346-v1.1.0.zip.sha256
+   Get-FileHash .\mhi2-ukrainian-localization-k3344-k3346-v1.1.1.zip -Algorithm SHA256
+   Get-Content .\mhi2-ukrainian-localization-k3344-k3346-v1.1.1.zip.sha256
    ```
 
    macOS / Linux:
 
    ```sh
-   shasum -a 256 -c mhi2-ukrainian-localization-k3346-v1.1.0.zip.sha256
+   shasum -a 256 -c mhi2-ukrainian-localization-k3344-k3346-v1.1.1.zip.sha256
    ```
 
    Рядки хешу мають збігатися (у macOS — `OK`). Не збігаються — завантажте знову.
@@ -320,7 +322,7 @@ Patch / Restore / SW Update. Потім скопіюйте створену те
 | `ERROR: the uk-localization folder is missing from SD1/mod` | Теку скопійовано не в `mod/` | Виправте розташування (Етап 3, п. 4) |
 | `step 1 of 3 done` / `step 2 of 3` | Це підказка, не помилка | Нічого не робіть, якщо не хочете йти далі |
 | `Invalid action…` | Лише якщо ви вручну редагували `ACTION.txt`: зайвий CR/пробіл/BOM | Перезапишіть командою із запасного шляху Етапу 6 |
-| `HMI is not the exact reviewed K3346/MU1438 binary` або схожі «not stock» | Версія/файли не ті, або вже щось змінено | **Нічого не змушуйте.** Не підтримується. Надішліть лог |
+| `HMI is not the exact reviewed K3344/K3346 MU1438 binary` або схожі «not stock» | Версія/файли не ті, або вже щось змінено | **Нічого не змушуйте.** Не підтримується. Надішліть лог |
 | `At least 40000 KiB free…` | Мало місця в блоці | Надішліть лог; не видаляйте нічого самі |
 | `WARNING: the SD card cannot be written; logging to …` | SD змонтована лише для читання, і перемонтування не вдалось | `CHECK` це не блокує (лог іде в пам'ять блока), але `INSTALL` без запису на SD не стартує. Перевірте перемикач захисту на карті, відформатуйте її FAT32 заново (M.I.B.: погана карта — головна причина проблем) |
 | `Cannot create the lock file …` / `Diagnostics: …` | Блок не дав створити службовий файл у `/tmp` (на цих блоках це `/dev/shmem`, де є лише файли, без папок) | Використовуйте останній реліз. Якщо помилка лишилась — надішліть рядок `Diagnostics:` з логу |
@@ -384,7 +386,7 @@ Patch / Restore / SW Update. Потім скопіюйте створену те
 
 > **Вперше з M.I.B.?** Читайте [покрокову інструкцію](docs/INSTALL_GUIDE.md#українська): словник термінів, перевірка контрольної суми, запасний вхід по telnet, таблиця помилок.
 
-1. Завантажте `mhi2-ukrainian-localization-k3346-v1.1.0.zip` і `.sha256`
+1. Завантажте `mhi2-ukrainian-localization-k3344-k3346-v1.1.1.zip` і `.sha256`
    з [Releases](https://github.com/yety-ua/mhi2-ukrainian-localization/releases).
    **GitHub Source code ZIP — це репозиторій, а не готовий корінь SD.**
 2. M.I.B. має вже бути встановлений у голові; його повний дистрибутив має лежати
@@ -555,14 +557,16 @@ see and what to do when you see something else.
 
 - A **FAT32** SD card already used with M.I.B. (32 GB or smaller is recommended; the
   write-protect switch must be unlocked) and a card reader.
-- A car with **MMI K3346 / MU1438** and **M.I.B. already installed**.
+- A car with **MMI K3344 or K3346 / MU1438** and **M.I.B. already installed**.
 - For Stage 5: a Windows laptop, a USB-Ethernet adapter the unit recognises plus a cable,
   and external vehicle power support. Running the engine is **not** a substitute.
 - Do not rush. During writing: do not remove the card, press Back or switch ignition off.
 
 ### Stage 1. Does it fit?
 
-Only `MHI2_ER_AUG22_K3346`, MU `1438`, HMI `HMI_AU_MIB2_H_EU_G22_C6_190300`. The
+**K3344 / MU1438 is adapted based on identical HMI and language files, but has not yet been tested in a vehicle.** Live dataset checks remain mandatory; `CHECK PASS` is required. The old v1.1.0 ZIP is for K3346 only.
+
+Package v1.1.1 supports only `MHI2_ER_AUG22_K3344` or `MHI2_ER_AUG22_K3346`, MU `1438`, HMI `HMI_AU_MIB2_H_EU_G22_C6_190300`. The
 installer **rejects anything else on its own**. Covered models (this firmware): **A4, A5, Q5, Q7**.
 **Not supported:** any A3, TT, R8, A6/A7 and other MMIs, even if their GEM combinations look similar. You can look at the version in the MMI
 settings beforehand (menu names vary), or simply run `CHECK`.
@@ -597,14 +601,14 @@ a cold start. REM uses the **lower** half of the right key instead; do not confu
    Windows:
 
    ```powershell
-   Get-FileHash .\mhi2-ukrainian-localization-k3346-v1.1.0.zip -Algorithm SHA256
-   Get-Content .\mhi2-ukrainian-localization-k3346-v1.1.0.zip.sha256
+   Get-FileHash .\mhi2-ukrainian-localization-k3344-k3346-v1.1.1.zip -Algorithm SHA256
+   Get-Content .\mhi2-ukrainian-localization-k3344-k3346-v1.1.1.zip.sha256
    ```
 
    macOS / Linux:
 
    ```sh
-   shasum -a 256 -c mhi2-ukrainian-localization-k3346-v1.1.0.zip.sha256
+   shasum -a 256 -c mhi2-ukrainian-localization-k3344-k3346-v1.1.1.zip.sha256
    ```
 
 3. Copy your whole working M.I.B. card to the computer as a spare. If `mod/custom.sh` or `mod/command.sh`
@@ -750,7 +754,7 @@ A word other than `CHECK` in `ACTION.txt` runs **at once, in a single launch** (
 | `the uk-localization folder is missing from SD1/mod` | Folder not inside `mod/` | Fix the location (Stage 3, step 4) |
 | `step 1 of 3 done` / `step 2 of 3` | A hint, not an error | Do nothing unless you want to continue |
 | `Invalid action…` | Only if you edited `ACTION.txt` by hand: stray CR / space / BOM | Rewrite with the Stage 6 fallback command |
-| `HMI is not the exact reviewed K3346/MU1438 binary`, “not stock” | Wrong version, or already modified | Do not force; unsupported. Send the log |
+| `HMI is not the exact reviewed K3344/K3346 MU1438 binary`, “not stock” | Wrong version, or already modified | Do not force; unsupported. Send the log |
 | `At least 40000 KiB free…` | Not enough space | Send the log; delete nothing yourself |
 | `WARNING: the SD card cannot be written; logging to …` | The SD is mounted read-only and the remount failed | `CHECK` is not blocked (the log goes to the unit's RAM), but `INSTALL` will not start without SD write access. Check the card's write-protect switch and reformat it as FAT32 (M.I.B.: bad cards are the top issue) |
 | `Cannot create the lock file …` / `Diagnostics: …` | The unit refused a helper file in `/tmp` (on these units that is `/dev/shmem`, which holds files only, no folders) | Use the latest release. If it persists, send the `Diagnostics:` line from the log |
