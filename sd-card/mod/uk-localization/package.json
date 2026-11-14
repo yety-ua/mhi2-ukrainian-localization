@@ -1,5 +1,5 @@
 {
-  "version": "1.1.1",
+  "version": "1.1.2",
   "train": "MHI2_ER_AUG22_K3344 / MHI2_ER_AUG22_K3346",
   "mu": "1438",
   "hmi": "HMI_AU_MIB2_H_EU_G22_C6_190300",
@@ -11,7 +11,7 @@
   "sha256": {
     "HMI.sha1": "edce387ad99d8544217a1953fab543c9ed6b60770e51d417024e7f6b41e31e60",
     "payload/1100076.png": "8010f37d33765f762386b0d51b8c9b61e74545e602fdf8b703d1ceb5c1536ce9",
-    "payload/lang_data.zip": "38892133bd48fc72b6e07ecaba8ea96dd6e7b699d500c9d94e5de050c9474f01",
+    "payload/lang_data.zip": "d636a3b6fc84605e3dbf979f74e749df1f1c7c8e00ede320045f330df714a0f7",
     "payload/lang_hmi_builtin.config": "c27671404b77ee14f30be87b3144ec3dda8e57c6a2431693266e48d534bd4a1e",
     "payload/lang_uk_hook.jar": "2f785f456a087b939caf1b384c3c6adbe5d8bcddade944c4ec38a84d526baa3f",
     "payload/lang_uk_voice.jar": "67ebb59191a7af598ab9d3293dcab68b2db915d570de39d57794850acd7209f1",

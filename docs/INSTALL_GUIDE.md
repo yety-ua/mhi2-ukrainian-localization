@@ -65,7 +65,7 @@
 
 **K3344 / MU1438 адаптовано за ідентичними HMI та мовними файлами, але в автомобілі ще не протестовано.** Перевірки датасетів конкретного блока збережено; потрібен `CHECK PASS`. Старий ZIP v1.1.0 призначений лише для K3346.
 
-Пакет v1.1.1 адаптовано **лише** для `MHI2_ER_AUG22_K3344` або `MHI2_ER_AUG22_K3346`, MU `1438`, HMI
+Пакет v1.1.2 адаптовано **лише** для `MHI2_ER_AUG22_K3344` або `MHI2_ER_AUG22_K3346`, MU `1438`, HMI
 `HMI_AU_MIB2_H_EU_G22_C6_190300`. Інші версії інсталятор **відхилить сам** — це безпечно.
 
 Охоплені моделі (за цією прошивкою): **A4, A5, Q5, Q7**. **Не підтримуються:** A3
@@ -106,21 +106,21 @@
 
 1. **Завантажте реліз**, а не вихідний код. На сторінці
    [Releases](https://github.com/yety-ua/mhi2-ukrainian-localization/releases) візьміть
-   `mhi2-ukrainian-localization-k3344-k3346-v1.1.1.zip` і поруч файл `.sha256`.
+   `mhi2-ukrainian-localization-k3344-k3346-v1.1.2.zip` і поруч файл `.sha256`.
    Кнопка «Source code (zip)» — **не те**: це вихідники, а не готова карта.
 2. **Перевірте, що файл не пошкоджений.** Порівняйте суму з вмістом `.sha256`.
 
    Windows (PowerShell, у теці із завантаженням):
 
    ```powershell
-   Get-FileHash .\mhi2-ukrainian-localization-k3344-k3346-v1.1.1.zip -Algorithm SHA256
-   Get-Content .\mhi2-ukrainian-localization-k3344-k3346-v1.1.1.zip.sha256
+   Get-FileHash .\mhi2-ukrainian-localization-k3344-k3346-v1.1.2.zip -Algorithm SHA256
+   Get-Content .\mhi2-ukrainian-localization-k3344-k3346-v1.1.2.zip.sha256
    ```
 
    macOS / Linux:
 
    ```sh
-   shasum -a 256 -c mhi2-ukrainian-localization-k3344-k3346-v1.1.1.zip.sha256
+   shasum -a 256 -c mhi2-ukrainian-localization-k3344-k3346-v1.1.2.zip.sha256
    ```
 
    Рядки хешу мають збігатися (у macOS — `OK`). Не збігаються — завантажте знову.
@@ -386,7 +386,7 @@ Patch / Restore / SW Update. Потім скопіюйте створену те
 
 > **Вперше з M.I.B.?** Читайте [покрокову інструкцію](docs/INSTALL_GUIDE.md#українська): словник термінів, перевірка контрольної суми, запасний вхід по telnet, таблиця помилок.
 
-1. Завантажте `mhi2-ukrainian-localization-k3344-k3346-v1.1.1.zip` і `.sha256`
+1. Завантажте `mhi2-ukrainian-localization-k3344-k3346-v1.1.2.zip` і `.sha256`
    з [Releases](https://github.com/yety-ua/mhi2-ukrainian-localization/releases).
    **GitHub Source code ZIP — це репозиторій, а не готовий корінь SD.**
 2. M.I.B. має вже бути встановлений у голові; його повний дистрибутив має лежати
@@ -566,7 +566,7 @@ see and what to do when you see something else.
 
 **K3344 / MU1438 is adapted based on identical HMI and language files, but has not yet been tested in a vehicle.** Live dataset checks remain mandatory; `CHECK PASS` is required. The old v1.1.0 ZIP is for K3346 only.
 
-Package v1.1.1 supports only `MHI2_ER_AUG22_K3344` or `MHI2_ER_AUG22_K3346`, MU `1438`, HMI `HMI_AU_MIB2_H_EU_G22_C6_190300`. The
+Package v1.1.2 supports only `MHI2_ER_AUG22_K3344` or `MHI2_ER_AUG22_K3346`, MU `1438`, HMI `HMI_AU_MIB2_H_EU_G22_C6_190300`. The
 installer **rejects anything else on its own**. Covered models (this firmware): **A4, A5, Q5, Q7**.
 **Not supported:** any A3, TT, R8, A6/A7 and other MMIs, even if their GEM combinations look similar. You can look at the version in the MMI
 settings beforehand (menu names vary), or simply run `CHECK`.
@@ -601,14 +601,14 @@ a cold start. REM uses the **lower** half of the right key instead; do not confu
    Windows:
 
    ```powershell
-   Get-FileHash .\mhi2-ukrainian-localization-k3344-k3346-v1.1.1.zip -Algorithm SHA256
-   Get-Content .\mhi2-ukrainian-localization-k3344-k3346-v1.1.1.zip.sha256
+   Get-FileHash .\mhi2-ukrainian-localization-k3344-k3346-v1.1.2.zip -Algorithm SHA256
+   Get-Content .\mhi2-ukrainian-localization-k3344-k3346-v1.1.2.zip.sha256
    ```
 
    macOS / Linux:
 
    ```sh
-   shasum -a 256 -c mhi2-ukrainian-localization-k3344-k3346-v1.1.1.zip.sha256
+   shasum -a 256 -c mhi2-ukrainian-localization-k3344-k3346-v1.1.2.zip.sha256
    ```
 
 3. Copy your whole working M.I.B. card to the computer as a spare. If `mod/custom.sh` or `mod/command.sh`
